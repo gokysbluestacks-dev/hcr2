@@ -1,0 +1,270 @@
+{
+  "body": [
+    {
+      "position": {
+        "y": -0.977599024772644,
+        "x": 0.06221149861812592
+      },
+      "angle": 0,
+      "name": "body0",
+      "massData-mass": 0.1599514484405518,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.3111075758934021,
+                0.3635352253913879,
+                0.3635352253913879,
+                0.3156664967536926
+              ],
+              "x": [
+                1.392754316329956,
+                1.392754316329956,
+                -1.406431198120117,
+                -1.406431198120117
+              ]
+            }
+          },
+          "density": 0.001000000047497451,
+          "name": "penetrationFix",
+          "filter-maskBits": 16384,
+          "filter-categoryBits": 16384,
+          "restitution": 0.1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.2894923090934753,
+                -0.2416234910488129,
+                -0.2444623857736588,
+                -0.2894923090934753
+              ],
+              "x": [
+                1.392754316329956,
+                1.392754316329956,
+                -1.237523913383484,
+                -1.406431198120117
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 1,
+          "filter-maskBits": 65247,
+          "filter-categoryBits": 1024,
+          "restitution": 0.1,
+          "name": "fixture0"
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.7727393507957458,
+                0.8251670002937317,
+                0.8251670002937317,
+                0.7772982716560364
+              ],
+              "x": [
+                1.392754316329956,
+                1.392754316329956,
+                -1.406431198120117,
+                -1.406431198120117
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 1,
+          "filter-maskBits": 65247,
+          "filter-categoryBits": 1024,
+          "restitution": 0.1,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "massData-center": {
+        "y": 0.29564568400383,
+        "x": 0.03083122707903385
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.1610755026340485
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 0,
+      "opacity": 1,
+      "scale": 0.2279469966888428,
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/container/container.obj"
+        }
+      ],
+      "corners": {
+        "y": [
+          -0.1139734983444214,
+          -0.1139734983444214,
+          0.1139734983444214,
+          0.1139734983444214
+        ],
+        "x": [
+          -0.1139734983444214,
+          0.1139734983444214,
+          0.1139734983444214,
+          -0.1139734983444214
+        ]
+      },
+      "name": "image0",
+      "filter": 1,
+      "renderOrder": -1,
+      "file": "../../tools/obj2rube/icon-model.png",
+      "glVertexPointer": [
+        -0.1139734983444214,
+        -0.1139734983444214,
+        0.1139734983444214,
+        -0.1139734983444214,
+        0.1139734983444214,
+        0.1139734983444214,
+        -0.1139734983444214,
+        0.1139734983444214
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "center": 0
+    },
+    {
+      "body": 0,
+      "opacity": 1,
+      "scale": 1.12,
+      "customProperties": [
+        {
+          "int": 11,
+          "name": "zOrder"
+        },
+        {
+          "float": 1.01,
+          "name": "z"
+        }
+      ],
+      "corners": {
+        "y": [
+          -0.2950000166893005,
+          -0.2950000166893005,
+          0.824999988079071,
+          0.824999988079071
+        ],
+        "x": [
+          -1.385120749473572,
+          1.385120749473572,
+          1.385120749473572,
+          -1.385120749473572
+        ]
+      },
+      "name": "container_bg",
+      "filter": 1,
+      "renderOrder": 1,
+      "file": "../textures/objects/container.png",
+      "glVertexPointer": [
+        -1.385120749473572,
+        -0.2950000166893005,
+        1.385120749473572,
+        -0.2950000166893005,
+        1.385120749473572,
+        0.824999988079071,
+        -1.385120749473572,
+        0.824999988079071
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "center": {
+        "y": 0.2649999856948853,
+        "x": 0
+      }
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "PlayerCar",
+      "PlayerCarPart",
+      "Driver",
+      "Terrain",
+      "Bridge",
+      "Collectible",
+      "Obstacle",
+      "LethalObstacle",
+      "PlayerTriggerArea",
+      "PlayerCarInterior",
+      "ObstacleNoCoins",
+      "ObstacleMagicWall",
+      "AreaNoAirtime",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

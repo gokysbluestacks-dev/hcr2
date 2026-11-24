@@ -1,0 +1,82 @@
+{
+  "buttonId": "countryside_fixed01",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside01_10",
+  "title": {
+    "localize": "Name of a level. Alternative name: Bridge Road",
+    "value": "Bridges And Stones"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 60,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 2,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "maxCount": 3,
+      "length": 19,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 345,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " x*=1.40; x+=70.0; var y := -1 + sin(x/25.0+cos(x/32.14))*4*clamp(0, x*0.00275, 1.0); y += cos(x*0.8+(sin(x*0.35)))*0.2*clamp(0, x*0.0015, 1.0); y -= cos(3.1 + x/2.5)*0.2*clamp(0, x*0.00275, 1.0); y += cos(2.0 + x/3.2)*0.5*clamp(0, x*0.00275, 1.0); y -= cos(0.8 + x/4.6)*1.2*clamp(0, x*0.00125, 1.0); y += cos(2.3 + x/6.0)*1.2*clamp(0, x*0.00125, 1.0); y -= cos(1.1 + x/7.5)*1.0*clamp(0, x*0.00085, 1.0); y += cos(3.5 + x/9.5)*1.0*clamp(0, x*0.00075, 1.0); y -= cos(4.9 + x/11.5)*1.0*clamp(0, x*0.00065, 1.0); y += cos(1.8 + x/13.5)*1.0*clamp(0, x*0.00055, 1.0); y -= cos(11.1 + x/25.2)*1.0*clamp(0, x*0.00055, 1.0); y *= 0.4+clamp(0.0, x/2500.0, 0.9); y; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

@@ -1,0 +1,100 @@
+{
+  "buttonId": "countryside_fixed05",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside05_10",
+  "jsonBlockFile": "countryside_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Trick Road",
+    "value": "Flipway"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 2,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "ramps2",
+    "algorithm",
+    "algorithm",
+    "ramps3",
+    "algorithm",
+    "ramps7",
+    "algorithm",
+    "drop6",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 25,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "forcedExpr": "index % 4 == 1",
+      "weight": 1.0,
+      "lengthVar": 3,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -16.0*sin(x2);",
+      "length": 17,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    40.0,
+    35.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed_06"
+  ],
+  "levelDistance": 400,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "x *= 1.2; x += 10.0; var y := cos(x/10.0)*2; y += cos(x/15.0) * 2.0 * (1.5 + sin(x/12.1)); y += cos(x/59.0) * 2.0 * (1.0 + sin(x/41.1)); y += cos(x+(sin(x*0.15)))*0.2*clamp(0, x*0.0015, 1.0); y += cos(x*0.20+(sin(x*0.10)))*2.0*clamp(0, x*0.00075, 1.0); y += cos(x*0.12+(sin(x*0.11)))*2.0*clamp(0, x*0.00275, 1.0); y += -1 + sin(x/25.0+cos(x/28.14))*4*clamp(0, x*0.00075, 1.0); y += cos(1.2 + x/1.4)*0.05; y += cos(2.7 + x/1.8)*0.05; y += cos(1.0 + x/2.0)*0.3; y -= cos(0.5 + x/13.5)*0.2; y += abs(cos(x / 25.0)) * 0.01*x; y *= 0.4+clamp(x/2000.0, 0.0, 1.5); y *= clamp(0.0, (x-10)/50, 1.0); y;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

@@ -1,0 +1,63 @@
+{
+  "buttonId": "countryside_fixed04",
+  "friction": 0.2,
+  "logo": "ui/logo_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside_sensor_dev",
+  "jsonBlockFile": "countryside_sensor_dev_blocks.json",
+  "title": "Countryside 4",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "countryside_gfx.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 40,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    48.0,
+    43.0,
+    38.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed05"
+  ],
+  "levelDistance": {
+    "var": 0,
+    "value": 320
+  },
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "x *= 1.5; var y := cos(x/11.0)*2.0 * (1.5 + sin(x/18.0)) + cos(x/7.0) * 2.0 * (1.5 + sin(x/12.1)) + cos(0.5 + x/29.0) * 2.0 * (1.5 + sin(x/60.1)) + cos(x/17.21 + sin(x/17.0)) * (1.5 + sin(x/185.0)) + cos(0.5 + x/13.5)*0.2*clamp(0.2, x*0.01, 0.6) + cos(x*0.17+(sin(x*0.25)))*2.0*clamp(0, x*0.00065, 1.0) + cos(x*0.0952+(sin(x*0.15)))*2.0*clamp(0, x*0.00205, 1.0) + -1 + sin(x/30.0+cos(x/32.14))*4*clamp(0, x*0.00065, 1.0); y += cos(1.0 + x/2.0)*0.3; y *= 0.5+clamp(0.0, x/4000.0, 1.5); y *= clamp(0.2, x/50, 0.5); y * 0.9;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 215,
+  "fuelDensityIncrease": 0.3
+}

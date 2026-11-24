@@ -1,0 +1,64 @@
+{
+  "buttonId": "city_fixed02",
+  "levelTier": 0,
+  "logo": "ui/cocosstudio/elements/bg_city.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "city02_7",
+  "jsonBlockFile": "city_02_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Hotel Road",
+    "value": "Hotel Radiator"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "rubeBlockOrder": true,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "city_gfx.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 45,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    30.0,
+    26.0,
+    21.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "city_fixed03"
+  ],
+  "levelDistance": 390,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "0",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

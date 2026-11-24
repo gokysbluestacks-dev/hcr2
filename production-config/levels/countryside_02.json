@@ -1,0 +1,79 @@
+{
+  "buttonId": "countryside_fixed02",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music2",
+    "audio/game-music2"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside02_8",
+  "jsonBlockFile": "countryside_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Water Way",
+    "value": "The Dip"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "water",
+    "algorithm",
+    "water8",
+    "algorithm",
+    "water4",
+    "algorithm",
+    "water9",
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 54,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    53.0,
+    50.0,
+    47.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed03"
+  ],
+  "levelDistance": 362,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": "var fade := clamp(0.0, x, 1.0); x *= (0.8 + 0.05*abs(sin(0.01*x))); x += 865.0; var y := cos(x/10.1)*0.43; y += cos(1.2 + x/0.8)*0.15; y += cos(2.7 + x/1.2)*0.25; y += cos(0.5 + x/1.8)*0.4; y += cos(0.5 + x/13.5)*0.2; y += cos(1.0 + x/2.5)*0.3; y += cos(0.4 + x/25.2)*0.2; y += cos(x*0.0752+(sin(x*0.18)))*1.5*clamp(x*0.00295, 0.3, 0.6); y += cos(1.0 + x/3.5)*0.5; y * 0.25 * fade;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 2383,
+  "fuelDensityIncrease": 0.3
+}

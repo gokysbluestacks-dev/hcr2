@@ -1,0 +1,2199 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "dark10",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.2130517959594727,
+                2.158353805541992,
+                -7.080173492431641,
+                -12.72292709350586,
+                -10.08675289154053,
+                -15.59983062744141,
+                -18.21676826477051,
+                -19.38766479492188,
+                -19.72895812988281
+              ],
+              "x": [
+                0.0,
+                5.415594100952148,
+                14.82113456726074,
+                24.58660888671875,
+                35.62513732910156,
+                45.64028549194336,
+                53.53992462158203,
+                61.69722747802734,
+                72.22055053710938,
+                81.96109008789062
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -11.08182048797607,
+                -11.8231372833252,
+                -12.2373104095459,
+                -13.37948417663574,
+                -13.12192916870117,
+                -10.43770027160645
+              ],
+              "x": [
+                57.28973007202148,
+                57.53751373291016,
+                58.40857696533203,
+                71.83438110351562,
+                75.49562072753906,
+                81.03919982910156
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -11.08182048797607,
+                -10.58283996582031,
+                -10.79338264465332,
+                -11.13272380828857,
+                -11.06818771362305,
+                -9.76930046081543,
+                -10.26420021057129
+              ],
+              "x": [
+                57.28973007202148,
+                57.59053039550781,
+                61.33811950683594,
+                66.56550598144531,
+                73.97032928466797,
+                79.67400360107422,
+                81.00990295410156
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 22.26586723327637,
+        "x": -67.13681030273438
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark11",
+      "fixture": [
+        {
+          "name": "surface_top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -2.764190912246704,
+                -2.241300106048584,
+                -2.193230152130127,
+                -2.601780891418457,
+                -3.755380868911743,
+                -4.780058860778809,
+                -5.269035816192627
+              ],
+              "x": [
+                28.02348136901856,
+                28.32080078125,
+                29.72102928161621,
+                32.96554565429688,
+                37.08060455322266,
+                42.56400680541992,
+                43.75479888916016
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -2.764190912246704,
+                -3.359040021896362,
+                -3.617244243621826,
+                -5.786559581756592,
+                -6.342807769775391,
+                -5.374990463256836
+              ],
+              "x": [
+                28.02348136901856,
+                28.2012996673584,
+                28.52421760559082,
+                36.84616851806641,
+                40.27457809448242,
+                43.75979614257813
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top3",
+          "chain": {
+            "vertices": {
+              "y": [
+                -18.07079696655273,
+                -17.46725273132324,
+                -14.65620040893555,
+                -18.46454620361328,
+                -20.53397560119629,
+                -26.3178653717041
+              ],
+              "x": [
+                85.51036071777344,
+                85.98448944091797,
+                88.69572448730469,
+                92.65643310546875,
+                95.48430633544922,
+                104.6395492553711
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.4284439086914063,
+                -1.145065307617188,
+                -3.179084777832031,
+                -9.856880187988281,
+                -13.68360042572022,
+                -16.4153003692627,
+                -14.39350032806397,
+                -11.95180034637451,
+                -11.55910015106201,
+                -12.62390041351318,
+                -14.37899971008301,
+                -19.60499954223633,
+                -20.19209671020508,
+                -22.46220016479492,
+                -30.34782218933106,
+                -32.07502746582031,
+                -30.57340621948242,
+                -33.04280090332031,
+                -34.03442001342773
+              ],
+              "x": [
+                0.0,
+                5.71624755859375,
+                9.199966430664062,
+                13.76593017578125,
+                23.84760093688965,
+                30.55620002746582,
+                41.36370086669922,
+                47.31000137329102,
+                50.89770126342773,
+                53.05849838256836,
+                56.90750122070313,
+                59.61439895629883,
+                66.1897964477539,
+                69.410400390625,
+                73.83297729492188,
+                86.78263092041016,
+                96.02760314941406,
+                107.2152252197266,
+                113.0989990234375,
+                116.5131454467773
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -18.07079696655273,
+                -18.78333854675293,
+                -23.26319122314453,
+                -25.86445808410645,
+                -26.4204044342041
+              ],
+              "x": [
+                85.51036071777344,
+                85.8205795288086,
+                89.46415710449219,
+                95.15963745117188,
+                104.6138763427734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top3"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top2",
+          "chain": {
+            "vertices": {
+              "y": [
+                -8.387200355529785,
+                -7.150489807128906,
+                -5.514820098876953,
+                -4.151279926300049,
+                -4.6774001121521,
+                -7.909860134124756
+              ],
+              "x": [
+                59.93999862670898,
+                60.26010131835938,
+                63.63600158691406,
+                71.53520202636719,
+                76.48500061035156,
+                83.41500091552734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -8.387200355529785,
+                -9.266599655151367,
+                -13.6653995513916,
+                -13.83030033111572,
+                -8.08333969116211
+              ],
+              "x": [
+                59.93999862670898,
+                60.88859939575195,
+                69.43419647216797,
+                79.85459899902344,
+                83.44429779052734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top2"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 2.688754081726074,
+        "x": 20.11249542236328
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark13",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -5.314356803894043,
+                -6.656234741210938,
+                -5.614356994628906,
+                -2.09490966796875,
+                -0.1224755048751831,
+                1.449043035507202,
+                1.261301279067993,
+                2.967767953872681,
+                1.40043842792511,
+                -3.872527360916138,
+                -7.531284332275391,
+                -4.713399887084961,
+                -11.73209953308106,
+                -9.70166015625,
+                -3.640429973602295
+              ],
+              "x": [
+                0.0,
+                9.292179107666016,
+                14.15927124023438,
+                19.17864990234375,
+                24.0120906829834,
+                28.83556938171387,
+                33.35260009765625,
+                38.29783630371094,
+                43.39243316650391,
+                47.79855346679688,
+                53.98366928100586,
+                62.02351379394531,
+                74.82129669189453,
+                85.58219909667969,
+                96.75589752197266,
+                114.484001159668
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "surface_top",
+          "chain": {
+            "vertices": {
+              "y": [
+                9.094610214233398,
+                10.46249961853027,
+                11.93490028381348,
+                14.13529968261719,
+                17.08320045471191,
+                19.41119956970215,
+                19.79960060119629,
+                17.96470069885254
+              ],
+              "x": [
+                7.581920146942139,
+                7.706039905548096,
+                10.06270027160645,
+                18.74600028991699,
+                24.23579978942871,
+                26.87800025939941,
+                28.64599990844727,
+                30.33740043640137
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                9.094610214233398,
+                7.862659931182861,
+                11.00749969482422,
+                13.86149978637695,
+                16.77190017700195,
+                17.96470069885254
+              ],
+              "x": [
+                7.581920146942139,
+                9.068070411682129,
+                18.347900390625,
+                28.11090087890625,
+                30.26239967346191,
+                30.33740043640137
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top2",
+          "chain": {
+            "vertices": {
+              "y": [
+                30.62849235534668,
+                31.17669105529785,
+                34.60868072509766,
+                35.20466613769531,
+                35.58943176269531,
+                35.02005767822266,
+                33.33380889892578,
+                29.51034736633301,
+                25.51417541503906
+              ],
+              "x": [
+                31.86973190307617,
+                32.1113166809082,
+                36.74260711669922,
+                40.77267456054688,
+                48.2274055480957,
+                54.43260955810547,
+                59.50672149658203,
+                64.86882019042969,
+                69.97709655761719
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                30.62849235534668,
+                28.49052619934082,
+                25.67822265625,
+                23.1825065612793,
+                20.17759323120117,
+                18.88397216796875,
+                25.51417541503906
+              ],
+              "x": [
+                31.86973190307617,
+                32.37360000610352,
+                34.77497100830078,
+                44.25001907348633,
+                53.96770095825195,
+                65.24945068359375,
+                69.97709655761719
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top2"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top",
+          "chain": {
+            "vertices": {
+              "y": [
+                9.094606399536133,
+                10.46253204345703,
+                11.93488121032715,
+                14.13528728485107,
+                17.08324241638184,
+                19.41117668151856,
+                19.79964637756348,
+                17.96470260620117
+              ],
+              "x": [
+                7.581916809082031,
+                7.706035614013672,
+                10.06267070770264,
+                18.74595451354981,
+                24.23579597473145,
+                26.87801551818848,
+                28.64596557617188,
+                30.3374195098877
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                9.094606399536133,
+                7.862659454345703,
+                11.00754451751709,
+                13.86154937744141,
+                16.77189254760742,
+                17.96470260620117
+              ],
+              "x": [
+                7.581916809082031,
+                9.068071365356445,
+                18.34787940979004,
+                28.11094474792481,
+                30.26237106323242,
+                30.3374195098877
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": -43.49318313598633,
+        "x": 216.6008758544922
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark12",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -1.323358535766602,
+                -0.4952460527420044,
+                1.499990940093994,
+                1.849590301513672,
+                -3.400733947753906,
+                -9.127132415771484,
+                -13.23023414611816,
+                -14.39764404296875,
+                -14.90188789367676,
+                -14.84280776977539,
+                -13.99422454833984
+              ],
+              "x": [
+                0.0,
+                7.929787635803223,
+                17.91332054138184,
+                23.98789596557617,
+                29.71731567382813,
+                34.5749626159668,
+                40.39547348022461,
+                47.60028076171875,
+                52.62802124023438,
+                56.71931457519531,
+                61.74159240722656,
+                68.85260772705078
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -1.240745544433594,
+                -2.042699813842773,
+                -2.500051498413086,
+                -4.108078002929688,
+                -6.185689449310303,
+                -4.471138954162598,
+                -1.941083908081055
+              ],
+              "x": [
+                42.98439025878906,
+                43.23300933837891,
+                43.94683837890625,
+                49.28614807128906,
+                55.58580780029297,
+                63.37721252441406,
+                65.3533935546875
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "name": "islandSurface",
+              "string": "surface_top"
+            },
+            {
+              "name": "islandTheme",
+              "string": "road"
+            },
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "surface_top",
+          "chain": {
+            "vertices": {
+              "y": [
+                -1.240745544433594,
+                -0.6584419012069702,
+                -0.9525775909423828,
+                -2.104938507080078,
+                -2.682340621948242,
+                -3.241904258728027,
+                -2.634235143661499,
+                -1.176239132881165,
+                -1.941083908081055
+              ],
+              "x": [
+                42.98439025878906,
+                43.50796508789063,
+                46.03271484375,
+                50.12614440917969,
+                52.92860412597656,
+                57.62434768676758,
+                60.76087188720703,
+                64.89128112792969,
+                65.3533935546875
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "circle": {
+            "radius": 0.5,
+            "center": {
+              "y": 1.923978805541992,
+              "x": 25.39819717407227
+            }
+          },
+          "name": "coinSpawn",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": -30.66373825073242,
+        "x": 144.6023254394531
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark2",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.387939453125,
+                -3.179084777832031,
+                -4.937168121337891,
+                -6.488676071166992,
+                -6.491649627685547,
+                -4.484237670898438,
+                -2.183280944824219,
+                -0.3024826049804688,
+                -0.9598236083984375,
+                -3.572700500488281,
+                -5.876136779785156,
+                -5.898345947265625
+              ],
+              "x": [
+                0.0,
+                7.180953979492188,
+                13.76593017578125,
+                18.48476982116699,
+                26.0506706237793,
+                33.94058227539063,
+                39.65964889526367,
+                41.518798828125,
+                43.25237274169922,
+                48.21183013916016,
+                53.79979705810547,
+                63.51662445068359,
+                71.10311889648438
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 109.7028350830078,
+        "x": 20.58285331726074
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark8",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.4040422439575195,
+                1.387862920761108,
+                2.85064697265625,
+                -3.199278354644775,
+                -3.231490135192871,
+                -0.3675293922424316,
+                -0.5347585678100586
+              ],
+              "x": [
+                0.0,
+                3.952096939086914,
+                7.278790473937988,
+                10.83837127685547,
+                16.41743087768555,
+                20.64886856079102,
+                23.11336326599121,
+                28.8599967956543
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.9950120449066162,
+                -0.9834880828857422,
+                -3.894103050231934,
+                -3.999094486236572
+              ],
+              "x": [
+                23.57510566711426,
+                12.74044036865234,
+                15.76063823699951,
+                21.53885650634766
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 37.46223068237305,
+        "x": 69.3117904663086
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark9",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.2956781387329102,
+                -1.568828582763672,
+                -2.609058380126953,
+                -3.473312854766846,
+                -4.2297682762146,
+                -3.796463489532471,
+                -2.611693382263184,
+                -1.131857872009277,
+                0.1613044738769531,
+                1.299007534980774,
+                1.598785996437073,
+                0.5860925912857056,
+                -1.388274192810059,
+                -4.577255725860596,
+                -7.103967666625977,
+                -9.491460800170898,
+                -11.08518028259277,
+                -12.09526443481445,
+                -12.24018478393555,
+                -10.31374549865723,
+                -10.47569465637207,
+                -12.17008399963379,
+                -12.69281959533691,
+                -10.34890747070313,
+                -16.46286392211914,
+                -13.18889236450195,
+                -13.23438262939453,
+                -12.69047546386719,
+                -10.77410507202148,
+                -9.792875289916992,
+                -9.642045974731445,
+                -9.707582473754883,
+                -9.922977447509766,
+                -3.82801628112793,
+                -3.923822402954102,
+                -1.847358703613281
+              ],
+              "x": [
+                0.0,
+                2.255512714385986,
+                5.308006286621094,
+                7.320582389831543,
+                10.53160667419434,
+                14.71317291259766,
+                17.46582794189453,
+                21.14606475830078,
+                24.13855743408203,
+                26.75890350341797,
+                31.06186676025391,
+                35.68140029907227,
+                43.01527404785156,
+                48.6566162109375,
+                53.64067077636719,
+                58.84280395507813,
+                63.60671234130859,
+                67.22599792480469,
+                70.10948944091797,
+                73.16807556152344,
+                78.61792755126953,
+                83.84156036376953,
+                87.85248565673828,
+                90.95274353027344,
+                95.59573364257812,
+                108.6224060058594,
+                122.9018630981445,
+                131.8698425292969,
+                136.2079315185547,
+                140.7125854492188,
+                143.0631713867188,
+                145.8179168701172,
+                150.3236846923828,
+                165.1325378417969,
+                177.0844116210938,
+                183.6712493896484,
+                192.0413970947266
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -11.11420059204102,
+                -11.10267639160156,
+                -13.57237243652344,
+                -13.57561302185059
+              ],
+              "x": [
+                95.72727966308594,
+                84.79085540771484,
+                88.79464721679688,
+                93.25011444091797
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 36.65544128417969,
+        "x": 106.9694747924805
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark7",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.04058027267456055,
+                -5.109864234924316,
+                -8.71440315246582,
+                -13.70905685424805,
+                -11.35372352600098,
+                -10.97343921661377,
+                -11.15787220001221
+              ],
+              "x": [
+                0.0,
+                2.208847045898438,
+                7.760345458984375,
+                11.17435646057129,
+                20.53120803833008,
+                31.80253791809082,
+                37.16474914550781,
+                42.01289367675781
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 49.45516586303711,
+        "x": 24.45774841308594
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark6",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.3184185028076172,
+                -2.656224727630615,
+                -6.329598426818848,
+                -12.0614185333252,
+                -13.12464141845703,
+                -12.72133350372315,
+                -7.274476051330566,
+                -7.334501266479492
+              ],
+              "x": [
+                0.0,
+                1.688823938369751,
+                5.211671829223633,
+                8.541804313659668,
+                17.0435791015625,
+                22.92582130432129,
+                26.68887138366699,
+                32.43515777587891,
+                35.46987915039063
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 62.15671539306641,
+        "x": -19.22461128234863
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark3",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                1.435829162597656,
+                1.584342956542969,
+                0.6704351902008057,
+                -3.630912780761719,
+                -4.772218227386475,
+                -4.316286087036133,
+                -4.254541397094727,
+                -4.089303016662598
+              ],
+              "x": [
+                0.0,
+                5.747955322265625,
+                9.463485717773438,
+                14.13169193267822,
+                21.73776626586914,
+                29.65444946289063,
+                34.34183120727539,
+                38.65576934814453,
+                42.64074325561523
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 103.674934387207,
+        "x": 99.68668365478516
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark5",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.6193408966064453,
+                -1.954358577728272,
+                -1.726151466369629,
+                -0.7332406044006348,
+                -1.215608596801758,
+                -4.596155166625977,
+                -8.20571231842041,
+                -6.876932144165039,
+                -3.183802127838135,
+                -2.796566009521484,
+                -2.750646591186523
+              ],
+              "x": [
+                0.0,
+                4.143302917480469,
+                8.269181251525879,
+                13.19518184661865,
+                17.74053764343262,
+                21.79789543151856,
+                27.32182312011719,
+                36.09113311767578,
+                41.32412338256836,
+                45.38570404052734,
+                48.10341644287109,
+                49.35062408447266
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 65.693603515625,
+        "x": -73.18033599853516
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark4",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.03476238250732422,
+                0.1614742279052734,
+                -1.430346488952637,
+                -6.144245147705078,
+                -7.424646377563477,
+                -7.421785354614258,
+                -4.595333099365234,
+                -5.707900047302246,
+                -10.61777877807617,
+                -11.95766067504883,
+                -10.46518135070801,
+                -8.210172653198242,
+                -7.720892906188965,
+                -12.58946132659912,
+                -13.29399108886719,
+                -12.36585807800293,
+                -12.40130043029785,
+                -9.513052940368652,
+                8.537647247314453
+              ],
+              "x": [
+                0.0,
+                4.111500263214111,
+                8.479530334472656,
+                12.25490951538086,
+                19.0849666595459,
+                26.41020965576172,
+                29.21213531494141,
+                34.52532577514648,
+                40.54827117919922,
+                45.76409149169922,
+                52.92964172363281,
+                58.08269500732422,
+                63.98223876953125,
+                73.20333099365234,
+                83.55137634277344,
+                91.27809143066406,
+                102.5057601928711,
+                109.4547271728516,
+                127.169189453125,
+                155.1581726074219
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 99.8571548461914,
+        "x": 148.9336090087891
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "dark1",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.576141357421875,
+                -2.874046325683594,
+                -1.216445922851563,
+                -1.747673034667969,
+                -5.059547424316406,
+                -7.132301330566406,
+                -10.73040008544922,
+                -10.10002899169922,
+                -10.20379638671875,
+                -11.96815490722656,
+                -14.04779815673828,
+                -15.49261474609375,
+                -16.65113067626953,
+                -23.24923706054688,
+                -24.06118774414063,
+                -21.99747467041016,
+                -20.57183837890625,
+                -19.47971343994141
+              ],
+              "x": [
+                0.0,
+                2.973831176757813,
+                8.442977905273438,
+                13.9598388671875,
+                17.42488479614258,
+                24.15900039672852,
+                28.36138725280762,
+                39.24343490600586,
+                43.69038391113281,
+                46.97129058837891,
+                50.41226577758789,
+                54.24769973754883,
+                57.07553482055664,
+                62.88751220703125,
+                75.72972106933594,
+                80.3143539428711,
+                84.7889175415039,
+                88.41667938232422,
+                91.43404388427734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 128.7501678466797,
+        "x": -75.91191101074219
+      },
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ]
+}

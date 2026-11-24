@@ -1,0 +1,76 @@
+{
+  "blocks": [
+    {
+      "forcedExpr": "index < 3 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 30,
+      "weight": 0.01,
+      "length": 70,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 5,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "length": 20,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": {
+    "localize": "Description of a level",
+    "value": "The perfect place to start exploring the wonders of long distance travel. Are we there yet?"
+  },
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var origX := x; x*=1.60; x+=70.0; var y := -1 + sin(x/25.0+cos(x/32.14))*4*clamp(0, x*0.00235, 1.0); y += cos(x*0.8+(sin(x*0.35)))*0.2*clamp(0, x*0.0015, 1.0); y += cos(3.1 + x/2.5)*0.2*clamp(0, x*0.00215, 1.0); y += cos(2.0 + x/3.2)*0.5*clamp(0, x*0.00215, 1.0); y += cos(0.8 + x/4.6)*1.2*clamp(0, x*0.00095, 1.0); y += cos(2.3 + x/6.0)*1.2*clamp(0, x*0.00025, 1.0); y += cos(1.1 + x/7.5)*1.0*clamp(0, x*0.00025, 1.0); y += cos(3.5 + x/9.5)*1.0*clamp(0, x*0.00055, 1.0); y += cos(4.9 + x/11.5)*1.0*clamp(0, x*0.00055, 1.0); y += cos(1.8 + x/13.5)*1.0*clamp(0, x*0.00045, 1.0); y += cos(11.1 + x/25.2)*1.0*clamp(0, x*0.00050, 1.0); y += cos(x/27.2)*3.0*clamp(0, (origX-3700)*0.001, 3.0); y += cos(x/35.2)*4.0*clamp(0, (origX-4200)*0.001, 3.0); y *= 0.45+clamp(0.0, x/2000.0, 0.9); y += 1.5*cos(1.5 + x/12.0) * clamp(0.0, (origX+20)/10, 1.0); y += clamp(0, 10.0 - 0.5*abs(origX - 812), 10.0); y; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "title": {
+    "localize": "Name of an adventure level. Use the same translation as in Hill Climb Racing 1 if possible",
+    "value": "Countryside"
+  },
+  "unlocks": [
+    "countryside_fixed01"
+  ],
+  "levelTier": 0,
+  "buttonId": "countryside_distance_01",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "blockRandomSeed": 104,
+  "starCriteria": [],
+  "coinMultiplier": 1.25,
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "fuelDensityIncrease": 0.3,
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music4",
+    "audio/game-music4"
+  ],
+  "levelType": "distance",
+  "id": "countryside_distance_01_14",
+  "jsonBlockFile": "countryside_distance_blocks.json",
+  "fuelDensity": 3.0
+}

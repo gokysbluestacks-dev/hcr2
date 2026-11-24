@@ -1,0 +1,78 @@
+{
+  "buttonId": "city_highway_fixed02",
+  "gfxDefinitionFile": "city_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_city.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "city_highway02_1",
+  "jsonBlockFile": "city_highway_02_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Tunnels",
+    "value": "Heat Club"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "tunnel1",
+    "algorithm",
+    "algorithm",
+    "tunnel2",
+    "algorithm",
+    "algorithm",
+    "tunnel3",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 20,
+      "weight": 0.01,
+      "length": 45,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    37.0,
+    33.0,
+    29.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "city_fixed02"
+  ],
+  "levelDistance": 650,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": " x := max(0.0, x); x += 12; var origX := x; x *= 0.40; var y := 0; y += cos(1.2 + x/0.8)*0.0; y += cos(2.7 + x/1.2)*0.0; y += cos(2.3 + x/1.5)*0.3; y += cos(1.0 + x/2.0)*0.3; y += cos(1.3 + x/2.5)*0.0; y += cos(2.1 + x/4.3)*1.0; y += cos(1.6 + x/6.0)*1.0; y += cos(1.3 + x/12.5)*1.0; y -= cos(0.5 + x/13.5)*0.5; y -= cos(0.4 + x/25.2)*0.5; y *= 3.0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

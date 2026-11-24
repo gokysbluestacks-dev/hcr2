@@ -1,0 +1,1579 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "blockramp4",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.02831017971038818,
+                -0.05475366115570068,
+                -0.1325042247772217,
+                -0.2656412124633789,
+                -0.4183764457702637,
+                -0.8006949424743652,
+                -1.132601022720337,
+                -1.441987037658691,
+                -1.830644369125366,
+                -2.375672340393066,
+                -2.751243591308594,
+                -2.996167659759521,
+                -3.197427272796631,
+                -3.500831127166748,
+                -3.818591594696045,
+                -4.254597663879395,
+                -4.722338676452637,
+                -5.206038951873779,
+                -5.587075710296631,
+                -6.020238876342773,
+                -6.790802001953125,
+                -7.515149116516113,
+                -7.78897762298584,
+                -8.255716323852539,
+                -8.66100788116455,
+                -8.87423038482666,
+                -9.526714324951172,
+                -9.967458724975586,
+                -10.12191295623779,
+                -10.26848125457764,
+                -10.3228874206543,
+                -10.38039207458496,
+                -10.41084957122803,
+                -10.44594383239746,
+                -10.56439304351807,
+                -10.68070507049561,
+                -10.71889591217041,
+                -10.73344898223877,
+                -10.7663516998291,
+                -11.03743553161621,
+                -11.40190887451172,
+                -11.56577968597412,
+                -11.687668800354
+              ],
+              "x": [
+                0.0,
+                0.2183974385261536,
+                0.4006093740463257,
+                0.7122231125831604,
+                1.053371787071228,
+                1.376361131668091,
+                1.978126645088196,
+                2.447675228118896,
+                2.858698129653931,
+                3.485317707061768,
+                4.416644096374512,
+                5.20442533493042,
+                5.861800670623779,
+                6.607814788818359,
+                7.365145206451416,
+                7.977198600769043,
+                8.875844955444336,
+                9.601032257080078,
+                10.19842529296875,
+                10.90468883514404,
+                12.14218235015869,
+                13.79073143005371,
+                15.32253074645996,
+                16.06319808959961,
+                17.75286674499512,
+                19.2352237701416,
+                19.81193923950195,
+                21.19083595275879,
+                22.17886161804199,
+                22.5966625213623,
+                23.79105758666992,
+                25.36441802978516,
+                26.03134536743164,
+                27.68173980712891,
+                28.20980072021484,
+                29.45588493347168,
+                30.27752113342285,
+                30.71989059448242,
+                31.41373062133789,
+                33.10138320922852,
+                34.93283843994141,
+                36.16229248046875,
+                37.31648254394531,
+                38.51409149169922
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": -58.40876770019531,
+        "x": 251.8075866699219
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "blockramp2",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.276799738407135,
+                -0.5545804500579834,
+                -0.7715129852294922,
+                -1.037825107574463,
+                -1.635262489318848,
+                -2.246412992477417,
+                -2.748416423797607,
+                -3.079959869384766,
+                -3.145733833312988
+              ],
+              "x": [
+                0.0,
+                2.095278978347778,
+                3.529753923416138,
+                4.649998188018799,
+                7.113333225250244,
+                9.542816162109375,
+                12.02460384368896,
+                14.28688526153564,
+                16.02299880981445,
+                27.16444969177246
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": -54.72593688964844,
+        "x": 164.468994140625
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "blockramp",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.3999519646167755,
+                -0.5373339653015137,
+                -0.6446229815483093,
+                -0.6708299517631531,
+                -1.029884099960327,
+                -1.160766363143921,
+                -1.010654926300049,
+                -1.172298908233643,
+                -1.399364471435547
+              ],
+              "x": [
+                0.0,
+                2.440862655639648,
+                3.895512580871582,
+                5.03151273727417,
+                7.509062767028809,
+                9.985027313232422,
+                12.52499675750732,
+                14.7496976852417,
+                16.5097770690918,
+                19.02746963500977
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": -55.4098014831543,
+        "x": 136.4880065917969
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -69.57530975341797,
+        "x": 278.1299133300781
+      },
+      "angle": 0.1759743541479111,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -67.46186065673828,
+        "x": 272.3447570800781
+      },
+      "angle": -0.02766557037830353,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -56.22009658813477,
+        "x": 176.0811920166016
+      },
+      "angle": -0.2320466935634613,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -56.8565673828125,
+        "x": 178.62646484375
+      },
+      "angle": -0.2320466935634613,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -57.69286346435547,
+        "x": 185.6360931396484
+      },
+      "angle": -0.3767893016338348,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -55.20689392089844,
+        "x": 175.0226440429688
+      },
+      "angle": 0.1962249428033829,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -67.3870620727539,
+        "x": 275.0101928710938
+      },
+      "angle": 0.1045595556497574,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -57.16693878173828,
+        "x": 180.9571533203125
+      },
+      "angle": -0.01665548980236053,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -57.02462005615234,
+        "x": 148.2527160644531
+      },
+      "angle": 0.1417513191699982,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -57.25474548339844,
+        "x": 183.5877838134766
+      },
+      "angle": -0.01665548980236053,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -55.63127136230469,
+        "x": 172.3800964355469
+      },
+      "angle": 0.1477145403623581,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -57.30825424194336,
+        "x": 145.6083526611328
+      },
+      "angle": 0.08867259323596954,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -56.57731628417969,
+        "x": 150.8829956054688
+      },
+      "angle": 0.1991955637931824,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -58.69541549682617,
+        "x": 188.0622100830078
+      },
+      "angle": -0.3767893016338348,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -66.87992858886719,
+        "x": 267.1268615722656
+      },
+      "angle": -0.1306319385766983,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -67.03185272216797,
+        "x": 277.6686096191406
+      },
+      "angle": 0.1829385310411453,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -55.9904670715332,
+        "x": 153.4828643798828
+      },
+      "angle": 0.2521745562553406,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -55.91852569580078,
+        "x": 169.7222900390625
+      },
+      "angle": 0.08984846621751785,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -67.23536682128906,
+        "x": 269.6845092773438
+      },
+      "angle": -0.1219751834869385,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp4",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": -56.09997940063477,
+        "x": 167.1082611083984
+      },
+      "angle": 0.07108289003372192,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.292686581611633,
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633
+              ],
+              "x": [
+                1.292686581611633,
+                1.292686581611633,
+                -1.292686581611633,
+                -1.292686581611633
+              ]
+            }
+          },
+          "density": 0.6,
+          "friction": 0.8,
+          "name": "fixture0",
+          "filter-categoryBits": 8,
+          "restitution": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "touchDestroyJoint",
+          "string": "*"
+        },
+        {
+          "float": 0.05,
+          "name": "touchDestroyJointDelay"
+        }
+      ],
+      "path": "o_blockramp2",
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ],
+  "image": [
+    {
+      "body": 15,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 22,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 9,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 3,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 20,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 12,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 11,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 5,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 17,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 19,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 14,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 13,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 16,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 6,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 21,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 4,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 8,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 7,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 10,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    },
+    {
+      "body": 18,
+      "opacity": 1,
+      "scale": 0.9755459427833557,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0.005792353302240372,
+        "x": 0.01533625088632107
+      },
+      "customProperties": [
+        {
+          "name": "model",
+          "string": "models/box/box_scaled.obj"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "models/barn/icon-model.png",
+      "name": "image0"
+    }
+  ]
+}

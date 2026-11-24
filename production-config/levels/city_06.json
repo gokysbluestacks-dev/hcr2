@@ -1,0 +1,72 @@
+{
+  "buttonId": "city_fixed06",
+  "gfxDefinitionFile": "city_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_city.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "city06_0",
+  "jsonBlockFile": "city_blocks.json",
+  "title": "City 6",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 1,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "junk3",
+    "algorithm",
+    "junk5",
+    "algorithm",
+    "algorithm",
+    "junk6",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 7,
+      "weight": 0.01,
+      "length": 25,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    36.0,
+    33.0,
+    30.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "city_fixed07"
+  ],
+  "levelDistance": 430,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "var fade := clamp(0.0, x/50, 1.0); x += 350; var origX := x*2.5; x *= 5.7; var tY := 0; tY += cos((3.14159+x/80.0)*4)*0.5; tY -= cos((3.14159+x/73.0)*1)*1.3; tY += cos((3.14159+x/57.0)/2)*1.8*clamp(0, origX/300.0, 1.0); tY += cos((3.14159+x/78.0)/3)*1.6*clamp(0, origX/600.0, 1.0); tY += cos((3.14159+x/57.0)/7)*2.6*clamp(0, origX/1200.0, 1.0); tY -= cos((3.14159+x/86.0)/4)*1.35*clamp(0, origX/1400.0, 1.0); tY += sin((3.14159+x/67.0)/4)*1.25*clamp(0, origX/1500.0, 1.0);  var t := clamp(0.0, (sin(origX/225.0)*0.5+0.5)^8.0, 1.0); var y := tY + t*(tY*0.75 - tY);  y *= 1.35 + clamp(0.0, origX/1350.0, 2.25); y * fade;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

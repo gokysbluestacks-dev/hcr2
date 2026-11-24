@@ -1,0 +1,90 @@
+{
+  "buttonId": "big_air_cup_02",
+  "gfxDefinitionFile": "forest2_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_forest.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "big_air_cup_02_01",
+  "jsonBlockFile": "big_air_cup_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Seesaws",
+    "value": "Seesaw Road"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "clash5",
+    "bridge",
+    "clash6",
+    "clash7",
+    "clash8",
+    "clash9"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 60,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 5,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "length": 20,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 320,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

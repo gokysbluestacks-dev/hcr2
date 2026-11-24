@@ -1,0 +1,95 @@
+{
+  "buttonId": "countryside_fixed08",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside08_2",
+  "jsonBlockFile": "countryside_blocks.json",
+  "title": "Countryside 8",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 3,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "ditch5",
+    "barn",
+    "algorithm",
+    "ditch8",
+    "algorithm",
+    "water10",
+    "algorithm",
+    "water12",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "normal",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 10,
+      "weight": 0.01,
+      "length": 45,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "range": {
+        "start": 0,
+        "end": 330
+      },
+      "length": 22,
+      "weight": 1.0,
+      "lengthVar": 5,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var a := asin(offset_y / -20); var p := length * a / (3.14159 - a); var x2 := 3.14159 * x / (length + p); -20.0*sin(x2);",
+      "yOffsetVar": 5,
+      "yOffset": 0,
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    57.0,
+    50.0,
+    43.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [],
+  "levelDistance": 319,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": "var fade := clamp(0.0, x/50, 1.0); x*=1.60; x+=570.0; var y := -1 + sin(x/25.0+cos(x/32.14))*4*clamp(0, x*0.00275, 1.0); y += cos(x*0.8+(sin(x*0.35)))*0.2*clamp(0, x*0.0015, 1.0); y += cos(3.1 + x/2.5)*0.2*clamp(0, x*0.00275, 1.0); y += cos(2.0 + x/3.2)*0.5*clamp(0, x*0.00275, 1.0); y += cos(0.8 + x/4.6)*1.2*clamp(0, x*0.00125, 1.0); y += cos(2.3 + x/6.0)*1.2*clamp(0, x*0.00125, 1.0); y += cos(1.1 + x/7.5)*1.0*clamp(0, x*0.00085, 1.0); y += cos(3.5 + x/9.5)*1.0*clamp(0, x*0.00075, 1.0); y += cos(4.9 + x/11.5)*1.0*clamp(0, x*0.00065, 1.0); y += cos(1.8 + x/13.5)*1.0*clamp(0, x*0.00055, 1.0); y += cos(11.1 + x/25.2)*1.0*clamp(0, x*0.00055, 1.0); y *= 0.4+clamp(0.0, x/2500.0, 0.9); y * fade;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

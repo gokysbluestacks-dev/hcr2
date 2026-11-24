@@ -1,0 +1,99 @@
+{
+  "buttonId": "countryside_cup_fixed03",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside_cup_03_03",
+  "jsonBlockFile": "countryside_cup_03_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Road Nine",
+    "value": "Circuit 9"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "block",
+    "algorithm",
+    "algorithm",
+    "landing",
+    "bump",
+    "algorithm",
+    "algorithm",
+    "long",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 60,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 2,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "maxCount": 3,
+      "length": 19,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    35.0,
+    31.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 345,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; x *= 0.7; y += cos(1.0 + x/1.0)*0.5; y += cos(1.8 + x/1.7)*0.9; y += cos(0.1 + x/2.5)*1.7; y += cos(2.4 + x/3.2)*1.8; y += cos(0.9 + x/4.6)*1.4; y += cos(2.2 + x/6.0)*1.2; y += cos(0.9 + x/7.5)*1.0; y += cos(2.7 + x/9.5)*1.0; y += cos(1.2 + x/11.5)*1.0; y += cos(0.1 + x/13.5)*3.0; y += cos(1.1 + x/25.2)*1.5; y += -0.15*x; y *= 0.50; y *= clamp(0.0, x/10, 1.0); y += 1.0 - 1.0*clamp(0.0, x/10, 1.0); ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

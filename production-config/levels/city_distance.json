@@ -1,0 +1,76 @@
+{
+  "buttonId": "city_distance",
+  "gfxDefinitionFile": "city_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_city.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "distance",
+  "id": "city_distance_05",
+  "jsonBlockFile": "city_distance_blocks.json",
+  "title": {
+    "localize": "Name of an adventure level",
+    "value": "City"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "river5",
+    "algorithm",
+    "junk1c",
+    "algorithm",
+    "girder",
+    "algorithm"
+  ],
+  "coinMultiplier": 1.25,
+  "fuelDensity": 2.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 30,
+      "weight": 0.01,
+      "length": 54,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": {
+    "localize": "Description of a level",
+    "value": "Bill's favorite city neighborhood with tricky jumps and obstacles."
+  },
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    250.0,
+    750.0,
+    1500.0
+  ],
+  "distanceBonusIncrease": 200,
+  "coinSpawnDistance": 60,
+  "unlocks": [
+    "forest_fixed06"
+  ],
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " x := max(0.0, x); var origX := x*2.5; x *= 6.7; var tY := 0; tY += cos((3.14159+x/80.0)*4)*0.5; tY += cos((3.14159+x/73.0)*1)*1.6; tY += cos((3.14159+x/57.0)/2)*1.6*clamp(0, origX/300.0, 1.0); tY += cos((3.14159+x/78.0)/3)*1.6*clamp(0, origX/600.0, 1.0); tY += cos((3.14159+x/57.0)/7)*2.6*clamp(0, origX/1200.0, 1.0); tY += cos((3.14159+x/86.0)/4)*1.35*clamp(0, origX/1400.0, 1.0); tY += sin((3.14159+x/67.0)/4)*1.25*clamp(0, origX/1500.0, 1.0);  var t := clamp(0.0, pow(abs(sin(origX/100.0))*0.5+0.5, 8.0), 1.0); var y := tY + t*-0.95*tY; y *= 1.35+clamp(0.0, origX/1350.0, 2.25); ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 2183,
+  "fuelDensityIncrease": 0.15
+}

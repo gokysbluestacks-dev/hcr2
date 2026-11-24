@@ -1,0 +1,59 @@
+{
+  "buttonId": "countryside_fixed10",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside10_0devv",
+  "title": "Countryside 10",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    35.0,
+    31.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 300,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": "var fade := clamp(0.0, x/50, 1.0); var origX := x; x += 250.0; x *= 1.05; var y := cos(x/10.1)*0.3; y += cos(1.2 + x/0.8)*0.22; y += cos(2.7 + x/1.2)*0.42; y += cos(2.3 + x/1.5)*0.3; y += cos(1.0 + x/2.0)*0.3; y += cos(1.3 + x/2.5)*0.3; y += cos(2.1 + x/4.3)*4.3; y += cos(1.6 + x/6.0)*5.3; y += cos(1.3 + x/12.5)*1.3; y -= cos(0.5 + x/13.5)*0.2; y -= cos(0.4 + x/25.2)*0.2; y += cos(x*0.0752+(sin(x*0.18)))*1.5*clamp(x*0.00295, 0.3, 0.6); y -= cos(1.0 + x/3.5)*0.5; y += 0.01*origX; y * 0.21 * fade;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

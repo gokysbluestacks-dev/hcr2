@@ -1,0 +1,77 @@
+{
+  "buttonId": "easy_mine_01",
+  "logo": "ui/cocosstudio/elements/bg_mine.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "easy_mine_01",
+  "jsonBlockFile": "easy_mine_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternate translation: Underground",
+    "value": "Nose Miner"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "mine_gfx.json",
+  "fuelDensity": 4.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "cave": true,
+      "length": 60,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 360,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "fixedBlockOrder": [
+    "algorithm",
+    "start1",
+    "block1_2",
+    "block1_3",
+    "block1_4",
+    "algorithm",
+    "algorithm"
+  ],
+  "blockRandomSeed": 6262,
+  "caveBottomAlgorithm": {
+    "expr": "12+2*sin(x*0.1);",
+    "type": "expr"
+  },
+  "fuelDensityIncrease": 0.3
+}

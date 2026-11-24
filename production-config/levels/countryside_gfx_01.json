@@ -1,0 +1,563 @@
+{
+  "finishLine": {
+    "scale": 10.0,
+    "zOrder": 3,
+    "anchor": [
+      0.5,
+      0.2
+    ],
+    "texture": "textures/objects/finishline.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.5
+    ]
+  },
+  "islands": {
+    "cave": {
+      "sideTexture": "textures/terrain/terrain-ground_mayan.png",
+      "zBack": -2.0,
+      "surfaceTexture": "textures/terrain/terrain-ground_mayan.png",
+      "sideTextureTile": 0.15,
+      "surfaceTextureTile": 0.15,
+      "zFront": 2.0
+    }
+  },
+  "backgroundLayers": [
+    {
+      "innerScale": 0.5,
+      "sizeY": 1.0,
+      "texture": "textures/sky/sky-bg-countryside.png",
+      "yOffset": 0.45,
+      "zOrder": 2,
+      "type": "looping",
+      "yOffsetVar": 0,
+      "speed": [
+        0.75,
+        0.2
+      ]
+    },
+    {
+      "scale": [
+        0.1,
+        0.1
+      ],
+      "type": "looping",
+      "sizeY": 0.5,
+      "texture": "textures/parallaxes/bg_countryside-field.png",
+      "yOffset": 0.275,
+      "zOrder": 4,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0,
+        0
+      ],
+      "speed": [
+        1.5,
+        0.25
+      ]
+    },
+    {
+      "count": 1,
+      "type": "parallax",
+      "texture": "textures/props/prop_barnhill.png",
+      "yOffset": 0.525,
+      "zOrder": 6,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0.0,
+        0
+      ],
+      "speed": [
+        4.5,
+        0.4
+      ],
+      "xOffset": 50
+    },
+    {
+      "type": "looping",
+      "sizeY": 0.6,
+      "texture": "textures/parallaxes/bg_countryside-trees.png",
+      "yOffset": 0.0,
+      "zOrder": 5,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0.0,
+        0
+      ],
+      "speed": [
+        4.5,
+        0.4
+      ]
+    },
+    {
+      "count": 1,
+      "scale": [
+        1.5,
+        1.5
+      ],
+      "baseSpeedVar": [
+        0,
+        0
+      ],
+      "speed": [
+        0.25,
+        -0.25
+      ],
+      "texture": "textures/parallaxes/cloud3.png",
+      "yOffset": 1.1,
+      "zOrder": 2,
+      "forceQuad": true,
+      "yOffsetVar": 0.0,
+      "baseSpeed": [
+        1.0,
+        0
+      ],
+      "type": "parallax"
+    }
+  ],
+  "themes": [
+    {
+      "specular": 0.2,
+      "specularPower": 4.0,
+      "terrainSurfaceTexture": "textures/terrain/terrain-surface",
+      "surfaceParticles": "particles/dust3.plist",
+      "terrainCaveTexture": "textures/terrain/terrain-ground_mayan",
+      "friction": 0.6,
+      "terrainBehindPlayer": true,
+      "terrainTexture": "textures/terrain/terrain-ground",
+      "terrainHeight": 15.0,
+      "surfaceDepth": 2.0,
+      "surfaceHeight": 2.0,
+      "surfaceTextureScale": [
+        0.2,
+        1.0
+      ],
+      "surfaceOffset": 0.3,
+      "terrainCliffTexture": "textures/terrain/terrain-ground_countryside-cliff",
+      "ambient": 0.5,
+      "lightDirection": [
+        -1.0,
+        1.0
+      ],
+      "physicsDensity": 2,
+      "drawToEdge": true,
+      "textureScale": [
+        0.1,
+        0.1
+      ],
+      "singleEdgeTerrain": true
+    }
+  ],
+  "propGroups": [
+    {
+      "distance": 40,
+      "chunkCountVar": 2,
+      "chunkDistance": 4,
+      "randomSeed": 4,
+      "distanceVar": 8,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        1,
+        1
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "props": [
+        {
+          "scale": [
+            12,
+            12
+          ],
+          "zOffset": -0.5,
+          "texture": "textures/props/tree1.png",
+          "anchor": [
+            0.6,
+            0
+          ],
+          "range": {
+            "start": -1
+          },
+          "zOrder": 3,
+          "underground": true,
+          "yOffset": 0.0,
+          "scaleVar": [
+            4,
+            4
+          ]
+        }
+      ],
+      "chunkDistanceVar": 5,
+      "chunkCount": 1,
+      "defaultScale": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "distance": 12,
+      "chunkCountVar": 1,
+      "chunkDistance": 3,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 7,
+      "defaultZOrder": 14,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0.5,
+        0.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": 2.2,
+          "weight": 10,
+          "texture": "textures/props/bush2.png",
+          "yOffset": -8.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            7,
+            7
+          ],
+          "zOrder": 14,
+          "defaultScaleVar": [
+            2,
+            2
+          ],
+          "yOffsetVar": 1.5,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 1.2,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": -0.4,
+          "weight": 2,
+          "texture": "textures/props/prop_arrow.png",
+          "yOffset": 0.3,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            2,
+            2
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "scale": [
+            4,
+            4
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "texture": "textures/props/prop_sign.png",
+          "yOffset": 0,
+          "range": {
+            "start": 10
+          },
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 3,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 90.0,
+      "chunkCountVar": 1,
+      "chunkDistance": 1.2,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 40.0,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "scale": [
+            1.2,
+            1.2
+          ],
+          "zOffset": 0.6,
+          "texture": "textures/props/prop_cone.png",
+          "yOffset": 0,
+          "range": {
+            "start": -100
+          },
+          "zOrder": 9,
+          "yOffsetVar": 0,
+          "rotation": true,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "randomSeed": 6,
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        1,
+        1
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "props": [
+        {
+          "reactionAnimation": "reaction2",
+          "zOrder": 14,
+          "scale": [
+            3,
+            3
+          ],
+          "zOffset": 1.1,
+          "weight": 2,
+          "color": [
+            210,
+            210,
+            210
+          ],
+          "anchor": [
+            0.5,
+            0
+          ],
+          "reactionProbability": 0.5,
+          "range": {
+            "start": 10
+          },
+          "animation": "textures/animations/cow/cow_animation",
+          "scaleVar": [
+            0,
+            0
+          ],
+          "yOffsetVar": 2,
+          "yOffset": -2.5,
+          "reactionRange": [
+            0.1,
+            3.5
+          ],
+          "reactionSound": "cow-moo"
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 2,
+      "defaultScale": [
+        3,
+        3
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "randomSeed": 6,
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "props": [
+        {
+          "opacity": 90,
+          "zOrder": 13,
+          "scale": [
+            0.9,
+            0.9
+          ],
+          "zOffset": 1.1,
+          "color": [
+            10,
+            10,
+            10
+          ],
+          "texture": "textures/effects/cow-shadow.png",
+          "yOffset": -2.8,
+          "range": {
+            "start": 10
+          },
+          "scaleVar": [
+            0,
+            0
+          ],
+          "yOffsetVar": 2,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 2,
+      "defaultScale": [
+        3,
+        3
+      ]
+    }
+  ],
+  "walls": {
+    "wall": {
+      "contactFadeAmount": 0.0,
+      "zOffset": -0.8,
+      "sideTexture": "textures/terrain/terrain-ground_mayan.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.0,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zOrder": 3
+    },
+    "wall_front": {
+      "contactFadeAmount": 0.5,
+      "zOffset": 0.8,
+      "sideTexture": "textures/terrain/terrain-ground_mayan.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.02,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zOrder": 11
+    }
+  },
+  "includeTextures": [
+    {
+      "texture": "textures/props/prop_tire.png"
+    }
+  ],
+  "liquids": {
+    "water": {
+      "angularDrag": 1.0,
+      "sideTexture": "textures/terrain/water.png",
+      "velocityMul": 0.5,
+      "splashParticles": "particles/water_splash.plist",
+      "thickness": 0.7,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/water-surface.png",
+      "lift": 0.8,
+      "linearDrag": 0.2,
+      "splashParticleCount": 10,
+      "scrollSpeed": 1.0
+    },
+    "mud": {
+      "angularDrag": 10.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "velocityMul": 0.5,
+      "splashParticles": "particles/mud_splash.plist",
+      "thickness": 0.5,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "lift": 0.0,
+      "linearDrag": 10.0,
+      "splashParticleCount": 10,
+      "scrollSpeed": 0.0
+    },
+    "waterfall": {
+      "angularDrag": 0.1,
+      "sideTexture": "textures/terrain/waterfall.png",
+      "velocityMul": 0.9,
+      "flipVertical": true,
+      "shader": "water",
+      "thickness": 0.7,
+      "surfaceTexture": "textures/terrain/waterfall.png",
+      "lift": -0.1,
+      "linearDrag": 0.1,
+      "scrollSpeed": 3.0
+    }
+  },
+  "previewImage": "elements/adventurebg_countryside.png",
+  "jointMaterials": {
+    "rope": {
+      "width": 2.0,
+      "texture": "textures/objects/rope.png"
+    },
+    "wire": {
+      "width": 0.2,
+      "texture": "textures/objects/rope-steel.png"
+    }
+  },
+  "music": {
+    "default": {
+      "game-over-victory": [
+        "bgm_victory"
+      ],
+      "running": [
+        "bgm_countryside-race"
+      ],
+      "intro": [
+        "bgm_countryside-intro"
+      ],
+      "game-over": [
+        "bgm_finish"
+      ]
+    },
+    "distance": {
+      "running": [
+        "bgm_countryside-distance"
+      ],
+      "starting": [
+        "bgm_countryside-intro"
+      ],
+      "result-screen": [
+        "bgm_victory"
+      ]
+    }
+  }
+}

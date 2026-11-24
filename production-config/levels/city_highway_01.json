@@ -1,0 +1,62 @@
+{
+  "buttonId": "city_highway_fixed01",
+  "logo": "ui/cocosstudio/elements/bg_city.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "city_highway01_3",
+  "title": {
+    "localize": "Name of a level. Alternative name: Long Road",
+    "value": "Rubberist"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "city_gfx.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 45,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    37.0,
+    33.0,
+    29.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "city_fixed02"
+  ],
+  "levelDistance": 600,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": " x := max(0.0, x); var origX := x*2.5; x *= 6.7; var tY := 0; tY += cos((3.14159+x/80.0)*4)*0.5; tY += cos((3.14159+x/73.0)*1)*1.6; tY += cos((3.14159+x/57.0)/2)*1.6*clamp(0, origX/300.0, 1.0); tY += cos((3.14159+x/78.0)/3)*1.6*clamp(0, origX/600.0, 1.0); tY += cos((3.14159+x/57.0)/7)*2.6*clamp(0, origX/1200.0, 1.0); tY += cos((3.14159+x/86.0)/4)*1.35*clamp(0, origX/1400.0, 1.0); tY += sin((3.14159+x/67.0)/4)*1.25*clamp(0, origX/1500.0, 1.0);  var t := clamp(0.0, pow(abs(sin(origX/100.0))*0.5+0.5, 8.0), 1.0); var y := tY + t*-0.95*tY; y *= 1.35+clamp(0.0, origX/1350.0, 2.25); ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

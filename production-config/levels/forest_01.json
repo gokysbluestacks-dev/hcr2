@@ -1,0 +1,94 @@
+{
+  "buttonId": "forest_fixed01",
+  "gfxDefinitionFile": "forest2_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_forest.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "forest01_10",
+  "jsonBlockFile": "forest_01_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Forest Trail",
+    "value": "Fingerwoods"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "swamp",
+    "algorithm",
+    "jump",
+    "algorithm",
+    "algorithm",
+    "swamp3",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 1.0,
+      "lengthVar": 3,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "length": 16,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    38.0,
+    36.0,
+    33.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "forest_fixed02"
+  ],
+  "levelDistance": 370,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "var fade := clamp(0.0, x/50, 1.0); x *= (0.58 + 0.05*abs(sin(0.01*x))); x += 1250.0; var y := cos(x/10.1)*0.3; y += cos(2.3 + x/0.5)*0.1; y += cos(2.3 + x/1.5)*0.6; y += cos(1.0 + x/2.0)*0.6; y += cos(1.3 + x/2.5)*0.5; y += cos(1.3 + x/2.5)*0.5; y += cos(1.0 + x/3.5)*0.5; y += cos(0.5 + x/7.5)*0.8; y += cos(0.5 + x/13.5)*0.2; y += cos(1.5 + x/18.2)*2.2; y += cos(0.4 + x/25.2)*2.2; y += -0.01*x; y *= 0.8 * fade;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

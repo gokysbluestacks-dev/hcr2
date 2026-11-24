@@ -1,0 +1,80 @@
+{
+  "buttonId": "countryside_cup_fixed02",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "countryside_cup_02_03",
+  "jsonBlockFile": "countryside_cup_02_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Two Cows",
+    "value": "Four-Wheel Park"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "water",
+    "algorithm",
+    "water2",
+    "bump",
+    "algorithm",
+    "algorithm",
+    "water3",
+    "algorithm",
+    "algorithm",
+    "blockramp6",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 10,
+      "weight": 0.01,
+      "length": 30,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    35.0,
+    31.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 380,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; y += cos(0.1 + x/1.7)*0.6; y += cos(1.1 + x/2.5)*0.7; y += cos(0.3 + x/3.2)*1.8; y += cos(1.5 + x/4.6)*1.4; y += cos(1.0 + x/6.0)*1.2; y += cos(2.5 + x/7.5)*1.0; y += cos(3.0 + x/9.5)*1.0; y += cos(0.7 + x/11.5)*1.0; y += cos(1.8 + x/13.5)*3.0; y += cos(11.1 + x/25.2)*1.5; y += -0.18*x; y *= 0.55; y *= clamp(0.0, x/10, 1.0); y += 1.0 - 1.0*clamp(0.0, x/10, 1.0); ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

@@ -1,0 +1,209 @@
+{
+  "body": [
+    {
+      "position": {
+        "y": 0.05498579889535904,
+        "x": 0.359048992395401
+      },
+      "angle": -0.009769699536263943,
+      "name": "body0",
+      "massData-mass": 0.1925864666700363,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.4094560146331787,
+                -0.2480169981718063,
+                -0.2890250086784363,
+                -0.4358539879322052
+              ],
+              "x": [
+                1.252969980239868,
+                1.250419974327087,
+                -1.247760057449341,
+                -1.245749950408936
+              ]
+            }
+          },
+          "density": 0.5,
+          "friction": 0.6,
+          "filter-maskBits": 119,
+          "filter-categoryBits": 8,
+          "restitution": 0.1,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "massData-center": {
+        "y": -0.3453233540058136,
+        "x": 0.02221114747226238
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.1235671043395996
+    },
+    {
+      "linearVelocity": 0,
+      "name": "static",
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 0.3912459909915924,
+        "x": -0.8709679841995239
+      },
+      "angle": 0,
+      "type": 0
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 0,
+      "opacity": 1,
+      "file": "../textures/objects/bridge_ramp2.png",
+      "scale": 0.6160153150558472,
+      "angle": 0.009769700467586517,
+      "center": {
+        "y": 0,
+        "x": -0.02942020073533058
+      },
+      "corners": {
+        "y": [
+          -0.3200293481349945,
+          -0.2959565818309784,
+          0.3200293481349945,
+          0.2959565818309784
+        ],
+        "x": [
+          -1.25838303565979,
+          1.205560684204102,
+          1.19954252243042,
+          -1.264401197433472
+        ]
+      },
+      "filter": 1,
+      "customProperties": [
+        {
+          "int": 0,
+          "name": "zOrder"
+        },
+        {
+          "float": -1.57,
+          "name": "surfaceAngle"
+        }
+      ],
+      "glVertexPointer": [
+        -1.25838303565979,
+        -0.3200293481349945,
+        1.205560684204102,
+        -0.2959565818309784,
+        1.19954252243042,
+        0.3200293481349945,
+        -1.264401197433472,
+        0.2959565818309784
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "joint": [
+    {
+      "motorSpeed": -0.122173048555851,
+      "lowerLimit": 0,
+      "bodyA": 1,
+      "jointSpeed": 0,
+      "bodyB": 0,
+      "refAngle": 0,
+      "name": "joint0",
+      "maxMotorTorque": 10000.0,
+      "anchorB": {
+        "y": -0.361625999212265,
+        "x": -1.236286282539368
+      },
+      "enableLimit": false,
+      "customProperties": [
+        {
+          "vec2": {
+            "y": 0.4,
+            "x": 0.1
+          },
+          "name": "revoluteJointAngleRange"
+        }
+      ],
+      "anchorA": {
+        "y": -0.685791015625,
+        "x": -0.009743034839630127
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": true
+    }
+  ],
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

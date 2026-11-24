@@ -1,0 +1,743 @@
+{
+  "finishLine": {
+    "scale": 10.0,
+    "zOrder": 3,
+    "anchor": [
+      0.5,
+      0.2
+    ],
+    "texture": "textures/objects/finishline.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.5
+    ]
+  },
+  "islands": {
+    "cave": {
+      "transparentWall": true,
+      "bottomScale": 1.0,
+      "sideTexture": "textures/terrain/terrain-snow.png",
+      "edgeTexture": "textures/terrain/terrain-cave-edge_snow.png",
+      "zBack": -2.0,
+      "surfaceTexture": "textures/terrain/terrain-surface_snow",
+      "sideTextureTile": 0.15,
+      "wallTextureTile": 0.15,
+      "ambient": 0.85,
+      "surfaceTextureTile": 0.15,
+      "lightWrap": 1.0,
+      "bottomTexture": "textures/terrain/terrain-bottom-snow.png",
+      "wallTexture": "textures/terrain/terrain-ice.png",
+      "zFront": 2.0
+    },
+    "road": {
+      "sideTexture": "textures/terrain/terrain-ground_snow.png",
+      "zBack": -2.0,
+      "surfaceTexture": "textures/terrain/terrain-surface_snow.png",
+      "sideTextureTile": 0.15,
+      "ambient": 0.85,
+      "surfaceTextureTile": 0.15,
+      "lightWrap": 1.0,
+      "zFront": 2.0
+    }
+  },
+  "backgroundLayers": [
+    {
+      "innerScale": 0.5,
+      "sizeY": 1.0,
+      "texture": "textures/sky/sky-bg-countryside_snow.png",
+      "yOffset": 0.45,
+      "zOrder": 2,
+      "type": "looping",
+      "yOffsetVar": 0,
+      "speed": [
+        0.75,
+        0.2
+      ]
+    },
+    {
+      "scale": [
+        0.1,
+        0.1
+      ],
+      "type": "looping",
+      "sizeY": 0.5,
+      "texture": "textures/parallaxes/bg_countryside_snow-field.png",
+      "yOffset": 0.275,
+      "zOrder": 4,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0,
+        0
+      ],
+      "speed": [
+        1.5,
+        0.25
+      ]
+    },
+    {
+      "count": 1,
+      "type": "parallax",
+      "texture": "textures/props/prop_barnhill_snow.png",
+      "yOffset": 0.525,
+      "zOrder": 6,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0.0,
+        0
+      ],
+      "speed": [
+        4.5,
+        0.4
+      ],
+      "xOffset": 50
+    },
+    {
+      "type": "looping",
+      "sizeY": 0.6,
+      "texture": "textures/parallaxes/bg_countryside_snow-trees.png",
+      "yOffset": 0.0,
+      "zOrder": 5,
+      "yOffsetVar": 0,
+      "baseSpeed": [
+        0.0,
+        0
+      ],
+      "speed": [
+        4.5,
+        0.4
+      ]
+    },
+    {
+      "count": 1,
+      "scale": [
+        1.5,
+        1.5
+      ],
+      "baseSpeedVar": [
+        0,
+        0
+      ],
+      "speed": [
+        0.25,
+        -0.25
+      ],
+      "texture": "textures/parallaxes/cloud3.png",
+      "yOffset": 1.1,
+      "zOrder": 2,
+      "forceQuad": true,
+      "yOffsetVar": 0.0,
+      "baseSpeed": [
+        1.0,
+        0
+      ],
+      "type": "parallax"
+    }
+  ],
+  "themes": [
+    {
+      "terrainBehindPlayer": true,
+      "surfaceParticles": "particles/snow.plist",
+      "terrainCaveTexture": "textures/terrain/terrain-ground_mayan",
+      "ambient": 0.85,
+      "friction": 0.6,
+      "surfaceTextureScale": [
+        0.2,
+        1.0
+      ],
+      "terrainCliffTexture": "textures/terrain/terrain-ground_countryside-cliff",
+      "rainDropSize": [
+        0.2,
+        0.2
+      ],
+      "physicsDensity": 2,
+      "textureScale": [
+        0.1,
+        0.1
+      ],
+      "singleEdgeTerrain": true,
+      "surfaceOffset": 0.3,
+      "rainDropColor": [
+        255,
+        255,
+        255,
+        200
+      ],
+      "terrainSurfaceTexture": "textures/terrain/terrain-surface_snow",
+      "rainDropRoundness": 1.0,
+      "terrainTexture": "textures/terrain/terrain-ground_snow",
+      "terrainHeight": 15.0,
+      "surfaceDepth": 2.0,
+      "rainDensity": 1.0,
+      "lightDirection": [
+        -0.6,
+        1.0
+      ],
+      "rainVel": [
+        -1.0,
+        -2.0,
+        0.0
+      ],
+      "specularPower": 2.0,
+      "surfaceHeight": 2.0,
+      "specular": 0.1,
+      "drawToEdge": true
+    }
+  ],
+  "propGroups": [
+    {
+      "distance": 40,
+      "chunkCountVar": 2,
+      "chunkDistance": 4,
+      "randomSeed": 5,
+      "distanceVar": 8,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        1,
+        1
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge",
+        "tunnel1",
+        "tunnel4"
+      ],
+      "props": [
+        {
+          "scale": [
+            12,
+            12
+          ],
+          "zOffset": -0.5,
+          "texture": "textures/props/tree1_snow.png",
+          "anchor": [
+            0.6,
+            0
+          ],
+          "range": {
+            "start": -1
+          },
+          "zOrder": 3,
+          "underground": true,
+          "yOffset": 0.0,
+          "scaleVar": [
+            4,
+            4
+          ]
+        }
+      ],
+      "chunkDistanceVar": 5,
+      "chunkCount": 1,
+      "defaultScale": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "distance": 12,
+      "chunkCountVar": 1,
+      "chunkDistance": 3,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 7,
+      "defaultZOrder": 14,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0.5,
+        0.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": 2.2,
+          "weight": 10,
+          "texture": "textures/props/bush2_snow.png",
+          "yOffset": -8.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            7,
+            7
+          ],
+          "zOrder": 14,
+          "defaultScaleVar": [
+            2,
+            2
+          ],
+          "yOffsetVar": 1.5,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        1,
+        1
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 1.2,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": -0.4,
+          "weight": 2,
+          "texture": "textures/props/prop_arrow.png",
+          "yOffset": 0.3,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            2,
+            2
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "scale": [
+            4,
+            4
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "texture": "textures/props/prop_sign.png",
+          "yOffset": 0,
+          "range": {
+            "start": 10
+          },
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 3,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 90.0,
+      "chunkCountVar": 1,
+      "chunkDistance": 1.2,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 40.0,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "scale": [
+            1.2,
+            1.2
+          ],
+          "zOffset": 0.6,
+          "texture": "textures/props/prop_cone_snow.png",
+          "yOffset": 0,
+          "range": {
+            "start": -100
+          },
+          "zOrder": 9,
+          "yOffsetVar": 0,
+          "rotation": true,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 20,
+      "chunkCountVar": 1,
+      "chunkDistance": 16,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "only",
+      "defaultZOrder": 4,
+      "chunkMode": false,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": -1.0,
+          "weight": 10,
+          "texture": "textures/props/lights.png",
+          "yOffset": 3.1,
+          "lights": [
+            {
+              "color": [
+                145,
+                250,
+                254,
+                130
+              ],
+              "animation": {
+                "color": [
+                  145,
+                  250,
+                  254,
+                  90
+                ],
+                "radius": 6.0,
+                "type": "flicker",
+                "time": [
+                  1.0,
+                  1.8
+                ]
+              },
+              "radius": 4.0,
+              "anchor": [
+                0.5,
+                0.5
+              ],
+              "texture": "textures/effects/light-lamp.png"
+            }
+          ],
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            2.5,
+            2.5
+          ],
+          "zOrder": 1,
+          "underground": false,
+          "anchor": [
+            0.1,
+            0.1
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 1,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 30,
+      "chunkCountVar": 2,
+      "chunkDistance": 4,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "only",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rock_ice.png",
+          "yOffset": 0,
+          "scalevar": [
+            2,
+            2
+          ],
+          "range": {
+            "start": 1
+          },
+          "scale": [
+            2,
+            2
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        },
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rocks.png",
+          "yOffset": 0,
+          "scalevar": [
+            1,
+            1
+          ],
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            1.5,
+            1.5
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 2,
+      "chunkCount": 3,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "randomSeed": 6,
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        1,
+        1
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "props": [
+        {
+          "zOrder": 14,
+          "scale": [
+            4.5,
+            4.5
+          ],
+          "zOffset": 1.1,
+          "weight": 2,
+          "color": [
+            210,
+            210,
+            210
+          ],
+          "yOffset": -2.5,
+          "range": {
+            "start": 10
+          },
+          "animation": "textures/animations/reindeer/reindeer",
+          "scaleVar": [
+            0.5,
+            0.5
+          ],
+          "yOffsetVar": 2,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 2,
+      "defaultScale": [
+        3,
+        3
+      ]
+    },
+    {
+      "distance": 100,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "randomSeed": 6,
+      "distanceVar": 20,
+      "defaultZOrder": 4,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "chunkMode": true,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "props": [
+        {
+          "opacity": 90,
+          "zOrder": 13,
+          "scale": [
+            0.9,
+            0.9
+          ],
+          "zOffset": 1.1,
+          "color": [
+            10,
+            10,
+            10
+          ],
+          "texture": "textures/effects/cow-shadow.png",
+          "yOffset": -2.8,
+          "range": {
+            "start": 10
+          },
+          "scaleVar": [
+            0,
+            0
+          ],
+          "yOffsetVar": 2,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 2,
+      "defaultScale": [
+        3,
+        3
+      ]
+    }
+  ],
+  "walls": {
+    "wall": {
+      "contactFadeAmount": 0.0,
+      "zOffset": -0.8,
+      "sideTexture": "textures/terrain/terrain-ground-cliff_bg.png",
+      "edgeTexture": "textures/terrain/terrain-cave-edge.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.0,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "edgeScale": 1,
+      "zOrder": 3,
+      "textureScale": [
+        3.0,
+        3.0
+      ]
+    },
+    "wall_front": {
+      "contactFadeAmount": 0.5,
+      "zOffset": 0.8,
+      "sideTexture": "textures/terrain/terrain-ground_mayan.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.02,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zOrder": 11
+    }
+  },
+  "includeTextures": [
+    {
+      "texture": "textures/props/prop_tire.png"
+    }
+  ],
+  "liquids": {
+    "water": {
+      "angularDrag": 1.0,
+      "sideTexture": "textures/terrain/water.png",
+      "velocityMul": 0.8,
+      "splashParticles": "particles/water_splash.plist",
+      "thickness": 0.7,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/water-surface.png",
+      "lift": 0.6,
+      "linearDrag": 0.2,
+      "splashParticleCount": 10,
+      "scrollSpeed": 1.0
+    },
+    "mud": {
+      "angularDrag": 10.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "velocityMul": 0.5,
+      "splashParticles": "particles/mud_splash.plist",
+      "thickness": 0.5,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "lift": 0.0,
+      "linearDrag": 10.0,
+      "splashParticleCount": 10,
+      "scrollSpeed": 0.0
+    },
+    "waterfall": {
+      "angularDrag": 0.1,
+      "sideTexture": "textures/terrain/waterfall.png",
+      "velocityMul": 0.9,
+      "flipVertical": true,
+      "shader": "water",
+      "thickness": 0.7,
+      "surfaceTexture": "textures/terrain/waterfall.png",
+      "lift": -0.1,
+      "linearDrag": 0.1,
+      "scrollSpeed": 3.0
+    }
+  },
+  "previewImage": "elements/adventurebg_winter.png",
+  "jointMaterials": {
+    "rope": {
+      "width": 2.0,
+      "texture": "textures/objects/rope.png"
+    },
+    "wire": {
+      "width": 0.2,
+      "texture": "textures/objects/rope-steel.png"
+    }
+  },
+  "music": {
+    "default": {
+      "game-over-victory": [
+        "bgm_victory"
+      ],
+      "running": [
+        "bgm_mountain-race"
+      ],
+      "intro": [
+        "bgm_mountain-intro"
+      ],
+      "game-over": [
+        "bgm_finish"
+      ]
+    },
+    "distance": {
+      "running": [
+        "bgm_mountain-distance"
+      ],
+      "starting": [
+        "bgm_mountain-intro"
+      ],
+      "result-screen": [
+        "bgm_victory"
+      ]
+    }
+  }
+}
