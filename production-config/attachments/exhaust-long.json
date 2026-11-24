@@ -1,0 +1,117 @@
+{
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": -1,
+      "opacity": 0.5,
+      "scale": 0.7084797620773315,
+      "center": {
+        "y": -0.02101195976138115,
+        "x": -0.2982789874076843
+      },
+      "corners": {
+        "y": [
+          -0.375251829624176,
+          -0.375251829624176,
+          0.3332279324531555,
+          0.3332279324531555
+        ],
+        "x": [
+          -1.006758689880371,
+          0.4102007746696472,
+          0.4102007746696472,
+          -1.006758689880371
+        ]
+      },
+      "filter": 1,
+      "file": "textures/vehicle-assets/4wheel/back/back_exhaust-long.png",
+      "glVertexPointer": [
+        -1.006758689880371,
+        -0.375251829624176,
+        0.4102007746696472,
+        -0.375251829624176,
+        0.4102007746696472,
+        0.3332279324531555,
+        -1.006758689880371,
+        0.3332279324531555
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "customProperties": [
+    {
+      "name": "rarity",
+      "string": "common"
+    },
+    {
+      "name": "slot",
+      "string": "back"
+    }
+  ],
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

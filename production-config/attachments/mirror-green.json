@@ -1,0 +1,117 @@
+{
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": -1,
+      "opacity": 0.5,
+      "scale": 0.7084800004959106,
+      "center": {
+        "y": 0.1760450005531311,
+        "x": -0.02305350080132484
+      },
+      "corners": {
+        "y": [
+          -0.1781949996948242,
+          -0.1781949996948242,
+          0.5302850008010864,
+          0.5302850008010864
+        ],
+        "x": [
+          -0.3772934973239899,
+          0.3311865031719208,
+          0.3311865031719208,
+          -0.3772934973239899
+        ]
+      },
+      "filter": 1,
+      "file": "textures/vehicle-assets/4wheel/mirror/mirrors_mirror-green.png",
+      "glVertexPointer": [
+        -0.3772934973239899,
+        -0.1781949996948242,
+        0.3311865031719208,
+        -0.1781949996948242,
+        0.3311865031719208,
+        0.5302850008010864,
+        -0.3772934973239899,
+        0.5302850008010864
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "customProperties": [
+    {
+      "name": "rarity",
+      "string": "common"
+    },
+    {
+      "name": "slot",
+      "string": "mirror"
+    }
+  ],
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

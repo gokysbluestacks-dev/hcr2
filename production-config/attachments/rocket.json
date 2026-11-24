@@ -1,0 +1,114 @@
+{
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": -1,
+      "opacity": 0.5,
+      "scale": 1.49004340171814,
+      "center": 0,
+      "corners": {
+        "y": [
+          -0.7450217008590698,
+          -0.7450217008590698,
+          0.7450217008590698,
+          0.7450217008590698
+        ],
+        "x": [
+          -0.7450217008590698,
+          0.7450217008590698,
+          0.7450217008590698,
+          -0.7450217008590698
+        ]
+      },
+      "filter": 1,
+      "file": "textures/vehicle-assets/4wheel/side/side_rocket.png",
+      "glVertexPointer": [
+        -0.7450217008590698,
+        -0.7450217008590698,
+        0.7450217008590698,
+        -0.7450217008590698,
+        0.7450217008590698,
+        0.7450217008590698,
+        -0.7450217008590698,
+        0.7450217008590698
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "customProperties": [
+    {
+      "name": "rarity",
+      "string": "common"
+    },
+    {
+      "name": "slot",
+      "string": "side"
+    }
+  ],
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

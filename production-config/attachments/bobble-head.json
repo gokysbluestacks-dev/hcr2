@@ -1,0 +1,323 @@
+{
+  "body": [
+    {
+      "position": {
+        "y": 0.1980080008506775,
+        "x": 0.001745700021274388
+      },
+      "angle": 0,
+      "name": "bobbleBody",
+      "massData-mass": 0.001141956658102572,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.1889821290969849,
+                0.1889821290969849,
+                0.1889821290969849,
+                -0.1889821290969849
+              ],
+              "x": [
+                0.1510673761367798,
+                0.1510673761367798,
+                -0.1510661244392395,
+                -0.1510661244392395
+              ]
+            }
+          },
+          "name": "fixture10",
+          "friction": 0.2,
+          "density": 0.01
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": false,
+          "name": "useInGhost"
+        },
+        {
+          "bool": false,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": 2.029998946717626e-10,
+        "x": 6.25085306182882e-07
+      },
+      "linearVelocity": 0,
+      "massData-I": 2.228163430118002e-05
+    },
+    {
+      "position": {
+        "y": 0.5453915596008301,
+        "x": 0.01029419898986816
+      },
+      "angle": 0,
+      "name": "bobbleHead",
+      "massData-mass": 0.0007257356191985309,
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.1519897431135178,
+            "center": {
+              "y": 1.192092895507813e-07,
+              "x": 2.384185791015625e-07
+            }
+          },
+          "name": "fixture9",
+          "friction": 0.2,
+          "density": 0.01
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": false,
+          "name": "useInGhost"
+        },
+        {
+          "bool": false,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": 1.192092895507813e-07,
+        "x": 2.384185791015625e-07
+      },
+      "linearVelocity": 0,
+      "massData-I": 8.382566193176899e-06
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 1,
+      "opacity": 0.5,
+      "scale": 0.3791057765483856,
+      "center": {
+        "y": 0.004275650251656771,
+        "x": -0.02411161735653877
+      },
+      "corners": {
+        "y": [
+          -0.1852772384881973,
+          -0.1852772384881973,
+          0.1938285380601883,
+          0.1938285380601883
+        ],
+        "x": [
+          -0.2329410761594772,
+          0.1847178339958191,
+          0.1847178339958191,
+          -0.2329410761594772
+        ]
+      },
+      "filter": 1,
+      "file": "textures/vehicle-assets/4wheel/hood/hood_bill-head.png",
+      "glVertexPointer": [
+        -0.2329410761594772,
+        -0.1852772384881973,
+        0.1847178339958191,
+        -0.1852772384881973,
+        0.1847178339958191,
+        0.1938285380601883,
+        -0.2329410761594772,
+        0.1938285380601883
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    },
+    {
+      "body": 0,
+      "opacity": 0.5,
+      "scale": 0.3791057765483856,
+      "center": {
+        "y": -0.003058568574488163,
+        "x": -0.0528552420437336
+      },
+      "corners": {
+        "y": [
+          -0.1926114559173584,
+          -0.1926114559173584,
+          0.1864943206310272,
+          0.1864943206310272
+        ],
+        "x": [
+          -0.2542551755905151,
+          0.1485446989536285,
+          0.1485446989536285,
+          -0.2542551755905151
+        ]
+      },
+      "filter": 1,
+      "file": "textures/vehicle-assets/4wheel/hood/hood_bill-body.png",
+      "glVertexPointer": [
+        -0.2542551755905151,
+        -0.1926114559173584,
+        0.1485446989536285,
+        -0.1926114559173584,
+        0.1485446989536285,
+        0.1864943206310272,
+        -0.2542551755905151,
+        0.1864943206310272
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image1"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "joint": [
+    {
+      "maxMotorForce": 0,
+      "name": "joint0",
+      "lowerLimit": 0.2,
+      "bodyA": 0,
+      "bodyB": 1,
+      "localAxisA": {
+        "y": 1,
+        "x": 0
+      },
+      "refAngle": 0,
+      "anchorB": {
+        "y": 1.192092895507813e-07,
+        "x": 1.434236764907837e-07
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 2.980232238769531e-08,
+        "x": -3.608874976634979e-08
+      },
+      "upperLimit": 0.35,
+      "type": "prismatic",
+      "enableMotor": false
+    },
+    {
+      "name": "joint1",
+      "bodyA": 0,
+      "bodyB": 1,
+      "length": 0.2148143500089645,
+      "frequency": 4,
+      "anchorB": {
+        "y": 1.192092895507813e-07,
+        "x": 1.434236764907837e-07
+      },
+      "anchorA": {
+        "y": 0.1432095766067505,
+        "x": -3.608874976634979e-08
+      },
+      "type": "distance",
+      "dampingRatio": 0
+    }
+  ],
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "customProperties": [
+    {
+      "name": "rarity",
+      "string": "common"
+    },
+    {
+      "name": "rootBody",
+      "string": "bobbleBody"
+    },
+    {
+      "name": "slot",
+      "string": "hood"
+    }
+  ],
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}
