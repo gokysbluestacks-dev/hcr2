@@ -1,0 +1,19 @@
+{
+  "configs": [
+    {
+      "eventPriorities": {
+        "game_started": 1,
+        "iap_purchased": 1,
+        "cloud_status_parse_error": 1,
+        "hacker_detected": 1
+      },
+      "weight": 499,
+      "priorityLevel": 1
+    },
+    {
+      "weight": 1,
+      "priorityLevel": 0
+    }
+  ],
+  "keepAliveInterval": 600
+}

@@ -1,0 +1,203 @@
+{
+  "raceEvents": [
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Hill Climb Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "hill_climb_cup",
+      "eventUnlockRank": 0,
+      "levels": [
+        "rookie_cup_01.json",
+        "rookie_cup_02.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem04.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Airtime Cup",
+        "value": "Big Air Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "big_air_cup",
+      "eventUnlockRank": 0,
+      "levels": [
+        "big_air_cup_01.json",
+        "big_air_cup_02.json",
+        "big_air_cup_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem03.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Dark Roads"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "dark_roads",
+      "eventUnlockRank": 0,
+      "levels": [
+        "dark_roads_cup_01.json",
+        "dark_roads_cup_02.json",
+        "dark_roads_cup_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem06.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Challenge Cup",
+        "value": "Challenger Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "challenger_cup",
+      "levels": [
+        "rookie_cup_03.json",
+        "rookie_cup_04.json",
+        "rookie_cup_05.json"
+      ],
+      "eventUnlockDistance": 500,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Countryside Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "countryside_cup",
+      "levels": [
+        "countryside_cup_01.json",
+        "countryside_cup_02.json",
+        "countryside_cup_03.json"
+      ],
+      "eventUnlockDistance": 1000,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem01.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Sunday Cup",
+        "value": "Sunday Champ"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "sunday_champ",
+      "levels": [
+        "countryside_01.json",
+        "countryside_02.json",
+        "countryside_03.json",
+        "mountain_01.json"
+      ],
+      "eventUnlockDistance": 2000,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem04.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Newton City",
+        "value": "Spring City"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "forest_distance",
+      "id": "spring_city",
+      "levels": [
+        "city_highway_01.json",
+        "city_highway_02.json",
+        "city_highway_03.json",
+        "city_highway_04.json"
+      ],
+      "eventUnlockDistance": 700,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem02.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Dirt Rally",
+        "value": "Dirty Rally"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "city_distance",
+      "id": "dirty_rally",
+      "levels": [
+        "forest_01.json",
+        "forest_02.json",
+        "countryside_04.json",
+        "countryside_05.json"
+      ],
+      "eventUnlockDistance": 2000,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem05.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Forest Cup",
+        "value": "Green Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "forest_distance",
+      "id": "green_cup",
+      "levels": [
+        "forest_03.json",
+        "forest_04.json",
+        "forest_05.json"
+      ],
+      "eventUnlockDistance": 1500,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Altitude Cup",
+        "value": "Uphill Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "mountain_distance_01",
+      "id": "uphill_cup",
+      "levels": [
+        "uphill_cup_01.json",
+        "uphill_cup_02.json"
+      ],
+      "eventUnlockDistance": 2000,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem09.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. Alternative name: Epic Mountain",
+        "value": "Epic Hills"
+      },
+      "price": 0,
+      "eventUnlockType": "DISTANCE",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "epic_hills",
+      "levels": [
+        "mountain_04.json",
+        "mountain_05.json",
+        "mountain_06.json"
+      ],
+      "eventUnlockDistance": 3000,
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem06.png"
+    },
+    {
+      "name": "Test Area",
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "test_cup",
+      "eventUnlockRank": 0,
+      "levels": [
+        "testarea_01.json",
+        "testarea_02.json",
+        "testarea_03.json",
+        "testarea_04.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    }
+  ]
+}

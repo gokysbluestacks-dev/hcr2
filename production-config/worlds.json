@@ -1,0 +1,58 @@
+{
+  "worlds": [
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_countryside.png",
+      "raceUnlockDistance": 0,
+      "id": "countryside_01",
+      "levels": [
+        "countryside_distance_01.json"
+      ],
+      "name": "Countryside"
+    },
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_forest.png",
+      "raceUnlockDistance": 0,
+      "id": "forest",
+      "levels": [
+        "forest_distance.json"
+      ],
+      "name": "Forest"
+    },
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_city.png",
+      "raceUnlockDistance": 0,
+      "id": "city",
+      "levels": [
+        "city_distance.json"
+      ],
+      "name": "City"
+    },
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_mountain.png",
+      "raceUnlockDistance": 0,
+      "id": "mountain_01",
+      "levels": [
+        "mountain_distance_01.json"
+      ],
+      "name": "Mountain"
+    },
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_winter.png",
+      "raceUnlockDistance": 0,
+      "id": "winter_01",
+      "levels": [
+        "winter_distance_01.json"
+      ],
+      "name": "Winter"
+    },
+    {
+      "icon": "ui/cocosstudio/elements/adventurebg_mines.png",
+      "raceUnlockDistance": 0,
+      "id": "mines",
+      "levels": [
+        "mine_distance.json"
+      ],
+      "name": "Mines"
+    }
+  ]
+}

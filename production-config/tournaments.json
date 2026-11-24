@@ -1,0 +1,114 @@
+{
+  "tournaments": [
+    {
+      "timeSpanStart": 0,
+      "raceAttempts": 5,
+      "listItemCsb": "ui/cocosstudio/tournament_list_item.csb",
+      "description": "Lorem ipmsum checksum",
+      "tournamentDurationMinutes": 15,
+      "raceCount": 4,
+      "timeSpanEnd": 1609286400,
+      "joinWindowDurationMinutes": 10,
+      "name": "TURBO JEEP CUP",
+      "loopIntervalMinutes": 10,
+      "trackPool": [
+        {
+          "worldId": "countryside",
+          "levelDifficulty": "easy"
+        }
+      ],
+      "allowedVehicles": [
+        {
+          "maxLevel": 16,
+          "vehicleId": "jeep"
+        }
+      ],
+      "id": "turbo_jeep_cup",
+      "icon": "ui/cocosstudio/missions/achievement1.png"
+    },
+    {
+      "timeSpanStart": 0,
+      "raceAttempts": 5,
+      "description": "Lorem ipmsum checksum",
+      "tournamentDurationMinutes": 60,
+      "raceCount": 4,
+      "timeSpanEnd": 1609286400,
+      "joinWindowDurationMinutes": 30,
+      "name": "MIXED CUP",
+      "loopIntervalMinutes": 30,
+      "trackPool": [
+        {
+          "worldId": "countryside"
+        },
+        {
+          "worldId": "mountain",
+          "levelDifficulty": "easy"
+        },
+        {
+          "worldId": "forest",
+          "levelDifficulty": "normal"
+        }
+      ],
+      "allowedVehicles": [
+        {
+          "maxLevel": 20,
+          "vehicleId": "scooter"
+        },
+        {
+          "maxLevel": 10,
+          "vehicleId": "jeep"
+        }
+      ],
+      "id": "countryside_test2",
+      "icon": "ui/cocosstudio/missions/achievement1.png"
+    },
+    {
+      "timeSpanStart": 0,
+      "raceAttempts": 5,
+      "listItemCsb": "ui/cocosstudio/tournament_list_item.csb",
+      "description": "Lorem ipmsum checksum",
+      "tournamentDurationMinutes": 15,
+      "raceCount": 4,
+      "timeSpanEnd": 1609286400,
+      "joinWindowDurationMinutes": 10,
+      "name": "SCOOTER CUP",
+      "loopIntervalMinutes": 10,
+      "unlockRequirements": {
+        "criterias": [
+          {
+            "missionId": "XP",
+            "requiredLevel": 1
+          }
+        ]
+      },
+      "allowedVehicles": [
+        {
+          "maxLevel": 10,
+          "vehicleId": "scooter"
+        }
+      ],
+      "id": "scooter_cup",
+      "icon": "ui/cocosstudio/missions/achievement1.png"
+    },
+    {
+      "timeSpanStart": 0,
+      "raceAttempts": 5,
+      "listItemCsb": "ui/cocosstudio/tournament_list_item.csb",
+      "description": "Lorem ipmsum checksum",
+      "tournamentDurationMinutes": 30,
+      "raceCount": 4,
+      "timeSpanEnd": 1609286400,
+      "joinWindowDurationMinutes": 20,
+      "name": "CRAPPY JEEP CUP",
+      "loopIntervalMinutes": 20,
+      "allowedVehicles": [
+        {
+          "maxLevel": 10,
+          "vehicleId": "jeep"
+        }
+      ],
+      "id": "jeep_cup_fixed_1",
+      "icon": "ui/cocosstudio/missions/achievement1.png"
+    }
+  ]
+}

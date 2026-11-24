@@ -1,0 +1,545 @@
+{
+  "leagues": [
+    {
+      "majorLeagueLevel": 0,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE I"
+      },
+      "raceRewards": [
+        100,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "minRank": 0,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_bronzeI.png",
+      "majorIcon": "ui/cocosstudio/elements/league_bronze.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE"
+      },
+      "icon": "ui/cocosstudio/elements/bronze1.png"
+    },
+    {
+      "majorLeagueLevel": 0,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE II"
+      },
+      "raceRewards": [
+        100,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "minRank": 2,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_bronzeII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_bronze.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE"
+      },
+      "icon": "ui/cocosstudio/elements/bronze2.png"
+    },
+    {
+      "majorLeagueLevel": 0,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE III"
+      },
+      "raceRewards": [
+        100,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "bronze_boss",
+      "minRank": 6,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_bronzeIII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_bronze.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "BRONZE"
+      },
+      "icon": "ui/cocosstudio/elements/bronze3.png"
+    },
+    {
+      "majorLeagueLevel": 1,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "SILVER I"
+      },
+      "raceRewards": [
+        150,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "minRank": 10,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_silverI.png",
+      "majorIcon": "ui/cocosstudio/elements/league_silver.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "SILVER"
+      },
+      "icon": "ui/cocosstudio/elements/silver1.png"
+    },
+    {
+      "majorLeagueLevel": 1,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "SILVER II"
+      },
+      "raceRewards": [
+        150,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "minRank": 13,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_silverII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_silver.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "SILVER"
+      },
+      "icon": "ui/cocosstudio/elements/silver2.png"
+    },
+    {
+      "majorLeagueLevel": 1,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "SILVER III"
+      },
+      "raceRewards": [
+        150,
+        50,
+        25,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "silver_boss",
+      "minRank": 17,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_silverIII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_silver.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "SILVER"
+      },
+      "icon": "ui/cocosstudio/elements/silver3.png"
+    },
+    {
+      "majorLeagueLevel": 2,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "GOLD I"
+      },
+      "raceRewards": [
+        200,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 20,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_goldI.png",
+      "majorIcon": "ui/cocosstudio/elements/league_gold.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "GOLD"
+      },
+      "icon": "ui/cocosstudio/elements/gold1.png"
+    },
+    {
+      "majorLeagueLevel": 2,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "GOLD II"
+      },
+      "raceRewards": [
+        200,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 23,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_goldII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_gold.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "GOLD"
+      },
+      "icon": "ui/cocosstudio/elements/gold2.png"
+    },
+    {
+      "majorLeagueLevel": 2,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "GOLD III"
+      },
+      "raceRewards": [
+        200,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "gold_boss",
+      "minRank": 27,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_goldIII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_gold.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "GOLD"
+      },
+      "icon": "ui/cocosstudio/elements/gold3.png"
+    },
+    {
+      "majorLeagueLevel": 3,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM I"
+      },
+      "raceRewards": [
+        250,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 30,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_platinumI.png",
+      "majorIcon": "ui/cocosstudio/elements/league_platinum.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM"
+      },
+      "icon": "ui/cocosstudio/elements/platinum1.png"
+    },
+    {
+      "majorLeagueLevel": 3,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM II"
+      },
+      "raceRewards": [
+        250,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 33,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_platinumII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_platinum.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM"
+      },
+      "icon": "ui/cocosstudio/elements/platinum2.png"
+    },
+    {
+      "majorLeagueLevel": 3,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM III"
+      },
+      "raceRewards": [
+        250,
+        100,
+        50,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "platinum_boss",
+      "minRank": 37,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_platinumIII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_platinum.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "PLATINUM"
+      },
+      "icon": "ui/cocosstudio/elements/platinum3.png"
+    },
+    {
+      "majorLeagueLevel": 4,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND I"
+      },
+      "raceRewards": [
+        300,
+        150,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 40,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_diamondI.png",
+      "majorIcon": "ui/cocosstudio/elements/league_diamond.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND"
+      },
+      "icon": "ui/cocosstudio/elements/diamond1.png"
+    },
+    {
+      "majorLeagueLevel": 4,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND II"
+      },
+      "raceRewards": [
+        300,
+        150,
+        50,
+        25,
+        25,
+        25
+      ],
+      "minRank": 43,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_diamondII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_diamond.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND"
+      },
+      "icon": "ui/cocosstudio/elements/diamond2.png"
+    },
+    {
+      "majorLeagueLevel": 4,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND III"
+      },
+      "raceRewards": [
+        300,
+        150,
+        50,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "diamond_boss",
+      "minRank": 47,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_diamondIII.png",
+      "majorIcon": "ui/cocosstudio/elements/league_diamond.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "DIAMOND"
+      },
+      "icon": "ui/cocosstudio/elements/diamond3.png"
+    },
+    {
+      "majorLeagueLevel": 5,
+      "title": {
+        "localize": "Name of a racing league",
+        "value": "LEGENDARY"
+      },
+      "raceRewards": [
+        350,
+        150,
+        50,
+        25,
+        25,
+        25
+      ],
+      "bossEvent": "legendary_boss",
+      "minRank": 50,
+      "cupBackground": "ui/cocosstudio/elements/eventitem_bg_legendary.png",
+      "majorIcon": "ui/cocosstudio/elements/legend-icon.png",
+      "majorTitle": {
+        "localize": "Name of a racing league",
+        "value": "LEGENDARY"
+      },
+      "minRankSteps": 10,
+      "icon": "ui/cocosstudio/elements/legend-icon.png"
+    }
+  ],
+  "boostSpeedMultiplier": 1.5,
+  "tournamentPoints": [
+    10,
+    8,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "priceTextColorNotEnoughMoney": [
+    218,
+    48,
+    48
+  ],
+  "showMoreGhostsMode": false,
+  "maxDailyMissionRepicks": 1,
+  "contentVersion": 7,
+  "levelTierRanks": [
+    30,
+    25,
+    20,
+    15
+  ],
+  "enableJsonReload": true,
+  "rubberbandVelocityFactors": [
+    -0.1,
+    -0.05,
+    0.1
+  ],
+  "onlyTimeTrialNormalCups": false,
+  "friendsRefreshInterval": 300,
+  "rubberbandThresholds": [
+    -20,
+    5.0
+  ],
+  "amazonStoreSignaturePart2": "ZaTkTRdmy7z9+gDU=",
+  "askRatingAfterCupReward": [
+    3,
+    20
+  ],
+  "boostFuelConsumption": 8.0,
+  "startCountdown": 3.0,
+  "defaultBackwallDistance": 50.0,
+  "maxNameChanges": 3,
+  "maxRecentChallenges": 8,
+  "cameraZoomGameOver": 2.0,
+  "initialCameraZoom": 1.2,
+  "maxVisibleRange": 50.0,
+  "useCupPlayerMatching": true,
+  "vehiclesHidden": [
+    "vehicle_monowheel.json"
+  ],
+  "defaultFirstCoinPosition": 55.0,
+  "firstStartLevel": "tutorial.json",
+  "initialCameraPan": [
+    0,
+    0
+  ],
+  "friendlyRaceResultsPollInterval": 20,
+  "airDragStartRamp": 0.2,
+  "androidReleaseSignaturePart2": "Sj3vAGdEkKdj3w=",
+  "airDragStartVelocity": 12,
+  "cloudSaveSkipIfBgDuration": 60,
+  "rankBoostFactor": 0.05,
+  "tutorialTipsEnabled": true,
+  "askSaveNowRankInterval": 5.0,
+  "androidDevelopmentSignaturePart2": "N+UtdejZ06m1Vpw9kpMDg=",
+  "minVisibleRange": 20.0,
+  "showRankPointsAfterRank": 50,
+  "raceLockTimeS": 900,
+  "fuelKillTime": 4.0,
+  "firstStartGameMode": "tutorial-race",
+  "personalBestGhostsAmount": 2,
+  "playerCarSpawnOffset": [
+    0.0,
+    0.1
+  ],
+  "defaultCoinsPerSpawn": 3.0,
+  "boostInAir": false,
+  "killCamGameSpeed": 0.25,
+  "collectibleHomingSpeed": 20.0,
+  "airDragForce": 0.08,
+  "rankPerPosition": 0.02,
+  "vehiclesTestmode": [
+    "vehicle_jeep.json",
+    "vehicle_scooter.json",
+    "vehicle_superjeep.json",
+    "vehicle_motocross.json",
+    "vehicle_sportscar.json",
+    "vehicle_monster.json",
+    "vehicle_pickup_truck.json",
+    "vehicle_minitank.json",
+    "vehicle_formula.json"
+  ],
+  "collectibleDeletingDistance": 70.0,
+  "coinsFromStar": 100,
+  "rankBoostMaxRank": 10,
+  "collectibleHomingDistance": 1.5,
+  "seasonsEnabled": false,
+  "maxBlockExtraDistance": 50.0,
+  "cameraZoomSpeed": 2.0,
+  "tournamentTeamWinBonus": 10,
+  "defaultCarScreenPos": 0.2,
+  "ghostMinOpacity": 30.0,
+  "tutorialId": "single-button-optional-looks",
+  "defaultBackwallStartDistance": 10.0,
+  "unrankedNormalCups": true,
+  "ghostMaxOpacity": 200.0,
+  "fadeDeadGhosts": true,
+  "cameraZoomScreenshot": 0.75,
+  "cameraOffsetSmoothingTime": 2.5,
+  "killCamZoom": -0.3,
+  "maxRubberbandOffset": [
+    -2.0,
+    4.0
+  ],
+  "cameraZoomFromVelocity": 0.08,
+  "ghostFadeDistance": 4.0,
+  "boostEnabled": false,
+  "analyticsGroup": "",
+  "maxDailyMissions": 3,
+  "seasons": [
+    {
+      "id": 0,
+      "name": {
+        "localize": "Name of a racing season",
+        "value": "PRESEASON"
+      }
+    },
+    {
+      "id": 1,
+      "name": {
+        "localize": "Name of a racing season",
+        "value": "SEASON 1"
+      }
+    }
+  ],
+  "priceTextColor": [
+    235,
+    243,
+    247
+  ],
+  "cameraDistance": 20.0,
+  "vehicles": [
+    "vehicle_jeep.json",
+    "vehicle_scooter.json",
+    "vehicle_superjeep.json",
+    "vehicle_motocross.json",
+    "vehicle_sportscar.json",
+    "vehicle_monster.json",
+    "vehicle_pickup_truck.json",
+    "vehicle_minitank.json",
+    "vehicle_formula.json"
+  ],
+  "cameraSmoothing": [
+    5,
+    1.5
+  ],
+  "gameOverTime": 12.0,
+  "defaultCoinSpawnDistance": 50.0,
+  "airDragAngleForce": 0.08,
+  "wcUnlockDistance": 500,
+  "capturePosDiffThreshold": 0.2,
+  "captureAngularDiffThreshold": 0.05
+}

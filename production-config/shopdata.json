@@ -1,0 +1,272 @@
+{
+  "rotationOfferLifetime": 86400,
+  "rotationStartTime": 172800,
+  "rotationOfferInterval": 259200,
+  "specialOffers": [
+    {
+      "csbFile": "IAP_specialoffer_jeep.csb",
+      "activePeriods": [
+        {
+          "lifeTime": 86400,
+          "startTime": 5
+        }
+      ],
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "jeep",
+          "variantId": "jeep_tire-heavy"
+        }
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_jeep_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "jeep_heavy",
+          "vehicleId": "jeep"
+        }
+      ],
+      "allowRotation": false,
+      "gemAmount": 500,
+      "id": "com.fingersoft.hcr2_special_jeep"
+    },
+    {
+      "csbFile": "IAP_specialoffer_monster_xmas.csb",
+      "activePeriods": [
+        {
+          "startTimestamp": 1481241600,
+          "endTimestamp": 1481499564
+        },
+        {
+          "startTimestamp": 1481848764,
+          "endTimestamp": 1482104364
+        },
+        {
+          "startTimestamp": 1482453564,
+          "endTimestamp": 1482712764
+        }
+      ],
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "monster",
+          "variantId": "monster_tire-xmas"
+        }
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_monster_xmas_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "monster_xmas",
+          "vehicleId": "monster"
+        }
+      ],
+      "allowRotation": false,
+      "gemAmount": 1500,
+      "unlockVehicles": [
+        "monster"
+      ],
+      "id": "com.fingersoft.hcr2_special_monster_xmas"
+    },
+    {
+      "csbFile": "IAP_specialoffer_superjeep.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "superjeep",
+          "variantId": "superjeep_tire-pro"
+        }
+      ],
+      "unlockDriverAssets": [
+        "rocker"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_superjeep_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "superjeep_pro",
+          "vehicleId": "superjeep"
+        }
+      ],
+      "gemAmount": 1000,
+      "unlockVehicles": [
+        "superjeep"
+      ],
+      "id": "com.fingersoft.hcr2_special_superjeep"
+    },
+    {
+      "csbFile": "IAP_specialoffer_monster_usa.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "monster",
+          "variantId": "monster_tire-usa"
+        }
+      ],
+      "unlockDriverAssets": [
+        "america"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_monster_usa_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "monster_america",
+          "vehicleId": "monster"
+        }
+      ],
+      "gemAmount": 1500,
+      "unlockVehicles": [
+        "monster"
+      ],
+      "id": "com.fingersoft.hcr2_special_monster_usa"
+    },
+    {
+      "gemAmount": 1000,
+      "csbFile": "IAP_specialoffer_pirate.csb",
+      "unlockDriverAssets": [
+        "pirate"
+      ],
+      "id": "com.fingersoft.hcr2_special_pirate",
+      "iTunesId": "com.fingersoft.hcr2_special_pirate_nc"
+    },
+    {
+      "csbFile": "IAP_specialoffer_monster_survivor.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "monster",
+          "variantId": "monster_tire-survivor"
+        }
+      ],
+      "unlockDriverAssets": [
+        "survivor"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_monster_survivor_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "monster_survivor",
+          "vehicleId": "monster"
+        }
+      ],
+      "gemAmount": 2500,
+      "unlockVehicles": [
+        "monster"
+      ],
+      "id": "com.fingersoft.hcr2_special_monster_survivor"
+    },
+    {
+      "csbFile": "IAP_specialoffer_sportscar.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "sportscar",
+          "variantId": "sportscar_tire-bundle"
+        }
+      ],
+      "unlockDriverAssets": [
+        "sports"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_sportscar_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "sportscar_orange",
+          "vehicleId": "sportscar"
+        }
+      ],
+      "gemAmount": 1500,
+      "unlockVehicles": [
+        "sportscar"
+      ],
+      "id": "com.fingersoft.hcr2_special_sportscar"
+    },
+    {
+      "csbFile": "IAP_specialoffer_pickup.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "pickup_truck",
+          "variantId": "pickup_tire-pimped"
+        }
+      ],
+      "unlockDriverAssets": [
+        "bling"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_pickup_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "pimped",
+          "vehicleId": "pickup_truck"
+        }
+      ],
+      "gemAmount": 1500,
+      "unlockVehicles": [
+        "pickup_truck"
+      ],
+      "id": "com.fingersoft.hcr2_special_pickup"
+    },
+    {
+      "csbFile": "IAP_specialoffer_tank_drafted.csb",
+      "unlockDriverAssets": [
+        "drafted"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_tank_drafted_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "M1",
+          "vehicleId": "minitank"
+        }
+      ],
+      "gemAmount": 3000,
+      "unlockVehicles": [
+        "minitank"
+      ],
+      "id": "com.fingersoft.hcr2_special_tank_drafted"
+    },
+    {
+      "csbFile": "IAP_specialoffer_superjeep_ninja.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "superjeep",
+          "variantId": "superjeep_tire-ninja"
+        }
+      ],
+      "unlockDriverAssets": [
+        "ninja"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_superjeep_ninja_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "superjeep_ninja",
+          "vehicleId": "superjeep"
+        }
+      ],
+      "gemAmount": 500,
+      "unlockVehicles": [
+        "superjeep"
+      ],
+      "id": "com.fingersoft.hcr2_special_superjeep_ninja"
+    },
+    {
+      "csbFile": "IAP_specialoffer_formula.csb",
+      "unlockVehicleSpriteVariants": [
+        {
+          "partId": "wheel",
+          "vehicleId": "formula",
+          "variantId": "formula_tire-bundle"
+        }
+      ],
+      "unlockDriverAssets": [
+        "sportsformula"
+      ],
+      "iTunesId": "com.fingersoft.hcr2_special_formula_nc",
+      "unlockVehiclePaints": [
+        {
+          "paintId": "formula_green",
+          "vehicleId": "formula"
+        }
+      ],
+      "gemAmount": 3000,
+      "unlockVehicles": [
+        "formula"
+      ],
+      "id": "com.fingersoft.hcr2_special_formula"
+    }
+  ]
+}

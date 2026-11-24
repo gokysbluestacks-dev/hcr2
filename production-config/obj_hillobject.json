@@ -1,0 +1,264 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "bushbody_bottom",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.0836946964263916,
+                0.0836946964263916,
+                -0.0836946964263916,
+                -0.0836946964263916
+              ],
+              "x": [
+                0.5086730122566223,
+                -0.4913269877433777,
+                -0.4913270473480225,
+                0.5086729526519775
+              ]
+            }
+          },
+          "name": "fixture1",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 5.439498424530029,
+        "x": 0.01946154236793518
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 1.782570600509644,
+        "x": -0.07850521802902222
+      },
+      "angle": 0,
+      "name": "bushbody",
+      "linearDamping": 0.1,
+      "massData-mass": 0.3542502224445343,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                3.297529697418213,
+                3.368911504745483,
+                -1.456570625305176,
+                -1.428436279296875
+              ],
+              "x": [
+                0.6265510320663452,
+                -0.3717895746231079,
+                -0.1482125818729401,
+                0.3366923332214356
+              ]
+            }
+          },
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 0.1
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "angularDamping": 0.1,
+      "massData-center": {
+        "y": 1.221230268478394,
+        "x": 0.1116306036710739
+      },
+      "linearVelocity": 0,
+      "massData-I": 1.197383403778076
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 1,
+      "opacity": 0.5,
+      "scale": 1,
+      "center": {
+        "y": 4.026637554168701,
+        "x": 0.1147417724132538
+      },
+      "corners": {
+        "y": [
+          3.526637554168701,
+          3.526637554168701,
+          4.526637554168701,
+          4.526637554168701
+        ],
+        "x": [
+          -0.8958215713500977,
+          1.12530517578125,
+          1.12530517578125,
+          -0.8958215713500977
+        ]
+      },
+      "filter": 1,
+      "file": "textures/props/bush1.png",
+      "glVertexPointer": [
+        -0.8958215713500977,
+        3.526637554168701,
+        1.12530517578125,
+        3.526637554168701,
+        1.12530517578125,
+        4.526637554168701,
+        -0.8958215713500977,
+        4.526637554168701
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "bush"
+    },
+    {
+      "body": 1,
+      "opacity": 0.5,
+      "scale": 5.001535892486572,
+      "center": {
+        "y": 1.137872934341431,
+        "x": 0.101060263812542
+      },
+      "corners": {
+        "y": [
+          -1.362895011901856,
+          -1.362895011901856,
+          3.638640880584717,
+          3.638640880584717
+        ],
+        "x": [
+          -0.524131715297699,
+          0.7262522578239441,
+          0.7262522578239441,
+          -0.524131715297699
+        ]
+      },
+      "filter": 1,
+      "file": "textures/props/lamp.png",
+      "glVertexPointer": [
+        -0.524131715297699,
+        -1.362895011901856,
+        0.7262522578239441,
+        -1.362895011901856,
+        0.7262522578239441,
+        3.638640880584717,
+        -0.524131715297699,
+        3.638640880584717
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "joint": [
+    {
+      "name": "joint0",
+      "bodyA": 0,
+      "bodyB": 1,
+      "length": 1.050999402999878,
+      "frequency": 0,
+      "anchorB": {
+        "y": 2.790889978408814,
+        "x": 0.09796673059463501
+      },
+      "anchorA": 0,
+      "type": "distance",
+      "dampingRatio": 0
+    }
+  ],
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "customProperties": [
+    {
+      "name": "file",
+      "string": "level_countryside_objects"
+    }
+  ],
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

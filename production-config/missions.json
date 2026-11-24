@@ -1,0 +1,166 @@
+{
+  "missions": [
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "countryside_distance_01"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "COUNTRYSIDE DISTANCE 01",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "countryside_distance_01_mission",
+      "icon": "ui/cocosstudio/missions/distance.png"
+    },
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "mountain_distance_01"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "MOUNTAIN DISTANCE 01",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "mountain_distance_01_mission",
+      "icon": "ui/cocosstudio/missions/distance.png"
+    },
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "forest_distance"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "FOREST DISTANCE",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "forest_distance_mission",
+      "icon": "ui/cocosstudio/missions/distance.png"
+    },
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "city_distance"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "CITY DISTANCE",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "city_distance_mission",
+      "icon": "ui/cocosstudio/missions/distance.png"
+    },
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "winter_distance_01"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "WINTER DISTANCE 01",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "winter_distance_01_mission",
+      "icon": "ui/cocosstudio/missions/distance.png"
+    },
+    {
+      "maxReward": 3000,
+      "rewards": {
+        "lin": 50,
+        "base": 1000
+      },
+      "description": "",
+      "criterias": [
+        {
+          "bigger_is_better": true,
+          "allowed_level_ids": [
+            "mine_distance"
+          ],
+          "cumulation_type": "SingleRun",
+          "type": "distance",
+          "targets": {
+            "lin": 200,
+            "base": 200
+          }
+        }
+      ],
+      "name": "",
+      "allowMultipleLevelCompletes": false,
+      "max_levels": -1,
+      "id": "mine_distance_mission",
+      "icon": ""
+    }
+  ]
+}

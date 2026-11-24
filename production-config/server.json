@@ -1,0 +1,48 @@
+{
+  "gameServerProduction": [
+    {
+      "host": "arg1f0.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f1.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f2.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f3.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f4.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f5.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f6.eastus.cloudapp.azure.com",
+      "port": 22994
+    },
+    {
+      "host": "arg1f7.eastus.cloudapp.azure.com",
+      "port": 22994
+    }
+  ],
+  "gameServerDevelopment": [
+    {
+      "host": "vtesting.cloudapp.net",
+      "port": 50001
+    }
+  ],
+  "gameServerProductionTest": [
+    {
+      "host": "vtesting.cloudapp.net",
+      "port": 50000
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "bossDrivers": {
+    "sporty": {
+      "cupPreview": "cup_preview_boss_sporty.csb",
+      "name": {
+        "localize": "League boss name",
+        "value": "Sporty"
+      },
+      "looks": "sports"
+    },
+    "survivor": {
+      "cupPreview": "cup_preview_boss_survivor.csb",
+      "name": {
+        "localize": "League boss name",
+        "value": "Survivor"
+      },
+      "looks": "survivor"
+    },
+    "bill": {
+      "cupPreview": "cup_preview_boss_bill.csb",
+      "name": "Bill Newton",
+      "looks": "oldie"
+    },
+    "santa": {
+      "name": {
+        "localize": "Driver name for Santa Claus",
+        "value": "Santa"
+      },
+      "looks": "santa"
+    },
+    "ninja": {
+      "cupPreview": "cup_preview_boss_ninja.csb",
+      "name": {
+        "localize": "League boss name",
+        "value": "Ninja"
+      },
+      "looks": "ninja"
+    },
+    "nerd": {
+      "cupPreview": "cup_preview_boss_nerd.csb",
+      "name": {
+        "localize": "League boss name",
+        "value": "Nerd"
+      },
+      "looks": "nerdgirl"
+    }
+  },
+  "raceEvents": [
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Hill Climb Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "hill_climb_cup",
+      "eventUnlockRank": 0,
+      "levels": [
+        "rookie_cup_01.json",
+        "rookie_cup_02.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem04.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Big Air Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "big_air_cup",
+      "eventUnlockRank": 2,
+      "levels": [
+        "big_air_cup_01.json",
+        "big_air_cup_02.json",
+        "big_air_cup_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem03.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Dark Roads"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "dark_roads",
+      "eventUnlockRank": 6,
+      "levels": [
+        "dark_roads_cup_01.json",
+        "dark_roads_cup_02.json",
+        "dark_roads_cup_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem06.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "First Snow"
+      },
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem-xmas.png",
+      "eventUnlockType": "RANK",
+      "eventUnlockRank": 6,
+      "levels": [
+        "xmas_cup_1.json",
+        "xmas_cup_2.json",
+        "xmas_cup_3.json"
+      ],
+      "id": "xmas_cup"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Challenger Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "challenger_cup",
+      "eventUnlockRank": 10,
+      "levels": [
+        "rookie_cup_03.json",
+        "rookie_cup_04.json",
+        "rookie_cup_05.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Countryside Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "countryside_cup",
+      "eventUnlockRank": 13,
+      "levels": [
+        "countryside_cup_01.json",
+        "countryside_cup_02.json",
+        "countryside_cup_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem01.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Sunday Champ"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "sunday_champ",
+      "eventUnlockRank": 17,
+      "levels": [
+        "countryside_01.json",
+        "countryside_02.json",
+        "countryside_03.json",
+        "mountain_01.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem04.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Winter Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "winter_cup_easy",
+      "eventUnlockRank": 20,
+      "levels": [
+        "winter_cup_easy_1.json",
+        "winter_cup_easy_2.json",
+        "winter_cup_easy_3.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem-xmas.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Spring City"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "forest_distance",
+      "id": "spring_city",
+      "eventUnlockRank": 20,
+      "levels": [
+        "city_highway_01.json",
+        "city_highway_02.json",
+        "city_highway_03.json",
+        "city_highway_04.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem_springcity.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Dirty Rally"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "city_distance",
+      "id": "dirty_rally",
+      "eventUnlockRank": 23,
+      "levels": [
+        "forest_01.json",
+        "forest_02.json",
+        "countryside_04.json",
+        "countryside_05.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem05.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Green Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "forest_distance",
+      "id": "green_cup",
+      "eventUnlockRank": 27,
+      "levels": [
+        "forest_03.json",
+        "forest_04.json",
+        "forest_05.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Uphill Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "mountain_distance_01",
+      "id": "uphill_cup",
+      "eventUnlockRank": 30,
+      "levels": [
+        "uphill_cup_01.json",
+        "uphill_cup_02.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem09.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Mine Shaft Cup"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "easy_mine_cup",
+      "eventUnlockRank": 33,
+      "levels": [
+        "easy_mine_01.json",
+        "easy_mine_02.json",
+        "easy_mine_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem_mine1.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. It's a mine-themed event.",
+        "value": "It's Mine!"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "boards_easy_cup",
+      "eventUnlockRank": 37,
+      "levels": [
+        "boards_easy_01.json",
+        "boards_easy_02.json",
+        "boards_easy_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem_mine1.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Epic Hills"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "eventUnlockLevelButtonId": "countryside_distance_01",
+      "id": "epic_hills",
+      "eventUnlockRank": 40,
+      "levels": [
+        "mountain_04.json",
+        "mountain_05.json",
+        "mountain_06.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem06.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. It's a formula track. Alternative name: Race Day",
+        "value": "Fingerstone GP"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "formula_city",
+      "eventUnlockRank": 40,
+      "levels": [
+        "formula_city_01.json",
+        "formula_city_02.json",
+        "formula_city_03.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem02.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Winter is Coming"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "long_winter_cup",
+      "eventUnlockRank": 43,
+      "levels": [
+        "long_winter_01.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem-xmas.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event. It's a mine-themed event.",
+        "value": "More Mines"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "mine_cup_2",
+      "eventUnlockRank": 47,
+      "levels": [
+        "mine_01_2.json",
+        "mine_02_2.json",
+        "mine_03_2.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem_mine1.png"
+    },
+    {
+      "name": {
+        "localize": "Name of a racing event",
+        "value": "Tunnels"
+      },
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "tunnels_cup_2",
+      "eventUnlockRank": 50,
+      "levels": [
+        "tunnels_cup_01_2.json",
+        "tunnels_cup_02_2.json",
+        "tunnels_cup_03_2.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem_mine1.png"
+    },
+    {
+      "name": "Test Area",
+      "price": 0,
+      "eventUnlockType": "RANK",
+      "id": "test_cup",
+      "eventUnlockRank": 0,
+      "levels": [
+        "testarea_01.json",
+        "testarea_02.json",
+        "testarea_03.json",
+        "testarea_04.json",
+        "testarea_05.json"
+      ],
+      "eventIcon": "ui/cocosstudio/elements/background-menuitem07.png"
+    }
+  ],
+  "specialEvents": [
+    {
+      "cupShuffleProbabilityAfterRewardsUnlocked": 0,
+      "cupShuffleProbability": 0,
+      "rewardShuffle": [
+        6
+      ],
+      "cupPool": [
+        "xmas_cup"
+      ],
+      "eventBorder": "ui/cocosstudio/elements/eventitem_bg_xmas.png",
+      "bossGhost": {
+        "flag": "fi",
+        "driver": [
+          "santa"
+        ]
+      },
+      "minRank": 2,
+      "id": "xmas_is_over"
+    },
+    {
+      "cupPool": [
+        "xmas_cup"
+      ],
+      "type": "boss",
+      "id": "bronze_boss",
+      "bossGhost": {
+        "vehiclePaint": "superjeep_pro",
+        "vehicleWheels": "superjeep_tire-pro",
+        "driver": [
+          "ninja"
+        ],
+        "rank": 10,
+        "vehicle": "superjeep"
+      },
+      "menuMusic": "bgm_boss-fight"
+    },
+    {
+      "cupPool": [
+        "sunday_champ"
+      ],
+      "type": "boss",
+      "id": "silver_boss",
+      "bossGhost": {
+        "vehiclePaint": "monster_survivor",
+        "vehicleWheels": "monster_tire-survivor",
+        "driver": [
+          "survivor"
+        ],
+        "rank": 20,
+        "vehicle": "monster"
+      },
+      "menuMusic": "bgm_boss-fight"
+    },
+    {
+      "cupPool": [
+        "green_cup"
+      ],
+      "type": "boss",
+      "id": "gold_boss",
+      "bossGhost": {
+        "driver": [
+          "nerd"
+        ],
+        "rank": 30,
+        "vehicle": "tank"
+      },
+      "menuMusic": "bgm_boss-fight"
+    },
+    {
+      "cupPool": [
+        "easy_mine_cup"
+      ],
+      "type": "boss",
+      "id": "platinum_boss",
+      "bossGhost": {
+        "vehiclePaint": "sportscar_orange",
+        "driver": [
+          "sporty"
+        ],
+        "rank": 40,
+        "vehicle": "sportscar"
+      },
+      "menuMusic": "bgm_boss-fight"
+    },
+    {
+      "cupPool": [
+        "long_winter_cup"
+      ],
+      "type": "boss",
+      "id": "diamond_boss",
+      "bossGhost": {
+        "vehiclePaint": "jeep_classic",
+        "driver": [
+          "bill"
+        ],
+        "rank": 50,
+        "vehicle": "jeep"
+      },
+      "menuMusic": "bgm_boss-fight"
+    },
+    {
+      "type": "boss",
+      "id": "legendary_boss",
+      "bossGhost": {
+        "driver": [
+          "ninja",
+          "survivor",
+          "nerd",
+          "sporty",
+          "bill"
+        ],
+        "rank": 50
+      },
+      "menuMusic": "bgm_boss-fight"
+    }
+  ]
+}

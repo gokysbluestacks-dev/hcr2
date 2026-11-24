@@ -1,0 +1,117 @@
+{
+  "collectibles": [
+    {
+      "sound": "collect_fuel",
+      "sprite": "textures/collectibles/fuel_canister.png",
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "fuel",
+      "id": "fuel-canister",
+      "size": [
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "sound": "collect_coin",
+      "sprite": "textures/collectibles/coin_bronze.png",
+      "amount": 1,
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "coin",
+      "id": "coin-bronze",
+      "size": [
+        1.4,
+        1.4
+      ]
+    },
+    {
+      "sound": "collect_coin",
+      "sprite": "textures/collectibles/coin_silver.png",
+      "amount": 5,
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "coin",
+      "id": "coin-silver",
+      "size": [
+        1.4,
+        1.4
+      ]
+    },
+    {
+      "sound": "collect_chest",
+      "sprite": "ui/cocosstudio/elements/coin4.png",
+      "shape": "box",
+      "colliderSize": [
+        1.0,
+        500.0
+      ],
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "coinsack",
+      "id": "distance-target",
+      "size": [
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "sound": "collect-daily-mission",
+      "sprite": "ui/cocosstudio/elements/trophy-icon.png",
+      "shape": "box",
+      "colliderSize": [
+        1.0,
+        5.0
+      ],
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "missiontoken",
+      "id": "daily-toolbox-token",
+      "size": [
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "sound": "collect_chest",
+      "sprite": "ui/cocosstudio/elements/chest_1.png",
+      "shape": "box",
+      "colliderSize": [
+        1.0,
+        500.0
+      ],
+      "components": [
+        {
+          "frequency": 0.5,
+          "type": "hover"
+        }
+      ],
+      "type": "chest",
+      "id": "distance-mission",
+      "size": [
+        1.8,
+        1.8
+      ]
+    }
+  ]
+}

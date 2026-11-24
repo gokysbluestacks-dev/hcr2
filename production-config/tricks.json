@@ -1,0 +1,148 @@
+{
+  "wheelieTick": 0.25,
+  "airtimeTricks": [
+    {
+      "triggerTick": 3,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "AIR TIME"
+      },
+      "bonusPerTick": 1
+    },
+    {
+      "triggerTick": 7,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "BIG AIR TIME"
+      },
+      "bonusPerTick": 2
+    },
+    {
+      "triggerTick": 8,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "INSANE AIR TIME"
+      },
+      "bonusPerTick": 5,
+      "tickLengthIncrease": 0.25
+    }
+  ],
+  "airtimeTick": 0.25,
+  "wheelieTricks": [
+    {
+      "triggerTick": 6,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "WHEELIE"
+      },
+      "bonusPerTick": 1
+    },
+    {
+      "triggerTick": 10,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "WHEEEEELIE"
+      },
+      "bonusPerTick": 2
+    },
+    {
+      "triggerTick": 15,
+      "text": {
+        "localize": "Name of a trick",
+        "value": "WHEEEEEEEEEEE"
+      },
+      "bonusPerTick": 5
+    }
+  ],
+  "neckflip": {
+    "text": {
+      "localize": "Name of a trick",
+      "value": "NECK FLIP"
+    },
+    "coinReward": 0
+  },
+  "flipTricks": [
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "FLIP"
+      },
+      "coinReward": 10,
+      "triggerFlip": 1
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "DOUBLE FLIP"
+      },
+      "coinReward": 20,
+      "triggerFlip": 2
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "TRIPLE FLIP"
+      },
+      "coinReward": 30,
+      "triggerFlip": 3
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "QUAD FLIP"
+      },
+      "coinReward": 40,
+      "triggerFlip": 4
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "LOST COUNT"
+      },
+      "coinReward": 40,
+      "triggerFlip": 5
+    }
+  ],
+  "backflipTricks": [
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "BACKFLIP"
+      },
+      "coinReward": 10,
+      "triggerFlip": 1
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "DOUBLE BACKFLIP"
+      },
+      "coinReward": 20,
+      "triggerFlip": 2
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "TRIPLE BACKFLIP"
+      },
+      "coinReward": 30,
+      "triggerFlip": 3
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "QUAD BACKFLIP"
+      },
+      "coinReward": 40,
+      "triggerFlip": 4
+    },
+    {
+      "text": {
+        "localize": "Name of a trick",
+        "value": "LOST COUNT"
+      },
+      "coinReward": 50,
+      "triggerFlip": 5
+    }
+  ]
+}

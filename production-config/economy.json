@@ -1,0 +1,747 @@
+{
+  "coinValueRampEndPositionRace": 500,
+  "freeRewardChestTime": 28800,
+  "gemsToCoinsConversionItems": [
+    {
+      "gemAmount": 100,
+      "gemsToCoinsConversion": 100,
+      "id": "convert0",
+      "icon": "ui/cocosstudio/IAP/bundle_1.png"
+    },
+    {
+      "gemAmount": 200,
+      "gemsToCoinsConversion": 110,
+      "id": "convert1",
+      "icon": "ui/cocosstudio/IAP/bundle_2.png"
+    },
+    {
+      "gemAmount": 500,
+      "gemsToCoinsConversion": 120,
+      "id": "convert2",
+      "icon": "ui/cocosstudio/IAP/bundle_3.png"
+    },
+    {
+      "gemAmount": 1000,
+      "gemsToCoinsConversion": 130,
+      "id": "convert3",
+      "icon": "ui/cocosstudio/IAP/bundle_4.png"
+    },
+    {
+      "gemAmount": 2000,
+      "gemsToCoinsConversion": 140,
+      "id": "convert4",
+      "icon": "ui/cocosstudio/IAP/bundle_5.png"
+    },
+    {
+      "gemAmount": 5000,
+      "gemsToCoinsConversion": 150,
+      "id": "convert5",
+      "icon": "ui/cocosstudio/IAP/bundle_6.png"
+    }
+  ],
+  "maxCoinValuePerChunkRace": 30,
+  "firstExtraMissionRewardTime": 1800,
+  "maxCoinValuePerChunkDistance": 40,
+  "firstFreeUpgradeTime": 900,
+  "defaultUpgradeCurve": "sinesquare",
+  "firstFreeRewardChestTime": 600,
+  "player_level_xp": {
+    "lin": 1000,
+    "base": 600,
+    "exp": 0.18,
+    "offset": -1
+  },
+  "videoOfferDelay": 0,
+  "upgradePriceTiers": [
+    {
+      "lin": 500,
+      "base": 800,
+      "exp": 0.2
+    },
+    {
+      "lin": 500,
+      "base": 1200,
+      "exp": 0.2
+    },
+    {
+      "lin": 500,
+      "base": 1600,
+      "exp": 0.2
+    },
+    {
+      "lin": 500,
+      "base": 2000,
+      "exp": 0.2
+    },
+    {
+      "lin": 500,
+      "base": 2000,
+      "exp": 0.25
+    },
+    {
+      "lin": 500,
+      "base": 2000,
+      "exp": 0.27
+    },
+    {
+      "lin": 500,
+      "base": 2000,
+      "exp": 0.3
+    }
+  ],
+  "videoSkipSpecialCupsPerDay": 2,
+  "coinValueRampStartValue": 0.25,
+  "freeRewardGems": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3
+  ],
+  "ghostsCollectCoins": false,
+  "cupTimerSkipCostPerHour": 4,
+  "freeRewardCoinRewardMultiplier": 0.5,
+  "tutorialRewardCoins": 1000,
+  "distanceTaskReward": {
+    "chestImageClosed": "ui/cocosstudio/elements/toolbox_event_closed.png",
+    "baseCoins": 2000,
+    "maxRangeFromHighscore": {
+      "lin": -5e-05,
+      "base": 1.25
+    },
+    "chestIcon": "ui/cocosstudio/elements/eventchest.png",
+    "coinsPerMeter": 0.3,
+    "minRangeFromHighscore": {
+      "lin": -5e-05,
+      "base": 0.85
+    },
+    "gemsPerMeter": 0.0005,
+    "baseGems": 2,
+    "chestImageOpen": "ui/cocosstudio/elements/toolbox_event_open.png",
+    "gemsProbability": 0.5
+  },
+  "specialCupRewards": [
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_1_closed.png",
+      "coinRewardMultiplier": 1,
+      "chestIcon": "ui/cocosstudio/elements/chest_1.png",
+      "timer": 10800,
+      "gemRewardMultiplier": 1,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_1_open.png",
+      "skippable": true
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_2_closed.png",
+      "coinRewardMultiplier": 2,
+      "chestIcon": "ui/cocosstudio/elements/chest_2.png",
+      "timer": 21600,
+      "gemRewardMultiplier": 2,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_2_open.png",
+      "skippable": false
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_3_closed.png",
+      "coinRewardMultiplier": 4,
+      "chestIcon": "ui/cocosstudio/elements/chest_3.png",
+      "timer": 28800,
+      "gemRewardMultiplier": 4,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_3_open.png",
+      "skippable": false
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_4_closed.png",
+      "coinRewardMultiplier": 8,
+      "chestIcon": "ui/cocosstudio/elements/chest_4.png",
+      "timer": 43200,
+      "gemRewardMultiplier": 8,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_4_open.png",
+      "skippable": false
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_5_closed.png",
+      "coinRewardMultiplier": 20,
+      "chestIcon": "ui/cocosstudio/elements/chest_5.png",
+      "timer": 86400,
+      "gemRewardMultiplier": 20,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_5_open.png",
+      "skippable": false
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_1_closed.png",
+      "coinRewardMultiplier": 1,
+      "chestIcon": "ui/cocosstudio/elements/chest_1.png",
+      "timer": 15,
+      "gemRewardMultiplier": 1,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_1_open.png",
+      "skippable": false
+    },
+    {
+      "chestImageClosed": "ui/cocosstudio/elements/toolbox_x_closed.png",
+      "coinRewardMultiplier": 2,
+      "rewardDriverSets": [
+        [
+          1.0,
+          "santa"
+        ]
+      ],
+      "chestIcon": "ui/cocosstudio/elements/chest_x.png",
+      "timer": 10800,
+      "gemRewardMultiplier": 2,
+      "chestImageOpen": "ui/cocosstudio/elements/toolbox_x_open.png",
+      "freeGift": true,
+      "skippable": true
+    }
+  ],
+  "normalStarRewards": [
+    0,
+    0,
+    0
+  ],
+  "distanceUnlockPrices": {
+    "city": 12000,
+    "mountain_01": 30000,
+    "countryside_01": 0,
+    "mines": 50000,
+    "winter_01": 40000,
+    "forest": 4000
+  },
+  "extraMissionRewardTime": 28800,
+  "easyStarRewards": [
+    0,
+    0,
+    0
+  ],
+  "iapItems": [
+    {
+      "name": "Stack of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems0_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems0",
+      "playId": "com.fingersoft.hcr2_gems0",
+      "windowsStoreId": "winstoreprefix.gem_bundle_small",
+      "gemAmount": 100,
+      "id": "gem_pack0",
+      "icon": "ui/cocosstudio/IAP/gembundle_1.png"
+    },
+    {
+      "name": "Cup of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems1_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems1",
+      "playId": "com.fingersoft.hcr2_gems1",
+      "windowsStoreId": "winstoreprefix.gem_bundle_medium",
+      "gemAmount": 400,
+      "id": "gem_pack1",
+      "icon": "ui/cocosstudio/IAP/gembundle_2.png"
+    },
+    {
+      "name": "Pile of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems2_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems2",
+      "playId": "com.fingersoft.hcr2_gems2",
+      "windowsStoreId": "winstoreprefix.gem_bundle_big",
+      "gemAmount": 800,
+      "id": "gem_pack2",
+      "icon": "ui/cocosstudio/IAP/gembundle_3.png"
+    },
+    {
+      "name": "Barrel of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems3_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems3",
+      "playId": "com.fingersoft.hcr2_gems3",
+      "windowsStoreId": "winstoreprefix.gem_bundle_large",
+      "gemAmount": 2000,
+      "id": "gem_pack3",
+      "icon": "ui/cocosstudio/IAP/gembundle_4.png"
+    },
+    {
+      "name": "Carful of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems4_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems4",
+      "playId": "com.fingersoft.hcr2_gems4",
+      "windowsStoreId": "winstoreprefix.gem_bundle_XL",
+      "gemAmount": 4000,
+      "id": "gem_pack4",
+      "icon": "ui/cocosstudio/IAP/gembundle_5.png"
+    },
+    {
+      "name": "Mountain of Gems",
+      "playIdDiscount": "com.fingersoft.hcr2_gems5_discount",
+      "iTunesId": "com.fingersoft.hcr2_gems5",
+      "playId": "com.fingersoft.hcr2_gems5",
+      "windowsStoreId": "winstoreprefix.gem_bundle_XXL",
+      "gemAmount": 8000,
+      "id": "gem_pack5",
+      "icon": "ui/cocosstudio/IAP/gembundle_6.png"
+    }
+  ],
+  "minInterstitialShowDelay": 120,
+  "interstitialShowDelay": 420,
+  "expiredChallengeCost": 1,
+  "freeUpgradeMaxPrice": 6000,
+  "friendlyRaceRetriesFillPrice": 1,
+  "specialCupShuffle": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    0,
+    2,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2
+  ],
+  "retryChallengeCost": 1,
+  "dailyRewardTime": 10800,
+  "freeFriendlyRaceRetries": 10,
+  "coinValueRampEndPositionDistance": 2000,
+  "freeUpgradeTime": 10800,
+  "freeUpgradeMinPrice": 0,
+  "tutorialRewardShuffle": [
+    5
+  ],
+  "namedExpressions": {
+    "sinesquare": "(-((x-1)^2) + 1 + (cos(pi*x-pi)+1)/2) / 2",
+    "sine": "(cos(pi*x-pi)+1)/2",
+    "square": "-((x-1)^2) + 1",
+    "linear": "x",
+    "exp": "x^2"
+  },
+  "seasonReward": {
+    "baseCoins": 10000,
+    "gemsPerLegendaryRank": 0.5,
+    "gemsPerRank": 0.2,
+    "coinsPerRank": 500,
+    "coinsPerLegendaryRank": 100,
+    "baseGems": 10
+  },
+  "showInterstitialOnlyAfterVictory": false,
+  "dailyToolboxWinsRequired": 10,
+  "base_conversion": {
+    "money": 0.99,
+    "coins": 10000
+  },
+  "initialGemAmount": 60,
+  "dailyDistanceMissionsLimit": 3,
+  "dailyToolboxTime": 86400,
+  "dailyToolboxCoinRewardMultiplier": 2.0,
+  "numSessionsWithInterstitialsDisabled": 1,
+  "dailyRewards": [
+    {
+      "minRank": 0,
+      "dailyRewardCoins": [
+        1000,
+        1250,
+        1250,
+        1500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1500
+    },
+    {
+      "minRank": 3,
+      "dailyRewardCoins": [
+        1000,
+        1250,
+        1250,
+        1500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1500
+    },
+    {
+      "minRank": 7,
+      "dailyRewardCoins": [
+        1000,
+        1250,
+        1250,
+        1500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1500
+    },
+    {
+      "minRank": 10,
+      "dailyRewardCoins": [
+        1250,
+        1500,
+        1500,
+        1750
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1750
+    },
+    {
+      "minRank": 13,
+      "dailyRewardCoins": [
+        1250,
+        1500,
+        1500,
+        1750
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1750
+    },
+    {
+      "minRank": 17,
+      "dailyRewardCoins": [
+        1250,
+        1500,
+        1500,
+        1750
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 1750
+    },
+    {
+      "minRank": 20,
+      "dailyRewardCoins": [
+        1500,
+        1750,
+        1750,
+        2000
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2000
+    },
+    {
+      "minRank": 23,
+      "dailyRewardCoins": [
+        1500,
+        1750,
+        1750,
+        2000
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2000
+    },
+    {
+      "minRank": 27,
+      "dailyRewardCoins": [
+        1500,
+        1750,
+        1750,
+        2000
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.2
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2000
+    },
+    {
+      "minRank": 30,
+      "dailyRewardCoins": [
+        1750,
+        2000,
+        2000,
+        2250
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2250
+    },
+    {
+      "minRank": 33,
+      "dailyRewardCoins": [
+        1750,
+        2000,
+        2000,
+        2250
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2250
+    },
+    {
+      "minRank": 37,
+      "dailyRewardCoins": [
+        1750,
+        2000,
+        2000,
+        2250
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2250
+    },
+    {
+      "minRank": 40,
+      "dailyRewardCoins": [
+        2000,
+        2250,
+        2250,
+        2500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2500
+    },
+    {
+      "minRank": 43,
+      "dailyRewardCoins": [
+        2000,
+        2250,
+        2250,
+        2500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2500
+    },
+    {
+      "minRank": 47,
+      "dailyRewardCoins": [
+        2000,
+        2250,
+        2250,
+        2500
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 2500
+    },
+    {
+      "minRank": 50,
+      "dailyRewardCoins": [
+        2250,
+        2500,
+        2500,
+        2500,
+        2500,
+        2750,
+        2750,
+        3000
+      ],
+      "dailyRewardVehicleChance": 0.5,
+      "dailyRewardDistanceRangeFromHighScore": [
+        0.75,
+        1.05
+      ],
+      "dailyRewardLockedVehicleChance": 0.2,
+      "dailyRewardMaxCoins": 3000
+    }
+  ],
+  "customizationPriceFactor": 1000,
+  "dailyToolboxGems": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5
+  ],
+  "vehicleUnlockPrices": {
+    "sportscar": 80000,
+    "pickup_truck": 60000,
+    "monowheel": 100000,
+    "motocross": 20000,
+    "monster": 40000,
+    "jeep": 0,
+    "scooter": 5000,
+    "skateboard": 50000,
+    "atv": 15000,
+    "fwd": 25000,
+    "truck": 20000,
+    "formula": 90000,
+    "minitank": 70000,
+    "superjeep": 9000,
+    "tractor": 15000
+  },
+  "hardStarRewards": [
+    0,
+    0,
+    0
+  ],
+  "dailyRewardLimit": 3,
+  "duplicateCustomizationRewardMultiplier": 0.5,
+  "dailyDistanceMissionRefillInterval": 43200
+}

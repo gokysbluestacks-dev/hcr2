@@ -1,0 +1,1355 @@
+{
+  "musicVolume": 0.25,
+  "sounds": {
+    "finish-second": "vo_second-place",
+    "dialog-hide": "sfx_dialog",
+    "result-screen-show-card": "sfx_stats-appearing",
+    "collect_chest": "sfx_coins-bag",
+    "sfx_formula-low-rpm": "sfx_formula-low-rpm",
+    "sports-car-horn": "sfx_horn-sports-car",
+    "menu-click": "sfx_button",
+    "splash_lava": "sfx_splash_lava",
+    "sfx_monster-truck-high-rpm": "sfx_monster-truck-high-rpm",
+    "atv-horn": "sfx_horn-atv",
+    "sfx_motorbike-low-rpm": "sfx_motorbike-low-rpm",
+    "standard-vehicle-impact-big": [
+      "sfx_standard-vehicle-big-impact-01",
+      "sfx_standard-vehicle-big-impact-02",
+      "sfx_standard-vehicle-big-impact-03",
+      "sfx_standard-vehicle-big-impact-04"
+    ],
+    "sfx_jeep-low-rpm": "sfx_jeep-low-rpm",
+    "sfx_jeep-high-rpm": "sfx_jeep-high-rpm",
+    "sfx_engine-turbo": "sfx_engine-turbo",
+    "sfx_minitank-idle": "sfx_minitank-idle",
+    "sfx_monowheel": "sfx_monowheel",
+    "sfx_motorbike-high-rpm": "sfx_motorbike-high-rpm",
+    "bonus-score": "sfx_bonus-score",
+    "formula-horn": "sfx_horn-formula",
+    "boulder": [
+      "sfx_boulder-01",
+      "sfx_boulder-02"
+    ],
+    "gem-use": "sfx_gem-use",
+    "league-down": "league_down",
+    "rank-progress-up": "sfx_rank-progress-up",
+    "reward-box-claim": "sfx_box-equip-button",
+    "sfx_engine-turbo-flutter": "sfx_engine-turbo-flutter",
+    "sfx_monster-truck-idle": "sfx_monster-truck-idle",
+    "driver-down": "vo_driver-down",
+    "gem": "sfx_gem",
+    "motocross-horn": "sfx_horn-motocross",
+    "finish-third": "vo_third-place",
+    "firework-victory": {
+      "volume": [
+        0.4,
+        0.6
+      ],
+      "file": [
+        "sfx_firework-01",
+        "sfx_firework-02",
+        "sfx_firework-03"
+      ]
+    },
+    "superjeep_pipe_detach": "sfx_car-part-detach",
+    "sfx_pickup-high-rpm": "sfx_pickup-high-rpm",
+    "sfx_sports-car-high-rpm": "sfx_sports-car-high-rpm",
+    "level-purchase": "sfx_purchase",
+    "victory": "vo_victory",
+    "sfx_jeep-idle": "sfx_jeep-idle",
+    "jeep-horn": "sfx_horn-jeep",
+    "standard-vehicle-impact-small": [
+      "sfx_standard-vehicle-small-impact-01",
+      "sfx_standard-vehicle-small-impact-02"
+    ],
+    "gem-conversion": "sfx_gem-conversion",
+    "sfx_atv-low-rpm": "sfx_atv-low-rpm",
+    "sfx_pickup-idle": "sfx_pickup-idle",
+    "sfx_monster-turbo": "engine-roar",
+    "carousel-bounce": "sfx_dialog",
+    "flag-transition": "",
+    "unlock": "sfx_unlock",
+    "rank-down-animation-start": "sfx_rank-down-animation-start",
+    "heavy-vehicle-impact-small": [
+      "sfx_heavy-vehicle-small-impact-01",
+      "sfx_heavy-vehicle-small-impact-02"
+    ],
+    "sfx_atv-higher-rpm": "sfx_atv-higher-rpm",
+    "sfx_pickup-low-rpm": "sfx_pickup-low-rpm",
+    "race-intro-show-opponents": "sfx_dialog",
+    "neck-flip": "vo_neck-flip",
+    "sfx_sports-car-idle": "sfx_sports-car-idle",
+    "boost": "boost",
+    "splash_big": "sfx_big-splash",
+    "sfx_atv-high-rpm": "sfx_atv-high-rpm",
+    "sfx_sports-car-low-rpm": "sfx_sports-car-low-rpm",
+    "collect_fuel": "sfx_fuel",
+    "menu-click-cancel": "sfx_button-cancel",
+    "finish-fourth": "vo_fourth-place",
+    "low-fuel-alert": "sfx_low-fuel-alert",
+    "sfx_scooter-backfire": "sfx_scooter-backfire",
+    "sfx_minitank-high-rpm": "sfx_minitank-high-rpm",
+    "splash_lava_big": "sfx_big-splash_lava",
+    "cow-moo": [
+      "cow-moo-1",
+      "cow-moo-2"
+    ],
+    "sfx_scooter-idle": "sfx_scooter-idle",
+    "sfx_monster-truck-low-rpm": "sfx_monster-truck-low-rpm",
+    "carousel-swipe": "sfx_swipe-vehicles",
+    "out-of-fuel": "vo_out-of-fuel",
+    "sfx_jeep-higher-rpm": "sfx_jeep-higher-rpm",
+    "scooter-horn": "sfx_horn-scooter",
+    "unlock_message": "sfx_unlock-message",
+    "monster-truck-horn": "sfx_horn-monster-truck",
+    "burning": "sfx_burning",
+    "light-vehicle-impact-big": [
+      "sfx_light-vehicle-big-impact-01",
+      "sfx_light-vehicle-big-impact-02",
+      "sfx_light-vehicle-big-impact-03",
+      "sfx_light-vehicle-big-impact-04"
+    ],
+    "daily-toolbox-progress": "daily_toolbox_progress",
+    "light-vehicle-impact-small": [
+      "sfx_light-vehicle-small-impact-01",
+      "sfx_light-vehicle-small-impact-02"
+    ],
+    "purchase-fail": "sfx_purchase-fail",
+    "sfx_atv-idle": "sfx_atv-idle",
+    "sfx_super-jeep-backfire": "sfx_super-jeep-backfire",
+    "collect_coin": "sfx_coin",
+    "superjeep_rollcage_hit": "sfx_car-part-hit",
+    "sfx_super-jeep-idle": "sfx_super-jeep-idle",
+    "rank-progress-down": "sfx_rank-progress-down",
+    "airtime": "",
+    "access-denied": "sfx_access-denied",
+    "gems_flow": "sfx_earn-gems",
+    "reward-box-open": "sfx_box-open",
+    "splash": "sfx_splash",
+    "dialog-show": "sfx_dialog",
+    "start-race": "sfx_start",
+    "sfx_monowheel-high-rpm": "sfx_monowheel-high-rpm",
+    "break_neck": [
+      "sfx_neck-crack-01",
+      "sfx_neck-crack-02",
+      "sfx_neck-crack-03",
+      "sfx_neck-crack-04"
+    ],
+    "collect-daily-mission": "sfx_races-collect",
+    "editbox-type": "sfx_digit",
+    "countdown-go": "vo_count-go",
+    "explode_car": "explosion",
+    "reward-tip": "sfx_tip",
+    "countdown-1": "vo_count-1",
+    "firework": {
+      "volume": [
+        0.4,
+        0.6
+      ],
+      "file": [
+        "sfx_firework-01",
+        "sfx_firework-02",
+        "sfx_firework-03"
+      ]
+    },
+    "break_highscore": "hohohou",
+    "skateboard-impact-small": [
+      "sfx_skateboard-small-impact-01",
+      "sfx_skateboard-small-impact-02",
+      "sfx_skateboard-small-impact-03"
+    ],
+    "sfx_super-jeep-high-rpm": "sfx_super-jeep-high-rpm",
+    "car-jump-medium": [
+      "sfx_car-jump-medium-01",
+      "sfx_car-jump-medium-02",
+      "sfx_car-jump-medium-03",
+      "sfx_car-jump-medium-04"
+    ],
+    "heavy-vehicle-impact-big": [
+      "sfx_heavy-vehicle-big-impact-01",
+      "sfx_heavy-vehicle-big-impact-02",
+      "sfx_heavy-vehicle-big-impact-03",
+      "sfx_heavy-vehicle-big-impact-04",
+      "sfx_heavy-vehicle-big-impact-05"
+    ],
+    "sfx_jeep-backfire": "sfx_jeep-backfire",
+    "cup-item-changed": "sfx_cup-item-changed",
+    "sfx_motorbike-backfire": "sfx_motorbike-backfire",
+    "sfx_motorbike-idle": "sfx_motorbike-idle",
+    "sfx_formula-high-rpm": "sfx_formula-high-rpm",
+    "rotating-wheel": "sfx_rotating-wheels",
+    "rank-up-animation-start": "sfx_rank-up-animation-start",
+    "sfx_scooter-high-rpm": "sfx_scooter-high-rpm",
+    "sfx_super-jeep-low-rpm": "sfx_super-jeep-low-rpm",
+    "superjeep-horn": "sfx_horn-super-jeep",
+    "tutorial-failed": "sfx_dialog",
+    "sfx_super-jeep-higher-rpm": "sfx_super-jeep-higher-rpm",
+    "sfx_yeah": "vo_yeah",
+    "sfx_monster-engine": "engine-bigmonster",
+    "tutorial-tip": "sfx_tip",
+    "sfx_engine-turbo-diesel": "sfx_engine-turbo-diesel",
+    "tutorial-completed": "vo_awesome",
+    "car-jump-low": [
+      "sfx_car-jump-low-01",
+      "sfx_car-jump-low-02"
+    ],
+    "sfx_scooter-low-rpm": "sfx_scooter-low-rpm",
+    "scene-transition": "sfx_screen-transition",
+    "sfx_formula-idle": "sfx_formula-idle",
+    "new-record": "vo_new-record",
+    "sfx_skateboard": "sfx_skateboard",
+    "minitank-horn": "sfx_horn-minitank",
+    "upgrade-purchase": "sfx_purchase",
+    "league-up": "league_up",
+    "superjeep_rollcage_detach": "sfx_car-part-detach",
+    "sfx_skateboard_kick": [
+      "sfx_skateboard-push-off-01",
+      "sfx_skateboard-push-off-02"
+    ],
+    "vehicle-purchase": "sfx_vehicle-purchase",
+    "countdown-3": "vo_count-3",
+    "countdown-2": "vo_count-2",
+    "invalid-name": "sfx_horn-jeep",
+    "coins_flow": "sfx_earn-coins",
+    "sfx_minitank-low-rpm": "sfx_minitank-low-rpm",
+    "reward-box-equip": "sfx_box-equip-button"
+  },
+  "minInterval": 0.1,
+  "events": {
+    "standard-vehicle-impact": {
+      "impulse": [
+        {
+          "range": [
+            1.1,
+            1.8
+          ],
+          "oneshot": true,
+          "id": "standard-vehicle-impact-small",
+          "interval": 1.0
+        },
+        {
+          "range": [
+            1.8,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "standard-vehicle-impact-big",
+          "interval": 1.0
+        }
+      ]
+    },
+    "skateboard-engine": {
+      "rpm": [
+        {
+          "volume": [
+            0.0,
+            1.0
+          ],
+          "range": [
+            0.0,
+            1.0
+          ],
+          "id": "sfx_skateboard",
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        }
+      ]
+    },
+    "pickup-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.1,
+            0.4
+          ],
+          "range": [
+            0.1,
+            1.0
+          ],
+          "id": "sfx_engine-turbo-diesel",
+          "pitch": [
+            0.5,
+            1.1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.25,
+            0.55
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "pitch": [
+            1.1,
+            1.1
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.3,
+            0.4
+          ],
+          "range": [
+            0.0,
+            0.2
+          ],
+          "id": "sfx_pickup-idle",
+          "pitch": [
+            0.9,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.4,
+            0.65
+          ],
+          "range": [
+            0.1,
+            0.65
+          ],
+          "id": "sfx_pickup-low-rpm",
+          "pitch": [
+            0.7,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.85,
+            0.95
+          ],
+          "range": [
+            0.45,
+            1
+          ],
+          "id": "sfx_pickup-high-rpm",
+          "pitch": [
+            0.9,
+            1.4
+          ]
+        }
+      ]
+    },
+    "monster-truck-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.25,
+            0.95
+          ],
+          "range": [
+            0.1,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.7,
+            1.3
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.4,
+            0.95
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            1.1,
+            1.5
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.5,
+            0.5
+          ],
+          "range": [
+            0.0,
+            0.25
+          ],
+          "id": "sfx_monster-truck-idle",
+          "pitch": [
+            1.0,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.3,
+            0.6
+          ],
+          "range": [
+            0.15,
+            0.7
+          ],
+          "id": "sfx_monster-truck-low-rpm",
+          "pitch": [
+            0.9,
+            1.6
+          ]
+        },
+        {
+          "volume": [
+            0.5,
+            0.8
+          ],
+          "range": [
+            0.5,
+            1
+          ],
+          "id": "sfx_monster-truck-high-rpm",
+          "pitch": [
+            0.8,
+            1.8
+          ]
+        }
+      ]
+    },
+    "motocross-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.2
+          ],
+          "range": [
+            0.0,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.9,
+            1.2
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 0.9,
+          "oneshot": true,
+          "volume": [
+            0.3,
+            0.45
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.9,
+            1.1
+          ],
+          "id": "sfx_motorbike-backfire"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.2,
+            0.1
+          ],
+          "range": [
+            0.0,
+            0.3
+          ],
+          "id": "sfx_motorbike-idle",
+          "pitch": [
+            0.9,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.25,
+            0.25
+          ],
+          "range": [
+            0.1,
+            0.65
+          ],
+          "id": "sfx_motorbike-low-rpm",
+          "pitch": [
+            0.9,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.35
+          ],
+          "range": [
+            0.45,
+            1.0
+          ],
+          "id": "sfx_motorbike-high-rpm",
+          "pitch": [
+            0.7,
+            1.2
+          ]
+        }
+      ]
+    },
+    "formula-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.3
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            1.2,
+            2
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.2,
+            0.4
+          ],
+          "range": [
+            0.6,
+            0.9
+          ],
+          "pitch": [
+            1.2,
+            1.8
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.3,
+            0.4
+          ],
+          "range": [
+            0.0,
+            0.3
+          ],
+          "id": "sfx_formula-idle",
+          "pitch": [
+            0.5,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.4,
+            0.5
+          ],
+          "range": [
+            0.05,
+            1
+          ],
+          "id": "sfx_formula-low-rpm",
+          "pitch": [
+            0.9,
+            1.4
+          ]
+        },
+        {
+          "volume": [
+            0.1,
+            0.9
+          ],
+          "range": [
+            0.1,
+            1
+          ],
+          "id": "sfx_formula-high-rpm",
+          "pitch": [
+            0.8,
+            1.0
+          ]
+        }
+      ]
+    },
+    "jeep-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.3
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.8,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.6,
+            0.65
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.9,
+            1.3
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.15,
+            0.15
+          ],
+          "range": [
+            0.0,
+            0.1
+          ],
+          "id": "sfx_jeep-idle",
+          "pitch": [
+            0.8,
+            0.9
+          ]
+        },
+        {
+          "volume": [
+            0.2,
+            0.3
+          ],
+          "range": [
+            0.05,
+            0.45
+          ],
+          "id": "sfx_jeep-low-rpm",
+          "pitch": [
+            0.8,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.25,
+            0.3
+          ],
+          "range": [
+            0.3,
+            0.8
+          ],
+          "id": "sfx_jeep-high-rpm",
+          "pitch": [
+            0.8,
+            1.15
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.35
+          ],
+          "range": [
+            0.7,
+            1
+          ],
+          "id": "sfx_jeep-higher-rpm",
+          "pitch": [
+            0.8,
+            1.1
+          ]
+        }
+      ]
+    },
+    "light-vehicle-impact": {
+      "impulse": [
+        {
+          "range": [
+            1.1,
+            1.8
+          ],
+          "oneshot": true,
+          "id": "light-vehicle-impact-small",
+          "interval": 1.0
+        },
+        {
+          "range": [
+            1.8,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "light-vehicle-impact-big",
+          "interval": 1.0
+        }
+      ]
+    },
+    "minitank-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.3
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.2,
+            0.4
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.5,
+            0.8
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.2,
+            0.3
+          ],
+          "range": [
+            0.0,
+            0.2
+          ],
+          "id": "sfx_minitank-idle",
+          "pitch": [
+            0.9,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.3,
+            0.35
+          ],
+          "range": [
+            0.1,
+            0.6
+          ],
+          "id": "sfx_minitank-low-rpm",
+          "pitch": [
+            0.9,
+            1.25
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.55
+          ],
+          "range": [
+            0.45,
+            1.0
+          ],
+          "id": "sfx_minitank-high-rpm",
+          "pitch": [
+            0.9,
+            1.1
+          ]
+        }
+      ]
+    },
+    "superjeep-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.25
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.8,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.3,
+            0.85
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.9,
+            1.3
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.4,
+            0.3
+          ],
+          "range": [
+            0.0,
+            0.1
+          ],
+          "id": "sfx_super-jeep-idle",
+          "pitch": [
+            1.1,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.3,
+            0.3
+          ],
+          "range": [
+            0.05,
+            0.4
+          ],
+          "id": "sfx_super-jeep-low-rpm",
+          "pitch": [
+            0.8,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.3,
+            0.3
+          ],
+          "range": [
+            0.3,
+            0.85
+          ],
+          "id": "sfx_super-jeep-high-rpm",
+          "pitch": [
+            0.8,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.35
+          ],
+          "range": [
+            0.7,
+            1
+          ],
+          "id": "sfx_super-jeep-higher-rpm",
+          "pitch": [
+            0.8,
+            1.1
+          ]
+        }
+      ]
+    },
+    "atv-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.2
+          ],
+          "range": [
+            0.5,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            1,
+            1.2
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.2,
+            0.3
+          ],
+          "range": [
+            0.6,
+            0.9
+          ],
+          "pitch": [
+            1,
+            1.3
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.45,
+            0.35
+          ],
+          "range": [
+            0.0,
+            0.15
+          ],
+          "id": "sfx_atv-idle",
+          "pitch": [
+            1,
+            1.2
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.3
+          ],
+          "range": [
+            0.05,
+            0.4
+          ],
+          "id": "sfx_atv-low-rpm",
+          "pitch": [
+            0.7,
+            1
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.3
+          ],
+          "range": [
+            0.3,
+            0.8
+          ],
+          "id": "sfx_atv-high-rpm",
+          "pitch": [
+            1,
+            1.15
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.3
+          ],
+          "range": [
+            0.7,
+            1
+          ],
+          "id": "sfx_atv-higher-rpm",
+          "pitch": [
+            0.9,
+            1.2
+          ]
+        }
+      ]
+    },
+    "skateboard-impact": {
+      "impulse": [
+        {
+          "range": [
+            0.5,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "skateboard-impact-small",
+          "interval": 1.0
+        }
+      ]
+    },
+    "rock": {
+      "impulse": [
+        {
+          "range": [
+            8.0,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "boulder",
+          "interval": 1.0
+        }
+      ]
+    },
+    "rolling-wheel": {
+      "speed": [
+        {
+          "volume": [
+            0.0,
+            1.0
+          ],
+          "range": [
+            1.0,
+            10.0
+          ],
+          "id": "rotating-wheel",
+          "pitch": [
+            0.5,
+            1.0
+          ]
+        }
+      ],
+      "impulse": [
+        {
+          "range": [
+            3.0,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "boulder",
+          "interval": 1.0
+        }
+      ]
+    },
+    "heavy-vehicle-impact": {
+      "impulse": [
+        {
+          "range": [
+            1,
+            1.5
+          ],
+          "oneshot": true,
+          "id": "heavy-vehicle-impact-small",
+          "probability": 0.9,
+          "interval": 1.0
+        },
+        {
+          "range": [
+            1.5,
+            10000.0
+          ],
+          "oneshot": true,
+          "id": "heavy-vehicle-impact-big",
+          "probability": 0.9,
+          "interval": 1.0
+        }
+      ]
+    },
+    "scooter-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.2
+          ],
+          "range": [
+            0.0,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.8,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 0.9,
+          "oneshot": true,
+          "volume": [
+            0.45,
+            0.55
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.9,
+            1.1
+          ],
+          "id": "sfx_scooter-backfire"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.2,
+            0.15
+          ],
+          "range": [
+            0.0,
+            0.3
+          ],
+          "id": "sfx_scooter-idle",
+          "pitch": [
+            1,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.5,
+            0.4
+          ],
+          "range": [
+            0.1,
+            0.8
+          ],
+          "id": "sfx_scooter-low-rpm",
+          "pitch": [
+            0.9,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.4,
+            0.4
+          ],
+          "range": [
+            0.45,
+            1.0
+          ],
+          "id": "sfx_scooter-high-rpm",
+          "pitch": [
+            0.8,
+            1.2
+          ]
+        }
+      ]
+    },
+    "monster-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.2,
+            1.0
+          ],
+          "range": [
+            0.0,
+            1.0
+          ],
+          "id": "sfx_monster-turbo",
+          "pitch": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "oneshot": true,
+          "volume": [
+            0.5,
+            0.8
+          ],
+          "range": [
+            0.5,
+            0.9
+          ],
+          "pitch": [
+            0.9,
+            1.3
+          ],
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.2,
+            0.4
+          ],
+          "range": [
+            0.0,
+            1.0
+          ],
+          "id": "sfx_monster-engine",
+          "pitch": [
+            0.5,
+            2.0
+          ]
+        }
+      ]
+    },
+    "rotating-wheel": {
+      "distance": [
+        {
+          "id": "rotating-wheel"
+        }
+      ]
+    },
+    "monowheel-engine": {
+      "rpm": [
+        {
+          "volume": [
+            0,
+            0.35
+          ],
+          "range": [
+            0,
+            1.0
+          ],
+          "id": "sfx_monowheel-high-rpm",
+          "pitch": [
+            0.7,
+            1.4
+          ]
+        }
+      ]
+    },
+    "sports-car-engine": {
+      "turbo": [
+        {
+          "volume": [
+            0.0,
+            0.25
+          ],
+          "range": [
+            0.3,
+            1.0
+          ],
+          "id": "sfx_engine-turbo",
+          "pitch": [
+            0.8,
+            1
+          ]
+        },
+        {
+          "direction": -1,
+          "interval": 1.0,
+          "probability": 1.0,
+          "randomVolume": false,
+          "oneshot": true,
+          "volume": [
+            0.3,
+            0.85
+          ],
+          "range": [
+            0.7,
+            1
+          ],
+          "pitch": [
+            1,
+            1.4
+          ],
+          "randomPitch": false,
+          "id": "sfx_engine-turbo-flutter"
+        }
+      ],
+      "rpm": [
+        {
+          "volume": [
+            0.35,
+            0.3
+          ],
+          "range": [
+            0.0,
+            0.2
+          ],
+          "id": "sfx_sports-car-idle",
+          "pitch": [
+            0.95,
+            1.1
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.55
+          ],
+          "range": [
+            0.05,
+            0.5
+          ],
+          "id": "sfx_sports-car-low-rpm",
+          "pitch": [
+            0.75,
+            1.15
+          ]
+        },
+        {
+          "volume": [
+            0.35,
+            0.5
+          ],
+          "range": [
+            0.4,
+            1
+          ],
+          "id": "sfx_sports-car-high-rpm",
+          "pitch": [
+            0.9,
+            1.2
+          ]
+        }
+      ]
+    }
+  }
+}

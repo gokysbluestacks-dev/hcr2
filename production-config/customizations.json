@@ -1,0 +1,290 @@
+{
+  "rarityWeights": [
+    0,
+    16,
+    4,
+    1,
+    0
+  ],
+  "drivers": [
+    {
+      "id": "default",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "CLASSIC"
+      }
+    },
+    {
+      "id": "farmer",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "FARMER"
+      }
+    },
+    {
+      "id": "fingersoft",
+      "name": "FINGERSOFT"
+    },
+    {
+      "id": "soldier",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "SOLDIER"
+      }
+    },
+    {
+      "id": "winter",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "WINTER"
+      }
+    },
+    {
+      "id": "carrie",
+      "name": "CARRIE"
+    },
+    {
+      "id": "cat",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "CAT"
+      }
+    },
+    {
+      "id": "clown",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "CLOWN"
+      }
+    },
+    {
+      "id": "firefighter",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "FIREFIGHTER"
+      }
+    },
+    {
+      "id": "ginger",
+      "name": {
+        "localize": "Name of a driver customization. It's a boy with red hair.",
+        "value": "GINGER"
+      }
+    },
+    {
+      "id": "goth",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "GOTH"
+      }
+    },
+    {
+      "id": "hipster",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "HIPSTER"
+      }
+    },
+    {
+      "id": "hoodie",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "HOODIE"
+      }
+    },
+    {
+      "id": "naked",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "NAKED"
+      }
+    },
+    {
+      "id": "nerdgirl",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "NERDGIRL"
+      }
+    },
+    {
+      "id": "nightsuit",
+      "name": {
+        "localize": "Name of a driver customization, it's a night suit",
+        "value": "PAJAMAS"
+      }
+    },
+    {
+      "id": "police",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "POLICE"
+      }
+    },
+    {
+      "id": "prisoner",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "PRISONER"
+      }
+    },
+    {
+      "id": "raccoonsuit",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "RACCOON"
+      }
+    },
+    {
+      "id": "steampunk",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "STEAMPUNK"
+      }
+    },
+    {
+      "id": "zombie",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "ZOMBIE"
+      }
+    },
+    {
+      "id": "caveman",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "CAVEMAN"
+      }
+    },
+    {
+      "id": "dinnersuit",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "DINNERSUIT"
+      }
+    },
+    {
+      "id": "rap-artist",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "DJ BILL"
+      }
+    },
+    {
+      "id": "halloween",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "VAMPIRE"
+      }
+    },
+    {
+      "id": "rocker",
+      "name": {
+        "localize": "Name of a driver customization. It's a rock music fan.",
+        "value": "ROCKER"
+      }
+    },
+    {
+      "id": "santa",
+      "name": {
+        "localize": "Name of a driver customization: Santa Claus outfit.",
+        "value": "SANTA"
+      }
+    },
+    {
+      "id": "survivor",
+      "name": {
+        "localize": "Name of a driver customization: It's a survivor living in post-apocalyptic world.",
+        "value": "SURVIVOR"
+      }
+    },
+    {
+      "id": "handyman",
+      "name": {
+        "localize": "Name of a driver customization: It's a construction worker/repair man.",
+        "value": "HANDYMAN"
+      }
+    },
+    {
+      "id": "miner",
+      "name": {
+        "localize": "Name of a driver customization: It's a mine worker with a head lamp.",
+        "value": "MINER"
+      }
+    },
+    {
+      "id": "punk",
+      "name": {
+        "localize": "Name of a driver customization: It's a mine worker with a punk girl.",
+        "value": "PUNK"
+      }
+    },
+    {
+      "id": "america",
+      "name": {
+        "localize": "Name of a driver customization: It's a USA-themed Uncle Sam lookalike.",
+        "value": "USA"
+      }
+    },
+    {
+      "id": "pirate",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "PIRATE"
+      }
+    },
+    {
+      "id": "sports",
+      "name": {
+        "localize": "Name of a driver customization. It's a racing car driver.",
+        "value": "RACING"
+      }
+    },
+    {
+      "id": "sportsformula",
+      "name": {
+        "localize": "Name of a driver customization. It's a formula car driver.",
+        "value": "FORMULA"
+      }
+    },
+    {
+      "id": "alice",
+      "name": "ALICE"
+    },
+    {
+      "id": "bling",
+      "name": {
+        "localize": "Name of a driver customization. It's a hip hop culture term, referring to flashy, ostentatious, or elaborate jewelry",
+        "value": "BLING"
+      }
+    },
+    {
+      "id": "winteroutfit",
+      "name": "STEVE"
+    },
+    {
+      "id": "ninja",
+      "name": {
+        "localize": "Name of a driver customization",
+        "value": "NINJA"
+      }
+    },
+    {
+      "id": "drafted",
+      "name": {
+        "localize": "Name of a driver customization. It's a soldier drafted for army",
+        "value": "DRAFTED"
+      }
+    },
+    {
+      "id": "kleopatra",
+      "name": {
+        "localize": "Name of a driver customization. It's an ancient egyptian queen ruler",
+        "value": "KLEOPATRA"
+      }
+    },
+    {
+      "id": "oldie",
+      "name": "BILL NEWTON"
+    }
+  ]
+}

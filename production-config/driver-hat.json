@@ -1,0 +1,155 @@
+{
+  "body": [
+    {
+      "position": {
+        "y": 0.02836846932768822,
+        "x": -0.1406835615634918
+      },
+      "angle": 0.09179467707872391,
+      "name": "hat",
+      "gravityScale": 0.5,
+      "massData-mass": 0.002708242740482092,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.0762767568230629,
+                0.4425388276576996,
+                0.430685430765152,
+                0.1188730597496033,
+                0.008455274626612663
+              ],
+              "x": [
+                0.27455273270607,
+                0.1631434112787247,
+                -0.1975564658641815,
+                -0.6554999947547913,
+                -0.561931312084198
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "massData-center": {
+        "y": 0.209540605545044,
+        "x": -0.1477465033531189
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.0003458757419139147
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 0,
+      "opacity": 1,
+      "scale": 1.282098412513733,
+      "center": {
+        "y": 0.2143693715333939,
+        "x": -0.1486483812332153
+      },
+      "corners": {
+        "y": [
+          -0.4266798496246338,
+          -0.4266798496246338,
+          0.8554185628890991,
+          0.8554185628890991
+        ],
+        "x": [
+          -0.7896975874900818,
+          0.4924008250236511,
+          0.4924008250236511,
+          -0.7896975874900818
+        ]
+      },
+      "filter": 1,
+      "file": "textures/drivers/default/default_hat.png",
+      "glVertexPointer": [
+        -0.7896975874900818,
+        -0.4266798496246338,
+        0.4924008250236511,
+        -0.4266798496246338,
+        0.4924008250236511,
+        0.8554185628890991,
+        -0.7896975874900818,
+        0.8554185628890991
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "hat"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

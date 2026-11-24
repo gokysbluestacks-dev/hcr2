@@ -1,0 +1,1 @@
+Place the version-matched decrypted JSON configuration files here. At minimum, provide gamedata.json, economy.json, events_rank.json, tournaments.json, and any other config files you intend the server to return. Do not put APK signing keys or unrelated secrets here.

@@ -1,0 +1,8 @@
+{
+  "sound": "break_highscore",
+  "effect": "particles/break_highscore.plist",
+  "floater_offset": [
+    0,
+    110
+  ]
+}

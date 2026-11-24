@@ -1,0 +1,698 @@
+{
+  "achievements": [
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Made The Grade"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQAQ",
+      "icon": "achievements/achievement_wc.png",
+      "id": 0,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for racing"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Warmed Up!"
+      },
+      "iosId": "",
+      "steps": 10,
+      "androidId": "CgkIrvvCxoUZEAIQAg",
+      "icon": "achievements/achievement_racewin.png",
+      "type": "winRaces",
+      "id": 1,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 10 races"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Unstoppable!"
+      },
+      "iosId": "",
+      "steps": 100,
+      "androidId": "CgkIrvvCxoUZEAIQAw",
+      "icon": "achievements/achievement_racewin.png",
+      "type": "winRaces",
+      "id": 2,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 100 races"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Losing Is for Losers"
+      },
+      "iosId": "",
+      "steps": 1000,
+      "androidId": "CgkIrvvCxoUZEAIQBA",
+      "icon": "achievements/achievement_racewin.png",
+      "type": "winRaces",
+      "id": 3,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 1000 races"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Racing God"
+      },
+      "iosId": "",
+      "steps": 10000,
+      "androidId": "CgkIrvvCxoUZEAIQBQ",
+      "icon": "achievements/achievement_racewin.png",
+      "type": "winRaces",
+      "id": 4,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 10000 races"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Nice Cups!"
+      },
+      "iosId": "",
+      "steps": 5,
+      "androidId": "CgkIrvvCxoUZEAIQBg",
+      "icon": "achievements/achievement_cupwin.png",
+      "type": "winCups",
+      "id": 5,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 5 cups"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "How Many Cups Is Enough?"
+      },
+      "iosId": "",
+      "steps": 50,
+      "androidId": "CgkIrvvCxoUZEAIQBw",
+      "icon": "achievements/achievement_cupwin.png",
+      "type": "winCups",
+      "id": 6,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 50 cups"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Need a New Cup Cabinet.."
+      },
+      "iosId": "",
+      "steps": 500,
+      "androidId": "CgkIrvvCxoUZEAIQCA",
+      "icon": "achievements/achievement_cupwin.png",
+      "type": "winCups",
+      "id": 7,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 500 cups"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "All Your Cups Are Belong to Me!"
+      },
+      "iosId": "",
+      "steps": 5000,
+      "androidId": "CgkIrvvCxoUZEAIQCQ",
+      "icon": "achievements/achievement_cupwin.png",
+      "type": "winCups",
+      "id": 8,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 5000 cups"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Challenger"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQCg",
+      "icon": "achievements/achievement_vs.png",
+      "id": 9,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Send a challenge"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Challenge Accepted"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQLQ",
+      "icon": "achievements/achievement_vs.png",
+      "type": "winChallenges",
+      "id": 42,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win a Challenge"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Bring It On"
+      },
+      "iosId": "",
+      "steps": 20,
+      "androidId": "CgkIrvvCxoUZEAIQLg",
+      "icon": "achievements/achievement_vs.png",
+      "type": "winChallenges",
+      "id": 43,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 20 Challenges"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Challenge Champ"
+      },
+      "iosId": "",
+      "steps": 100,
+      "androidId": "CgkIrvvCxoUZEAIQLw",
+      "icon": "achievements/achievement_vs.png",
+      "type": "winChallenges",
+      "id": 44,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Win 100 Challenges"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Water Run"
+      },
+      "platformSteps": 0.01,
+      "iosId": "",
+      "steps": 10000,
+      "androidId": "CgkIrvvCxoUZEAIQCw",
+      "icon": "achievements/achievement_distance1.png",
+      "type": "totalDistance",
+      "id": 10,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Drive 10000 meters"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Milk Run"
+      },
+      "platformSteps": 0.01,
+      "iosId": "",
+      "steps": 100000,
+      "androidId": "CgkIrvvCxoUZEAIQDA",
+      "icon": "achievements/achievement_distance2.png",
+      "type": "totalDistance",
+      "id": 11,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Drive 100000 meters"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Can't Run That Far, So I Drive"
+      },
+      "platformSteps": 0.01,
+      "iosId": "",
+      "steps": 1000000,
+      "androidId": "CgkIrvvCxoUZEAIQDQ",
+      "icon": "achievements/achievement_distance3.png",
+      "type": "totalDistance",
+      "id": 12,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Drive 1000000 meters"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Just Getting Started"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQKg",
+      "icon": "achievements/achievement_bronze1.png",
+      "type": "league",
+      "id": 41,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Bronze I"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Can't Go Wrong With More Bronze"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQDg",
+      "icon": "achievements/achievement_bronze2.png",
+      "type": "league",
+      "id": 13,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Bronze II"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Price of Bronze is Up, Sell Sell!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQDw",
+      "icon": "achievements/achievement_bronze3.png",
+      "type": "league",
+      "id": 14,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Bronze III"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Shiny!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQEA",
+      "icon": "achievements/achievement_silver1.png",
+      "type": "league",
+      "id": 15,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Silver I"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Making It Look Easy"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQEQ",
+      "icon": "achievements/achievement_silver2.png",
+      "type": "league",
+      "id": 16,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Silver II"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Silvertongue"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQEg",
+      "icon": "achievements/achievement_silver3.png",
+      "type": "league",
+      "id": 17,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Silver III"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Time to Get a Golden Tooth"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQEw",
+      "icon": "achievements/achievement_gold1.png",
+      "type": "league",
+      "id": 18,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Gold I"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Or Maybe a Golden Car?"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQFA",
+      "icon": "achievements/achievement_gold2.png",
+      "type": "league",
+      "id": 19,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Gold II"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "A Castle Made of Gold!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQFQ",
+      "icon": "achievements/achievement_gold3.png",
+      "type": "league",
+      "id": 20,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Gold III"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Expect Great Things Here"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQFg",
+      "icon": "achievements/achievement_platinum1.png",
+      "type": "league",
+      "id": 21,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Platinum I"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Platinum Times 2 Equals Progress!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQFw",
+      "icon": "achievements/achievement_platinum2.png",
+      "type": "league",
+      "id": 22,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Platinum II"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "My Platinum Is Better Than Yours"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQGA",
+      "icon": "achievements/achievement_platinum3.png",
+      "type": "league",
+      "id": 23,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Platinum III"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Things Are Looking Up!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQGQ",
+      "icon": "achievements/achievement_diamond1.png",
+      "type": "league",
+      "id": 24,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Diamond I"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Where Can I Cash In All These Diamonds?"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQGg",
+      "icon": "achievements/achievement_diamond2.png",
+      "type": "league",
+      "id": 25,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Diamond II"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Diamond Shows I Care"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQGw",
+      "icon": "achievements/achievement_diamond3.png",
+      "type": "league",
+      "id": 26,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Diamond III"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Am Legend"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQHA",
+      "icon": "achievements/achievement_legendary.png",
+      "type": "league",
+      "id": 27,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Qualify for Legendary"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Earning Them Fliplegs!"
+      },
+      "iosId": "",
+      "steps": 10,
+      "androidId": "CgkIrvvCxoUZEAIQHQ",
+      "icon": "achievements/achievement_flip.png",
+      "type": "flips",
+      "id": 28,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Make 10 flips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Should Post a Video of These Flips"
+      },
+      "iosId": "",
+      "steps": 50,
+      "androidId": "CgkIrvvCxoUZEAIQHg",
+      "icon": "achievements/achievement_flip.png",
+      "type": "flips",
+      "id": 29,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Make 50 flips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I'm Going to Throw Up"
+      },
+      "iosId": "",
+      "steps": 100,
+      "androidId": "CgkIrvvCxoUZEAIQHw",
+      "icon": "achievements/achievement_flip.png",
+      "type": "flips",
+      "id": 30,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Make 100 flips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "They Call Me the Rotator"
+      },
+      "iosId": "",
+      "steps": 10,
+      "androidId": "CgkIrvvCxoUZEAIQIA",
+      "icon": "achievements/achievement_backflip.png",
+      "type": "backFlips",
+      "id": 31,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "10 backflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I'm a Backwardsman, a Backwards Man"
+      },
+      "iosId": "",
+      "steps": 50,
+      "androidId": "CgkIrvvCxoUZEAIQIQ",
+      "icon": "achievements/achievement_backflip.png",
+      "type": "backFlips",
+      "id": 32,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "50 backflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Go Back as Fast as I Can"
+      },
+      "iosId": "",
+      "steps": 100,
+      "androidId": "CgkIrvvCxoUZEAIQIg",
+      "icon": "achievements/achievement_backflip.png",
+      "type": "backFlips",
+      "id": 33,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "100 backflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "That Hurt!"
+      },
+      "iosId": "",
+      "steps": 5,
+      "androidId": "CgkIrvvCxoUZEAIQIw",
+      "icon": "achievements/achievement_neckflip.png",
+      "type": "neckFlips",
+      "id": 34,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "5 neckflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Don't Think This Is Healthy"
+      },
+      "iosId": "",
+      "steps": 10,
+      "androidId": "CgkIrvvCxoUZEAIQJA",
+      "icon": "achievements/achievement_neckflip.png",
+      "type": "neckFlips",
+      "id": 35,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "10 neckflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I'm Immortal!"
+      },
+      "iosId": "",
+      "steps": 50,
+      "androidId": "CgkIrvvCxoUZEAIQJQ",
+      "icon": "achievements/achievement_neckflip.png",
+      "type": "neckFlips",
+      "id": 36,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "50 neckflips"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Car Connoisseur"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQJg",
+      "icon": "achievements/secret-achievement.png",
+      "id": 37,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Purchase all vehicles"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "I Need More Cups!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQJw",
+      "icon": "achievements/secret-achievement.png",
+      "id": 38,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Unlock all cups"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Driving Where No Bill has Gone Before!"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQKA",
+      "icon": "achievements/secret-achievement.png",
+      "id": 39,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Unlock all adventure tracks"
+      }
+    },
+    {
+      "name": {
+        "localize": "Name of an achievement",
+        "value": "Totally Pimped Out"
+      },
+      "iosId": "",
+      "androidId": "CgkIrvvCxoUZEAIQKQ",
+      "icon": "achievements/achievements_upgrade.png",
+      "id": 40,
+      "description": {
+        "localize": "Description of an achievement",
+        "value": "Fully upgrade a vehicle"
+      }
+    }
+  ]
+}
