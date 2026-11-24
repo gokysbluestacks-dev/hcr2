@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.git/
+.venv/
+player_data/
+server.log
+*.i64
+*.idb
+*.dat

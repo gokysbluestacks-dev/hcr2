@@ -1,0 +1,23 @@
+services:
+  hcr2-server:
+    build: .
+    container_name: hcr2-server
+    restart: unless-stopped
+    ports:
+      - "8311:8311/tcp"
+    environment:
+      HCR2_HOST: 0.0.0.0
+      HCR2_PORT: 8311
+      HCR2_DATA_DIR: /var/lib/hcr2/player_data
+      HCR2_ALLOW_LOCAL_CUP_CACHE: "1"
+      HCR2_DECRYPTED_DIR: /opt/hcr2/config
+      HCR2_SO_PATH: /opt/hcr2/lib/libcocos2dcpp.so
+    volumes:
+      - ./player_data:/var/lib/hcr2/player_data
+      - ./production-config:/opt/hcr2/config:ro
+      - ./runtime-lib:/opt/hcr2/lib:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"

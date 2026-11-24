@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+player_data/
+server.log
+runtime-lib/libcocos2dcpp.so
+production-config/*.json

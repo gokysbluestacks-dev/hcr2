@@ -1,0 +1,14 @@
+127.0.0.1 localhost
+::1 ip6-localhost
+# HCR2 Private Server Redirection Entries
+192.168.5.16 arg1f0.eastus.cloudapp.azure.com
+192.168.5.16 arg1f1.eastus.cloudapp.azure.com
+192.168.5.16 arg1f2.eastus.cloudapp.azure.com
+192.168.5.16 arg1f3.eastus.cloudapp.azure.com
+192.168.5.16 arg1f4.eastus.cloudapp.azure.com
+192.168.5.16 arg1f5.eastus.cloudapp.azure.com
+192.168.5.16 arg1f6.eastus.cloudapp.azure.com
+192.168.5.16 arg1f7.eastus.cloudapp.azure.com
+192.168.5.16 vtesting.cloudapp.net
+192.168.5.16 playhcr.com
+192.168.5.16 monitor.fingersoft.net
