@@ -1,0 +1,233 @@
+{
+  "shadowLength": 4.5,
+  "attachments": [],
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful turbo."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 6,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 5.5,
+            "from": 3.5
+          },
+          "max_torque": {
+            "to": 20,
+            "from": 15
+          },
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 5.5,
+            "from": 2.0
+          },
+          "max_speeds": {
+            "to": 50,
+            "from": 37
+          }
+        }
+      ],
+      "id": "formula_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 6,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 1.5,
+            "from": 0.4
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 1.5,
+            "from": 0.4
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "formula_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point and better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 6,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -1.0,
+              "from": 0.0
+            }
+          ]
+        }
+      ],
+      "id": "formula_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Upgraded spoilers give a nice downforce effect. If spoilers get detached, the effect is lost!"
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so try to keep it short!",
+        "value": "DOWNFORCE"
+      },
+      "upgrade_price_tier": 6,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 15.0,
+            "from": 4.0
+          },
+          "type": "downforce"
+        }
+      ],
+      "id": "formula_downforce",
+      "icon": "ui/cocosstudio/upgrades/item_formula_downforce.png"
+    }
+  ],
+  "id": "formula",
+  "revModeCoeffDown": 2.0,
+  "vehicleUnlockRank": 40,
+  "numTyreTracks": 2,
+  "airTurnRate": 50,
+  "hornSound": "formula-horn",
+  "spriteVariants": {
+    "wheel": {
+      "formula_tire-tractor": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_tractor.png",
+        "rarity": "common"
+      },
+      "formula_default": {
+        "name": "Normal",
+        "texture": "textures/cars/formula/car_formula-tire.png",
+        "rarity": "default"
+      },
+      "formula_tire-hcr": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_hcr.png",
+        "rarity": "common"
+      },
+      "formula_tire-goth": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_goth.png",
+        "rarity": "common"
+      },
+      "formula_tire-motorcycle": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_motorcycle.png",
+        "rarity": "common"
+      },
+      "formula_tire-bundle": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_formula.png",
+        "rarity": "premium"
+      },
+      "formula_tire-simple": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_simple.png",
+        "rarity": "common"
+      },
+      "formula_tire-old": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_old.png",
+        "rarity": "common"
+      },
+      "formula_tire-safari": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_safari.png",
+        "rarity": "common"
+      },
+      "formula_tire-steampunk": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_steampunk.png",
+        "rarity": "common"
+      }
+    }
+  },
+  "baseCCvalue": 560,
+  "boost": {
+    "offset": [
+      -1.66,
+      1.84
+    ],
+    "file": "ui/cocosstudio/boost_up.csb",
+    "behindCar": false
+  },
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "Insanely fast ride for smoother tracks. Try to keep in one piece!"
+  },
+  "revModeCoeffUp": 4.0,
+  "turboFlutterSound": "turbo-flutter",
+  "customRubeFiles": {
+    "formula_green": "vehicle_formula_model_premium.json"
+  },
+  "engineSound": "formula-engine",
+  "shadowOffset": -0.5,
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-formula.png",
+  "fuelTank": 30.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "FORMULA"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "impactSound": "standard-vehicle-impact",
+  "turboSound": "jeep-turbo",
+  "rube_file": "vehicle_formula_model.json"
+}

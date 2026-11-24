@@ -1,0 +1,180 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/cartoonbill.png",
+  "shadowLength": 6.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "TRUCK"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "offset": [
+      2.8,
+      5.12
+    ],
+    "file": "ui/cocosstudio/boost_up.csb",
+    "behindCar": false
+  },
+  "numTyreTracks": 2,
+  "airTurnRate": 20,
+  "impactSound": "heavy-vehicle-impact",
+  "spriteVariants": {},
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 5,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 1.6
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 1.6
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "truck_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 5,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.8,
+            "from": 0.3
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 0.5,
+            "from": 0.3
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            {
+              "to": 1,
+              "from": 0.0
+            },
+            "0"
+          ]
+        }
+      ],
+      "id": "truck_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 5,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": "0",
+          "max_torque": {
+            "to": 40,
+            "from": 20
+          },
+          "type": "engine_params",
+          "max_turbo_pressures": "0",
+          "max_speeds": {
+            "to": 41,
+            "from": 25
+          }
+        }
+      ],
+      "id": "truck_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "AWD"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 5,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.5,
+            "from": 0.25
+          },
+          "type": "power_distribution"
+        }
+      ],
+      "id": "truck_power_distribution",
+      "icon": "ui/cocosstudio/upgrades/item_gearshift_on.png"
+    }
+  ],
+  "engineSound": "jeep-engine",
+  "fuelTank": 50.0,
+  "rube_file": "vehicle_truck_model.json",
+  "id": "truck",
+  "attachments": [
+    {
+      "node": "hood",
+      "id": "hood",
+      "offset": [
+        0.38,
+        0.087
+      ]
+    },
+    {
+      "node": "door",
+      "id": "side",
+      "offset": [
+        0.1173,
+        -0.336925
+      ]
+    },
+    {
+      "node": "chassis",
+      "id": "back",
+      "offset": [
+        -2.34,
+        -0.76
+      ]
+    },
+    {
+      "node": "chassisFront",
+      "id": "mirror",
+      "offset": [
+        -0.44464,
+        0.82068
+      ]
+    }
+  ]
+}

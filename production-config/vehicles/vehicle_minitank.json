@@ -1,0 +1,262 @@
+{
+  "numTyreTracks": 2,
+  "attachments": [],
+  "nameFloaterOffset": [
+    0.0,
+    3.5
+  ],
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful turbo."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 4.0,
+            "from": 1.73
+          },
+          "max_torque": "8",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 3.0,
+            "from": 1.71
+          },
+          "max_speeds": {
+            "to": 47,
+            "from": 32
+          }
+        }
+      ],
+      "id": "minitank_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel1"
+        },
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel2"
+        },
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel3"
+        },
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel4"
+        },
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel5"
+        },
+        {
+          "amounts": {
+            "to": 7.0,
+            "from": 0.5
+          },
+          "type": "body_friction",
+          "target": "wheel6"
+        }
+      ],
+      "id": "minitank_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point and better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            {
+              "to": 0.5,
+              "from": 0.0
+            },
+            {
+              "to": -1.2,
+              "from": -0.0
+            }
+          ]
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring1"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring2"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring3"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring4"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring5"
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "spring6"
+        }
+      ],
+      "id": "minitank_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved fuel tank allows the vehicle to drive a longer time without refueling."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as FUEL or TANK SIZE",
+        "value": "FUEL TANK"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 56.0,
+            "from": 30.0
+          },
+          "type": "fuel_tank"
+        }
+      ],
+      "id": "minitank_fuel_tank",
+      "icon": "ui/cocosstudio/upgrades/item_fueltank.png"
+    }
+  ],
+  "id": "minitank",
+  "vehicleUnlockRank": 30,
+  "rpmScale": 1.0,
+  "airTurnRate": 18.0,
+  "hornSound": "minitank-horn",
+  "spriteVariants": {
+    "wheel": {}
+  },
+  "baseCCvalue": 860,
+  "boost": {
+    "offset": [
+      -0.5,
+      1.1
+    ],
+    "behindCar": false
+  },
+  "exhaust": {
+    "life": [
+      0.5,
+      1.5
+    ],
+    "file": "particles/exhaust_diesel.plist",
+    "offset": [
+      -2.6,
+      1.5
+    ]
+  },
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "It's a tank!"
+  },
+  "turboFlutterSound": "",
+  "engineSound": "minitank-engine",
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-tank.png",
+  "fuelTank": 30.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "TANK"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "rearSuspensionColliderLimits": [
+    0,
+    0.2
+  ],
+  "frontSuspensionColliderLimits": [
+    0,
+    0.2
+  ],
+  "impactSound": "heavy-vehicle-impact",
+  "turboSound": "jeep-turbo",
+  "rube_file": "vehicle_minitank_model.json"
+}

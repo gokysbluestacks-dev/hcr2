@@ -1,0 +1,187 @@
+{
+  "rpmScale": 2.2,
+  "attachments": [],
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Increases the maximum speed of the vehicle."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "type": "engine_params",
+          "max_speeds": {
+            "to": 22.5,
+            "from": 18
+          }
+        }
+      ],
+      "id": "monster_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved turbo for faster acceleration and motor torque."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as ACCELERATION or BOOST",
+        "value": "TURBO"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 3.14,
+            "from": 0.73
+          },
+          "max_torque": {
+            "to": 80.0,
+            "from": 40.0
+          },
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 4.0,
+            "from": 0.71
+          }
+        }
+      ],
+      "id": "monster_turbo",
+      "icon": "ui/cocosstudio/upgrades/item_turbo.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 6.8,
+            "from": 1.35
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 6.8,
+            "from": 1.35
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "monster_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point and better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 3,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.6,
+              "from": -0.0
+            }
+          ]
+        }
+      ],
+      "id": "monster_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    }
+  ],
+  "id": "monster",
+  "vehicleUnlockRank": 23,
+  "numTyreTracks": 2,
+  "airTurnRate": 80.0,
+  "hornSound": "monster-truck-horn",
+  "spriteVariants": {
+    "wheel": {
+      "monster_tire-xmas": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_xmas.png",
+        "rarity": "premium"
+      },
+      "monster_default": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_monster.png",
+        "rarity": "default"
+      },
+      "monster_tire-usa": {
+        "name": "USA",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_usa.png",
+        "rarity": "premium"
+      },
+      "monster_tire-survivor": {
+        "name": "Survivor",
+        "texture": "textures/cars/monster/car_monster-tire-survivor.png",
+        "rarity": "premium"
+      }
+    }
+  },
+  "baseCCvalue": 360,
+  "boost": {
+    "offset": [
+      -0.5,
+      1.1
+    ],
+    "behindCar": false
+  },
+  "exhaust": {
+    "life": [
+      0.5,
+      1.5
+    ],
+    "file": "particles/exhaust.plist",
+    "offset": [
+      -1.7,
+      0.2
+    ]
+  },
+  "description": {
+    "localize": "Vehicle description",
+    "value": "The Monster is BACK! And it's bigger than ever!"
+  },
+  "turboFlutterSound": "",
+  "engineSound": "monster-truck-engine",
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-monster.png",
+  "fuelTank": 45.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "MONSTER TRUCK"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "impactSound": "standard-vehicle-impact",
+  "turboSound": "jeep-turbo",
+  "rube_file": "vehicle_monster_model.json"
+}

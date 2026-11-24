@@ -1,0 +1,145 @@
+{
+  "rpmScale": 1.2,
+  "shadowLength": 1.5,
+  "attachments": [],
+  "nameFloaterOffset": [
+    0.0,
+    3.5
+  ],
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful boost."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 3.0,
+            "from": 1.0
+          },
+          "max_torque": "30",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 2.0,
+            "from": 1.0
+          },
+          "max_speeds": {
+            "to": 43,
+            "from": 22
+          }
+        }
+      ],
+      "id": "monowheel_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 13.0,
+            "from": 0.7
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "monowheel_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved gyro allows the driver to lean back when going uphill, greatly enhancing the safety of the vehicle!"
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as BALANCE or GYRO",
+        "value": "STABILITY"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 0.0
+          },
+          "type": "stability"
+        }
+      ],
+      "id": "monowheel_stability",
+      "icon": "ui/cocosstudio/upgrades/item_onewheeler_stability.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved air controls makes handling the vehicle a lot easier in jumps."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "AIR CONTROL"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": -15.0,
+            "from": -3
+          },
+          "type": "air_control"
+        }
+      ],
+      "id": "monowheel_air_control",
+      "icon": "ui/cocosstudio/upgrades/item_onewheeler_aircontrol.png"
+    }
+  ],
+  "id": "monowheel",
+  "vehicleUnlockRank": 0,
+  "numTyreTracks": 1,
+  "airTurnRate": -14,
+  "hornSound": "editbox-type",
+  "spriteVariants": {},
+  "baseCCvalue": 0,
+  "boost": {
+    "offset": [
+      -0.58,
+      0.33
+    ]
+  },
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "'One wheel ought to be enough for anybody.' -Bill Newton"
+  },
+  "revModeCoeffUp": 1.5,
+  "engineSound": "monowheel-engine",
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-monowheel.png",
+  "fuelTank": 50.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "MONOWHEEL"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "impactSound": "light-vehicle-impact",
+  "rube_file": "vehicle_monowheel_model.json"
+}

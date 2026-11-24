@@ -1,0 +1,3257 @@
+{
+  "body": [
+    {
+      "position": {
+        "y": 3.426340341567993,
+        "x": 1.620630145072937
+      },
+      "angle": 0,
+      "name": "driverBody",
+      "massData-mass": 0.03194890543818474,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.5416569709777832,
+                0.1948792338371277,
+                0.2722094655036926,
+                -0.5803220868110657
+              ],
+              "x": [
+                0.249252051115036,
+                0.08613356947898865,
+                -0.1924626380205154,
+                -0.2782508730888367
+              ]
+            }
+          },
+          "density": 0.1,
+          "friction": 0.5,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture2"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": false,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.2053769826889038,
+        "x": -0.03721309825778008
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.003504449268803001
+    },
+    {
+      "position": {
+        "y": 2.661204099655151,
+        "x": 1.849852800369263
+      },
+      "angle": 1.425048112869263,
+      "name": "leg_upper_r",
+      "massData-mass": 0.001778666744939983,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.3050513863563538,
+                0.2941443920135498,
+                -0.2917468845844269,
+                -0.2869703769683838
+              ],
+              "x": [
+                0.1491977423429489,
+                -0.204179972410202,
+                -0.1025510430335999,
+                0.14675672352314
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.02212012931704521,
+        "x": -0.003979770466685295
+      },
+      "linearVelocity": 0,
+      "massData-I": 6.603136716876179e-05
+    },
+    {
+      "position": {
+        "y": 3.370920419692993,
+        "x": 1.718522071838379
+      },
+      "angle": 0.6346728205680847,
+      "name": "arm_upper_l",
+      "massData-mass": 0.0009707954595796764,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.2854292988777161,
+                0.2796396613121033,
+                -0.2923493385314941,
+                -0.2214092165231705
+              ],
+              "x": [
+                0.04453365504741669,
+                -0.1612611263990402,
+                -0.1584554463624954,
+                -0.001248911023139954
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.0251607708632946,
+        "x": -0.07073143124580383
+      },
+      "linearVelocity": 0,
+      "massData-I": 3.181537613272667e-05
+    },
+    {
+      "angle": -0.00986021663993597,
+      "name": "driverHead",
+      "massData-mass": 0.003421194618567824,
+      "fixture": [
+        {
+          "name": "fixture1",
+          "density": 0.01,
+          "friction": 0.5,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "circle": {
+            "radius": 0.33,
+            "center": 0
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "driverBody"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": false,
+          "name": "useInHighscore"
+        }
+      ],
+      "position": {
+        "y": 4.089410305023193,
+        "x": 1.750519156455994
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.0001862840726971626
+    },
+    {
+      "position": {
+        "y": 2.694896221160889,
+        "x": 1.61229419708252
+      },
+      "angle": 0,
+      "name": "pelvis",
+      "massData-mass": 0.001506504719145596,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.1786393523216248,
+                0.1450736373662949,
+                -0.1426760852336884,
+                -0.1414773166179657
+              ],
+              "x": [
+                0.2505658566951752,
+                -0.2745413780212402,
+                -0.2241927981376648,
+                0.2397768795490265
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.01326523162424564,
+        "x": 0.001779864658601582
+      },
+      "linearVelocity": 0,
+      "massData-I": 4.276789695722982e-05
+    },
+    {
+      "position": {
+        "y": 2.490412950515747,
+        "x": 2.212457180023193
+      },
+      "angle": 0.8628445863723755,
+      "name": "leg_lower_l",
+      "massData-mass": 0.000991850160062313,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.2307360023260117,
+                0.2095790058374405,
+                -0.20974400639534,
+                -0.2254679948091507
+              ],
+              "x": [
+                0.1568859964609146,
+                -0.09655070304870605,
+                -0.1435530036687851,
+                0.057065699249506
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.0088029270991683,
+        "x": -0.003709138371050358
+      },
+      "linearVelocity": 0,
+      "massData-I": 2.065789340122137e-05
+    },
+    {
+      "position": {
+        "y": 3.109700202941895,
+        "x": 2.212540149688721
+      },
+      "angle": 1.497174024581909,
+      "name": "arm_lower_l",
+      "massData-mass": 0.0006646860274486244,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.3746763467788696,
+                0.4352308511734009,
+                -0.1502862721681595,
+                -0.1372261643409729
+              ],
+              "x": [
+                0.04867997393012047,
+                -0.08483803272247314,
+                -0.09551852196455002,
+                0.01114931702613831
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.142198920249939,
+        "x": -0.03086799941956997
+      },
+      "linearVelocity": 0,
+      "massData-I": 3.160825144732371e-05
+    },
+    {
+      "position": {
+        "y": 2.257357597351074,
+        "x": 2.524792432785034
+      },
+      "angle": 0.5195624828338623,
+      "name": "foot_l",
+      "massData-mass": 0.001004812656901777,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.08275440335273743,
+                0.08105778694152832,
+                0.1431571841239929,
+                -0.04731911420822144
+              ],
+              "x": [
+                0.3220744132995606,
+                0.3154230415821075,
+                -0.2255416959524155,
+                -0.2629504203796387
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.02314300090074539,
+        "x": 0.02914454415440559
+      },
+      "linearVelocity": 0,
+      "massData-I": 3.076824941672385e-05
+    },
+    {
+      "position": {
+        "y": 2.298517942428589,
+        "x": 2.516644477844238
+      },
+      "angle": 0.6416599750518799,
+      "name": "foot_r",
+      "massData-mass": 0.001004812656901777,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.08275440335273743,
+                0.08105778694152832,
+                0.1431571841239929,
+                -0.04731911420822144
+              ],
+              "x": [
+                0.3220744132995606,
+                0.3154230415821075,
+                -0.2255416959524155,
+                -0.2629504203796387
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.02314300090074539,
+        "x": 0.02914454415440559
+      },
+      "linearVelocity": 0,
+      "massData-I": 3.076824941672385e-05
+    },
+    {
+      "position": {
+        "y": 2.49355959892273,
+        "x": 2.224744081497192
+      },
+      "angle": 0.7407470941543579,
+      "name": "leg_lower_r",
+      "massData-mass": 0.000991850160062313,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.2307360023260117,
+                0.2095790058374405,
+                -0.20974400639534,
+                -0.2254679948091507
+              ],
+              "x": [
+                0.1568859964609146,
+                -0.09655070304870605,
+                -0.1435530036687851,
+                0.057065699249506
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.0088029270991683,
+        "x": -0.003709138371050358
+      },
+      "linearVelocity": 0,
+      "massData-I": 2.065789340122137e-05
+    },
+    {
+      "position": {
+        "y": 3.308720350265503,
+        "x": 1.684713125228882
+      },
+      "angle": 0.6476558446884155,
+      "name": "arm_upper_r",
+      "massData-mass": 0.009707954712212086,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.2854292988777161,
+                0.2796396613121033,
+                -0.2923493385314941,
+                -0.2214092165231705
+              ],
+              "x": [
+                0.04453365504741669,
+                -0.1612611263990402,
+                -0.1584554463624954,
+                -0.001248911023139954
+              ]
+            }
+          },
+          "density": 0.1,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.0251607708632946,
+        "x": -0.07073143124580383
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.0003181537613272667
+    },
+    {
+      "position": {
+        "y": 3.705560207366943,
+        "x": 3.212839365005493
+      },
+      "angle": 0,
+      "name": "exhaustPipe",
+      "massData-mass": 0.1607312709093094,
+      "fixture": [
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.04319095611572266,
+                1.2303307056427,
+                1.153200149536133,
+                0.05244249105453491
+              ],
+              "x": [
+                0.1328763961791992,
+                0.04473727941513062,
+                -0.1436738967895508,
+                -0.1008855700492859
+              ]
+            }
+          },
+          "name": "fixture3",
+          "friction": 0.2,
+          "density": 0.2
+        },
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                1.2303307056427,
+                1.53874397277832,
+                1.325350999832153,
+                1.153200149536133
+              ],
+              "x": [
+                0.04473727941513062,
+                -0.341209203004837,
+                -0.4053820967674255,
+                -0.1436738967895508
+              ]
+            }
+          },
+          "name": "fixture3",
+          "friction": 0.2,
+          "density": 0.2
+        },
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.187139630317688,
+                0.04319095611572266,
+                0.05244249105453491,
+                -1.264481067657471
+              ],
+              "x": [
+                0.2758100032806397,
+                0.1328763961791992,
+                -0.1008855700492859,
+                -0.2483484745025635
+              ]
+            }
+          },
+          "name": "fixture3",
+          "friction": 0.2,
+          "density": 0.2
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.09284021705389023,
+        "x": -0.01676321960985661
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.1083081662654877
+    },
+    {
+      "position": {
+        "y": 2.668456554412842,
+        "x": 1.664809942245483
+      },
+      "angle": 0,
+      "name": "door",
+      "massData-mass": 0.2292413711547852,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.4884951710700989,
+                0.9225155115127563,
+                0.8985649347305298,
+                -1.080212593078613,
+                -1.096253871917725
+              ],
+              "x": [
+                0.8365558981895447,
+                0.6234719753265381,
+                -0.3371096849441528,
+                -0.3485362529754639,
+                0.8095461130142212
+              ]
+            }
+          },
+          "name": "fixture7",
+          "friction": 0.2,
+          "density": 0.1
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassisFront"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.1025025993585587,
+        "x": 0.2331616878509522
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.1146110445261002
+    },
+    {
+      "position": {
+        "y": 3.015786409378052,
+        "x": 3.422640085220337
+      },
+      "angle": 0,
+      "name": "hood",
+      "massData-mass": 0.3855348527431488,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.03655827045440674,
+                0.1550738513469696,
+                0.174595832824707,
+                -0.102861762046814
+              ],
+              "x": [
+                1.206656575202942,
+                0.6153788566589355,
+                -0.6599487066268921,
+                -0.7561585903167725
+              ]
+            }
+          },
+          "name": "fixture6",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassisFront"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": 0.03768941760063171,
+        "x": 0.06824392825365067
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.09370845556259155
+    },
+    {
+      "position": {
+        "y": 2.404946327209473,
+        "x": 3.080265998840332
+      },
+      "angle": 0,
+      "name": "chassisFront",
+      "massData-mass": 1.387877941131592,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.5749379396438599,
+                -0.1961898356676102,
+                -0.8598804473876953,
+                -0.7812748551368713
+              ],
+              "x": [
+                1.530807971954346,
+                0.7231744527816772,
+                1.232393622398377,
+                1.378701686859131
+              ]
+            }
+          },
+          "name": "fixture5",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.5749379396438599,
+                0.7307373285293579,
+                -0.3961105942726135,
+                -0.1961898356676102
+              ],
+              "x": [
+                1.530807971954346,
+                -1.987168788909912,
+                -0.2181306332349777,
+                0.7231744527816772
+              ]
+            }
+          },
+          "name": "fixture5",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.3961105942726135,
+                0.7307373285293579,
+                -0.9732509851455688,
+                -1.160473346710205
+              ],
+              "x": [
+                -0.2181306332349777,
+                -1.987168788909912,
+                -1.908826351165772,
+                -0.7970196008682251
+              ]
+            }
+          },
+          "name": "fixture5",
+          "friction": 0.2,
+          "density": 0.3
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.05739747360348702,
+        "x": -0.4384055435657501
+      },
+      "linearVelocity": 0,
+      "massData-I": 1.953205823898315
+    },
+    {
+      "position": {
+        "y": 2.438127279281616,
+        "x": -1.526893615722656
+      },
+      "angle": 0,
+      "name": "chassis",
+      "massData-mass": 0.5804693698883057,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.6417623162269592,
+                -0.424660325050354,
+                -0.5338307023048401,
+                -0.7000938057899475
+              ],
+              "x": [
+                2.797655582427979,
+                2.329962730407715,
+                -0.7627717852592468,
+                1.114713788032532
+              ]
+            }
+          },
+          "filter-categoryBits": 2,
+          "name": "fixture4",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.7000938057899475,
+                -0.5338307023048401,
+                -0.7624162435531616,
+                -0.9031733274459839
+              ],
+              "x": [
+                1.114713788032532,
+                -0.7627717852592468,
+                -0.2161169052124023,
+                0.7434806227684021
+              ]
+            }
+          },
+          "filter-categoryBits": 2,
+          "name": "fixture4",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.424660325050354,
+                -0.3799358606338501,
+                -0.5089741945266724,
+                -0.5338307023048401
+              ],
+              "x": [
+                2.329962730407715,
+                -2.36263108253479,
+                -2.574346542358398,
+                -0.7627717852592468
+              ]
+            }
+          },
+          "filter-categoryBits": 2,
+          "name": "fixture4",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.3799358606338501,
+                0.7067611217498779,
+                0.7065877318382263,
+                -0.5089741945266724
+              ],
+              "x": [
+                -2.36263108253479,
+                -2.366371631622315,
+                -2.574014186859131,
+                -2.574346542358398
+              ]
+            }
+          },
+          "filter-categoryBits": 2,
+          "name": "fixture4",
+          "friction": 0.2,
+          "density": 0.3
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.6417623162269592,
+                0.7107809782028198,
+                0.7106019854545593,
+                -0.424660325050354
+              ],
+              "x": [
+                2.797655582427979,
+                2.447845935821533,
+                2.233513593673706,
+                2.329962730407715
+              ]
+            }
+          },
+          "filter-categoryBits": 2,
+          "name": "fixture4",
+          "friction": 0.2,
+          "density": 0.3
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.3554360866546631,
+        "x": 0.4560090303421021
+      },
+      "linearVelocity": 0,
+      "massData-I": 1.976033210754395
+    },
+    {
+      "position": {
+        "y": 3.059020519256592,
+        "x": 2.159655094146729
+      },
+      "angle": 1.510486125946045,
+      "name": "arm_lower_r",
+      "massData-mass": 0.006646860390901566,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.3746763467788696,
+                0.4352308511734009,
+                -0.1502862721681595,
+                -0.1372261643409729
+              ],
+              "x": [
+                0.04867997393012047,
+                -0.08483803272247314,
+                -0.09551852196455002,
+                0.01114931702613831
+              ]
+            }
+          },
+          "density": 0.1,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.142198920249939,
+        "x": -0.03086799941956997
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.0003160825290251523
+    },
+    {
+      "position": {
+        "y": 2.702508211135864,
+        "x": 1.835335969924927
+      },
+      "angle": 1.54714560508728,
+      "name": "leg_upper_l",
+      "massData-mass": 0.001778666744939983,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.3050513863563538,
+                0.2941443920135498,
+                -0.2917468845844269,
+                -0.2869703769683838
+              ],
+              "x": [
+                0.1491977423429489,
+                -0.204179972410202,
+                -0.1025510430335999,
+                0.14675672352314
+              ]
+            }
+          },
+          "density": 0.01,
+          "friction": 0.2,
+          "filter-maskBits": 65528,
+          "filter-categoryBits": 4,
+          "name": "fixture0"
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        }
+      ],
+      "massData-center": {
+        "y": 0.02212012931704521,
+        "x": -0.003979770466685295
+      },
+      "linearVelocity": 0,
+      "massData-I": 6.603136716876179e-05
+    },
+    {
+      "angle": 0,
+      "name": "frontWheel",
+      "bullet": true,
+      "massData-mass": 0.6809402704238892,
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.85,
+            "center": 0
+          },
+          "name": "frontWheel",
+          "friction": 0.5,
+          "density": 0.3
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "name": "partType",
+          "string": "wheel"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "position": {
+        "y": 0.901663601398468,
+        "x": 3.419208288192749
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.2459896951913834
+    },
+    {
+      "position": {
+        "y": 3.802852869033814,
+        "x": 1.745222806930542
+      },
+      "angle": 0,
+      "name": "cockpitTop",
+      "massData-mass": 0.1159546077251434,
+      "fixture": [
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.6108639240264893,
+                0.8517423868179321,
+                0.7219882607460022,
+                -0.6320012807846069
+              ],
+              "x": [
+                0.8866943120956421,
+                0.681333065032959,
+                0.5823287963867188,
+                0.7616897225379944
+              ]
+            }
+          },
+          "name": "fixture7",
+          "friction": 0.2,
+          "density": 0.2
+        },
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.8517423868179321,
+                0.9853023290634155,
+                0.7269686460494995,
+                0.7219882607460022
+              ],
+              "x": [
+                0.681333065032959,
+                -0.5910555124282837,
+                -0.4517296850681305,
+                0.5823287963867188
+              ]
+            }
+          },
+          "name": "fixture7",
+          "friction": 0.2,
+          "density": 0.2
+        },
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.7269686460494995,
+                0.9853023290634155,
+                -0.6591126918792725,
+                -0.6454718112945557
+              ],
+              "x": [
+                -0.4517296850681305,
+                -0.5910555124282837,
+                -0.5896240472793579,
+                -0.4861441552639008
+              ]
+            }
+          },
+          "name": "fixture7",
+          "friction": 0.2,
+          "density": 0.2
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassisFront"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": 0.3849190473556519,
+        "x": 0.04666706174612045
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.07821618020534515
+    },
+    {
+      "angle": 0,
+      "name": "rearWheel",
+      "bullet": true,
+      "massData-mass": 0.6809402704238892,
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.85,
+            "center": 0
+          },
+          "name": "rearWheel",
+          "friction": 0.5,
+          "density": 0.3
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "name": "partType",
+          "string": "wheel"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "position": {
+        "y": 0.911762535572052,
+        "x": -2.700182914733887
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.2459896951913834
+    },
+    {
+      "position": {
+        "y": 3.212522506713867,
+        "x": -1.51911461353302
+      },
+      "angle": 0,
+      "name": "goat",
+      "massData-mass": 0.2342405468225479,
+      "fixture": [
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                0.2003076672554016,
+                0.6272225379943848,
+                0.2378961443901062,
+                -0.3535529971122742,
+                -0.2052910327911377
+              ],
+              "x": [
+                1.247002601623535,
+                0.5551531314849854,
+                -0.9115975499153137,
+                0.3535540103912354,
+                0.9366047382354736
+              ]
+            }
+          },
+          "name": "fixture8",
+          "friction": 0.2,
+          "density": 0.1
+        },
+        {
+          "filter-maskBits": 65534,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.086958765983582,
+                -0.3535529971122742,
+                0.2378961443901062,
+                -1.075609087944031
+              ],
+              "x": [
+                0.4539532661437988,
+                0.3535540103912354,
+                -0.9115975499153137,
+                -0.6908338069915771
+              ]
+            }
+          },
+          "name": "fixture8",
+          "friction": 0.2,
+          "density": 0.1
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "customProperties": [
+        {
+          "name": "parentName",
+          "string": "chassis"
+        },
+        {
+          "bool": true,
+          "name": "useInGameplay"
+        },
+        {
+          "bool": true,
+          "name": "useInGhost"
+        },
+        {
+          "bool": true,
+          "name": "useInHighscore"
+        }
+      ],
+      "massData-center": {
+        "y": -0.209460511803627,
+        "x": 0.02227935194969177
+      },
+      "linearVelocity": 0,
+      "massData-I": 0.1132287010550499
+    }
+  ],
+  "velocityIterations": 8,
+  "image": [
+    {
+      "body": 7,
+      "opacity": 1,
+      "scale": 1.226067781448364,
+      "center": {
+        "y": 0.1080257743597031,
+        "x": 0.08428768813610077
+      },
+      "corners": {
+        "y": [
+          -0.5050081014633179,
+          -0.5050081014633179,
+          0.7210596799850464,
+          0.7210596799850464
+        ],
+        "x": [
+          -0.5287461876869202,
+          0.6973215937614441,
+          0.6973215937614441,
+          -0.5287461876869202
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -6,
+      "file": "textures/drivers/default/default_foot-right.png",
+      "glVertexPointer": [
+        -0.5287461876869202,
+        -0.5050081014633179,
+        0.6973215937614441,
+        -0.5050081014633179,
+        0.6973215937614441,
+        0.7210596799850464,
+        -0.5287461876869202,
+        0.7210596799850464
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "foot-left"
+    },
+    {
+      "body": 5,
+      "opacity": 1,
+      "scale": 1.002050518989563,
+      "center": {
+        "y": 0.0212251041084528,
+        "x": -0.005879282020032406
+      },
+      "corners": {
+        "y": [
+          -0.4798001646995544,
+          -0.4798001646995544,
+          0.5222503542900085,
+          0.5222503542900085
+        ],
+        "x": [
+          -0.5069045424461365,
+          0.4951459765434265,
+          0.4951459765434265,
+          -0.5069045424461365
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -5,
+      "file": "textures/drivers/default/default_lowerleg-right.png",
+      "glVertexPointer": [
+        -0.5069045424461365,
+        -0.4798001646995544,
+        0.4951459765434265,
+        -0.4798001646995544,
+        0.4951459765434265,
+        0.5222503542900085,
+        -0.5069045424461365,
+        0.5222503542900085
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "lowerleg-left"
+    },
+    {
+      "body": 2,
+      "opacity": 1,
+      "scale": 1.123330950737,
+      "angle": -0.6476558446884155,
+      "center": {
+        "y": 0.01915433257818222,
+        "x": -0.06686617434024811
+      },
+      "corners": {
+        "y": [
+          -0.08991081267595291,
+          -0.7676372528076172,
+          0.128219485282898,
+          0.8059459328651428
+        ],
+        "x": [
+          -0.8536577820777893,
+          0.04219897091388702,
+          0.7199254035949707,
+          -0.1759313195943832
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -5,
+      "file": "textures/drivers/default/default_upperarm-right.png",
+      "glVertexPointer": [
+        -0.8536577820777893,
+        -0.08991081267595291,
+        0.04219897091388702,
+        -0.7676372528076172,
+        0.7199254035949707,
+        0.128219485282898,
+        -0.1759313195943832,
+        0.8059459328651428
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "upperarm-left"
+    },
+    {
+      "body": 4,
+      "opacity": 1,
+      "scale": 0.9930850863456726,
+      "angle": -0.09207077324390411,
+      "center": {
+        "y": -0.06151537597179413,
+        "x": -0.05073127150535584
+      },
+      "corners": {
+        "y": [
+          -0.5103023052215576,
+          -0.6016072630882263,
+          0.3872715532779694,
+          0.4785765409469605
+        ],
+        "x": [
+          -0.5908231735229492,
+          0.3980556726455689,
+          0.4893606305122376,
+          -0.4995182156562805
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -4,
+      "file": "textures/drivers/default/default_pelvis.png",
+      "glVertexPointer": [
+        -0.5908231735229492,
+        -0.5103023052215576,
+        0.3980556726455689,
+        -0.6016072630882263,
+        0.4893606305122376,
+        0.3872715532779694,
+        -0.4995182156562805,
+        0.4785765409469605
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "pelvis"
+    },
+    {
+      "body": 17,
+      "opacity": 1,
+      "scale": 1.046925187110901,
+      "angle": -0.1972342133522034,
+      "center": {
+        "y": 0.02240509539842606,
+        "x": -0.01946138963103294
+      },
+      "corners": {
+        "y": [
+          -0.3883320987224579,
+          -0.5934853553771973,
+          0.4331423044204712,
+          0.6382955312728882
+        ],
+        "x": [
+          -0.635351836681366,
+          0.3912757933139801,
+          0.5964290499687195,
+          -0.4301985800266266
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -4,
+      "file": "textures/drivers/default/default_upperleg-right.png",
+      "glVertexPointer": [
+        -0.635351836681366,
+        -0.3883320987224579,
+        0.3912757933139801,
+        -0.5934853553771973,
+        0.5964290499687195,
+        0.4331423044204712,
+        -0.4301985800266266,
+        0.6382955312728882
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "upperleg-left"
+    },
+    {
+      "body": 8,
+      "opacity": 1,
+      "scale": 1.226067781448364,
+      "center": {
+        "y": 0.1080257743597031,
+        "x": 0.08428768813610077
+      },
+      "corners": {
+        "y": [
+          -0.5050081014633179,
+          -0.5050081014633179,
+          0.7210596799850464,
+          0.7210596799850464
+        ],
+        "x": [
+          -0.5287461876869202,
+          0.6973215937614441,
+          0.6973215937614441,
+          -0.5287461876869202
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -4,
+      "file": "textures/drivers/default/default_foot-right.png",
+      "glVertexPointer": [
+        -0.5287461876869202,
+        -0.5050081014633179,
+        0.6973215937614441,
+        -0.5050081014633179,
+        0.6973215937614441,
+        0.7210596799850464,
+        -0.5287461876869202,
+        0.7210596799850464
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "foot-right"
+    },
+    {
+      "body": 6,
+      "opacity": 1,
+      "scale": 1.052520036697388,
+      "angle": -0.6774569153785706,
+      "center": {
+        "y": -0.03515854477882385,
+        "x": -0.02135664969682694
+      },
+      "corners": {
+        "y": [
+          -0.1153372824192047,
+          -0.7750710248947144,
+          0.04502019286155701,
+          0.7047539949417114
+        ],
+        "x": [
+          -0.7612691521644592,
+          0.05882208794355393,
+          0.7185558676719666,
+          -0.1015353873372078
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -4,
+      "file": "textures/drivers/default/default_arm-left.png",
+      "glVertexPointer": [
+        -0.7612691521644592,
+        -0.1153372824192047,
+        0.05882208794355393,
+        -0.7750710248947144,
+        0.7185558676719666,
+        0.04502019286155701,
+        -0.1015353873372078,
+        0.7047539949417114
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "arm-left"
+    },
+    {
+      "body": 3,
+      "opacity": 1,
+      "scale": 2.208636522293091,
+      "angle": 0.00986021663993597,
+      "center": {
+        "y": -0.08562278747558594,
+        "x": -0.05952300876379013
+      },
+      "corners": {
+        "y": [
+          -1.200775980949402,
+          -1.178998589515686,
+          1.02953040599823,
+          1.007753014564514
+        ],
+        "x": [
+          -1.152898907661438,
+          1.055630087852478,
+          1.033852815628052,
+          -1.174676179885864
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -4,
+      "file": "textures/drivers/default/default_head.png",
+      "glVertexPointer": [
+        -1.152898907661438,
+        -1.200775980949402,
+        1.055630087852478,
+        -1.178998589515686,
+        1.033852815628052,
+        1.02953040599823,
+        -1.174676179885864,
+        1.007753014564514
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "head"
+    },
+    {
+      "body": 0,
+      "opacity": 1,
+      "scale": 2.12249755859375,
+      "center": {
+        "y": -0.214809000492096,
+        "x": -0.03850698843598366
+      },
+      "corners": {
+        "y": [
+          -1.276057720184326,
+          -1.276057720184326,
+          0.846439778804779,
+          0.846439778804779
+        ],
+        "x": [
+          -1.099755764007568,
+          1.022741794586182,
+          1.022741794586182,
+          -1.099755764007568
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -3,
+      "file": "textures/drivers/default/default_torso.png",
+      "glVertexPointer": [
+        -1.099755764007568,
+        -1.276057720184326,
+        1.022741794586182,
+        -1.276057720184326,
+        1.022741794586182,
+        0.846439778804779,
+        -1.099755764007568,
+        0.846439778804779
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "torso"
+    },
+    {
+      "body": 9,
+      "opacity": 1,
+      "scale": 1.002050518989563,
+      "center": {
+        "y": 0.0212251041084528,
+        "x": -0.005879282020032406
+      },
+      "corners": {
+        "y": [
+          -0.4798001646995544,
+          -0.4798001646995544,
+          0.5222503542900085,
+          0.5222503542900085
+        ],
+        "x": [
+          -0.5069045424461365,
+          0.4951459765434265,
+          0.4951459765434265,
+          -0.5069045424461365
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -3,
+      "file": "textures/drivers/default/default_lowerleg-right.png",
+      "glVertexPointer": [
+        -0.5069045424461365,
+        -0.4798001646995544,
+        0.4951459765434265,
+        -0.4798001646995544,
+        0.4951459765434265,
+        0.5222503542900085,
+        -0.5069045424461365,
+        0.5222503542900085
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "lowerleg-right"
+    },
+    {
+      "body": 10,
+      "opacity": 1,
+      "scale": 1.055042386054993,
+      "angle": -0.6418505907058716,
+      "center": {
+        "y": 0.0195578970015049,
+        "x": -0.05976463854312897
+      },
+      "corners": {
+        "y": [
+          -0.08716514706611633,
+          -0.7187966108322144,
+          0.1262809336185455,
+          0.7579124569892883
+        ],
+        "x": [
+          -0.7981191873550415,
+          0.04695840179920197,
+          0.6785898804664612,
+          -0.1664876788854599
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -2,
+      "file": "textures/drivers/default/default_upperarm-right.png",
+      "glVertexPointer": [
+        -0.7981191873550415,
+        -0.08716514706611633,
+        0.04695840179920197,
+        -0.7187966108322144,
+        0.6785898804664612,
+        0.1262809336185455,
+        -0.1664876788854599,
+        0.7579124569892883
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "upperarm-right"
+    },
+    {
+      "body": 1,
+      "opacity": 1,
+      "scale": 1.046925187110901,
+      "angle": -0.1972342133522034,
+      "center": {
+        "y": 0.02240509539842606,
+        "x": -0.01946138963103294
+      },
+      "corners": {
+        "y": [
+          -0.3883320987224579,
+          -0.5934853553771973,
+          0.4331423044204712,
+          0.6382955312728882
+        ],
+        "x": [
+          -0.635351836681366,
+          0.3912757933139801,
+          0.5964290499687195,
+          -0.4301985800266266
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -2,
+      "file": "textures/drivers/default/default_upperleg-right.png",
+      "glVertexPointer": [
+        -0.635351836681366,
+        -0.3883320987224579,
+        0.3912757933139801,
+        -0.5934853553771973,
+        0.5964290499687195,
+        0.4331423044204712,
+        -0.4301985800266266,
+        0.6382955312728882
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "upperleg-right"
+    },
+    {
+      "body": 21,
+      "opacity": 0.5,
+      "scale": 2.466815710067749,
+      "center": {
+        "y": 0.0703587532043457,
+        "x": 0.09043323993682861
+      },
+      "corners": {
+        "y": [
+          -1.163049101829529,
+          -1.163049101829529,
+          1.30376660823822,
+          1.30376660823822
+        ],
+        "x": [
+          -1.142974615097046,
+          1.323841094970703,
+          1.323841094970703,
+          -1.142974615097046
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -1,
+      "file": "textures/cars/car_truck01-assets/goat.png",
+      "glVertexPointer": [
+        -1.142974615097046,
+        -1.163049101829529,
+        1.323841094970703,
+        -1.163049101829529,
+        1.323841094970703,
+        1.30376660823822,
+        -1.142974615097046,
+        1.30376660823822
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image0"
+    },
+    {
+      "body": 11,
+      "opacity": 0.5,
+      "scale": 2.910157442092896,
+      "center": {
+        "y": 0.1233913898468018,
+        "x": -0.1131103038787842
+      },
+      "corners": {
+        "y": [
+          -1.331687331199646,
+          -1.331687331199646,
+          1.57847011089325,
+          1.57847011089325
+        ],
+        "x": [
+          -0.5024975538253784,
+          0.2762769460678101,
+          0.2762769460678101,
+          -0.5024975538253784
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -1,
+      "file": "textures/cars/car_truck01-assets/truck_exhaust.png",
+      "glVertexPointer": [
+        -0.5024975538253784,
+        -1.331687331199646,
+        0.2762769460678101,
+        -1.331687331199646,
+        0.2762769460678101,
+        1.57847011089325,
+        -0.5024975538253784,
+        1.57847011089325
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "exhaustPipe"
+    },
+    {
+      "body": 16,
+      "opacity": 1,
+      "scale": 1.111256003379822,
+      "angle": -0.7142171263694763,
+      "center": {
+        "y": 0.07006029039621353,
+        "x": -0.01734565198421478
+      },
+      "corners": {
+        "y": [
+          0.01417509466409683,
+          -0.7137265205383301,
+          0.1259454786777496,
+          0.8538471460342407
+        ],
+        "x": [
+          -0.8011325001716614,
+          0.03853954374790192,
+          0.7664411664009094,
+          -0.07323084771633148
+        ]
+      },
+      "filter": 1,
+      "renderOrder": -1,
+      "file": "textures/drivers/default/default_arm-right.png",
+      "glVertexPointer": [
+        -0.8011325001716614,
+        0.01417509466409683,
+        0.03853954374790192,
+        -0.7137265205383301,
+        0.7664411664009094,
+        0.1259454786777496,
+        -0.07323084771633148,
+        0.8538471460342407
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "arm-right"
+    },
+    {
+      "body": 19,
+      "opacity": 0.5,
+      "scale": 1.740909576416016,
+      "center": {
+        "y": 0.1971862316131592,
+        "x": 0.2089529037475586
+      },
+      "corners": {
+        "y": [
+          -0.6732685565948486,
+          -0.6732685565948486,
+          1.067641019821167,
+          1.067641019821167
+        ],
+        "x": [
+          -0.6652864217758179,
+          1.083192229270935,
+          1.083192229270935,
+          -0.6652864217758179
+        ]
+      },
+      "filter": 1,
+      "file": "textures/cars/car_truck01-assets/truck_roof.png",
+      "glVertexPointer": [
+        -0.6652864217758179,
+        -0.6732685565948486,
+        1.083192229270935,
+        -0.6732685565948486,
+        1.083192229270935,
+        1.067641019821167,
+        -0.6652864217758179,
+        1.067641019821167
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "image1"
+    },
+    {
+      "body": 15,
+      "opacity": 0.5,
+      "scale": 1.979850888252258,
+      "center": {
+        "y": -0.2559333741664887,
+        "x": -0.0223185271024704
+      },
+      "corners": {
+        "y": [
+          -1.245858788490295,
+          -1.245858788490295,
+          0.7339920997619629,
+          0.7339920997619629
+        ],
+        "x": [
+          -2.647454261779785,
+          2.602817058563232,
+          2.602817058563232,
+          -2.647454261779785
+        ]
+      },
+      "filter": 1,
+      "file": "textures/cars/car_truck01-assets/truck_base.png",
+      "glVertexPointer": [
+        -2.647454261779785,
+        -1.245858788490295,
+        2.602817058563232,
+        -1.245858788490295,
+        2.602817058563232,
+        0.7339920997619629,
+        -2.647454261779785,
+        0.7339920997619629
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "chassis"
+    },
+    {
+      "body": 12,
+      "opacity": 0.5,
+      "scale": 3.206224203109741,
+      "center": {
+        "y": 0.2686582207679749,
+        "x": 0.2100573778152466
+      },
+      "corners": {
+        "y": [
+          -1.334453821182251,
+          -1.334453821182251,
+          1.87177038192749,
+          1.87177038192749
+        ],
+        "x": [
+          -0.5980153679847717,
+          1.01813018321991,
+          1.01813018321991,
+          -0.5980153679847717
+        ]
+      },
+      "filter": 1,
+      "file": "textures/cars/car_truck01-assets/truck_door.png",
+      "glVertexPointer": [
+        -0.5980153679847717,
+        -1.334453821182251,
+        1.01813018321991,
+        -1.334453821182251,
+        1.01813018321991,
+        1.87177038192749,
+        -0.5980153679847717,
+        1.87177038192749
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "door"
+    },
+    {
+      "body": 14,
+      "opacity": 0.5,
+      "scale": 2.335288524627686,
+      "customProperties": [
+        {
+          "bool": false,
+          "name": "optional"
+        }
+      ],
+      "corners": {
+        "y": [
+          -1.554562926292419,
+          -1.554562926292419,
+          0.7807255983352661,
+          0.7807255983352661
+        ],
+        "x": [
+          -2.218960285186768,
+          1.703882455825806,
+          1.703882455825806,
+          -2.218960285186768
+        ]
+      },
+      "name": "chassisFront",
+      "filter": 1,
+      "renderOrder": 1,
+      "file": "textures/cars/car_truck01-assets/truck_cockpit.png",
+      "glVertexPointer": [
+        -2.218960285186768,
+        -1.554562926292419,
+        1.703882455825806,
+        -1.554562926292419,
+        1.703882455825806,
+        0.7807255983352661,
+        -2.218960285186768,
+        0.7807255983352661
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "center": {
+        "y": -0.3869186937808991,
+        "x": -0.2575389742851257
+      }
+    },
+    {
+      "body": 20,
+      "opacity": 0.5,
+      "scale": 1.8,
+      "center": 0,
+      "corners": {
+        "y": [
+          -0.9,
+          -0.9,
+          0.9,
+          0.9
+        ],
+        "x": [
+          -0.9,
+          0.9,
+          0.9,
+          -0.9
+        ]
+      },
+      "filter": 1,
+      "renderOrder": 1,
+      "file": "textures/cars/car_truck01-assets/truck_tire.png",
+      "glVertexPointer": [
+        -0.9,
+        -0.9,
+        0.9,
+        -0.9,
+        0.9,
+        0.9,
+        -0.9,
+        0.9
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "rearWheel"
+    },
+    {
+      "body": 18,
+      "opacity": 0.5,
+      "scale": 1.8,
+      "center": 0,
+      "corners": {
+        "y": [
+          -0.9,
+          -0.9,
+          0.9,
+          0.9
+        ],
+        "x": [
+          -0.9,
+          0.9,
+          0.9,
+          -0.9
+        ]
+      },
+      "filter": 1,
+      "renderOrder": 2,
+      "file": "textures/cars/car_truck01-assets/truck_tire.png",
+      "glVertexPointer": [
+        -0.9,
+        -0.9,
+        0.9,
+        -0.9,
+        0.9,
+        0.9,
+        -0.9,
+        0.9
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "frontWheel"
+    },
+    {
+      "body": 13,
+      "opacity": 0.5,
+      "scale": 0.3526975512504578,
+      "center": {
+        "y": 0.01893077790737152,
+        "x": 0.1835397183895111
+      },
+      "corners": {
+        "y": [
+          -0.1574179977178574,
+          -0.1574179977178574,
+          0.1952795535326004,
+          0.1952795535326004
+        ],
+        "x": [
+          -0.7965525388717651,
+          1.163632035255432,
+          1.163632035255432,
+          -0.7965525388717651
+        ]
+      },
+      "filter": 1,
+      "renderOrder": 2,
+      "file": "textures/cars/car_truck01-assets/truck_hood.png",
+      "glVertexPointer": [
+        -0.7965525388717651,
+        -0.1574179977178574,
+        1.163632035255432,
+        -0.1574179977178574,
+        1.163632035255432,
+        0.1952795535326004,
+        -0.7965525388717651,
+        0.1952795535326004
+      ],
+      "glTexCoordPointer": [
+        0.0,
+        0.0,
+        1,
+        0.0,
+        1,
+        1,
+        0.0,
+        1
+      ],
+      "aspectScale": 1,
+      "glDrawElements": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "name": "hood"
+    }
+  ],
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "joint": [
+    {
+      "name": "pelvisJoint",
+      "bodyA": 14,
+      "bodyB": 4,
+      "refAngle": 0,
+      "frequency": 0,
+      "anchorB": {
+        "y": -0.2426273822784424,
+        "x": -0.07624983787536621
+      },
+      "anchorA": {
+        "y": 0.1222515106201172,
+        "x": -1.441202878952026
+      },
+      "type": "weld",
+      "dampingRatio": 0
+    },
+    {
+      "name": "leftFootJoint",
+      "lowerLimit": 0,
+      "bodyA": 7,
+      "jointSpeed": 0,
+      "bodyB": 19,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": -1.533267498016357,
+        "x": 0.8206071853637695
+      },
+      "enableLimit": false,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.009761011227965355,
+        "x": 0.04169319570064545
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverBodyArmLeft",
+      "lowerLimit": -0.5235987901687622,
+      "bodyA": 0,
+      "jointSpeed": 0,
+      "bodyB": 2,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.2182354927062988,
+        "x": -0.048154566437006
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.0917661190032959,
+        "x": -0.07028019428253174
+      },
+      "upperLimit": 2.268928050994873,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverLegRight",
+      "lowerLimit": -2.094395160675049,
+      "bodyA": 1,
+      "jointSpeed": 0,
+      "bodyB": 9,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.1983716189861298,
+        "x": 0.005535341799259186
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2450525909662247,
+        "x": 0.01826551556587219
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverHeadBodyDamp",
+      "bodyA": 3,
+      "bodyB": 0,
+      "length": 1.455451607704163,
+      "frequency": 2,
+      "anchorB": {
+        "y": -0.7199523448944092,
+        "x": 0.5344058275222778
+      },
+      "anchorA": {
+        "y": 0.01251444034278393,
+        "x": -0.006412233226001263
+      },
+      "type": "distance",
+      "dampingRatio": 4
+    },
+    {
+      "name": "driverBodyPelvis",
+      "bodyA": 0,
+      "bodyB": 4,
+      "refAngle": 0,
+      "frequency": 0,
+      "anchorB": {
+        "y": 0.1830465793609619,
+        "x": -0.02795958518981934
+      },
+      "anchorA": {
+        "y": -0.5483977794647217,
+        "x": -0.03628921508789063
+      },
+      "type": "weld",
+      "dampingRatio": 0
+    },
+    {
+      "name": "driverFootRight",
+      "lowerLimit": -0.3490658402442932,
+      "bodyA": 9,
+      "jointSpeed": 0,
+      "bodyB": 8,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.06569550186395645,
+        "x": -0.1423086076974869
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2614685893058777,
+        "x": -0.05132127553224564
+      },
+      "upperLimit": 0.3490658402442932,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverPelvisLegLeft",
+      "lowerLimit": 0,
+      "bodyA": 4,
+      "jointSpeed": 0,
+      "bodyB": 17,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.2267944812774658,
+        "x": -0.005706841126084328
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.007270097732543945,
+        "x": -0.003824234008789063
+      },
+      "upperLimit": 1.570796370506287,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverArmRight",
+      "lowerLimit": 0.1745329201221466,
+      "bodyA": 10,
+      "jointSpeed": 0,
+      "bodyB": 16,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.4053269326686859,
+        "x": -0.007940921001136303
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2281289100646973,
+        "x": -0.08496624231338501
+      },
+      "upperLimit": 1.047197580337524,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverBodyHead",
+      "lowerLimit": -0.6108652353286743,
+      "bodyA": 0,
+      "jointSpeed": 0,
+      "bodyB": 3,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": -0.4762620031833649,
+        "x": -0.1765770018100739
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.1885669231414795,
+        "x": -0.0513758659362793
+      },
+      "upperLimit": 0.3490659892559052,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverLegLeft",
+      "lowerLimit": -2.094395160675049,
+      "bodyA": 17,
+      "jointSpeed": 0,
+      "bodyB": 5,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.2460863590240479,
+        "x": 0.08495350182056427
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2450505346059799,
+        "x": 0.01826852932572365
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverFootLeft",
+      "lowerLimit": -0.3490658402442932,
+      "bodyA": 5,
+      "jointSpeed": 0,
+      "bodyB": 7,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.1113451644778252,
+        "x": -0.1057437062263489
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2483907788991928,
+        "x": -0.03604358807206154
+      },
+      "upperLimit": 0.3490658402442932,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "jointExhaust",
+      "lowerLimit": -0.01745329238474369,
+      "bodyA": 14,
+      "jointSpeed": 0,
+      "bodyB": 11,
+      "refAngle": 0,
+      "maxMotorTorque": 500.0,
+      "anchorB": {
+        "y": -1.156100034713745,
+        "x": 0.01561212539672852
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.1445119380950928,
+        "x": 0.1481850147247315
+      },
+      "upperLimit": 0.01745329238474369,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverPelvisLegRight",
+      "lowerLimit": 0,
+      "bodyA": 4,
+      "jointSpeed": 0,
+      "bodyB": 1,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.2447726428508759,
+        "x": 0.005471224430948496
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.007270097732543945,
+        "x": -0.003824234008789063
+      },
+      "upperLimit": 1.570796370506287,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "joint1",
+      "bodyA": 12,
+      "bodyB": 14,
+      "refAngle": 0,
+      "frequency": 0,
+      "anchorB": {
+        "y": 0.7412850856781006,
+        "x": -0.5707659721374512
+      },
+      "anchorA": {
+        "y": 0.4777750968933106,
+        "x": 0.8446900844573975
+      },
+      "type": "weld",
+      "dampingRatio": 0
+    },
+    {
+      "name": "cockpitJoint",
+      "bodyA": 19,
+      "bodyB": 14,
+      "refAngle": 0,
+      "frequency": 0,
+      "anchorB": {
+        "y": 0.7402539253234863,
+        "x": -1.120669960975647
+      },
+      "anchorA": {
+        "y": -0.6576530933380127,
+        "x": 0.2143770456314087
+      },
+      "type": "weld",
+      "dampingRatio": 0
+    },
+    {
+      "name": "driverBodyArmRight",
+      "lowerLimit": -0.5235987901687622,
+      "bodyA": 0,
+      "jointSpeed": 0,
+      "bodyB": 10,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.2629710733890533,
+        "x": -0.0722775086760521
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.04848599433898926,
+        "x": -0.1522101163864136
+      },
+      "upperLimit": 2.268928050994873,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "driverArmLeft",
+      "lowerLimit": 0.1745329201221466,
+      "bodyA": 2,
+      "jointSpeed": 0,
+      "bodyB": 6,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.4123387634754181,
+        "x": -0.005007450003176928
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2388219684362412,
+        "x": -0.07348249852657318
+      },
+      "upperLimit": 1.047199964523315,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "rightHandJoint",
+      "lowerLimit": 0,
+      "bodyA": 16,
+      "jointSpeed": 0,
+      "bodyB": 19,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": -0.7986464500427246,
+        "x": 0.6736972332000732
+      },
+      "enableLimit": false,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2620973885059357,
+        "x": -0.03908735886216164
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "rightFootJoint",
+      "lowerLimit": 0,
+      "bodyA": 8,
+      "jointSpeed": 0,
+      "bodyB": 19,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": -1.499666452407837,
+        "x": 0.8537771701812744
+      },
+      "enableLimit": false,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.04555198177695274,
+        "x": 0.06876946985721588
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "hoodJoint",
+      "lowerLimit": 0,
+      "bodyA": 14,
+      "jointSpeed": 0,
+      "bodyB": 13,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": 0.1643600463867188,
+        "x": -0.6501100063323975
+      },
+      "enableLimit": true,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": 0.775200366973877,
+        "x": -0.3077359199523926
+      },
+      "upperLimit": 0.3490658402442932,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "leftHandJoint",
+      "lowerLimit": 0,
+      "bodyA": 6,
+      "jointSpeed": 0,
+      "bodyB": 19,
+      "refAngle": 0,
+      "maxMotorTorque": 0,
+      "anchorB": {
+        "y": -0.6666762828826904,
+        "x": 0.6950972080230713
+      },
+      "enableLimit": false,
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -0.2252153605222702,
+        "x": 0.04315895587205887
+      },
+      "upperLimit": 0,
+      "type": "revolute",
+      "enableMotor": false
+    },
+    {
+      "name": "frontSpring",
+      "bodyA": 14,
+      "type": "wheel",
+      "bodyB": 18,
+      "localAxisA": {
+        "y": 1,
+        "x": 0
+      },
+      "maxMotorTorque": 500.0,
+      "springDampingRatio": 0.7,
+      "anchorB": {
+        "y": -1.788139343261719e-07,
+        "x": 1.668930053710938e-06
+      },
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -1.503282785415649,
+        "x": 0.3389439582824707
+      },
+      "springFrequency": 3,
+      "enableMotor": true
+    },
+    {
+      "name": "rearSpring",
+      "bodyA": 15,
+      "type": "wheel",
+      "bodyB": 20,
+      "localAxisA": {
+        "y": 1,
+        "x": 0
+      },
+      "maxMotorTorque": 500.0,
+      "springDampingRatio": 0.7,
+      "anchorB": {
+        "y": -1.192092895507813e-07,
+        "x": 2.86102294921875e-06
+      },
+      "motorSpeed": 0,
+      "anchorA": {
+        "y": -1.526364803314209,
+        "x": -1.173286437988281
+      },
+      "springFrequency": 3,
+      "enableMotor": true
+    },
+    {
+      "name": "base",
+      "bodyA": 14,
+      "bodyB": 15,
+      "refAngle": 0,
+      "frequency": 0,
+      "anchorB": {
+        "y": -0.09778714179992676,
+        "x": 2.495039939880371
+      },
+      "anchorA": {
+        "y": -0.0646061897277832,
+        "x": -2.112119913101196
+      },
+      "type": "weld",
+      "dampingRatio": 0
+    }
+  ],
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "PlayerCar",
+      "PlayerCarPart",
+      "Driver",
+      "Terrain",
+      "Bridge",
+      "Collectible",
+      "Obstacle",
+      "LethalObstacle",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

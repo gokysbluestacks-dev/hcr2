@@ -1,0 +1,215 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-atv.png",
+  "numTyreTracks": 2,
+  "fuelTank": 40.0,
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "Agile and light all-terrain vehicle with great grip and suspension. Great for making trick combos!"
+  },
+  "hornSound": "atv-horn",
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "offset": [
+      -1.76,
+      1.34
+    ]
+  },
+  "vehicleUnlockRank": 10,
+  "attachments": [],
+  "maxAngularVelocity": 1.8,
+  "airTurnRate": 30.0,
+  "impactSound": "light-vehicle-impact",
+  "spriteVariants": {
+    "wheel": {
+      "atv_tire-safari": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_safari.png",
+        "rarity": "common"
+      },
+      "default": {
+        "name": "Normal",
+        "texture": "textures/cars/atv/atv-tire.png",
+        "rarity": "default"
+      },
+      "atv_tire-goth": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_goth.png",
+        "rarity": "default"
+      },
+      "atv_tire-steampunk": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_steampunk.png",
+        "rarity": "common"
+      },
+      "atv_tire-hcr": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_hcr.png",
+        "rarity": "common"
+      },
+      "atv_tire-tractor": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_tractor.png",
+        "rarity": "common"
+      },
+      "atv_tire-old": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_old.png",
+        "rarity": "common"
+      },
+      "atv_tire-motorcycle": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_motorcycle.png",
+        "rarity": "common"
+      },
+      "atv_tire-simple": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_simple.png",
+        "rarity": "common"
+      }
+    }
+  },
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful turbo."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 4.0,
+            "from": 2.5
+          },
+          "max_torque": "60",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 5.5,
+            "from": 3.5
+          },
+          "max_speeds": {
+            "to": 42,
+            "from": 28
+          }
+        }
+      ],
+      "id": "atv_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 4.0,
+            "from": 2.0
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 4.0,
+            "from": 2.0
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "atv_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point and better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 1.5,
+            "from": 0.32
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 1.5,
+            "from": 0.32
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.6,
+              "from": 0.0
+            }
+          ]
+        }
+      ],
+      "id": "atv_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved air controls makes handling the vehicle a lot easier in jumps."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as AIR TURN or TURN SPEED",
+        "value": "AIR CONTROL"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 200.0,
+            "from": 30.0
+          },
+          "type": "air_control"
+        }
+      ],
+      "id": "atv_air_control",
+      "icon": "ui/cocosstudio/upgrades/item_atvaircontrol.png"
+    }
+  ],
+  "engineSound": "atv-engine",
+  "baseCCvalue": 260,
+  "rube_file": "vehicle_atv_model.json",
+  "id": "atv",
+  "name": {
+    "localize": "Name of a vehicle, All-Terrain Vehicle",
+    "value": "ATV"
+  }
+}

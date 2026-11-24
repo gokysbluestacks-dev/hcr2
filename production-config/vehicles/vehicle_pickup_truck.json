@@ -1,0 +1,246 @@
+{
+  "rpmScale": 1.6,
+  "attachments": [
+    {
+      "node": "ant3",
+      "id": "antenna",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ],
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Increases the maximum speed of the vehicle."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "type": "engine_params",
+          "max_speeds": {
+            "to": 33.5,
+            "from": 25
+          }
+        }
+      ],
+      "id": "pickup_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved turbo reduces turbo lag, improves maximum and launch turbo pressure."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "TURBO"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 1.9,
+            "from": 0.5
+          },
+          "max_torque": {
+            "to": 35.0,
+            "from": 30.0
+          },
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 4.1,
+            "from": 0.5
+          }
+        }
+      ],
+      "id": "pickup_turbo",
+      "icon": "ui/cocosstudio/upgrades/item_turbo.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 8.0,
+            "from": 0.9
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 8.0,
+            "from": 0.9
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "pickup_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.95,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 0.95,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.65,
+              "from": 0.0
+            }
+          ]
+        }
+      ],
+      "id": "pickup_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    }
+  ],
+  "id": "pickup_truck",
+  "vehicleUnlockRank": 27,
+  "numTyreTracks": 2,
+  "airTurnRate": 140.0,
+  "hornSound": "motocross-horn",
+  "spriteVariants": {
+    "wheel": {
+      "pickup_tire-motorcycle": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_motorcycle.png",
+        "rarity": "common"
+      },
+      "pickup_tire-safari": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_safari.png",
+        "rarity": "common"
+      },
+      "pickup_tire-old": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_old.png",
+        "rarity": "common"
+      },
+      "default": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_pickup.png",
+        "rarity": "default"
+      },
+      "pickup_tire-tractor": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_tractor.png",
+        "rarity": "common"
+      },
+      "pickup_tire-hcr": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_hcr.png",
+        "rarity": "common"
+      },
+      "pickup_tire-pimped": {
+        "name": "Pimped Out",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_pimped.png",
+        "rarity": "premium"
+      },
+      "pickup_tire-simple": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_simple.png",
+        "rarity": "common"
+      },
+      "pickup_tire-steampunk": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_steampunk.png",
+        "rarity": "common"
+      }
+    }
+  },
+  "baseCCvalue": 260,
+  "boost": {
+    "fuelPickupBoostPower": 3.5,
+    "fuelPickupBoostEnabled": false,
+    "offset": [
+      -2.9,
+      1.35
+    ]
+  },
+  "exhaust": {
+    "node": "chassis",
+    "scale": 0.7,
+    "angle": 15.0,
+    "file": "particles/exhaust_diesel.plist",
+    "offset": [
+      -1.38,
+      3.37
+    ],
+    "maxParticles": 60
+  },
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "The American Dream on wheels."
+  },
+  "turboFlutterSound": "",
+  "engineSound": "pickup-engine",
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-pickup.png",
+  "fuelTank": 52.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "SUPER DIESEL"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "rearSuspensionColliderLimits": [
+    0,
+    0.2
+  ],
+  "frontSuspensionColliderLimits": [
+    0,
+    0.2
+  ],
+  "impactSound": "standard-vehicle-impact",
+  "turboSound": "pickup-turbo",
+  "rube_file": "vehicle_pickup_truck_model.json"
+}

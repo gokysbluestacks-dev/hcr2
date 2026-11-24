@@ -1,0 +1,220 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-motocross.png",
+  "exhaust": {
+    "node": "exhaustPipe",
+    "scale": 0.7,
+    "angle": 15.0,
+    "file": "particles/exhaust_superjeep2.plist",
+    "offset": [
+      -1.8,
+      1.88
+    ],
+    "maxParticles": 64
+  },
+  "numTyreTracks": 1,
+  "fuelTank": 42.0,
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "Bill's favorite 2-wheeler, also known as 'The Apollo', always ready for a spin."
+  },
+  "hornSound": "motocross-horn",
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "node": "exhaustPipe",
+    "offset": [
+      -1.73,
+      1.85
+    ]
+  },
+  "vehicleUnlockRank": 13,
+  "maxAngularVelocity": 1.5,
+  "airTurnRate": 50.0,
+  "impactSound": "light-vehicle-impact",
+  "spriteVariants": {
+    "wheel": {
+      "jeep_tire-simple": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_simple.png",
+        "rarity": "common"
+      },
+      "default": {
+        "name": "Normal",
+        "texture": "textures/cars/Bike-parts-assets/motocross_tire.png",
+        "rarity": "default"
+      },
+      "jeep_tire-old": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_old.png",
+        "rarity": "common"
+      },
+      "tire-goth": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/2wheel/tire/tire_goth.png",
+        "rarity": "default"
+      },
+      "jeep_tire-motorcycle": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_motorcycle.png",
+        "rarity": "common"
+      },
+      "jeep_tire-tractor": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_tractor.png",
+        "rarity": "common"
+      },
+      "tire-steampunk": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/2wheel/tire/tire_steampunk.png",
+        "rarity": "default"
+      },
+      "jeep_tire-hcr": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_hcr.png",
+        "rarity": "common"
+      },
+      "tire-safari": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/2wheel/tire/tire_safari.png",
+        "rarity": "default"
+      }
+    }
+  },
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful boost."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 3.4,
+            "from": 1.1
+          },
+          "max_torque": "15",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 3,
+            "from": 0.5
+          },
+          "max_speeds": {
+            "to": 47,
+            "from": 29
+          }
+        }
+      ],
+      "id": "motocross_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 5.6,
+            "from": 1.2
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 5.6,
+            "from": 1.2
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "motocross_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 1.85,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 1.85,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        }
+      ],
+      "id": "motocross_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point improves stability and handling."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as STABILITY or WEIGHT POINT",
+        "value": "BALANCE"
+      },
+      "upgrade_price_tier": 2,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.35,
+              "from": 0
+            }
+          ]
+        }
+      ],
+      "id": "motocross_center_of_mass",
+      "icon": "ui/cocosstudio/upgrades/item_motocrossbalance.png"
+    }
+  ],
+  "engineSound": "motocross-engine",
+  "baseCCvalue": 210,
+  "turboSound": "jeep-turbo",
+  "rube_file": "vehicle_motocross_model.json",
+  "id": "motocross",
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "MOTOCROSS"
+  }
+}

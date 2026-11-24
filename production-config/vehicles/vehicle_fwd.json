@@ -1,0 +1,222 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/cartoonbill.png",
+  "rpmScale": 1.2,
+  "fuelTank": 44.0,
+  "description": {
+    "localize": "Description of a vehicle",
+    "value": "Bill's latest fad: Buggy with a front-wheel drive and air brake!"
+  },
+  "vehicleUnlockRank": 21,
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "offset": [
+      -2.0,
+      1.33
+    ]
+  },
+  "numTyreTracks": 2,
+  "attachments": [
+    {
+      "node": "ant2",
+      "id": "antenna",
+      "offset": [
+        0,
+        0
+      ]
+    }
+  ],
+  "airTurnRate": 140.0,
+  "impactSound": "standard-vehicle-impact",
+  "turboFlutterSound": "turbo-flutter",
+  "spriteVariants": {
+    "wheel": {
+      "default": {
+        "name": "Normal",
+        "texture": "textures/cars/jeep-tire.png",
+        "rarity": "default"
+      },
+      "tire-goth": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_goth.png",
+        "rarity": "default"
+      },
+      "tire-safari": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_safari.png",
+        "rarity": "default"
+      },
+      "tire-steampunk": {
+        "name": "Normal",
+        "texture": "textures/vehicle-assets/4wheel/tire/tire_steampunk.png",
+        "rarity": "default"
+      }
+    },
+    "chassis": {
+      "default": {
+        "name": "Normal",
+        "texture": "textures/cars/pickup/car_pickup-body.png",
+        "rarity": "default"
+      }
+    }
+  },
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "More speed, and a faster, more powerful turbo."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 15,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 3.14,
+            "from": 2
+          },
+          "max_torque": "35",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 3.08,
+            "from": 2
+          },
+          "max_speeds": {
+            "to": 55,
+            "from": 35
+          }
+        },
+        {
+          "amounts": {
+            "to": 1.0,
+            "from": 1.0
+          },
+          "type": "power_distribution"
+        }
+      ],
+      "id": "fwd_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Improved grip for better traction and power delivery to the ground."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 15,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 3.5,
+            "from": 1.7
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 3.5,
+            "from": 1.7
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "fwd_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Lower weight point and better shock absorption improve stability on high speeds."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 15,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.8,
+            "from": 0.3
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 0.8,
+            "from": 0.3
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            {
+              "to": 0.5,
+              "from": 0.0
+            },
+            {
+              "to": -0.4,
+              "from": 0.0
+            }
+          ]
+        }
+      ],
+      "id": "fwd_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": {
+        "localize": "Description of a vehicle upgrade",
+        "value": "Brake faster with an upgraded air brake."
+      },
+      "name": {
+        "localize": "Name of a vehicle upgrade. This string has very little space in UI, so if this is too long, you can also translate as FLAPS or AIR FLAPS (as in airplane)",
+        "value": "AIR BRAKE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 15,
+      "upgrade_effects": [
+        {
+          "type": "air_brake",
+          "offsets": [
+            {
+              "to": -1.3,
+              "from": -0.4
+            },
+            {
+              "to": -13,
+              "from": -3
+            }
+          ]
+        }
+      ],
+      "id": "fwd_air_brake",
+      "icon": "ui/cocosstudio/upgrades/item_gearshift_on.png"
+    }
+  ],
+  "engineSound": "jeep-engine",
+  "turboSound": "jeep-turbo",
+  "rube_file": "vehicle_fwd_model.json",
+  "id": "fwd",
+  "name": {
+    "localize": "Name of a vehicle, FWD = Front Wheel Drive",
+    "value": "FWD BUGGY"
+  }
+}

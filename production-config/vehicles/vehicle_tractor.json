@@ -1,0 +1,181 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/icon-vehicle-tractor.png",
+  "fuelTank": 50.0,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "TRACTOR"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "offset": [
+      0.45,
+      3.5
+    ],
+    "file": "ui/cocosstudio/boost_up.csb",
+    "behindCar": false
+  },
+  "numTyreTracks": 2,
+  "airTurnRate": 20,
+  "impactSound": "heavy-vehicle-impact",
+  "spriteVariants": {},
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 1.2
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 1.2
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "tractor_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.86,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 0.86,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.6,
+              "from": 0
+            }
+          ]
+        }
+      ],
+      "id": "tractor_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "max_torque": {
+            "to": 60,
+            "from": 35
+          },
+          "type": "engine_params",
+          "max_speeds": {
+            "to": 25,
+            "from": 17
+          }
+        }
+      ],
+      "id": "tractor_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "TURBO"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 20,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 2.5,
+            "from": 1.0
+          },
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 10.0,
+            "from": 0.0
+          }
+        }
+      ],
+      "id": "tractor_turbo",
+      "icon": "ui/cocosstudio/upgrades/item_gearshift_on.png"
+    }
+  ],
+  "engineSound": "jeep-engine",
+  "rube_file": "vehicle_tractor_model.json",
+  "id": "tractor",
+  "attachments": [
+    {
+      "node": "chassis",
+      "id": "back",
+      "offset": [
+        -1.9,
+        -0.5
+      ]
+    },
+    {
+      "node": "chassis",
+      "id": "hood",
+      "offset": [
+        1.18,
+        0.0
+      ]
+    },
+    {
+      "node": "chassis",
+      "id": "side",
+      "offset": [
+        0.7650536,
+        -0.634303
+      ]
+    },
+    {
+      "node": "chassis",
+      "id": "mirror",
+      "offset": [
+        -0.3075214,
+        0.062879
+      ]
+    }
+  ]
+}

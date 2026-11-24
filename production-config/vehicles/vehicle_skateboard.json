@@ -1,0 +1,158 @@
+{
+  "vehicleIcon": "ui/cocosstudio/elements/cartoonbill.png",
+  "shadowLength": 1.5,
+  "name": {
+    "localize": "Name of a vehicle",
+    "value": "SKATEBOARD"
+  },
+  "shadowTexture": "textures/effects/blob-shadow.png",
+  "boost": {
+    "offset": [
+      -0.58,
+      0.33
+    ]
+  },
+  "numTyreTracks": 2,
+  "airTurnRate": 20,
+  "impactSound": "skateboard-impact",
+  "spriteVariants": {},
+  "upgrades": [
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "GRIP"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 11,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 2.2
+          },
+          "type": "body_friction",
+          "target": "rearWheel"
+        },
+        {
+          "amounts": {
+            "to": 2.8,
+            "from": 1.2
+          },
+          "type": "body_friction",
+          "target": "frontWheel"
+        }
+      ],
+      "id": "skateboard_grip",
+      "icon": "ui/cocosstudio/upgrades/item_tire_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "SUSPENSION"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 11,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.86,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "frontSpring"
+        },
+        {
+          "amounts": {
+            "to": 0.86,
+            "from": 0.2
+          },
+          "type": "spring_damping",
+          "target": "rearSpring"
+        },
+        {
+          "type": "center_of_mass",
+          "target": "chassis",
+          "offsets": [
+            "0",
+            {
+              "to": -0.6,
+              "from": 0.0
+            }
+          ]
+        }
+      ],
+      "id": "skateboard_springs",
+      "icon": "ui/cocosstudio/upgrades/item_springs_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "ENGINE"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 11,
+      "upgrade_effects": [
+        {
+          "turbo_pressure_speeds": {
+            "to": 3.4,
+            "from": 1.1
+          },
+          "max_torque": "140",
+          "type": "engine_params",
+          "max_turbo_pressures": {
+            "to": 0.0,
+            "from": 0.0
+          },
+          "max_speeds": {
+            "to": 110,
+            "from": 110
+          }
+        }
+      ],
+      "id": "skateboard_engine",
+      "icon": "ui/cocosstudio/upgrades/item_cooler_on.png"
+    },
+    {
+      "upgradePValues": "1.0",
+      "description": "",
+      "name": {
+        "localize": "Name of a vehicle upgrade",
+        "value": "AWD"
+      },
+      "upgrade_price_tier": 1,
+      "max_levels": 11,
+      "upgrade_effects": [
+        {
+          "amounts": {
+            "to": 0.5,
+            "from": 0.5
+          },
+          "type": "power_distribution"
+        }
+      ],
+      "id": "skateboard_power_distribution",
+      "icon": "ui/cocosstudio/upgrades/item_gearshift_on.png"
+    }
+  ],
+  "engineSound": "skateboard-engine",
+  "fuelTank": 9999999.0,
+  "rube_file": "vehicle_skateboard_model.json",
+  "id": "skateboard",
+  "attachments": [
+    {
+      "node": "chassis",
+      "type": "hood",
+      "id": "hood",
+      "offset": [
+        1.04,
+        0.2
+      ]
+    }
+  ]
+}
