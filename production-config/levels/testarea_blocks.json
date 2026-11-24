@@ -1,0 +1,142 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "waves",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                3,
+                -3,
+                5,
+                -10,
+                0.0
+              ],
+              "x": [
+                0.0,
+                20.0,
+                40.0,
+                60.0,
+                80.0,
+                100.0
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 83.09147644042969,
+        "x": -0.1658921241760254
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "steepen",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                2,
+                6,
+                12.0,
+                21.06028747558594,
+                34.45704650878906
+              ],
+              "x": [
+                0.0,
+                20.0,
+                40.0,
+                60.0,
+                80.0,
+                100.0
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 152.8681488037109,
+        "x": -0.1658921241760254
+      },
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ],
+  "velocityIterations": 8,
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

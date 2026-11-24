@@ -1,0 +1,97 @@
+{
+  "buttonId": "uphill_cup_02",
+  "gfxDefinitionFile": "mountain_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_mountain.png",
+  "musicTracks": [
+    "audio/game-music3",
+    "audio/game-music3"
+  ],
+  "levelType": "fixedshort",
+  "id": "uphill02_1",
+  "jsonBlockFile": "uphill_cup_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Tricky Road",
+    "value": "Tricky Drive"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "easycave6",
+    "algorithm",
+    "algorithm",
+    "hardcave0",
+    "algorithm",
+    "algorithm",
+    "hardup0",
+    "bridge",
+    "algorithm",
+    "skillcave0",
+    "ditch",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 5,
+      "weight": 0.01,
+      "length": 28,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 2,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge-mountain.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "maxCount": 3,
+      "length": 19,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    40.0,
+    36.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "mountain_fixed02"
+  ],
+  "levelDistance": 290,
+  "algorithm": {
+    "expr": " var fade := clamp(0.0, x / 50, 1.0); var s := 0.002; var y := 120 * (abs((0.5*((max(2*x, 1.0)^0.95)*0.002) + 1) % 2-1) + 0.9*abs((0.5*(((2*x+150)^0.95)*0.002) + 1) % 2-1)) * (0.33 + 0.14*2*x*0.001); y += cos(1.6 + x/0.6)*0.03; y += cos(2.3 + x/1.5)*0.1; y += cos(1.0 + x/2.0)*0.1; y += cos(1.3 + x/2.5)*0.6; y += cos(2.9 + x/4.0)*0.9; y += cos(1.3 + x/5.8)*1.0; y += cos(3.1 + x/10.5)*1.2; y += cos(0.1 + x/20.5)*4.0; y * fade;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

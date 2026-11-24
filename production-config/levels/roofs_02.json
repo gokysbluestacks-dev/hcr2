@@ -1,0 +1,53 @@
+{
+  "buttonId": "roofs_fixed02",
+  "friction": 0.6,
+  "levelTier": 0,
+  "logo": "ui/logo_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "roofs_02_0devv",
+  "jsonBlockFile": "roofs_02_blocks.json",
+  "title": "Roofs 2",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "rubeBlockOrder": true,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "fuelDensity": 3.0,
+  "blocks": [],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    35.0,
+    31.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "roofs_fixed02"
+  ],
+  "levelDistance": 345,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": "0.0;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

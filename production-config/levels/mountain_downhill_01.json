@@ -1,0 +1,86 @@
+{
+  "buttonId": "mountain_downhill_01",
+  "gfxDefinitionFile": "mountain_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_mountain.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "mountain_downhill_01",
+  "jsonBlockFile": "mountain_downhill_01_blocks.json",
+  "title": "Downhill",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "hills1",
+    "hills2",
+    "algorithm",
+    "algorithm",
+    "bridge",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 30,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 20.0,
+      "lengthVar": 4,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "seed": 123,
+      "length": 18,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "levelDistance": 298,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": " x += 6.0; sin(x*0.275 + cos(x*0.35 + sin(x*0.3)*0.3)*0.4) * 2.0+85.0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 0,
+  "fuelDensityIncrease": 0.3
+}

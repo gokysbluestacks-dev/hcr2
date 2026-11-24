@@ -1,0 +1,76 @@
+{
+  "buttonId": "rookie_cup_02",
+  "gfxDefinitionFile": "forest2_gfx.json",
+  "logo": "ui/cocosstudio/elements/bg_forest.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "rookie_cup_02_01",
+  "jsonBlockFile": "rookie_cup_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Second Gear",
+    "value": "No Skidding"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "drop4",
+    "algorithm",
+    "algorithm",
+    "up",
+    "algorithm",
+    "algorithm",
+    "logs",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 10,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    35.0,
+    31.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 377,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; y += cos(1.1 + x/1.7)*0.0; y += cos(2.1 + x/2.5)*0.4; y += cos(0.0 + x/3.2)*0.8; y += cos(2.8 + x/4.6)*1.4; y += cos(0.3 + x/6.0)*3.2; y += cos(2.1 + x/7.5)*4.0; y += cos(4.5 + x/9.5)*6.0; y += cos(4.9 + x/11.5)*5.0; y += cos(2.8 + x/13.5)*7.0; y += cos(9.1 + x/25.2)*1.0; y += -0.30*x; y *= 0.35; y *= clamp(0.0, x/20, 1.0); y += 2.0 - 2.0*clamp(0.0, x/20, 1.0); ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

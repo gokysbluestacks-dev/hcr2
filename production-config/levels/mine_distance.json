@@ -1,0 +1,67 @@
+{
+  "buttonId": "mine_distance",
+  "levelTier": 0,
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music4",
+    "audio/game-music4"
+  ],
+  "levelType": "distance",
+  "id": "mine_distance_02",
+  "jsonBlockFile": "mine_distance_blocks.json",
+  "title": {
+    "localize": "Name of an adventure level. It's a coal mine.",
+    "value": "Mines"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "rubeBlockOrder": true,
+  "fixedBlockOrder": [
+    "algorithm"
+  ],
+  "coinMultiplier": 1.25,
+  "fuelDensity": 4.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 3 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 15,
+      "weight": 0.01,
+      "cave": true,
+      "length": 35,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": {
+    "localize": "Description of a level",
+    "value": "Venture down the mines. Who knows what kind of treasure lies there?"
+  },
+  "gfxDefinitionFile": "mine_gfx.json",
+  "coinSpawnDistance": 60,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0; var startFade := clamp(0.0, x/20, 1.0); var distanceFade := clamp(0.2, x/500, 1.0); y += cos(0.2 + x/0.6)*0.0; y += cos(2.3 + x/1.5)*0.2; y += cos(1.0 + x/2.0)*1.0; y += cos(1.3 + x/2.5)*1.0; y += cos(2.9 + x/4.0)*1.0; y += cos(1.3 + x/5.8)*1.0; y += cos(3.1 + x/10.5)*1.5; y += cos(0.1 + x/20.5)*1.5; y += cos(0.5 + x/28.5)*2.0; var y2 := 1.4*cos(x / 6.0);  y2 += 1.6*cos(0.8 + x / 10.3); y2 += 10.7*cos(3.1 + x/ 13.5); y2 *= clamp(0.0, x/5000, 1.0); y += y2; y += -2.0*sin(0.15*x) - 0.2*x; y *= distanceFade; y *= startFade; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "cameraMinVisibilityOffset": 4,
+  "caveBottomAlgorithm": {
+    "expr": "12+2*sin(x*0.1);",
+    "type": "expr"
+  },
+  "fuelDensityIncrease": 0.12,
+  "cameraMaxVisibilityOffset": 8,
+  "rubeBlockOrderFirstPassOnly": true
+}

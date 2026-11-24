@@ -1,0 +1,73 @@
+{
+  "buttonId": "mountain_fixed01",
+  "gfxDefinitionFile": "mountain_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_mountain.png",
+  "musicTracks": [
+    "audio/game-music3",
+    "audio/game-music3"
+  ],
+  "levelType": "fixedshort",
+  "id": "mountain01_1",
+  "jsonBlockFile": "mountain_01_blocks.json",
+  "title": "Mountain 1",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "algorithm",
+    "hills1",
+    "algorithm",
+    "algorithm",
+    "hills2",
+    "algorithm",
+    "algorithm",
+    "hills3",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 5,
+      "weight": 0.01,
+      "length": 40,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    45.0,
+    40.0,
+    36.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "mountain_fixed02"
+  ],
+  "levelDistance": 349,
+  "algorithm": {
+    "expr": "x *= 1.2; var y := cos(x/10.0)*2.0 * (1.5 + sin(x/18.0)) + cos(x/7.21 + sin(x/17.0)) * (1.5 + sin(x/185.0)) + cos(0.5 + x/13.5)*0.2*clamp(0.2, x*0.01, 0.6) + cos(x*0.17+(sin(x*0.25)))*2.0*clamp(0, x*0.00065, 1.0) + cos(x*0.0952+(sin(x*0.15)))*2.0*clamp(0, x*0.00205, 1.0) + -1 + sin(x/30.0+cos(x/32.14))*4*clamp(0, x*0.00065, 1.0); y += cos(1.2 + x/1.8)*0.2; y += cos(0.3 + x/2.7)*0.2; y *= 0.5+clamp(0.0, x/4000.0, 1.5); y += 0.15*x; y *= clamp(0.0, x/50, 1.0);",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

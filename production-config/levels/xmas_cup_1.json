@@ -1,0 +1,76 @@
+{
+  "buttonId": "xmas_cup_1",
+  "gfxDefinitionFile": "countryside_snow_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_winter.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "xmas_cup_1",
+  "jsonBlockFile": "skill_blocks.json",
+  "title": {
+    "localize": "Name of a level.",
+    "value": "Let It Snow"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "down1",
+    "pit1",
+    "down1",
+    "smoothTest",
+    "jump2",
+    "bump1",
+    "pit2",
+    "down2",
+    "up1",
+    "algorithm"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 10,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 400,
+  "algorithm": {
+    "blockLength": 10.0,
+    "expr": " var y := 0; y;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

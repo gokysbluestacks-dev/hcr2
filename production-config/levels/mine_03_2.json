@@ -1,0 +1,77 @@
+{
+  "buttonId": "mine_03_2",
+  "logo": "ui/cocosstudio/elements/bg_mine.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "mine_03_2",
+  "jsonBlockFile": "mine_blocks_2.json",
+  "title": {
+    "localize": "Name of a level.",
+    "value": "Deep End"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "mine_gfx.json",
+  "fuelDensity": 4.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "cave": true,
+      "length": 60,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 340,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "fixedBlockOrder": [
+    "algorithm",
+    "start3",
+    "down3",
+    "roll3",
+    "big_wheel3",
+    "end3",
+    "start"
+  ],
+  "blockRandomSeed": 6262,
+  "caveBottomAlgorithm": {
+    "expr": "10+sin(x*0.1);",
+    "type": "expr"
+  },
+  "fuelDensityIncrease": 0.3
+}

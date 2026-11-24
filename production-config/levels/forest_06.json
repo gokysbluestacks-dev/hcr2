@@ -1,0 +1,76 @@
+{
+  "buttonId": "forest_fixed06",
+  "logo": "ui/cocosstudio/elements/bg_forest.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "forest06_1",
+  "title": "Forest 6",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 1,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "normal",
+  "gfxDefinitionFile": "forest2_gfx.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    },
+    {
+      "weight": 1.0,
+      "lengthVar": 3,
+      "blendSurfaceEdges": false,
+      "texture": "textures/objects/bridge.png",
+      "textureScale": [
+        1.1,
+        1.1
+      ],
+      "terrainOffsetExpr": "var offset := 0; var x2 := 3.1415 * x / length; x2 *= 1.0 + 0.01*offset; -20.0*sin(x2);",
+      "length": 16,
+      "range": {
+        "start": 0
+      },
+      "type": "code",
+      "id": "bridge"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    47.0,
+    45.0,
+    43.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "forest_fixed07"
+  ],
+  "levelDistance": 450,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": "x *= 0.8; x += 10.0; var k0 := 1.22; var k1 := 0.51; var k2 := 0.97; var k3 := 1.52; var y := 0.0; y -= k0*cos(k1 + x/(7.0 + 2.0*k2))*1.5; y -= k1*cos(k2 + x/(10.0 + 1.5*k3))*1.5; y += k2*cos(k3 + x/(4.0 + 1.5*k0))*0.8; y += k3*cos(k0 + x/(2.0 + 1.5*k1))*0.5; y += k1*cos(k3 + x/(15.0 + 1.5*k2))*11.5; y += cos(2.3 + x/1.5)*0.3; y += cos(1.0 + x/2.0)*0.3; y += cos(1.3 + x/2.5)*0.3; y *= clamp(0.2, x/50, 1.0); y * 1.4;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

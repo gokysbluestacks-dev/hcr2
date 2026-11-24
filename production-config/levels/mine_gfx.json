@@ -1,0 +1,576 @@
+{
+  "finishLine": {
+    "scale": 10.0,
+    "zOrder": 3,
+    "anchor": [
+      0.5,
+      0.2
+    ],
+    "texture": "textures/objects/finishline.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.5
+    ]
+  },
+  "music": {
+    "default": {
+      "game-over-victory": [
+        "bgm_victory"
+      ],
+      "running": [
+        "bgm_mine-race"
+      ],
+      "intro": [
+        "bgm_mine-intro"
+      ],
+      "game-over": [
+        "bgm_finish"
+      ]
+    },
+    "distance": {
+      "running": [
+        "bgm_mine-distance"
+      ],
+      "starting": [
+        "bgm_mine-intro"
+      ],
+      "result-screen": [
+        "bgm_victory"
+      ]
+    }
+  },
+  "themes": [
+    {
+      "terrainBehindPlayer": true,
+      "surfaceParticles": "particles/mine.plist",
+      "terrainCliffTexture": "textures/terrain/terrain-surface_mine",
+      "friction": 0.65,
+      "surfaceTextureScale": [
+        0.2,
+        1.0
+      ],
+      "groundBottomOffset": [
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "physicsDensity": 2,
+      "textureScale": [
+        0.1,
+        0.1
+      ],
+      "singleEdgeTerrain": true,
+      "ambient": 0.5,
+      "tyreTrackMaxAlpha": 0.0,
+      "surfaceOffset": 0.3,
+      "terrainSurfaceTexture": "textures/terrain/terrain-surface_mine",
+      "terrainTexture": "textures/terrain/terrain-ground_mine",
+      "terrainHeight": 15.0,
+      "surfaceDepth": 2.0,
+      "lightDirection": [
+        -1.0,
+        1.0
+      ],
+      "sideAmbient": 0.5,
+      "specularPower": 4.0,
+      "surfaceHeight": 2.0,
+      "specular": 0.2,
+      "lightWrap": 1.0,
+      "drawToEdge": true
+    }
+  ],
+  "propGroups": [
+    {
+      "distance": 30,
+      "chunkCountVar": 1,
+      "chunkDistance": 5,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "yes",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0.5,
+        0.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "maxSpawnAngle": 65,
+          "texture": "textures/props/sandpile.png",
+          "yOffset": 0.1,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            1.8,
+            1.8
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 30,
+      "chunkCountVar": 1,
+      "chunkDistance": 5,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "yes",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0.5,
+        0.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/planks.png",
+          "yOffset": 0.1,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            6.0,
+            6.0
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.1,
+            0.1
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 1,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 30,
+      "chunkCountVar": 1,
+      "chunkDistance": 16,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "only",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": -1.0,
+          "weight": 10,
+          "texture": "textures/props/wooden-frame.png",
+          "yOffset": 0.1,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            16.0,
+            16.0
+          ],
+          "zOrder": 0,
+          "underground": true,
+          "anchor": [
+            0.1,
+            0.1
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 1,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 20,
+      "chunkCountVar": 1,
+      "chunkDistance": 16,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "inCaves": "only",
+      "defaultZOrder": 4,
+      "chunkMode": false,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": -1.0,
+          "weight": 10,
+          "texture": "textures/props/lamp.png",
+          "yOffset": 3.1,
+          "lights": [
+            {
+              "color": [
+                255,
+                220,
+                60,
+                150
+              ],
+              "animation": {
+                "color": [
+                  255,
+                  200,
+                  60,
+                  128
+                ],
+                "radius": 11.0,
+                "type": "flicker",
+                "time": [
+                  1.0,
+                  1.8
+                ]
+              },
+              "radius": 8.0,
+              "anchor": [
+                0.5,
+                0.5
+              ],
+              "texture": "textures/effects/light-lamp.png"
+            }
+          ],
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            5.5,
+            5.5
+          ],
+          "zOrder": 1,
+          "underground": false,
+          "anchor": [
+            0.1,
+            0.1
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 1,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 35,
+      "chunkCountVar": 1,
+      "chunkDistance": 5,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 15,
+      "inCaves": "yes",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0.5,
+        0.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rocks.png",
+          "yOffset": 0.1,
+          "range": {
+            "start": 0
+          },
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 15,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 2,
+      "inCaves": "yes",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": 1.3,
+          "weight": 10,
+          "texture": "textures/props/cart.png",
+          "yOffset": -1.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            3,
+            3
+          ],
+          "zOrder": 14,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        },
+        {
+          "rotate": true,
+          "zOffset": 1.3,
+          "weight": 10,
+          "texture": "textures/props/cart_gold.png",
+          "yOffset": -1.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            3,
+            3
+          ],
+          "zOrder": 14,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 1,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 15,
+      "chunkCountVar": 2,
+      "chunkDistance": 6,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 2,
+      "inCaves": "yes",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        1.5,
+        1.5
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": 1.1,
+          "weight": 10,
+          "color": [
+            185,
+            185,
+            185
+          ],
+          "maxSpawnAngle": 35,
+          "texture": "textures/props/sandpile.png",
+          "yOffset": -1.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            3,
+            3
+          ],
+          "zOrder": 12,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        },
+        {
+          "rotate": true,
+          "zOffset": 1.1,
+          "weight": 10,
+          "color": [
+            185,
+            185,
+            185
+          ],
+          "maxSpawnAngle": 35,
+          "texture": "textures/props/sandpile_gold.png",
+          "yOffset": -1.5,
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            3,
+            3
+          ],
+          "zOrder": 12,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 3,
+      "chunkCount": 3,
+      "defaultScale": [
+        4,
+        4
+      ]
+    }
+  ],
+  "backgroundLayers": [
+    {
+      "count": 1,
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "type": "looping",
+      "sizeY": 1.0,
+      "texture": "textures/sky/sky-mountain-bg.png",
+      "yOffset": -0.8,
+      "zOrder": 1,
+      "yOffsetVar": 0.0,
+      "innerScale": 0.4,
+      "speed": [
+        0.45,
+        0.2
+      ]
+    }
+  ],
+  "liquids": {
+    "water": {
+      "angularDrag": 1.0,
+      "sideTexture": "textures/terrain/water-forest.png",
+      "velocityMul": 0.5,
+      "splashParticles": "particles/water_splash.plist",
+      "thickness": 0.25,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/water-surface-forest.png",
+      "lift": 0.8,
+      "linearDrag": 0.2,
+      "splashParticleCount": 10,
+      "scrollSpeed": 0.1
+    },
+    "lava_down": {
+      "sideTextureScale": [
+        1.8,
+        1.8
+      ],
+      "angularDrag": 8.0,
+      "sideTexture": "textures/terrain/lava.png",
+      "surfaceBody": true,
+      "velocityMul": 1.0,
+      "contactParticleSound": "burning",
+      "shader": "water",
+      "thickness": 0.8,
+      "splashParticles": "particles/lava_splash.plist",
+      "surfaceTexture": "textures/terrain/lava-surface.png",
+      "linearDragRampTime": 2.0,
+      "killsDriver": true,
+      "lift": 0.6,
+      "splashSoundBig": "splash_lava_big",
+      "linearDrag": 8.8,
+      "sideTextureRepeatMirrored": false,
+      "splashSound": "splash_lava",
+      "splashParticleCount": 5,
+      "contactParticles": "Particles/fire.plist",
+      "scrollSpeed": -0.1
+    }
+  },
+  "previewImage": "elements/adventurebg_mines.png",
+  "jointMaterials": {
+    "rope": {
+      "width": 2.0,
+      "texture": "textures/objects/rope.png"
+    },
+    "wire": {
+      "width": 0.6,
+      "texture": "textures/objects/rope-steel.png"
+    }
+  },
+  "islands": {
+    "cave": {
+      "bottomScale": 1.0,
+      "sideTexture": "textures/terrain/roof.png",
+      "edgeTexture": "textures/terrain/terrain-cave-edge.png",
+      "zBack": -2.0,
+      "enableWallLighting": true,
+      "enableSideLighting": true,
+      "surfaceTexture": "textures/terrain/terrain-surface_mine.png",
+      "edgeScale": 1,
+      "sideTextureTile": 0.15,
+      "ambient": 0.25,
+      "surfaceTextureTile": 0.15,
+      "lightWrap": 1.0,
+      "bottomTexture": "textures/terrain/terrain-bottom-test.png",
+      "wallTexture": "textures/terrain/wall2.png",
+      "zFront": 2.0
+    },
+    "surface": {
+      "bottomScale": 1.0,
+      "sideTexture": "textures/terrain/roof.png",
+      "edgeTexture": "textures/terrain/terrain-cave-edge.png",
+      "zBack": -2.0,
+      "enableWallLighting": true,
+      "enableSideLighting": true,
+      "surfaceTexture": "textures/terrain/terrain-surface_mine.png",
+      "edgeScale": 1,
+      "sideTextureTile": 0.15,
+      "ambient": 0.25,
+      "surfaceTextureTile": 0.15,
+      "lightWrap": 1.0,
+      "bottomTexture": "textures/terrain/terrain-bottom-test.png",
+      "wallTexture": "",
+      "zFront": 2.0
+    }
+  }
+}

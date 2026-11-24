@@ -1,0 +1,77 @@
+{
+  "buttonId": "formula_city_01",
+  "logo": "ui/cocosstudio/elements/bg_fingerstone.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "formula_city_01",
+  "jsonBlockFile": "formula_city_blocks.json",
+  "title": {
+    "localize": "Name of a level. Alternative name: Bad Brakes",
+    "value": "Braking Bad"
+  },
+  "firstFuelChunkIndex": 2,
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "formula_city_gfx.json",
+  "fuelDensity": 5.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 45,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    37.0,
+    33.0,
+    29.0
+  ],
+  "distanceBonusIncrease": 200,
+  "coinSpawnDistance": 60,
+  "unlocks": [
+    "city_fixed02"
+  ],
+  "levelDistance": 500,
+  "algorithm": {
+    "blockLength": 30.0,
+    "expr": " var y := 0; ",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "fixedBlockOrder": [
+    "algorithm",
+    "block1",
+    "block2",
+    "block3",
+    "block4",
+    "block5",
+    "algorithm",
+    "algorithm",
+    "algorithm",
+    "algorithm"
+  ],
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.0
+}

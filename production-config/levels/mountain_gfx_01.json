@@ -1,0 +1,729 @@
+{
+  "finishLine": {
+    "scale": 8.0,
+    "zOrder": 3,
+    "anchor": [
+      0.5,
+      0.15
+    ],
+    "texture": "textures/objects/finishline.png",
+    "offset": [
+      0.0,
+      0.0,
+      0.6
+    ]
+  },
+  "islands": {
+    "cave": {
+      "bottomScale": 1.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zBack": -2.0,
+      "surfaceTexture": "textures/terrain/terrain-surface_mountain.png",
+      "sideTextureTile": 0.15,
+      "surfaceTextureTile": 0.15,
+      "bottomTexture": "textures/terrain/terrain-bottom-test.png",
+      "zFront": 2.0
+    },
+    "road": {
+      "bottomScale": 1.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zBack": -2.0,
+      "surfaceTexture": "textures/terrain/terrain-surface_mountain.png",
+      "sideTextureTile": 0.15,
+      "surfaceTextureTile": 0.15,
+      "bottomTexture": "textures/terrain/terrain-bottom-test.png",
+      "zFront": 2.0
+    }
+  },
+  "backgroundLayers": [
+    {
+      "count": 1,
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "type": "looping",
+      "sizeY": 1.0,
+      "texture": "textures/sky/sky-mountain-bg.png",
+      "yOffset": -0.8,
+      "zOrder": 1,
+      "yOffsetVar": 0.0,
+      "innerScale": 0.4,
+      "speed": [
+        0.45,
+        0.2
+      ]
+    },
+    {
+      "count": 1,
+      "scale": [
+        0.6,
+        0.6
+      ],
+      "type": "parallax",
+      "sizeY": 0.8,
+      "texture": "textures/parallaxes/bg_mountain.png",
+      "yOffset": 0.5,
+      "zOrder": 6,
+      "yOffsetVar": 0.0,
+      "speed": [
+        1.5,
+        0.45
+      ],
+      "scaleVar": [
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "count": 1,
+      "scale": [
+        1.4,
+        1.4
+      ],
+      "type": "parallax",
+      "sizeY": 0.8,
+      "texture": "textures/parallaxes/bg_mountain.png",
+      "yOffset": 0.5,
+      "zOrder": 6,
+      "yOffsetVar": 0.1,
+      "speed": [
+        2.0,
+        0.5
+      ],
+      "scaleVar": [
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "opacity": 191,
+      "count": 2,
+      "scale": [
+        0.5,
+        0.5
+      ],
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "speed": [
+        1.0,
+        0.4
+      ],
+      "sizeY": 0.8,
+      "texture": "textures/parallaxes/bg_mountain.png",
+      "yOffset": 0.5,
+      "zOrder": 4,
+      "yOffsetVar": 0.1,
+      "type": "parallax"
+    },
+    {
+      "count": 1,
+      "scale": [
+        0.6,
+        0.6
+      ],
+      "type": "looping",
+      "sizeY": 0.75,
+      "texture": "textures/parallaxes/clouds.png",
+      "yOffset": -0.2,
+      "zOrder": 5,
+      "yOffsetVar": -0.0,
+      "speed": [
+        0.9,
+        0.3
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "terrainSurfaceTexture": "textures/terrain/terrain-surface_mountain",
+      "weight": 1.0,
+      "surfaceParticles": "particles/dust.plist",
+      "terrainCaveTexture": "textures/terrain/terrain-ground_mayan",
+      "groundBottomOffset": [
+        0.0,
+        -30.0,
+        20.0
+      ],
+      "friction": 0.6,
+      "terrainBehindPlayer": true,
+      "terrainTexture": "textures/terrain/terrain-ground_mountain_grass",
+      "terrainHeight": 50.0,
+      "surfaceDepth": 2.0,
+      "surfaceHeight": 2.0,
+      "surfaceTextureScale": [
+        0.2,
+        1.0
+      ],
+      "surfaceOffset": 0.2,
+      "terrainCliffTexture": "textures/terrain/terrain-surface_mountain",
+      "ambient": 0.5,
+      "rangeY": {
+        "start": 0,
+        "end": 60
+      },
+      "physicsDensity": 2,
+      "drawToEdge": true,
+      "textureScale": [
+        0.1,
+        0.1
+      ],
+      "singleEdgeTerrain": true
+    },
+    {
+      "weight": 2.0,
+      "terrainCaveTexture": "textures/terrain/terrain-ground_mayan",
+      "ambient": 0.5,
+      "friction": 0.38,
+      "surfaceTextureScale": [
+        0.2,
+        1.0
+      ],
+      "terrainCliffTexture": "textures/terrain/terrain-ground_mountainice-cliff",
+      "rainDropSize": [
+        0.15,
+        0.15
+      ],
+      "physicsDensity": 2,
+      "textureScale": [
+        0.1,
+        0.1
+      ],
+      "singleEdgeTerrain": true,
+      "surfaceParticles": "particles/ice.plist",
+      "surfaceOffset": 0.2,
+      "rainDropColor": [
+        255,
+        255,
+        255,
+        200
+      ],
+      "terrainSurfaceTexture": "textures/terrain/terrain-surface_icemountain",
+      "rainDropRoundness": 1.0,
+      "terrainTexture": "textures/terrain/terrain-ground_mountain",
+      "terrainHeight": 50.0,
+      "surfaceDepth": 2.0,
+      "rainDensity": 1.0,
+      "rainVel": [
+        -1.0,
+        -2.0,
+        0.0
+      ],
+      "terrainBehindPlayer": true,
+      "surfaceHeight": 2.0,
+      "rangeY": {
+        "start": 60
+      },
+      "drawToEdge": true
+    }
+  ],
+  "propGroups": [
+    {
+      "distance": 6,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 5,
+      "defaultZOrder": 4,
+      "props": [
+        {
+          "rotate": false,
+          "zOffset": 1.8,
+          "scaleVar": [
+            3.0,
+            3.0
+          ],
+          "color": [
+            100,
+            100,
+            100
+          ],
+          "texture": "textures/props/tree-pine4.png",
+          "yOffset": -8.2,
+          "range": {
+            "start": -0.0,
+            "end": 330
+          },
+          "scale": [
+            12.0,
+            12.0
+          ],
+          "zOrder": 9,
+          "yOffsetVar": 2.1,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "rotate": false,
+          "zOffset": 1.8,
+          "color": [
+            100,
+            100,
+            100
+          ],
+          "texture": "textures/props/tree-pine4.png",
+          "yOffset": -7.2,
+          "range": {
+            "start": -130,
+            "end": 270
+          },
+          "scale": [
+            12.0,
+            12.0
+          ],
+          "zOrder": 9,
+          "yOffsetVar": 2.1,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "rotate": true,
+          "zOffset": 0.6,
+          "texture": "textures/props/snow2.png",
+          "yOffset": -0.7,
+          "range": {
+            "start": -100,
+            "end": 300
+          },
+          "scale": [
+            2.5,
+            2.5
+          ],
+          "zOrder": 9,
+          "yOffsetVar": 0.0,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "scale": [
+            7,
+            7
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "texture": "textures/props/tree-pine4.png",
+          "yOffset": 0,
+          "range": {
+            "start": 30
+          },
+          "scaleVar": [
+            1,
+            1
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "defaultScaleVar": [
+        2,
+        2
+      ],
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 60,
+      "chunkCountVar": 1,
+      "chunkDistance": 6,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 30,
+      "inCaves": "no",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        2,
+        2
+      ],
+      "props": [
+        {
+          "scale": [
+            3,
+            3
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "yOffset": 0,
+          "range": {
+            "start": 30
+          },
+          "animation": "textures/animations/goat/GoatAnim",
+          "scaleVar": [
+            1,
+            1
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "chunkDistanceVar": 5,
+      "chunkCount": 3,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 30,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "defaultZOrder": 4,
+      "props": [
+        {
+          "scale": [
+            3,
+            3
+          ],
+          "zOffset": 0.6,
+          "scaleVar": [
+            2,
+            2
+          ],
+          "texture": "textures/props/rock.png",
+          "yOffset": 0,
+          "range": {
+            "start": -100,
+            "end": 300
+          },
+          "zOrder": 4,
+          "yOffsetVar": 0,
+          "rotation": true,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "scale": [
+            9,
+            9
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "texture": "textures/props/tree-pine5.png",
+          "yOffset": 0,
+          "range": {
+            "start": 30
+          },
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        },
+        {
+          "scale": [
+            9,
+            9
+          ],
+          "zOffset": -0.5,
+          "weight": 2,
+          "texture": "textures/props/tree-pine3.png",
+          "yOffset": 0,
+          "range": {
+            "start": 30
+          },
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0
+          ]
+        }
+      ],
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 30,
+      "chunkCountVar": 1,
+      "chunkDistance": 2,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 10,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rock.png",
+          "yOffset": 0,
+          "scalevar": [
+            2,
+            2
+          ],
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            2,
+            2
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        },
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rock.png",
+          "yOffset": 0,
+          "scalevar": [
+            2,
+            2
+          ],
+          "range": {
+            "start": -10
+          },
+          "scale": [
+            3,
+            3
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 10,
+      "chunkCountVar": 2,
+      "chunkDistance": 3,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 5,
+      "inCaves": "only",
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.45,
+          "weight": 10,
+          "texture": "textures/props/rock_incave.png",
+          "yOffset": 0.5,
+          "scalevar": [
+            2,
+            2
+          ],
+          "range": {
+            "start": 100
+          },
+          "scale": [
+            2,
+            2
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.3
+          ]
+        }
+      ],
+      "chunkDistanceVar": 2,
+      "chunkCount": 2,
+      "defaultScale": [
+        4,
+        4
+      ]
+    },
+    {
+      "distance": 250,
+      "chunkCountVar": 1,
+      "chunkDistance": 5,
+      "disabledBlocks": [
+        "bridge"
+      ],
+      "distanceVar": 50.5,
+      "defaultZOrder": 4,
+      "chunkMode": true,
+      "defaultScaleVar": [
+        0,
+        0
+      ],
+      "props": [
+        {
+          "rotate": true,
+          "zOffset": -0.4,
+          "weight": 2,
+          "texture": "textures/props/prop_warningtape.png",
+          "yOffset": 0,
+          "range": {
+            "start": -1
+          },
+          "scale": [
+            2.5,
+            2.5
+          ],
+          "zOrder": 3,
+          "anchor": [
+            0.5,
+            0.14
+          ]
+        }
+      ],
+      "chunkDistanceVar": 0,
+      "chunkCount": 4,
+      "defaultScale": [
+        4,
+        4
+      ]
+    }
+  ],
+  "walls": {
+    "wall": {
+      "contactFadeAmount": 0.0,
+      "zOffset": -2.0,
+      "sideTexture": "textures/terrain/terrain-ground-cliff_bg.png",
+      "edgeTexture": "textures/terrain/terrain-cave-edge.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.0,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "edgeScale": 1,
+      "zOrder": 1,
+      "textureScale": [
+        3.0,
+        3.0
+      ]
+    },
+    "wall_front": {
+      "contactFadeAmount": 0.5,
+      "zOffset": 1.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain.png",
+      "shader": "wall",
+      "contactFadeSpeed": 0.02,
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "zOrder": 11,
+      "textureScale": [
+        3.0,
+        3.0
+      ]
+    }
+  },
+  "liquids": {
+    "water": {
+      "angularDrag": 1.0,
+      "sideTexture": "textures/terrain/water.png",
+      "velocityMul": 0.7,
+      "splashParticles": "particles/water_splash.plist",
+      "thickness": 0.5,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/water-surface.png",
+      "lift": 0.5,
+      "linearDrag": 0.2,
+      "splashParticleCount": 5,
+      "scrollSpeed": 1.0
+    },
+    "mud": {
+      "angularDrag": 10.0,
+      "sideTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "velocityMul": 0.5,
+      "splashParticles": "particles/mud_splash.plist",
+      "thickness": 0.5,
+      "shader": "water",
+      "surfaceTexture": "textures/terrain/terrain-ground_mountain_grass.png",
+      "lift": 0.0,
+      "linearDrag": 10.0,
+      "splashParticleCount": 10,
+      "scrollSpeed": 0.0
+    },
+    "waterfall": {
+      "angularDrag": 1.0,
+      "sideTexture": "textures/terrain/waterfall.png",
+      "velocityMul": 0.5,
+      "flipVertical": true,
+      "shader": "water",
+      "thickness": 0.7,
+      "surfaceTexture": "textures/terrain/waterfall.png",
+      "lift": -0.8,
+      "linearDrag": 0.2,
+      "scrollSpeed": 10.0
+    }
+  },
+  "previewImage": "elements/adventurebg_mountain.png",
+  "jointMaterials": {
+    "rope": {
+      "width": 2.0,
+      "texture": "textures/objects/rope.png"
+    },
+    "wire": {
+      "width": 0.2,
+      "texture": "textures/objects/rope-steel.png"
+    }
+  },
+  "music": {
+    "default": {
+      "game-over-victory": [
+        "bgm_victory"
+      ],
+      "running": [
+        "bgm_mountain-race"
+      ],
+      "intro": [
+        "bgm_mountain-intro"
+      ],
+      "game-over": [
+        "bgm_finish"
+      ]
+    },
+    "distance": {
+      "running": [
+        "bgm_mountain-distance"
+      ],
+      "starting": [
+        "bgm_mountain-intro"
+      ],
+      "result-screen": [
+        "bgm_victory"
+      ]
+    }
+  }
+}

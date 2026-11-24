@@ -1,0 +1,60 @@
+{
+  "buttonId": "testarea_02",
+  "logo": "ui/cocosstudio/elements/bg_countryside.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "testarea_02_0",
+  "title": "FLAT UPHILL",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "coinMultiplier": 1.25,
+  "levelDifficulty": "easy",
+  "gfxDefinitionFile": "countryside_gfx_01.json",
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 100,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": " var y := 0.2*x; y;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

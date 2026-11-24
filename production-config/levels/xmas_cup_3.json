@@ -1,0 +1,72 @@
+{
+  "buttonId": "xmas_cup_3",
+  "gfxDefinitionFile": "countryside_snow_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_winter.png",
+  "musicTracks": [
+    "audio/game-music",
+    "audio/game-music"
+  ],
+  "levelType": "fixedshort",
+  "id": "xmas_cup_3",
+  "jsonBlockFile": "skill_blocks.json",
+  "title": {
+    "localize": "Name of a level.",
+    "value": "Crossroads"
+  },
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "down2",
+    "tunnel1",
+    "down1",
+    "tunnel2",
+    "tunnel3",
+    "tunnel4"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "maxSlope": 0.05,
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 30,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    50.0,
+    42.0,
+    39.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "countryside_fixed02"
+  ],
+  "levelDistance": 450,
+  "algorithm": {
+    "blockLength": 20.0,
+    "expr": " var y := 0; y;",
+    "scale": [
+      1.0,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      0.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 6262,
+  "fuelDensityIncrease": 0.3
+}

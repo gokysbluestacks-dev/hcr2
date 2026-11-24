@@ -1,0 +1,67 @@
+{
+  "buttonId": "mountain_fixed08",
+  "gfxDefinitionFile": "mountain_gfx_01.json",
+  "logo": "ui/cocosstudio/elements/bg_mountain.png",
+  "musicTracks": [
+    "audio/game-music3",
+    "audio/game-music3"
+  ],
+  "levelType": "fixedshort",
+  "id": "mountain08_0devv",
+  "jsonBlockFile": "mountain_blocks.json",
+  "title": "Countryside 2",
+  "gravity": [
+    0.0,
+    -10.0
+  ],
+  "unlockCost": 0,
+  "levelTier": 0,
+  "fixedBlockOrder": [
+    "algorithm",
+    "stack",
+    "algorithm",
+    "boulder0",
+    "stack"
+  ],
+  "levelDifficulty": "easy",
+  "coinMultiplier": 1.25,
+  "fuelDensity": 3.0,
+  "blocks": [
+    {
+      "forcedExpr": "index < 2 or index % 2 == 0",
+      "lengthVar": 0,
+      "weight": 0.01,
+      "length": 50,
+      "type": "algorithm",
+      "id": "algorithm"
+    }
+  ],
+  "description": "",
+  "distanceBonus": 15,
+  "distanceBonusStart": 200,
+  "starCriteria": [
+    41.0,
+    38.0,
+    35.0
+  ],
+  "distanceBonusIncrease": 200,
+  "unlocks": [
+    "mountain_fixed03"
+  ],
+  "levelDistance": 340,
+  "algorithm": {
+    "blockLength": 50.0,
+    "expr": "var fade := clamp(0.0, x/50, 1.0); x *= 0.8; var y := 0.2*x; y += cos(2.3 + x/1.1)*0.3; y += cos(1.0 + x/1.9)*0.3; y += cos(1.3 + x/2.3)*0.6; y += cos(1.0 + x/3.5)*2.5; y += cos(0.0 + x/11.1)*2.3; y += cos(0.5 + x/15.5)*6.2; y += cos(0.4 + x/25.2)*10.2; y * 0.5 * fade;",
+    "scale": [
+      1.5,
+      1.0
+    ],
+    "type": "expr",
+    "offset": [
+      10.0,
+      0.0
+    ]
+  },
+  "blockRandomSeed": 225,
+  "fuelDensityIncrease": 0.3
+}

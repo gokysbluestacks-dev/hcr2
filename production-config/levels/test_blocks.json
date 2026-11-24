@@ -1,0 +1,267 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "smallHill",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                2,
+                0.0
+              ],
+              "x": [
+                0.0,
+                10,
+                20.0
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 152.8681488037109,
+        "x": -0.1658921241760254
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "generic1",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                1.963706493377686,
+                1.607974648475647,
+                -4.841052532196045,
+                -0.6412653923034668,
+                -0.4000024795532227
+              ],
+              "x": [
+                0.0,
+                12.15969944000244,
+                24.93005180358887,
+                41.14068984985352,
+                67.84292602539062,
+                79.8611068725586
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 40.57508087158203,
+        "x": -0.01340293884277344
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "smoothJump",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -3.999129772186279,
+                -16.28031158447266,
+                -14.78779602050781,
+                -18.63080978393555,
+                -18.9957447052002,
+                -30.41414451599121,
+                -30.75212860107422
+              ],
+              "x": [
+                0.0,
+                13.09810447692871,
+                33.25193023681641,
+                42.70347595214844,
+                46.78885650634766,
+                50.47869110107422,
+                63.37009048461914,
+                69.3256607055664
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 133.7860717773438,
+        "x": -0.03594570606946945
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "smoothTest",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ],
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                2.691308975219727,
+                1.550344467163086,
+                3.904308795928955,
+                -1.857897877693176,
+                -2.206409454345703,
+                -2.088555574417114,
+                1.516292572021484,
+                -0.1466021537780762
+              ],
+              "x": [
+                0.0,
+                9.018796920776367,
+                15.10765361785889,
+                21.69084739685059,
+                33.22174072265625,
+                39.82280349731445,
+                46.45471954345703,
+                52.27433013916016,
+                65.70060729980469
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 79.96636199951172,
+        "x": -0.01340293884277344
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "uphill",
+      "fixture": [
+        {
+          "name": "fixture0",
+          "friction": 0.2,
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                5.91544771194458
+              ],
+              "x": [
+                0.0,
+                20.03105163574219
+              ]
+            }
+          },
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "position": {
+        "y": 65.0344009399414,
+        "x": -0.01340293884277344
+      },
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ],
+  "velocityIterations": 8,
+  "gravity": {
+    "y": -10,
+    "x": 0
+  },
+  "allowSleep": true,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": true,
+  "continuousPhysics": true,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": true
+}

@@ -1,0 +1,3751 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "start1",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.6465539932250977,
+                -2.862331390380859,
+                -4.817474842071533,
+                -4.140108108520508,
+                -1.475096702575684,
+                -0.1425743103027344,
+                0.01809310913085938,
+                0.90948486328125,
+                1.385042190551758
+              ],
+              "x": [
+                0.0,
+                6.588146209716797,
+                11.08715629577637,
+                17.2542610168457,
+                21.98032188415527,
+                26.30569267272949,
+                30.90402221679688,
+                33.32778930664063,
+                36.01025390625,
+                40.15110015869141
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 264.2624206542969,
+        "x": 99.0679931640625
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block2",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -1.002225399017334,
+                -1.888837575912476,
+                -2.420937538146973,
+                -2.17400074005127,
+                -1.517055511474609,
+                -4.549759387969971,
+                -4.591630935668945,
+                -2.664381980895996,
+                -2.416835784912109,
+                -1.330646514892578,
+                -1.605941772460938,
+                -1.40968132019043
+              ],
+              "x": [
+                0.0,
+                4.667928695678711,
+                6.509382247924805,
+                8.511493682861328,
+                10.47631359100342,
+                12.94245719909668,
+                16.07767105102539,
+                18.59332084655762,
+                22.43123626708984,
+                24.3875732421875,
+                26.99098205566406,
+                30.49429321289063,
+                32.40068817138672
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -3.229404449462891,
+                -3.211067199707031,
+                -4.801818370819092,
+                -4.818098545074463
+              ],
+              "x": [
+                21.54936218261719,
+                14.03756141662598,
+                15.44816207885742,
+                19.74216079711914
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 267.342529296875,
+        "x": 162.1974792480469
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block4",
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.5,
+            "center": {
+              "y": 1.531661987304688,
+              "x": 18.32102203369141
+            }
+          },
+          "name": "coinSpawn",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -1.002197504043579,
+                -0.3843164443969727,
+                4.825092315673828,
+                4.859003067016602,
+                2.025765419006348,
+                0.6646332740783691,
+                2.279739379882813,
+                6.971403121948242,
+                6.924709320068359,
+                4.162572860717773,
+                2.0030517578125,
+                2.199863433837891,
+                5.687850952148438,
+                8.517547607421875,
+                4.230358123779297,
+                4.553436279296875
+              ],
+              "x": [
+                0.0,
+                4.861268997192383,
+                8.557186126708984,
+                12.64577484130859,
+                14.41327476501465,
+                16.89061164855957,
+                20.24800109863281,
+                23.77361679077148,
+                27.26044464111328,
+                28.84969711303711,
+                30.39320373535156,
+                32.85460662841797,
+                36.95977020263672,
+                40.46842193603516,
+                42.26136016845703,
+                51.55327606201172,
+                55.07137298583984
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 247.8086547851563,
+        "x": 290.3919677734375
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block3",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                -0.005828857421875,
+                0.536407470703125,
+                2.097412109375,
+                3.127532958984375,
+                2.20220947265625,
+                -0.761016845703125,
+                -1.079345703125,
+                0.08001708984375,
+                -1.235137939453125,
+                -3.206207275390625
+              ],
+              "x": [
+                -0.0024871826171875,
+                3.505950927734375,
+                5.696746826171875,
+                8.707122802734375,
+                12.48373413085938,
+                16.78207397460938,
+                19.84904479980469,
+                23.63362121582031,
+                28.23063659667969,
+                32.68885803222656
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 263.647216796875,
+        "x": 216.2348022460938
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cave2",
+      "fixture": [
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                6.707279205322266,
+                9.627525329589844,
+                11.10347366333008,
+                8.964361190795898,
+                5.191522598266602,
+                1.46990966796875,
+                4.625824928283691,
+                8.914498329162598,
+                5.70421314239502,
+                5.951944351196289
+              ],
+              "x": [
+                2.975831985473633,
+                11.28754806518555,
+                22.3427734375,
+                23.70421600341797,
+                28.69099426269531,
+                30.65068054199219,
+                35.38766479492188,
+                42.44735717773438,
+                51.05001831054688,
+                54.20166778564453
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.3378477096557617,
+                2.569709777832031,
+                3.231731414794922,
+                1.8233642578125,
+                -4.567522048950195,
+                -6.37028694152832,
+                -7.647715568542481,
+                -7.384662628173828,
+                -4.389579772949219,
+                -2.655531883239746,
+                -2.599862098693848,
+                0.3836021423339844,
+                -0.04418230056762695,
+                0.09954452514648438
+              ],
+              "x": [
+                0.0,
+                6.368404388427734,
+                10.54941940307617,
+                14.25318336486816,
+                17.41303062438965,
+                22.61910057067871,
+                24.69008255004883,
+                28.18802642822266,
+                31.10251617431641,
+                35.32489013671875,
+                36.97389221191406,
+                42.05237197875977,
+                43.83807373046875,
+                49.94701385498047,
+                56.22145080566406
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 3000,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 2000,
+          "name": "rangeStart"
+        },
+        {
+          "int": 0,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 177.3816223144531,
+        "x": 267.3939208984375
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cave1",
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.5,
+            "center": {
+              "y": -2.993579149246216,
+              "x": 30.88743209838867
+            }
+          },
+          "name": "coinSpawn",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                8.410572052001953,
+                11.47487640380859,
+                11.31901931762695,
+                10.1086483001709,
+                8.236276626586914,
+                7.91802978515625,
+                5.318299293518066,
+                7.25393009185791,
+                7.955403327941895,
+                3.256998062133789
+              ],
+              "x": [
+                11.08542919158936,
+                17.75049209594727,
+                21.628173828125,
+                28.57308197021484,
+                29.76816558837891,
+                34.45938110351563,
+                40.36934661865234,
+                54.0212287902832,
+                61.26240921020508,
+                66.64732360839844
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                1.768801689147949,
+                3.838905334472656,
+                3.937160491943359,
+                2.443449020385742,
+                -3.338335037231445,
+                -3.892329216003418,
+                -2.287540435791016,
+                -2.923408508300781,
+                -0.7969808578491211,
+                -0.9415979385375977,
+                -3.544605255126953,
+                -4.84424638748169,
+                -4.881824493408203
+              ],
+              "x": [
+                0.0,
+                9.563976287841797,
+                15.64456558227539,
+                18.1167163848877,
+                23.72477531433106,
+                30.67044448852539,
+                41.71504211425781,
+                46.49845123291016,
+                51.344970703125,
+                54.38539123535156,
+                56.37874984741211,
+                61.99692535400391,
+                67.44021606445312,
+                69.81766510009766
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": true,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 3000,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 2000,
+          "name": "rangeStart"
+        },
+        {
+          "int": 0,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 179.6610717773438,
+        "x": 188.5927124023438
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cameraDown",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.5426092147827148,
+                0.2730088233947754
+              ],
+              "x": [
+                0.0,
+                8.094903945922852,
+                17.79391288757324
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 5,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 8,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": -6,
+                "x": 4
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.233182907104492,
+                41.99878311157227,
+                42.33908081054688,
+                -5.047317504882813
+              ],
+              "x": [
+                12.20251655578613,
+                12.19956588745117,
+                8.050905227661133,
+                8.484004974365234
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 0,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 175.4754638671875,
+        "x": 22.79472732543945
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cameraNormal",
+      "fixture": [
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 0,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 0,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": 0,
+                "x": 9.999999747378752e-06
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.233182907104492,
+                41.99878311157227,
+                42.33908081054688,
+                -5.047317504882813
+              ],
+              "x": [
+                12.20251655578613,
+                12.19956588745117,
+                8.050905227661133,
+                8.484004974365234
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                1.029464244842529,
+                0.2730088233947754
+              ],
+              "x": [
+                0.0,
+                13.61234664916992,
+                17.79391288757324
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 0,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 175.4138946533203,
+        "x": -10.80046463012695
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cameraFar",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.5426092147827148,
+                0.2730088233947754
+              ],
+              "x": [
+                0.0,
+                8.094903945922852,
+                17.79391288757324
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 5,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 10,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": 0,
+                "x": 4
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.233182907104492,
+                41.99878311157227,
+                42.33908081054688,
+                -5.047317504882813
+              ],
+              "x": [
+                12.20251655578613,
+                12.19956588745117,
+                8.050905227661133,
+                8.484004974365234
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 0,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 175.5877380371094,
+        "x": -38.61550140380859
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "end1",
+      "fixture": [
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 0,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 0,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": 0,
+                "x": 9.999999747378752e-06
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -16.02099418640137,
+                31.21097183227539,
+                31.55126953125,
+                -15.83512878417969
+              ],
+              "x": [
+                50.00750732421875,
+                50.00455856323242,
+                45.85589599609375,
+                46.28899765014648
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -2.880161285400391,
+                -2.861824035644531,
+                -14.06707763671875,
+                -13.61092472076416
+              ],
+              "x": [
+                92.75392150878906,
+                69.44365692138672,
+                78.49085998535156,
+                86.110107421875
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -1.382943153381348,
+                -3.598720550537109,
+                -7.277298450469971,
+                -6.198927879333496,
+                -6.668652057647705,
+                -6.03764533996582,
+                -3.372633934020996,
+                -3.180187225341797,
+                -0.1660194396972656,
+                -13.35807800292969,
+                4.422624588012695
+              ],
+              "x": [
+                0.0,
+                10.17805099487305,
+                14.67706108093262,
+                23.3268928527832,
+                30.11235809326172,
+                38.4638671875,
+                44.58176422119141,
+                48.90713500976563,
+                62.75656127929688,
+                67.48153686523438,
+                82.86663818359375,
+                94.8316421508789
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 152.5934448242188,
+        "x": 491.6253662109375
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cave4",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.3378477096557617,
+                -2.742439270019531,
+                -3.733097076416016,
+                -5.141464233398438,
+                -11.21025276184082,
+                -13.30817699432373,
+                -13.04512405395508,
+                -10.59703826904297,
+                -8.657866477966309,
+                -8.60219669342041,
+                -13.79021072387695,
+                -22.11737823486328,
+                -25.13029861450195
+              ],
+              "x": [
+                0.0,
+                6.368404388427734,
+                13.02842330932617,
+                23.10679054260254,
+                26.26663780212402,
+                35.43245315551758,
+                43.03284454345703,
+                51.62238311767578,
+                57.14385986328125,
+                60.02357482910156,
+                62.97720718383789,
+                69.1900634765625,
+                76.21297454833984,
+                89.93000793457031
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 5,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 8,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": -6,
+                "x": 4
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -16.10069084167481,
+                31.13127517700195,
+                31.47157287597656,
+                -15.91482543945313
+              ],
+              "x": [
+                35.98114013671875,
+                35.97819137573242,
+                31.82953071594238,
+                32.26263046264648
+              ]
+            }
+          }
+        },
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                7.594806671142578,
+                9.627525329589844,
+                5.858953475952148,
+                5.191522598266602,
+                1.034052133560181,
+                -2.607147216796875,
+                0.8565073013305664,
+                -1.583563804626465,
+                5.293965339660645,
+                9.889276504516602
+              ],
+              "x": [
+                4.201448440551758,
+                11.28754806518555,
+                19.63893890380859,
+                28.69099426269531,
+                40.82428359985352,
+                42.91807556152344,
+                45.3199462890625,
+                52.13137817382813,
+                61.9898681640625,
+                66.27075958251953
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 3000,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 2000,
+          "name": "rangeStart"
+        },
+        {
+          "int": 0,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 175.7289428710938,
+        "x": 392.7607727050781
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "cave3",
+      "fixture": [
+        {
+          "name": "top",
+          "chain": {
+            "vertices": {
+              "y": [
+                6.707279205322266,
+                8.011177062988281,
+                11.08708572387695,
+                13.54320335388184,
+                10.37835693359375,
+                10.17150974273682,
+                14.19136905670166,
+                12.95665168762207,
+                8.98143482208252,
+                7.896051406860352
+              ],
+              "x": [
+                2.975831985473633,
+                10.34000778198242,
+                17.104736328125,
+                26.52819061279297,
+                29.10032653808594,
+                31.01333618164063,
+                34.68948364257813,
+                49.71706771850586,
+                53.98690795898438,
+                55.98081207275391
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "ceiling"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            },
+            {
+              "float": 5,
+              "name": "islandThickness"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                1.500926971435547,
+                1.519264221191406,
+                -2.518417358398438,
+                -1.32142448425293
+              ],
+              "x": [
+                27.86198425292969,
+                16.45156288146973,
+                21.34092330932617,
+                25.42996597290039
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.3378477096557617,
+                1.217643737792969,
+                3.231731414794922,
+                1.8233642578125,
+                0.9202556610107422,
+                -0.8825092315673828,
+                -1.625071525573731,
+                -0.1978492736816406,
+                2.262336730957031,
+                2.708115577697754,
+                3.905022144317627,
+                1.715170860290527,
+                1.099254608154297,
+                2.634131908416748,
+                0.09954452514648438
+              ],
+              "x": [
+                0.0,
+                6.368404388427734,
+                10.58918380737305,
+                14.25318336486816,
+                17.41303062438965,
+                18.24477195739746,
+                20.31575393676758,
+                21.86295318603516,
+                25.40671539306641,
+                28.81106567382813,
+                33.09608459472656,
+                37.26422119140625,
+                40.95694351196289,
+                43.79348754882813,
+                48.61684417724609,
+                58.00059509277344
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": true,
+              "name": "exit"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                2.480083465576172,
+                2.498420715332031,
+                0.7360992431640625,
+                0.7198200225830078
+              ],
+              "x": [
+                48.56816101074219,
+                38.51256561279297,
+                40.97871017456055,
+                45.51263809204102
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 3000,
+          "name": "rangeEnd"
+        },
+        {
+          "int": 2000,
+          "name": "rangeStart"
+        },
+        {
+          "int": 0,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 177.8885040283203,
+        "x": 329.1072692871094
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block10",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.4743890762329102,
+                -2.640300750732422,
+                -6.583053588867188,
+                -12.43245124816895,
+                -18.1282958984375,
+                -18.39390182495117,
+                -19.40138244628906,
+                -22.83456802368164,
+                -24.59413909912109,
+                -22.66315841674805,
+                -21.64124870300293
+              ],
+              "x": [
+                0.0,
+                6.224681854248047,
+                10.71521759033203,
+                24.77355575561523,
+                30.92174530029297,
+                40.08824920654297,
+                44.16892242431641,
+                46.55727386474609,
+                51.22673034667969,
+                56.9002685546875,
+                69.08993530273438,
+                71.91749572753906
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 199.9895629882813,
+        "x": 106.3269348144531
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block9",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                3.625564336776733,
+                5.271842002868652,
+                8.09073257446289,
+                12.40766334533691,
+                11.61586856842041,
+                9.901830673217773,
+                11.22286987304688,
+                12.11720085144043,
+                13.7761344909668,
+                17.24846458435059,
+                18.21482849121094,
+                18.41164016723633,
+                22.08908081054688,
+                26.71852111816406,
+                30.67223739624023,
+                30.99531555175781
+              ],
+              "x": [
+                0.0,
+                7.432252883911133,
+                18.58404159545898,
+                25.56118011474609,
+                30.5159969329834,
+                35.16276550292969,
+                39.28480529785156,
+                43.16326522827148,
+                47.24958038330078,
+                51.42672348022461,
+                55.38166809082031,
+                61.72673797607422,
+                65.83190155029297,
+                74.83451080322266,
+                79.46918487548828,
+                86.86663055419922,
+                90.38472747802734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 248.8918762207031,
+        "x": 743.177734375
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block8",
+      "fixture": [
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 5,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 10,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": 0,
+                "x": 4
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -17.66518783569336,
+                29.56679153442383,
+                29.9070930480957,
+                -17.47932624816895
+              ],
+              "x": [
+                13.38369750976563,
+                13.38074684143066,
+                9.232088088989258,
+                9.665186882019043
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -3.848061561584473,
+                -11.19890975952148,
+                -12.51997375488281,
+                -19.06140327453613,
+                -17.53632736206055,
+                -25.1046142578125,
+                -24.09434127807617,
+                -17.50144195556641,
+                -9.218992233276367,
+                -9.114437103271484,
+                -8.710869789123535,
+                -9.075995445251465,
+                -12.34496593475342,
+                -11.25489711761475,
+                -6.549848556518555
+              ],
+              "x": [
+                0.0,
+                3.177211761474609,
+                9.616447448730469,
+                12.31835556030273,
+                19.87352752685547,
+                26.06129455566406,
+                28.52919769287109,
+                31.66324996948242,
+                34.92124176025391,
+                38.53603363037109,
+                39.04599761962891,
+                39.33684539794922,
+                42.0277214050293,
+                52.23620223999023,
+                61.0235710144043,
+                70.407470703125
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 0,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 0,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": 0,
+                "x": 9.999999747378752e-06
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -16.02099418640137,
+                31.21097183227539,
+                31.55126953125,
+                -15.83512878417969
+              ],
+              "x": [
+                50.00750732421875,
+                50.00455856323242,
+                45.85589599609375,
+                46.28899765014648
+              ]
+            }
+          }
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -18.06738662719727,
+                -18.07317352294922,
+                -25.25825500488281,
+                -24.57502555847168
+              ],
+              "x": [
+                35.14555358886719,
+                25.66481971740723,
+                28.16624069213867,
+                31.85586929321289
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 256.532470703125,
+        "x": 656.678955078125
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block7",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.7394611835479736,
+                1.207358360290527,
+                0.7722053527832031,
+                2.344223022460938,
+                2.270185470581055,
+                8.308350563049316,
+                10.28415679931641,
+                9.546100616455078,
+                0.551025390625,
+                -0.680485725402832,
+                2.277562141418457,
+                -3.47425651550293
+              ],
+              "x": [
+                0.0,
+                2.497799396514893,
+                7.080043792724609,
+                14.38195037841797,
+                16.47918319702148,
+                26.37755584716797,
+                38.53960418701172,
+                51.01150131225586,
+                56.40048980712891,
+                69.84236907958984,
+                75.88911437988281,
+                84.46888732910156,
+                91.660888671875
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "camZoom"
+            },
+            {
+              "name": "sensorType",
+              "string": "trigger"
+            },
+            {
+              "float": 5,
+              "name": "cameraMaxVisibilityOffset"
+            },
+            {
+              "float": 8,
+              "name": "cameraMinVisibilityOffset"
+            },
+            {
+              "vec2": {
+                "y": -6,
+                "x": 4
+              },
+              "name": "cameraPanOffset"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.9640178680419922,
+                46.26794815063477,
+                46.60824584960938,
+                -0.7781524658203125
+              ],
+              "x": [
+                26.30072212219238,
+                26.29777145385742,
+                22.14911079406738,
+                22.58221054077148
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 257.9454345703125,
+        "x": 554.708984375
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block6",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                3.267813682556152,
+                2.491870880126953,
+                -6.583053588867188,
+                -12.43245124816895,
+                -8.719298362731934,
+                -8.984905242919922,
+                -9.992385864257812,
+                -16.09859085083008,
+                -17.85816192626953,
+                -16.43772506713867,
+                -15.41581535339356
+              ],
+              "x": [
+                0.0,
+                7.080043792724609,
+                14.77819061279297,
+                24.77355575561523,
+                30.92174530029297,
+                47.03807830810547,
+                51.11875152587891,
+                53.50710296630859,
+                67.37171936035156,
+                79.29930114746094,
+                84.59675598144531,
+                87.42431640625
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 257.9454345703125,
+        "x": 474.7607116699219
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "block5",
+      "fixture": [
+        {
+          "circle": {
+            "radius": 0.5,
+            "center": {
+              "y": 3.598281860351563,
+              "x": 37.27863311767578
+            }
+          },
+          "name": "coinSpawn",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.1108312606811523,
+                -2.900691986083984,
+                -2.002471923828125,
+                -1.919561624526978,
+                -2.323664426803589,
+                -2.28898811340332,
+                -11.88803005218506,
+                -11.96332931518555,
+                -4.065204620361328,
+                -4.128311157226563,
+                -7.65147876739502,
+                -3.257273674011231,
+                -4.358894348144531,
+                -11.24668884277344,
+                -11.12251091003418
+              ],
+              "x": [
+                0.0,
+                5.101039886474609,
+                12.89556121826172,
+                22.37047958374023,
+                23.32307052612305,
+                23.71550178527832,
+                24.39934539794922,
+                30.61956024169922,
+                33.95490264892578,
+                36.55704498291016,
+                61.45290374755859,
+                62.9502067565918,
+                79.79158020019531,
+                85.3328628540039,
+                97.73937225341797,
+                101.8480224609375
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        },
+        {
+          "name": "fixture2",
+          "density": 1,
+          "friction": 0.2,
+          "filter-maskBits": 65471,
+          "filter-categoryBits": 64,
+          "customProperties": [
+            {
+              "name": "sensorId",
+              "string": "water"
+            },
+            {
+              "name": "sensorType",
+              "string": "liquid"
+            }
+          ],
+          "sensor": true,
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.077289581298828,
+                -5.058952331542969,
+                -12.55760192871094,
+                -12.57388114929199
+              ],
+              "x": [
+                36.92527770996094,
+                25.51485633850098,
+                30.40421676635742,
+                34.93814468383789
+              ]
+            }
+          }
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 500,
+          "name": "rangeStart"
+        },
+        {
+          "int": 2,
+          "name": "row"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 257.9454345703125,
+        "x": 378.4194030761719
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 265.0221862792969,
+        "x": 598.5586547851562
+      },
+      "angle": 0.02398767322301865,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                12.96975517272949,
+                22.10048484802246,
+                22.10048484802246,
+                12.96975517272949
+              ],
+              "x": [
+                4.628583908081055,
+                4.628583908081055,
+                -4.502141952514648,
+                -4.502141952514648
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -3.246381759643555,
+                5.884347915649414,
+                5.884347915649414,
+                -3.246381759643555
+              ],
+              "x": [
+                4.624643325805664,
+                4.624643325805664,
+                -13.56007766723633,
+                -13.56007766723633
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block7",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 261.4603881835938,
+        "x": 561.327880859375
+      },
+      "angle": -0.1429523527622223,
+      "name": "body1",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -4.708563804626465,
+                4.260363101959229,
+                -6.646778106689453
+              ],
+              "x": [
+                6.700228691101074,
+                5.547384738922119,
+                -6.570504188537598
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture1",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block7",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 260.3111267089844,
+        "x": 576.340576171875
+      },
+      "angle": -0.004758588969707489,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                4.491022109985352,
+                10.35227775573731,
+                10.37244510650635,
+                4.491022109985352
+              ],
+              "x": [
+                8.906579971313477,
+                8.906579971313477,
+                1.53566575050354,
+                -5.403003692626953
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -4.565380096435547,
+                4.56535005569458,
+                4.56535005569458,
+                -4.565380096435547
+              ],
+              "x": [
+                8.905289649963379,
+                8.905289649963379,
+                -8.905269622802734,
+                -9.181170463562012
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block7",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 259.9117126464844,
+        "x": 407.6217956542969
+      },
+      "angle": 0.4125462770462036,
+      "name": "body0",
+      "massData-mass": 0.2378218472003937,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.268970489501953,
+                -1.305933475494385,
+                -1.684031844139099,
+                -1.596688866615295
+              ],
+              "x": [
+                6.836655139923096,
+                -6.629525184631348,
+                -6.731733798980713,
+                6.784855842590332
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 0.7,
+          "density": 0.05
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "massData-center": {
+        "y": -1.464728951454163,
+        "x": -0.09487535804510117
+      },
+      "linearVelocity": 0,
+      "path": "o_block5",
+      "massData-I": 4.116285800933838
+    },
+    {
+      "position": {
+        "y": 260.6704711914063,
+        "x": 414.0604553222656
+      },
+      "angle": 0.376991868019104,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.1989492177963257,
+                0.2250210493803024,
+                0.2250210493803024,
+                -0.1989492177963257
+              ],
+              "x": [
+                0.624500572681427,
+                0.624500572681427,
+                -0.6245005130767822,
+                -0.6245005130767822
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 1,
+          "density": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block5",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 256.3485107421875,
+        "x": 508.4098815917969
+      },
+      "angle": 0.1872672885656357,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.657187461853027,
+                5.324934005737305,
+                -3.526830673217773
+              ],
+              "x": [
+                3.341762542724609,
+                -8.92468547821045,
+                -10.72435474395752
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture1",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block6",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 254.0531768798828,
+        "x": 494.0007019042969
+      },
+      "angle": 0,
+      "name": "body1",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -3.246381759643555,
+                5.884347915649414,
+                5.884347915649414,
+                -3.246381759643555
+              ],
+              "x": [
+                4.624643325805664,
+                4.624643325805664,
+                -13.56007766723633,
+                -13.82126140594482
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block6",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 243.5326995849609,
+        "x": 683.0652465820312
+      },
+      "angle": 0,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.1515458226203919,
+                0.171405553817749,
+                0.171405553817749,
+                -0.1515458226203919
+              ],
+              "x": [
+                0.4757015407085419,
+                0.4757015407085419,
+                -0.4757015407085419,
+                -0.4757015407085419
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 1,
+          "density": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block8",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 247.3009033203125,
+        "x": 695.6105346679688
+      },
+      "angle": 0.2610780596733093,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.1515458226203919,
+                0.171405553817749,
+                0.171405553817749,
+                -0.1515458226203919
+              ],
+              "x": [
+                0.4757015407085419,
+                0.4757015407085419,
+                -0.4757015407085419,
+                -0.4757015407085419
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 1,
+          "density": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block8",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 256.9246215820313,
+        "x": 432.1343078613281
+      },
+      "angle": 0,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -7.625582695007324,
+                1.505147218704224,
+                1.505147218704224,
+                -7.625582695007324
+              ],
+              "x": [
+                25.68042755126953,
+                25.68042755126953,
+                7.869867324829102,
+                7.869867324829102
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -4.565380096435547,
+                4.56535005569458,
+                4.56535005569458,
+                -4.565380096435547
+              ],
+              "x": [
+                8.905289649963379,
+                8.905289649963379,
+                -17.56961441040039,
+                -17.56961441040039
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                11.94266700744629,
+                21.07339668273926,
+                21.07339668273926,
+                11.94266700744629
+              ],
+              "x": [
+                -8.459232330322266,
+                -8.459232330322266,
+                -17.58995819091797,
+                -17.58995819091797
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block5",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 247.2229156494141,
+        "x": 688.8035888671875
+      },
+      "angle": 0.2815268039703369,
+      "name": "body0",
+      "massData-mass": 0.2378218472003937,
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -1.268970489501953,
+                -1.305933475494385,
+                -1.684031844139099,
+                -1.596688866615295
+              ],
+              "x": [
+                6.836655139923096,
+                -6.629525184631348,
+                -6.731733798980713,
+                6.784855842590332
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 0.7,
+          "density": 0.05
+        }
+      ],
+      "angularVelocity": 0,
+      "type": 2,
+      "awake": true,
+      "massData-center": {
+        "y": -1.464728951454163,
+        "x": -0.09487535804510117
+      },
+      "linearVelocity": 0,
+      "path": "o_block8",
+      "massData-I": 4.116285800933838
+    },
+    {
+      "position": {
+        "y": 255.4929046630859,
+        "x": 402.0988159179688
+      },
+      "angle": 0,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -0.1515458226203919,
+                0.171405553817749,
+                0.171405553817749,
+                -0.1515458226203919
+              ],
+              "x": [
+                0.4757015407085419,
+                0.4757015407085419,
+                -0.4757015407085419,
+                -0.4757015407085419
+              ]
+            }
+          },
+          "filter-categoryBits": 64,
+          "name": "fixture0",
+          "friction": 1,
+          "density": 0.5
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block5",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 250.9477691650391,
+        "x": 526.701416015625
+      },
+      "angle": 0.1872672885656357,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -5.657187461853027,
+                5.324934005737305,
+                -3.526830673217773
+              ],
+              "x": [
+                3.341762542724609,
+                -8.92468547821045,
+                -10.72435474395752
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture1",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block6",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 248.6524353027344,
+        "x": 512.292236328125
+      },
+      "angle": 0,
+      "name": "body1",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -3.246381759643555,
+                5.884347915649414,
+                5.884347915649414,
+                -3.246381759643555
+              ],
+              "x": [
+                4.624643325805664,
+                4.624643325805664,
+                -13.56007766723633,
+                -13.82126140594482
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block6",
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "position": {
+        "y": 238.2502899169922,
+        "x": 678.146240234375
+      },
+      "angle": 0,
+      "name": "body0",
+      "fixture": [
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                12.96975517272949,
+                22.10048484802246,
+                22.10048484802246,
+                12.96975517272949
+              ],
+              "x": [
+                4.628583908081055,
+                4.628583908081055,
+                -4.502141952514648,
+                -4.502141952514648
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        },
+        {
+          "polygon": {
+            "vertices": {
+              "y": [
+                -3.246381759643555,
+                5.884347915649414,
+                5.884347915649414,
+                -3.246381759643555
+              ],
+              "x": [
+                4.624643325805664,
+                4.624643325805664,
+                -13.56007766723633,
+                -13.56007766723633
+              ]
+            }
+          },
+          "filter-categoryBits": 8,
+          "name": "fixture0",
+          "friction": 0.2,
+          "density": 1
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "path": "o_block8",
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ],
+  "image": [
+    {
+      "body": 18,
+      "opacity": 1,
+      "scale": 12.95616912841797,
+      "name": "image1",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "textures/objects/snowcastle_wall-windows.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 8.403047561645508,
+        "x": 0.01898026280105114
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": -3.269888877868652,
+        "x": 21.11118698120117
+      }
+    },
+    {
+      "body": 32,
+      "opacity": 1,
+      "scale": 12.95616912841797,
+      "name": "image1",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "textures/objects/snowcastle_wall-windows.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 8.403047561645508,
+        "x": 0.01898026280105114
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 13.08598518371582,
+      "name": "image1",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "textures/objects/snowcastle_wall-windows.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 7.451203346252441,
+        "x": -13.04502487182617
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": -1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": -3.269888877868652,
+        "x": 12.33459854125977
+      }
+    },
+    {
+      "body": 20,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.3450181484222412,
+        "x": 4.456004142761231
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.3450181484222412,
+        "x": 4.456004142761231
+      }
+    },
+    {
+      "body": 19,
+      "opacity": 1,
+      "scale": 9.671168327331543,
+      "name": "image1",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_ramp.png",
+      "aspectScale": 1,
+      "center": {
+        "y": -3.385580062866211,
+        "x": -1.791085243225098
+      }
+    },
+    {
+      "body": 20,
+      "opacity": 1,
+      "scale": 8.294976234436035,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 6.671658515930176,
+        "x": 5.145615100860596
+      }
+    },
+    {
+      "body": 20,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.3450181484222412,
+        "x": -4.320583343505859
+      }
+    },
+    {
+      "body": 18,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 17.86413383483887,
+        "x": 0.1392531394958496
+      }
+    },
+    {
+      "body": 21,
+      "opacity": 1,
+      "scale": 1,
+      "name": "image0",
+      "file": "textures/objects/plank_winter.png",
+      "aspectScale": 1,
+      "center": {
+        "y": -1.585845112800598,
+        "x": 0.06749046593904495
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.3450181484222412,
+        "x": -4.320583343505859
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 16.72671508789063,
+        "x": -12.92335510253906
+      }
+    },
+    {
+      "body": 32,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 17.86413383483887,
+        "x": 0.1392531394958496
+      }
+    },
+    {
+      "body": 28,
+      "opacity": 1,
+      "scale": 1,
+      "name": "image0",
+      "file": "textures/objects/plank_winter.png",
+      "aspectScale": 1,
+      "center": {
+        "y": -1.585845112800598,
+        "x": 0.06749046593904495
+      }
+    },
+    {
+      "body": 27,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.3942289352416992,
+        "x": -13.074782371521
+      }
+    },
+    {
+      "body": 24,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.490690231323242,
+        "x": -9.097734451293945
+      }
+    },
+    {
+      "body": 24,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.531648635864258,
+        "x": -0.01217412948608398
+      }
+    },
+    {
+      "body": 32,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.467491865158081,
+        "x": -8.78691291809082
+      }
+    },
+    {
+      "body": 18,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.531648635864258,
+        "x": -0.01217412948608398
+      }
+    },
+    {
+      "body": 32,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.531648635864258,
+        "x": -0.01217412948608398
+      }
+    },
+    {
+      "body": 18,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.467491865158081,
+        "x": -8.78691291809082
+      }
+    },
+    {
+      "body": 31,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.490690231323242,
+        "x": -9.097734451293945
+      }
+    },
+    {
+      "body": 20,
+      "opacity": 1,
+      "scale": 7.756333351135254,
+      "name": "image2",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_ramp.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 7.309613227844238,
+        "x": -0.8843128085136414
+      }
+    },
+    {
+      "body": 23,
+      "opacity": 1,
+      "scale": 10.12783622741699,
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "flip": true,
+      "name": "image1",
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_ramp.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.365303754806519,
+        "x": -5.909502983093262
+      }
+    },
+    {
+      "body": 30,
+      "opacity": 1,
+      "scale": 10.12783622741699,
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "flip": true,
+      "name": "image1",
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_ramp.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.365303754806519,
+        "x": -5.909502983093262
+      }
+    },
+    {
+      "body": 19,
+      "opacity": 1,
+      "scale": 9.671168327331543,
+      "name": "image1",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_ramp.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 0.6362905502319336,
+        "x": 2.81696891784668
+      }
+    },
+    {
+      "body": 31,
+      "opacity": 1,
+      "scale": 9.804596900939941,
+      "name": "image0",
+      "customProperties": [
+        {
+          "int": 4,
+          "name": "zOrder"
+        }
+      ],
+      "renderOrder": 1,
+      "file": "textures/objects/snowcastle_base-square.png",
+      "aspectScale": 1,
+      "center": {
+        "y": 1.531648635864258,
+        "x": -0.01217412948608398
+      }
+    }
+  ],
+  "object": [
+    {
+      "name": "o_block5"
+    },
+    {
+      "name": "o_block5"
+    },
+    {
+      "name": "o_block5"
+    },
+    {
+      "name": "o_block5"
+    },
+    {
+      "name": "o_block6"
+    },
+    {
+      "name": "o_block6"
+    },
+    {
+      "name": "o_block7"
+    },
+    {
+      "name": "o_block7"
+    },
+    {
+      "name": "o_block8"
+    },
+    {
+      "name": "o_block8"
+    },
+    {
+      "name": "o_block8"
+    },
+    {
+      "name": "o_block8"
+    }
+  ]
+}

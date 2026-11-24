@@ -1,0 +1,399 @@
+{
+  "body": [
+    {
+      "angle": 0,
+      "name": "down",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.05584144592285156,
+                -0.9593863487243652,
+                -4.738776206970215,
+                -7.823306083679199,
+                -8.157946586608887,
+                -8.93148422241211,
+                -10.91156578063965,
+                -12.90717697143555,
+                -14.09170246124268,
+                -14.87734699249268,
+                -15.38144016265869
+              ],
+              "x": [
+                0.0,
+                3.561115503311157,
+                8.456308364868164,
+                17.81580543518066,
+                28.81322860717773,
+                34.5482292175293,
+                45.35427093505859,
+                50.44818115234375,
+                55.208251953125,
+                59.15668106079102,
+                64.1174545288086,
+                72.46640014648438
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2000000029802322,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 76.47760009765625,
+        "x": 206.8557586669922
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "jump2",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.882598876953125,
+                -1.599220275878906,
+                -3.633234977722168,
+                -9.856880187988281,
+                -13.68362426757813,
+                -16.13929748535156,
+                -16.41525268554688,
+                -16.00932312011719,
+                -14.39354705810547,
+                -12.95769119262695,
+                -11.95183849334717,
+                -11.55912208557129,
+                -12.06095886230469,
+                -13.81605529785156,
+                -18.20504188537598,
+                -19.03619956970215,
+                -18.3356990814209,
+                -18.42010116577148,
+                -22.65809440612793,
+                -27.56344604492188,
+                -30.97070121765137,
+                -32.71564865112305,
+                -32.82047271728516
+              ],
+              "x": [
+                0.0,
+                5.71624755859375,
+                9.199966430664062,
+                13.76589965820313,
+                23.84758758544922,
+                30.55624389648438,
+                38.05426788330078,
+                41.36370849609375,
+                44.114013671875,
+                47.30999755859375,
+                49.44485092163086,
+                50.89770126342773,
+                53.05845642089844,
+                56.37275695800781,
+                59.07962036132813,
+                62.39505004882813,
+                64.74464416503906,
+                66.99136352539062,
+                71.61920166015625,
+                77.52922058105469,
+                85.43769073486328,
+                91.5859375,
+                96.07392883300781,
+                99.41625213623047
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2000000029802322,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 112.8342590332031,
+        "x": 83.44440460205078
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "eka",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                -0.5180568695068359,
+                -1.650506496429443,
+                -4.079222679138184,
+                -2.217188835144043,
+                -0.3413877487182617,
+                -1.114925384521484,
+                -2.201241254806519,
+                -5.902269840240479,
+                -6.520417213439941,
+                -4.185081481933594,
+                -3.022547483444214,
+                -3.263674259185791
+              ],
+              "x": [
+                0.0,
+                3.535602807998657,
+                8.066614151000977,
+                20.06044006347656,
+                32.27589797973633,
+                41.635498046875,
+                52.44154357910156,
+                58.06051254272461,
+                65.68119812011719,
+                73.85037231445312,
+                82.84402465820312,
+                91.38301086425781,
+                98.07906341552734
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2000000029802322,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 115.9529571533203,
+        "x": -22.70976257324219
+      },
+      "linearVelocity": 0,
+      "type": 0
+    },
+    {
+      "angle": 0,
+      "name": "end",
+      "fixture": [
+        {
+          "name": "fixture1",
+          "chain": {
+            "vertices": {
+              "y": [
+                0.0,
+                0.04608631134033203,
+                1.079141616821289,
+                3.269730567932129,
+                3.919532775878906,
+                1.227433681488037,
+                0.8350393176078796,
+                1.049840688705444,
+                -1.163431644439697,
+                -1.070555448532105,
+                1.209696769714356,
+                1.48399543762207
+              ],
+              "x": [
+                0.0,
+                3.786030292510986,
+                8.456398010253906,
+                15.54209423065186,
+                26.03511619567871,
+                35.69347381591797,
+                45.16611480712891,
+                50.62711334228516,
+                56.33705902099609,
+                71.83333587646484,
+                78.6517105102539,
+                82.80619812011719
+              ]
+            }
+          },
+          "density": 1,
+          "friction": 0.2000000029802322,
+          "filter-maskBits": 65527,
+          "filter-categoryBits": 8,
+          "customProperties": [
+            {
+              "bool": false,
+              "name": "cave"
+            },
+            {
+              "bool": false,
+              "name": "entry"
+            },
+            {
+              "bool": false,
+              "name": "exit"
+            },
+            {
+              "bool": false,
+              "name": "island"
+            },
+            {
+              "bool": true,
+              "name": "splineInterpolation"
+            }
+          ]
+        }
+      ],
+      "angularVelocity": 0,
+      "awake": true,
+      "customProperties": [
+        {
+          "int": 1000,
+          "name": "rangeStart"
+        },
+        {
+          "bool": false,
+          "name": "noProps"
+        }
+      ],
+      "position": {
+        "y": 61.82624816894531,
+        "x": 289.8262023925781
+      },
+      "linearVelocity": 0,
+      "type": 0
+    }
+  ],
+  "velocityIterations": 8,
+  "gravity": 0,
+  "allowSleep": false,
+  "subStepping": false,
+  "positionIterations": 3,
+  "stepsPerSecond": 60.0,
+  "autoClearForces": false,
+  "continuousPhysics": false,
+  "collisionbitplanes": {
+    "names": [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "warmStarting": false
+}
