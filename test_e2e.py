@@ -11,6 +11,7 @@ from cipher import HCR2Framer
 from server import HCR2PrivateServer
 from db import PlayerDB
 from ghost_manager import ghost_mgr
+from handlers import CUP_FINISH_POINTS
 
 FSMessageCls = get_message_class("FSMessage")
 
@@ -165,7 +166,7 @@ async def run_test():
         ghost_mgr.get_cup_replays([rid])[0].vehicle == "jeep"
         for rid in expected_replay_ids
     )
-    assert len(resp_match.WCRace.RaceFinishWCRanks) == 0
+    assert len(resp_match.WCRace.RaceFinishWCRanks) == len(CUP_FINISH_POINTS)
     assert len(resp_match.WCRace.Replays) == len(resp_match.Cups)
     opponent_owners = []
     replay_offset = 0

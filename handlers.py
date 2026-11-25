@@ -49,23 +49,38 @@ MSG_REQUEST_DIVISION_RACE_REPLAYS = 22
 MSG_STORE_TEAM_REPLAY             = 26
 MSG_CREATE_CHALLENGE               = 27
 MSG_UPDATE_CHALLENGE               = 28
-CHALLENGE_CREATE_RESPONSE_SUCCESS  = 1
+# The client maps ResponseCode to GameServer::RequestStatus and treats 1 as success
+# for every request whose callback receives a RequestStatus (cups, boss cup, ...).
+REQUEST_STATUS_SUCCESS             = 1
+CHALLENGE_CREATE_RESPONSE_SUCCESS  = REQUEST_STATUS_SUCCESS
 MSG_REQUEST_CHALLENGES             = 29
 MSG_CREATE_CUP                   = 30
 MSG_REQUEST_CUPS                  = 31
 MSG_STORE_GAME_STATUS             = 39
 MSG_REQUEST_GAME_STATUS           = 40
 MSG_REQUEST_FRIENDLY_RACES        = 41
+MSG_REQUEST_PLAYER_INFOS          = 46
+MSG_INVITE_FRIEND                 = 47
 MSG_ACCEPT_INVITE                 = 48
 MSG_REQUEST_FRIENDS               = 49
 MSG_ADD_FRIENDS                   = 50
 MSG_SET_TEST_GROUP                = 51
 MSG_REMOVE_FRIEND                 = 52
-MSG_REQUEST_PLAYER_INFOS           = 53
+MSG_REQUEST_SEASON_RESET          = 53
 MSG_REQUEST_BOSS_CUP              = 54
-# Leaderboard request message IDs observed from the game client.
-MSG_REQUEST_LEADERBOARD_STANDINGS = 23
-MSG_REQUEST_LEADERBOARD           = 4
+MSG_REQUEST_FLAG                  = 20
+# Leaderboard request message IDs observed from the game client. The "ByDistance"
+# and "ByPoints" variants all share the same Leaderboard response payload.
+MSG_REQUEST_LEADERBOARD              = 4
+MSG_REQUEST_LEADERBOARD_BY_DISTANCE  = 5
+MSG_REQUEST_LEADERBOARD_BY_POINTS    = 8
+MSG_REQUEST_LEADERBOARD_STANDINGS    = 23
+
+# Cup points added to the player's WCRank by finish position (1st, 2nd, 3rd, 4th).
+# The client's RaceInfo::getWcRankWithFinishPosition reads an absolute rank per
+# position out of WCRace.RaceFinishWCRanks and calls PlayerInfo::setWcRank with it,
+# so the server sends currentRank + these awards.
+CUP_FINISH_POINTS = (0.5, 0.15, 0.0, -0.25)
 
 LOGGER = logging.getLogger("hcr2.handlers")
 DECRYPTED_DIR = os.path.expanduser(os.environ.get(
@@ -144,10 +159,18 @@ class MessageDispatcher:
             responses.append(self._handle_remove_friend(in_msg))
         elif msg_type == MSG_ACCEPT_INVITE:
             responses.append(self._handle_accept_invite(in_msg))
-        elif msg_type == MSG_REQUEST_LEADERBOARD:
+        elif msg_type == MSG_INVITE_FRIEND:
+            responses.append(self._handle_invite_friend(in_msg))
+        elif msg_type in (
+            MSG_REQUEST_LEADERBOARD,
+            MSG_REQUEST_LEADERBOARD_BY_DISTANCE,
+            MSG_REQUEST_LEADERBOARD_BY_POINTS,
+        ):
             responses.append(self._handle_request_leaderboard(in_msg))
         elif msg_type == MSG_REQUEST_LEADERBOARD_STANDINGS:
             responses.append(self._handle_request_leaderboard_standings(in_msg))
+        elif msg_type == MSG_REQUEST_FLAG:
+            responses.append(self._handle_request_flag(in_msg))
         elif msg_type == MSG_REQUEST_BOSS_CUP:
             responses.append(self._handle_request_boss_cup(in_msg))
         else:
@@ -264,7 +287,10 @@ class MessageDispatcher:
     def _handle_request_cups(self, in_msg):
         out = FSMessageCls()
         out.MessageType = MSG_REQUEST_CUPS
-        out.ResponseCode = 0
+        # RaceInfo::wcCupsReady succeeds only when the trailing RequestStatus arg == 1;
+        # that arg is populated from FSMessage ResponseCode, so a non-1 value makes the
+        # client abort matchmaking and tear the connection down.
+        out.ResponseCode = REQUEST_STATUS_SUCCESS
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
 
@@ -290,6 +316,19 @@ class MessageDispatcher:
                 player_rank=player_rank,
                 content_version=content_version,
                 requester_player_id=self.player_id,
+            )
+
+            # The client derives the post-race WCRank from this per-finish-position
+            # table (RaceInfo::getWcRankWithFinishPosition -> PlayerInfo::setWcRank)
+            # and persists it back through storeGameStatus. Without it the rank never
+            # moves, so send the current rank plus each position's point award.
+            wc_race.RaceFinishWCRanks.extend(
+                player_rank + points for points in CUP_FINISH_POINTS
+            )
+            LOGGER.info(
+                "[Cups] WCRank %s -> finish awards %s",
+                player_rank,
+                list(wc_race.RaceFinishWCRanks),
             )
 
             expected_replay_count = len(cups)
@@ -374,7 +413,13 @@ class MessageDispatcher:
     def _handle_request_wc_race_replays(self, in_msg):
         out = FSMessageCls()
         out.MessageType = in_msg.MessageType
-        out.ResponseCode = 0
+        # RaceInfo::wcReplaysReady only marks the race READY when the trailing
+        # RequestStatus arg equals 1 (populated from FSMessage ResponseCode).
+        # Any other value makes the client set state 3, which
+        # GameContentLayer::checkRaceInfoReplays turns into abortOnDisconnect
+        # ("ghost FETCHING failed, abort"). That is the disconnect seen after the
+        # second cup leg, since later legs are fetched through this request.
+        out.ResponseCode = REQUEST_STATUS_SUCCESS
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
 
@@ -809,7 +854,10 @@ class MessageDispatcher:
     def _handle_request_leaderboard(self, in_msg):
         """Return server-local standings scoped to the requested leaderboard filter."""
         out = FSMessageCls()
-        out.MessageType = MSG_REQUEST_LEADERBOARD
+        # requestLeaderboard, requestLeaderboardByDistance (5) and ByPoints (8) all share
+        # the same Leaderboard response payload; echo the request type so the client's
+        # per-message-number callback is invoked.
+        out.MessageType = in_msg.MessageType or MSG_REQUEST_LEADERBOARD
         out.ResponseCode = 0
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
@@ -901,10 +949,46 @@ class MessageDispatcher:
         )
         return out
 
+    def _handle_request_flag(self, in_msg):
+        """Answer the client's country-flag lookup (MessageType 20)."""
+        out = FSMessageCls()
+        out.MessageType = MSG_REQUEST_FLAG
+        out.ResponseCode = 0
+        out.Session = self.session_id
+        out.MessageNumber = in_msg.MessageNumber
+
+        # The client falls back to "default" when the flag field is absent, so mirror
+        # that default explicitly when the stored profile has no flag.
+        profile = PlayerDB.load_player(self.player_id)
+        out.flag = profile.get("flag") or "default"
+        LOGGER.info("[Flag] Served flag %r for player %s", out.flag, self.player_id)
+        return out
+
+    def _handle_invite_friend(self, in_msg):
+        """Answer an inviteFriend request (MessageType 47)."""
+        out = FSMessageCls()
+        out.MessageType = MSG_INVITE_FRIEND
+        # inviteFriend's callback also receives a trailing RequestStatus.
+        out.ResponseCode = REQUEST_STATUS_SUCCESS
+        out.Session = self.session_id
+        out.MessageNumber = in_msg.MessageNumber
+
+        # The client's inviteFriend response callback reads FriendInviteId (string) and
+        # its own MessageNumber back out of the response.
+        invite_id = in_msg.FriendInviteId or os.urandom(8).hex()
+        out.FriendInviteId = invite_id
+        LOGGER.info(
+            "[Friends] inviteFriend target=%r -> invite %s",
+            in_msg.PlayerId,
+            invite_id,
+        )
+        return out
+
     def _handle_request_boss_cup(self, in_msg):
         out = FSMessageCls()
         out.MessageType = MSG_REQUEST_BOSS_CUP
-        out.ResponseCode = 0
+        # Same RequestStatus gate as requestCups (see _handle_request_cups).
+        out.ResponseCode = REQUEST_STATUS_SUCCESS
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
         out.SendCupReplays = True
@@ -920,6 +1004,10 @@ class MessageDispatcher:
             player_rank,
             in_msg.ContentVersion if in_msg.ContentVersion else 7,
             requester_player_id=self.player_id,
+        )
+        # Same per-finish-position WCRank table as _handle_request_cups.
+        wc.RaceFinishWCRanks.extend(
+            player_rank + points for points in CUP_FINISH_POINTS
         )
         out.SendCupReplays = bool(cups)
         for c in cups:

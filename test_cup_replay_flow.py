@@ -90,9 +90,14 @@ class CupReplayFlowTests(unittest.TestCase):
             "local_cup", "jeep", 4.0, 0.0, 7
         )
 
-        expected_ids = ["more/1/track_a_jeep.dat", "more/1/track_b_jeep.dat"]
+        local_ids = ["more/1/track_a_jeep.dat", "more/1/track_b_jeep.dat"]
+        uploaded_ids = ["uploaded-track_a", "uploaded-track_b"]
+        valid_owner_replays = [local_ids, uploaded_ids]
         self.assertEqual(len(cups), 2)
-        self.assertEqual(list(cups[0].replayIds), expected_ids)
+        # The same-vehicle slot now chooses randomly among its best candidates,
+        # so any valid owner set is acceptable.
+        for cup in cups:
+            self.assertIn(list(cup.replayIds), valid_owner_replays)
         first_leg_ids = [cup.replayIds[0] for cup in cups]
         self.assertEqual([r._id for r in inline_wcrace.Replays], first_leg_ids)
         self.assertEqual(
@@ -104,8 +109,8 @@ class CupReplayFlowTests(unittest.TestCase):
             [7] * len(inline_wcrace.Replays),
         )
         self.assertEqual(
-            [r._id for r in manager.get_cup_replays(expected_ids)],
-            expected_ids,
+            [r._id for r in manager.get_cup_replays(local_ids)],
+            local_ids,
         )
 
     def test_challenge_cup_ids_return_replays_through_both_request_paths(self):
@@ -156,7 +161,12 @@ class CupReplayFlowTests(unittest.TestCase):
             "hill_climb_cup", "jeep", 4.0, 0.0, 7
         )
         self.assertEqual(len(cups), 2)
-        self.assertEqual(list(cups[0].replayIds), ["challenge-run-track-a", "challenge-run-track-b"])
+        valid_owner_replays = [
+            ["challenge-run-track-a", "challenge-run-track-b"],
+            ["opponent-track-a", "opponent-track-b"],
+        ]
+        for cup in cups:
+            self.assertIn(list(cup.replayIds), valid_owner_replays)
         first_leg_ids = [cup.replayIds[0] for cup in cups]
         self.assertEqual([replay._id for replay in inline_wcrace.Replays], first_leg_ids)
 

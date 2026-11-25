@@ -372,6 +372,7 @@ class GhostManager:
             content_version,
             3,
             requester_player_id=requester_player_id,
+            p_value=p_value,
         )
         for cup in cups:
             if not cup.replayIds:
@@ -428,19 +429,24 @@ class GhostManager:
         content_version,
         opponent_count,
         requester_player_id=None,
+        p_value=None,
     ):
-        """Build Cup records using playable replay IDs for each cup track."""
+        """Build Cup records using playable replay IDs for each cup track.
+
+        Each opponent is one owner that has a replay on every cup track, chosen
+        so the field contains one opponent on the requester's vehicle, one whose
+        tuning (PValue) matches the requester, and one arbitrary opponent.
+        """
         if not tracks or opponent_count <= 0:
             return []
+
+        # Search the full pool (every vehicle) so the "random" opponent can be a
+        # different vehicle; the vehicle preference is applied when selecting the
+        # dedicated same-vehicle slot below.
         replay_choices = [
-            self._cup_track_replay_candidates(level_id, vehicle_id)
+            self._cup_track_replay_candidates(level_id, None)
             for level_id in tracks
         ]
-        if any(not candidates for candidates in replay_choices):
-            replay_choices = [
-                self._cup_track_replay_candidates(level_id, None)
-                for level_id in tracks
-            ]
         if any(not candidates for candidates in replay_choices):
             LOGGER.warning(
                 "Cannot build cup %s: missing replay tracks %s",
@@ -468,32 +474,76 @@ class GhostManager:
             )
             return []
 
-        # Candidate lists are ranked, so keep the first track's ranking while
-        # deduplicating owners. Each opponent then uses that owner's replay on
-        # every track instead of combining unrelated players into one Cup.
-        ordered_players = []
-        seen_players = set()
+        # Preserve the per-track ranking (each candidate list is already ordered)
+        # as the deterministic base order, deduplicating owners. Each opponent
+        # then uses that owner's replay on every track instead of combining
+        # unrelated players into one Cup.
+        ranked_players = []
         for replay in replay_choices[0]:
             player_id = replay.playerId
-            if player_id in common_players and player_id not in seen_players:
-                ordered_players.append(player_id)
-                seen_players.add(player_id)
+            if player_id in common_players and player_id not in ranked_players:
+                ranked_players.append(player_id)
+        rank_index = {player_id: index for index, player_id in enumerate(ranked_players)}
 
-        if len(ordered_players) < opponent_count:
+        # Tuning is captured by PValue; a lower gap means a closer tune match.
+        # Ties fall back to the original ranking order.
+        def order_key(player_id):
+            replay = player_replays_by_track[0][player_id]
+            gap = float("inf")
+            if p_value is not None and replay.HasField("PValue"):
+                gap = abs(replay.PValue - p_value)
+            return (gap, rank_index[player_id])
+
+        same_vehicle = sorted(
+            (
+                player_id for player_id in common_players
+                if player_replays_by_track[0][player_id].vehicle == vehicle_id
+            ),
+            key=order_key,
+        )
+        same_tunes = sorted(common_players, key=order_key)
+        random_pool = sorted(common_players)
+        random.shuffle(random_pool)
+
+        def pick_from_group(group, top_n, exclude):
+            """Randomly choose among the best `top_n` (or all) unused owners."""
+            candidates = [player_id for player_id in group if player_id not in exclude]
+            if not candidates:
+                return None
+            return random.choice(candidates[:top_n] if top_n else candidates)
+
+        # Fill one slot per category with distinct owners. The same-vehicle and
+        # same-tunes slots consider their best three candidates before picking one
+        # at random; the last slot is drawn at random from the whole pool.
+        selected = []
+        for group, top_n in ((same_vehicle, 3), (same_tunes, 3), (random_pool, None)):
+            if len(selected) >= opponent_count:
+                break
+            pick = pick_from_group(group, top_n, selected)
+            if pick is not None:
+                selected.append(pick)
+
+        if len(selected) < opponent_count:
             LOGGER.warning(
                 "Cup %s has only %s unique eligible opponents; requested %s",
                 cup_id,
-                len(ordered_players),
+                len(selected),
                 opponent_count,
             )
 
+        LOGGER.info(
+            "Cup %s opponent picks (same_vehicle/same_tunes/random): %s",
+            cup_id,
+            selected[:opponent_count],
+        )
+
         cups = []
-        for player_id in ordered_players[:opponent_count]:
-            selected = [by_player[player_id] for by_player in player_replays_by_track]
+        for player_id in selected[:opponent_count]:
+            selected_replays = [by_player[player_id] for by_player in player_replays_by_track]
             cup = CupCls()
             cup.cupId = cup_id
             cup.ContentVersion = content_version
-            cup.replayIds.extend(self._cup_replay_id(replay) for replay in selected)
+            cup.replayIds.extend(self._cup_replay_id(replay) for replay in selected_replays)
             cups.append(cup)
         return cups
 
