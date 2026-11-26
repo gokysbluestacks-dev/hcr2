@@ -9,8 +9,7 @@ from google.protobuf import descriptor_pb2, descriptor_pool, message_factory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_SO_PATH = os.environ.get("HCR2_SO_PATH", "")
 FALLBACK_SO_PATHS = (
-    os.path.join(BASE_DIR, "libcocos2dcpp.so"),
-    r"C:\Users\ASUS\Downloads\libcocos2dcpp.so",
+    "/home/container/runtime-lib/libcocos2dcpp.so",
 )
 
 # Descriptors: (offset, length, name)
