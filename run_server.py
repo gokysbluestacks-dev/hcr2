@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description="HCR2 private game server")
 
     parser.add_argument(
-        "--host",
+        "-host",
         default=os.environ.get("HCR2_HOST", "0.0.0.0"),
         help="Interface to bind"
     )
