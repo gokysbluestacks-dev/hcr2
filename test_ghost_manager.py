@@ -1,6 +1,7 @@
 """Regression tests for offline hill-climb cup ghost matchmaking."""
 
 import os
+import tempfile
 import unittest
 import zlib
 from unittest.mock import patch
@@ -244,10 +245,12 @@ class GhostManagerHillClimbTests(unittest.TestCase):
         self.assertEqual(len(resolved), 1)
         self.assertEqual(resolved[0].zippedFrameData, make_zipped_frame_data())
 
-    def test_matchmaking_falls_back_to_any_vehicle_for_each_track(self):
+    def test_matchmaking_allows_an_opponent_to_switch_vehicles_between_tracks(self):
         manager = self.make_manager([])
         manager.authentic_cups = {}
         manager.get_track_ids_for_cup = lambda cup_id: ["track_a", "track_b"]
+        # The only owner drives a different vehicle on each leg; a cup lets each
+        # leg use its own vehicle, so the opponent is still a valid match.
         for level_id, vehicle, replay_id in (
             ("track_a", "jeep", "jeep-run"),
             ("track_b", "scooter", "scooter-run"),
@@ -264,6 +267,161 @@ class GhostManagerHillClimbTests(unittest.TestCase):
         cups, _ = manager.create_cup_matchmaking("hill_climb_cup", "jeep", 4.0, 0.0, 7)
         self.assertEqual(len(cups), 1)
         self.assertEqual(list(cups[0].replayIds), ["jeep-run", "scooter-run"])
+
+    def test_matchmaking_does_not_limit_ghosts_to_requesters_vehicle(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        manager.get_track_ids_for_cup = lambda cup_id: ["track_a", "track_b"]
+        for player_id, vehicle in (
+            ("jeep-a", "jeep"),
+            ("scooter-a", "scooter"),
+            ("scooter-b", "scooter"),
+            ("scooter-c", "scooter"),
+        ):
+            for level_id in ("track_a", "track_b"):
+                replay = Replay()
+                replay.playerId = player_id
+                replay.available = True
+                replay.vehicle = vehicle
+                replay.levelId = level_id
+                replay.time = 25.0
+                replay.distance = 100.0
+                replay._id = f"{player_id}-{level_id}"
+                replay.zippedFrameData = make_zipped_frame_data()
+                manager.register_challenge_replay(replay)
+
+        cups, _ = manager.create_cup_matchmaking("hill_climb_cup", "jeep", 4.0, 20.0, 7)
+
+        # Requesting "jeep" must not exclude the scooter opponents.
+        self.assertEqual(len(cups), 3)
+        vehicles = {
+            replay.vehicle
+            for cup in cups
+            for replay in manager.get_cup_replays(list(cup.replayIds))
+        }
+        self.assertIn("scooter", vehicles)
+
+    def test_matchmaking_scales_ghost_difficulty_with_rank(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        manager.get_track_ids_for_cup = lambda cup_id: ["track_a", "track_b"]
+        for step in range(10):
+            ghost_time = 10.0 * (step + 1)
+            for level_id in ("track_a", "track_b"):
+                replay = Replay()
+                replay.playerId = f"ghost-{ghost_time:.0f}"
+                replay.available = True
+                replay.vehicle = "jeep"
+                replay.levelId = level_id
+                replay.time = ghost_time
+                replay.distance = 100.0
+                replay._id = f"ghost-{ghost_time:.0f}-{level_id}"
+                replay.zippedFrameData = make_zipped_frame_data()
+                manager.register_challenge_replay(replay)
+
+        def selected_times(player_rank):
+            cups, _ = manager.create_cup_matchmaking(
+                "hill_climb_cup", "jeep", 4.0, player_rank, 7
+            )
+            return sorted(
+                manager.get_cup_replays(list(cup.replayIds))[0].time
+                for cup in cups
+            )
+
+        bronze_times = selected_times(0.0)
+        legendary_times = selected_times(50.0)
+
+        self.assertEqual(len(bronze_times), 3)
+        self.assertEqual(len(legendary_times), 3)
+        # Training/Bronze I draws from the slowest ghosts, Legendary the fastest.
+        self.assertGreaterEqual(min(bronze_times), 50.0)
+        self.assertLessEqual(max(legendary_times), 60.0)
+
+    def test_server_cups_folder_ghosts_join_the_cup_pool(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        manager.cup_replays = {}
+        manager._cup_replay_index = {}
+        manager.get_track_ids_for_cup = lambda cup_id: ["track_a"]
+
+        with tempfile.TemporaryDirectory() as cups_dir:
+            replay = Replay()
+            replay.playerId = "server-ghost"
+            replay.available = True
+            replay.vehicle = "jeep"
+            replay.levelId = "track_a"
+            replay.time = 24.0
+            replay.distance = 100.0
+            replay.zippedFrameData = make_zipped_frame_data()
+            with open(os.path.join(cups_dir, "ghost_3_0.dat"), "wb") as replay_file:
+                replay_file.write(replay.SerializeToString())
+
+            with patch("ghost_manager.CUPS_DIR", cups_dir):
+                manager._load_server_cup_replays()
+
+        self.assertEqual(
+            [replay._id for replay in manager.cup_replays["track_a"]],
+            ["cups/ghost_3_0.dat"],
+        )
+        cups, _ = manager.create_cup_matchmaking("hill_climb_cup", "jeep", 4.0, 0.0, 7)
+        self.assertEqual(len(cups), 1)
+        self.assertEqual(list(cups[0].replayIds), ["cups/ghost_3_0.dat"])
+        resolved = manager.get_cup_replays(list(cups[0].replayIds))
+        self.assertEqual(resolved[0].playerId, "server-ghost")
+
+    def test_matchmaking_leads_mixed_cache_and_server_ids_with_a_server_cup(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        manager.get_track_ids_for_cup = lambda cup_id: ["track_a", "track_b"]
+        manager.cup_replays = {}
+        manager._cup_replay_index = {}
+
+        # Server-hosted opponents (no "cups/" prefix) on both tracks.
+        for player_id in ("server-a", "server-b"):
+            for track in ("track_a", "track_b"):
+                replay = Replay()
+                replay.playerId = player_id
+                replay.available = True
+                replay.vehicle = "jeep"
+                replay.levelId = track
+                replay.time = 24.0
+                replay.distance = 100.0
+                replay._id = f"more/{player_id}-{track}.dat"
+                replay.zippedFrameData = make_zipped_frame_data()
+                manager.cup_replays.setdefault(track, []).append(replay)
+                manager._cup_replay_index[replay._id] = replay
+
+        # Client-cached opponents ("cups/" prefix) on both tracks.
+        for set_idx in range(2):
+            for track_idx, track in enumerate(("track_a", "track_b")):
+                replay = Replay()
+                replay.playerId = f"cache-{set_idx}"
+                replay.available = True
+                replay.vehicle = "jeep"
+                replay.levelId = track
+                replay.time = 30.0
+                replay.distance = 100.0
+                replay._id = f"cups/ghost_{set_idx}_{track_idx}.dat"
+                replay.zippedFrameData = make_zipped_frame_data()
+                manager.cup_replays.setdefault(track, []).append(replay)
+                manager._cup_replay_index[replay._id] = replay
+
+        cups, wc_race = manager.create_cup_matchmaking(
+            "hill_climb_cup", "jeep", 4.0, 0.0, 7
+        )
+
+        self.assertEqual(len(cups), 3)
+        replay_ids = [rid for cup in cups for rid in cup.replayIds]
+        # Both sources are allowed in one response...
+        self.assertTrue(any(rid.startswith("cups/") for rid in replay_ids))
+        self.assertTrue(any(not rid.startswith("cups/") for rid in replay_ids))
+        # ...but the leading cup must be server-hosted so the client fetches the
+        # mixed batch online instead of reading it from its local cups/ cache.
+        self.assertTrue(all(not rid.startswith("cups/") for rid in cups[0].replayIds))
+        self.assertEqual(
+            [replay._id for replay in wc_race.Replays],
+            [cup.replayIds[0] for cup in cups],
+        )
 
     def test_matchmaking_returns_no_ghost_opponents_when_no_pairs_exist(self):
         manager = self.make_manager(["ghost_2_0.dat"])
@@ -394,6 +552,85 @@ class GhostManagerHillClimbTests(unittest.TestCase):
             )
 
         self.assertEqual(cups, [])
+
+    def test_matchmaking_treats_same_player_vehicle_variants_as_separate_opponents(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        tracks = ["track_a", "track_b"]
+        manager.get_track_ids_for_cup = lambda cup_id: tracks
+        # One owner recorded every track with two vehicles: both ghosts must stay
+        # usable as distinct opponents, but each cup still holds only one of them.
+        for level_id, vehicle in (
+            ("track_a", "jeep"),
+            ("track_a", "scooter"),
+            ("track_b", "jeep"),
+            ("track_b", "scooter"),
+        ):
+            replay = Replay()
+            replay.playerId = "multi"
+            replay.available = True
+            replay.vehicle = vehicle
+            replay.levelId = level_id
+            replay.time = 24.0
+            replay._id = f"multi-{level_id}-{vehicle}"
+            replay.zippedFrameData = make_zipped_frame_data()
+            manager.register_challenge_replay(replay)
+
+        with patch(
+            "ghost_manager.random.sample",
+            side_effect=lambda values, count: list(values)[:count],
+        ):
+            cups, _ = manager.create_cup_matchmaking(
+                "hill_climb_cup", "jeep", 4.0, 20.0, 7
+            )
+
+        replay_legs = [
+            [replay.vehicle for replay in manager.get_cup_replays(list(cup.replayIds))]
+            for cup in cups
+        ]
+        self.assertEqual(len(cups), 2)
+        # Each cup keeps a single vehicle across its legs, one variant per cup.
+        self.assertEqual(replay_legs, [["jeep", "jeep"], ["scooter", "scooter"]])
+
+    def test_matchmaking_falls_back_when_a_variant_lacks_a_track(self):
+        manager = self.make_manager([])
+        manager.authentic_cups = {}
+        tracks = ["track_a", "track_b"]
+        manager.get_track_ids_for_cup = lambda cup_id: tracks
+        # "scooter" only exists on the first track; the second leg reuses the
+        # owner's jeep ghost so the scooter variant is still raceable.
+        for level_id, vehicle in (
+            ("track_a", "jeep"),
+            ("track_a", "scooter"),
+            ("track_b", "jeep"),
+        ):
+            replay = Replay()
+            replay.playerId = "multi"
+            replay.available = True
+            replay.vehicle = vehicle
+            replay.levelId = level_id
+            replay.time = 24.0
+            replay._id = f"multi-{level_id}-{vehicle}"
+            replay.zippedFrameData = make_zipped_frame_data()
+            manager.register_challenge_replay(replay)
+
+        with patch(
+            "ghost_manager.random.sample",
+            side_effect=lambda values, count: list(values)[:count],
+        ):
+            cups, _ = manager.create_cup_matchmaking(
+                "hill_climb_cup", "jeep", 4.0, 20.0, 7
+            )
+
+        leg_ids = sorted(list(cup.replayIds) for cup in cups)
+        self.assertEqual(len(cups), 2)
+        self.assertEqual(
+            leg_ids,
+            sorted([
+                ["multi-track_a-jeep", "multi-track_b-jeep"],
+                ["multi-track_a-scooter", "multi-track_b-jeep"],
+            ]),
+        )
 
 
 if __name__ == "__main__":

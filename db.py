@@ -60,6 +60,7 @@ class PlayerDB:
         # Keep new profiles empty/low rather than inventing advanced progress.
         default_profile = {
             "player_id": player_id,
+            "player_name": "",
             "friends": [],
             "coins": 0,
             "diamonds": 0,
@@ -125,6 +126,13 @@ class PlayerDB:
 
         if game_status_msg.HasField("cloudSaveVersion"):
             profile["cloud_save_version"] = game_status_msg.cloudSaveVersion + 1
+
+        # Remember the display name the client reports so requestGameStatus can
+        # echo it back (instead of the raw player id) and leaderboard rows can
+        # show it. The client caps how much of it fits on screen, so a fuller
+        # name still beats the obviously wrong player id fallback.
+        if game_status_msg.HasField("playerName") and game_status_msg.playerName:
+            profile["player_name"] = game_status_msg.playerName
 
         # Persist the flag the player picked so requestFlag can echo it back
         # instead of re-resolving the country from their IP.

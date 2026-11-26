@@ -34,12 +34,31 @@ DATA_DIR = os.path.expanduser(os.environ.get(
     "HCR2_DATA_DIR", os.path.join(BASE_DIR, "player_data")
 ))
 REPLAYS_DIR = os.path.join(DATA_DIR, "replays")
+CUP_GHOSTS_DIR = os.path.join(DATA_DIR, "cup_ghosts")
 CUP_REPLAYS_DIR = os.path.join(BASE_DIR, "more")
+CUPS_DIR = os.path.join(BASE_DIR, "cups")
 ADB_PATH = os.environ.get("HCR2_ADB_PATH", "")
 ANDROID_CUPS_DIR = "/data/data/com.fingersoft.hcr2/files/cups"
 
+# production-config/gamedata.json maps Training/Bronze I to rank 0 and Legendary
+# to rank 50 (leagues[].minRank). Cup ghost difficulty is interpolated across
+# that span: low ranks meet the slowest ghosts, Legendary the fastest.
+MAX_CUP_RANK = 50.0
+
 os.makedirs(REPLAYS_DIR, exist_ok=True)
 LOGGER = logging.getLogger("hcr2.ghosts")
+
+
+def cup_rank_fraction(player_rank) -> float:
+    """Return the player's rank as a 0..1 difficulty fraction.
+
+    0 is Training/Bronze I (slowest cup ghosts) and 1 is Legendary (fastest).
+    """
+    try:
+        rank = float(player_rank)
+    except (TypeError, ValueError):
+        rank = 0.0
+    return max(0.0, min(1.0, rank / MAX_CUP_RANK))
 
 class GhostManager:
     def __init__(self, sync_emulator: bool = False):
@@ -61,6 +80,8 @@ class GhostManager:
         self._load_authentic_ghosts()
         self._load_authentic_cups()
         self._load_local_cup_replays()
+        self._load_server_cup_replays()
+        self._load_saved_cup_ghosts()
         self._load_saved_player_replays()
         self._load_saved_challenge_replays()
         self._emulator_assets_synced = self._verify_cups_on_emulator() if sync_emulator else False
@@ -341,6 +362,162 @@ class GhostManager:
 
         LOGGER.info("Loaded %s local cup replays across %s tracks", count, len(self.cup_replays))
 
+    def _load_server_cup_replays(self):
+        """Load cup opponent ghosts from the server-root ``cups/`` folder.
+
+        These ghosts back cup matchmaking only. They are registered in
+        ``cup_replays`` (which track leaderboards ignore) so their records never
+        leak into the per-track boards.
+        """
+        if not os.path.isdir(CUPS_DIR):
+            LOGGER.info("Server cup replay directory is unavailable: %s", CUPS_DIR)
+            return
+
+        count = 0
+        for path in sorted(glob.glob(os.path.join(CUPS_DIR, "ghost_*.dat"))):
+            filename = os.path.basename(path)
+            try:
+                with open(path, "rb") as replay_file:
+                    replay = ReplayCls()
+                    replay.ParseFromString(replay_file.read())
+
+                if not replay.levelId or not replay.vehicle or not replay.playerId:
+                    LOGGER.warning("Skipping server cup ghost with incomplete metadata: %s", path)
+                    continue
+                if self._extract_frame_data(replay) is None:
+                    LOGGER.warning("Skipping server cup ghost with invalid frame data: %s", path)
+                    continue
+
+                replay._id = f"cups/{filename}"
+                replay.available = True
+                self.cup_replays.setdefault(replay.levelId, []).append(replay)
+                self._cup_replay_index[replay._id] = replay
+                count += 1
+            except Exception as e:
+                LOGGER.warning("Failed to load server cup ghost %s: %s", path, e)
+
+        LOGGER.info(
+            "Loaded %s server-root cup ghosts across %s tracks",
+            count,
+            len(self.cup_replays),
+        )
+
+    @staticmethod
+    def _cup_ghost_id(player_id, level_id, vehicle):
+        """Replay id for a recording uploaded with a completed cup.
+
+        The client fetches a cup leg from the server unless the first id in
+        that leg contains ``cups/`` (ReplayManager::fetchWcRaceReplaysToCache).
+        This prefix stays off that local-cache path.
+        """
+        def part(value):
+            return str(value).replace("\\", "_").replace("/", "_")
+
+        return f"cupghost/{part(player_id)}/{part(level_id)}/{part(vehicle)}"
+
+    @staticmethod
+    def _cup_ghost_path(replay_id):
+        return os.path.join(CUP_GHOSTS_DIR, replay_id.replace("/", "__") + ".dat")
+
+    def _index_cup_ghost(self, replay):
+        """Register one persisted cup recording, replacing the owner's prior run."""
+        replay_id = replay._id
+        previous = self._cup_replay_index.get(replay_id)
+        if previous is not None:
+            level_rows = self.cup_replays.get(previous.levelId, [])
+            self.cup_replays[previous.levelId] = [
+                item for item in level_rows
+                if not item.HasField("_id") or item._id != replay_id
+            ]
+
+        clone = self._clone_replay(replay)
+        self._cup_replay_index[replay_id] = clone
+        self.cup_replays.setdefault(clone.levelId, []).append(clone)
+        return clone
+
+    def _load_saved_cup_ghosts(self):
+        """Load cup recordings saved from completed cups into the cup ghost pool."""
+        if not os.path.isdir(CUP_GHOSTS_DIR):
+            return
+
+        count = 0
+        for path in sorted(glob.glob(os.path.join(CUP_GHOSTS_DIR, "*.dat"))):
+            try:
+                with open(path, "rb") as replay_file:
+                    replay = ReplayCls()
+                    replay.ParseFromString(replay_file.read())
+                if (
+                    not replay.levelId
+                    or not replay.vehicle
+                    or not replay.playerId
+                    or not replay.HasField("_id")
+                    or not replay._id.startswith("cupghost/")
+                ):
+                    LOGGER.warning("Skipping saved cup ghost with incomplete metadata: %s", path)
+                    continue
+                if replay.HasField("available") and not replay.available:
+                    continue
+                if self._extract_frame_data(replay) is None:
+                    LOGGER.warning("Skipping saved cup ghost with invalid frame data: %s", path)
+                    continue
+                replay.available = True
+                self._index_cup_ghost(replay)
+                count += 1
+            except (OSError, ValueError, DecodeError) as exc:
+                LOGGER.warning("Failed to load saved cup ghost %s: %s", path, exc)
+
+        if count:
+            LOGGER.info("Loaded %s saved cup ghosts across %s tracks", count, len(self.cup_replays))
+
+    def store_cup_ghost(self, player_id, replay_msg):
+        """Persist one track recording from a completed cup and offer it as a cup ghost.
+
+        GameServer::createCup copies each track's Replay into the finish message
+        and, when the cup was not served from the local ``cups/`` cache, compresses
+        FrameData into zippedFrameData. Recordings without that payload cannot be
+        driven, so they are not registered.
+        """
+        if replay_msg is None or not player_id:
+            return None
+        if replay_msg.HasField("available") and not replay_msg.available:
+            return None
+        if not replay_msg.levelId or not replay_msg.vehicle:
+            return None
+        if self._extract_frame_data(replay_msg) is None:
+            return None
+
+        clone = self._clone_replay(replay_msg)
+        clone.playerId = player_id
+        clone.available = True
+        if not clone.playerName:
+            profile = PlayerDB.load_player(player_id)
+            player_name = ""
+            if isinstance(profile, dict):
+                player_name = profile.get("player_name") or profile.get("name") or ""
+            if player_name:
+                clone.playerName = player_name
+        clone._id = self._cup_ghost_id(player_id, clone.levelId, clone.vehicle)
+
+        try:
+            os.makedirs(CUP_GHOSTS_DIR, exist_ok=True)
+            file_path = self._cup_ghost_path(clone._id)
+            with open(file_path, "wb") as replay_file:
+                replay_file.write(clone.SerializeToString())
+        except OSError:
+            LOGGER.exception("Failed to save cup ghost %s", clone._id)
+            return None
+
+        self._index_cup_ghost(clone)
+        LOGGER.info(
+            "Stored cup ghost %s for player=%s level=%s vehicle=%s time=%s",
+            clone._id,
+            player_id,
+            clone.levelId,
+            clone.vehicle,
+            clone.time if clone.HasField("time") else None,
+        )
+        return clone._id
+
     def get_track_ids_for_cup(self, cup_id: str) -> List[str]:
         ev = self.cup_definitions.get(cup_id)
         if not ev:
@@ -373,6 +550,7 @@ class GhostManager:
             3,
             requester_player_id=requester_player_id,
             p_value=p_value,
+            player_rank=player_rank,
         )
         for cup in cups:
             if not cup.replayIds:
@@ -430,41 +608,48 @@ class GhostManager:
         opponent_count,
         requester_player_id=None,
         p_value=None,
+        player_rank=0.0,
     ):
         """Build Cup records using playable replay IDs for each cup track.
 
-        Each opponent is one owner that has a replay on every cup track, chosen
-        so the field contains one opponent on the requester's vehicle, one whose
-        tuning (PValue) matches the requester, and one arbitrary opponent.
+        Every opponent is one owner with a replay on every cup track; an owner
+        that recorded a track with several vehicles supplies one opponent per
+        vehicle so those ghosts all stay usable. Each leg may be driven with a
+        different vehicle, so opponents are not restricted to the requester's
+        vehicle. Opponents are ordered by how closely their time matches the
+        difficulty implied by the requester's rank: Training/Bronze I faces the
+        slowest ghosts (highest possible times) and Legendary the fastest.
         """
         if not tracks or opponent_count <= 0:
             return []
 
-        # Search the full pool (every vehicle) so the "random" opponent can be a
-        # different vehicle; the vehicle preference is applied when selecting the
-        # dedicated same-vehicle slot below.
-        replay_choices = [
+        per_track_candidates = [
             self._cup_track_replay_candidates(level_id, None)
             for level_id in tracks
         ]
-        if any(not candidates for candidates in replay_choices):
+        if any(not candidates for candidates in per_track_candidates):
             LOGGER.warning(
                 "Cannot build cup %s: missing replay tracks %s",
                 cup_id,
-                [level_id for level_id, candidates in zip(tracks, replay_choices) if not candidates],
+                [level_id for level_id, candidates in zip(tracks, per_track_candidates) if not candidates],
             )
             return []
 
-        player_replays_by_track = []
-        for candidates in replay_choices:
+        # A player may have recorded the same track with several vehicles. Keep
+        # every (player, vehicle) variant so each ghost stays usable as its own
+        # opponent, while a cup still holds exactly one opponent.
+        per_track_by_player = []  # track -> {player_id: {vehicle: replay}}
+        for candidates in per_track_candidates:
             by_player = {}
             for replay in candidates:
                 if replay.playerId and replay.playerId != requester_player_id:
-                    by_player.setdefault(replay.playerId, replay)
-            player_replays_by_track.append(by_player)
+                    by_player.setdefault(replay.playerId, {}).setdefault(
+                        replay.vehicle, replay
+                    )
+            per_track_by_player.append(by_player)
 
-        common_players = set(player_replays_by_track[0])
-        for by_player in player_replays_by_track[1:]:
+        common_players = set(per_track_by_player[0])
+        for by_player in per_track_by_player[1:]:
             common_players.intersection_update(by_player)
         if not common_players:
             LOGGER.warning(
@@ -475,53 +660,101 @@ class GhostManager:
             return []
 
         # Preserve the per-track ranking (each candidate list is already ordered)
-        # as the deterministic base order, deduplicating owners. Each opponent
-        # then uses that owner's replay on every track instead of combining
-        # unrelated players into one Cup.
+        # as the deterministic base order, deduplicating owners.
         ranked_players = []
-        for replay in replay_choices[0]:
+        for replay in per_track_candidates[0]:
             player_id = replay.playerId
             if player_id in common_players and player_id not in ranked_players:
                 ranked_players.append(player_id)
         rank_index = {player_id: index for index, player_id in enumerate(ranked_players)}
 
-        # Tuning is captured by PValue; a lower gap means a closer tune match.
-        # Ties fall back to the original ranking order.
-        def order_key(player_id):
-            replay = player_replays_by_track[0][player_id]
-            gap = float("inf")
+        # A variant reuses the player's ghost for a leg when that vehicle was not
+        # recorded there, so switching-vehicle opponents still work and every
+        # recorded vehicle can be raced.
+        def opponent_replay(player_id, vehicle, track_index):
+            per_track = per_track_by_player[track_index][player_id]
+            return per_track.get(vehicle) or next(iter(per_track.values()))
+
+        # Build one opponent per distinct per-leg replay set. Variants that
+        # resolve to the same ghosts (a player who raced one vehicle per leg)
+        # collapse back into a single opponent.
+        identities = []
+        identity_replays = {}
+        seen_signatures = set()
+        for player_id in ranked_players:
+            for track_index in range(len(tracks)):
+                for vehicle in per_track_by_player[track_index][player_id]:
+                    selected_replays = [
+                        opponent_replay(player_id, vehicle, leg)
+                        for leg in range(len(tracks))
+                    ]
+                    replay_ids = [
+                        self._cup_replay_id(replay) for replay in selected_replays
+                    ]
+                    # Keep each opponent's ghost set single-source: the client
+                    # inspects only the first ID of a fetch batch to choose
+                    # between its local ``cups/`` cache and the server, then
+                    # loads the whole batch the same way, so one opponent must
+                    # not mix cache IDs with server-hosted IDs.
+                    if len({replay_id.startswith("cups/") for replay_id in replay_ids}) != 1:
+                        continue
+                    signature = tuple(replay_ids)
+                    if signature in seen_signatures:
+                        continue
+                    seen_signatures.add(signature)
+                    identity = (player_id, vehicle)
+                    identities.append(identity)
+                    identity_replays[identity] = selected_replays
+
+        if not identities:
+            LOGGER.warning(
+                "Cannot build cup %s: no eligible opponent has a single-source replay for every track %s",
+                cup_id,
+                tracks,
+            )
+            return []
+
+        # Difficulty target: interpolate between the slowest and fastest ghost
+        # time across the eligible field. A rank fraction of 0 (Training/Bronze I)
+        # targets the slowest ghost and 1 (Legendary) the fastest.
+        rank_fraction = cup_rank_fraction(player_rank)
+        identity_times = {}
+        for identity in identities:
+            times = [
+                replay.time
+                for replay in identity_replays[identity]
+                if replay.HasField("time")
+            ]
+            identity_times[identity] = (sum(times) / len(times)) if times else None
+
+        known_times = [time for time in identity_times.values() if time is not None]
+        if known_times:
+            slowest, fastest = max(known_times), min(known_times)
+            target_time = slowest - rank_fraction * (slowest - fastest)
+        else:
+            target_time = None
+
+        # Tuning (PValue) is only a tiebreaker; difficulty leads so a low rank
+        # reliably meets slower ghosts regardless of tune.
+        def order_key(identity):
+            player_id, vehicle = identity
+            ghost_time = identity_times[identity]
+            time_gap = (
+                abs(ghost_time - target_time)
+                if target_time is not None and ghost_time is not None
+                else float("inf")
+            )
+            replay = identity_replays[identity][0]
+            tune_gap = float("inf")
             if p_value is not None and replay.HasField("PValue"):
-                gap = abs(replay.PValue - p_value)
-            return (gap, rank_index[player_id])
+                tune_gap = abs(replay.PValue - p_value)
+            return (time_gap, tune_gap, rank_index[player_id], vehicle)
 
-        same_vehicle = sorted(
-            (
-                player_id for player_id in common_players
-                if player_replays_by_track[0][player_id].vehicle == vehicle_id
-            ),
-            key=order_key,
-        )
-        same_tunes = sorted(common_players, key=order_key)
-        random_pool = sorted(common_players)
-        random.shuffle(random_pool)
-
-        def pick_from_group(group, top_n, exclude):
-            """Randomly choose among the best `top_n` (or all) unused owners."""
-            candidates = [player_id for player_id in group if player_id not in exclude]
-            if not candidates:
-                return None
-            return random.choice(candidates[:top_n] if top_n else candidates)
-
-        # Fill one slot per category with distinct owners. The same-vehicle and
-        # same-tunes slots consider their best three candidates before picking one
-        # at random; the last slot is drawn at random from the whole pool.
-        selected = []
-        for group, top_n in ((same_vehicle, 3), (same_tunes, 3), (random_pool, None)):
-            if len(selected) >= opponent_count:
-                break
-            pick = pick_from_group(group, top_n, selected)
-            if pick is not None:
-                selected.append(pick)
+        ordered = sorted(identities, key=order_key)
+        # Draw from the closest candidates so the field stays within the
+        # rank-appropriate difficulty band while keeping a little variety.
+        pool = ordered[:max(opponent_count, min(len(ordered), opponent_count * 2))]
+        selected = random.sample(pool, min(opponent_count, len(pool)))
 
         if len(selected) < opponent_count:
             LOGGER.warning(
@@ -532,19 +765,30 @@ class GhostManager:
             )
 
         LOGGER.info(
-            "Cup %s opponent picks (same_vehicle/same_tunes/random): %s",
+            "Cup %s opponent picks (requested_vehicle=%s rank=%.2f target_time=%s): %s",
             cup_id,
+            vehicle_id,
+            player_rank,
+            target_time,
             selected[:opponent_count],
         )
 
         cups = []
-        for player_id in selected[:opponent_count]:
-            selected_replays = [by_player[player_id] for by_player in player_replays_by_track]
+        for identity in selected[:opponent_count]:
+            selected_replays = identity_replays[identity]
             cup = CupCls()
             cup.cupId = cup_id
             cup.ContentVersion = content_version
             cup.replayIds.extend(self._cup_replay_id(replay) for replay in selected_replays)
             cups.append(cup)
+        # Order server-hosted cups first. The client inspects only the first ID
+        # of each per-leg fetch batch (ordered by cup) to choose between its
+        # local ``cups/`` cache and the server; leading with a server-hosted ID
+        # makes it fetch the whole mixed batch online instead of trying to open
+        # server IDs as local cache files.
+        cups.sort(key=lambda cup: all(
+            replay_id.startswith("cups/") for replay_id in cup.replayIds
+        ))
         return cups
 
     @staticmethod

@@ -84,40 +84,68 @@ MSG_REQUEST_CHALLENGE_LEADERBOARD_BY_DISTANCE = 33
 MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_TIME      = 42
 MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_DISTANCE  = 43
 
+# The adventure/cup points board (client LeaderboardType 6) keys its cache on
+# this literal string (LeaderboardManager::refreshRankLeaderboard). Its rows are
+# ordered by adventure points, which the client stores per row as
+# PlayerInfo::getWcRank() * 1000.0 (TrackLeaderboard::isBetter reads
+# LeaderboardItemData.points and compares it to wcrank * 1000).
+POINTS_LEADERBOARD_FILTER = "wcrankpoints"
+POINTS_PER_WCRANK = 1000
+
 # The client reads an absolute WCRank per finish position out of
 # WCRace.RaceFinishWCRanks (RaceInfo::getWcRankWithFinishPosition) and applies it
 # verbatim via PlayerInfo::setWcRank, so the server is the sole authority for the
-# post-cup rank. Reproduce the game's own reference formula
-# (ReplayManager::createWcRaceFromCache) so awards stay consistent.
-DEFAULT_RANK_PER_POSITION = 0.02
-DEFAULT_RANK_BOOST_FACTOR = 0.05
-DEFAULT_RANK_BOOST_MAX_RANK = 10.0
+# post-cup rank. Award a flat spread relative to the player's current rank:
+# 1st +0.2, 2nd +0.1, 3rd +0.0, 4th -0.1.
+RANK_AWARD_BY_POSITION = (0.2, 0.1, 0.0, -0.1)
+# Boss cups are won outright or lost: a win is worth a full rank point and any
+# other finish is a loss.
+BOSS_RANK_AWARD_BY_POSITION = (1.0, -0.1, -0.1, -0.1)
 
 
-def cup_finish_ranks(
-    player_rank,
-    rank_per_position=DEFAULT_RANK_PER_POSITION,
-    rank_boost_factor=DEFAULT_RANK_BOOST_FACTOR,
-    rank_boost_max_rank=DEFAULT_RANK_BOOST_MAX_RANK,
-):
+def cup_finish_ranks(player_rank, awards=RANK_AWARD_BY_POSITION):
     """Build the absolute WCRank table the client reads per finish position.
 
-    Mirrors ReplayManager::createWcRaceFromCache so the server awards exactly
-    what the game's own reference implementation would, including the low-rank
-    boost and the duplicated final entry the client relies on for aborted cups.
+    Entries are indexed by finish position (0 = 1st place) as offsets from the
+    player's current rank. The final entry is duplicated because the client
+    reads the last slot when a cup is aborted before the finish.
     """
-    ranks = []
-    for i in range(1, 5):
-        rank = player_rank - i * rank_per_position
-        rank += (3 - i) * rank_per_position
-        if rank < rank_boost_max_rank:
-            rank += -(rank_boost_factor * rank) + rank_boost_factor * rank_boost_max_rank
-        finish_rank = rank + (rank - player_rank)
-        if i == 4 and player_rank <= finish_rank:
-            finish_rank = player_rank
-        ranks.append(finish_rank)
+    ranks = [player_rank + delta for delta in awards]
     ranks.append(ranks[-1])
     return ranks
+
+
+# The client only pushes its WCRank back to us on its periodic storeGameStatus
+# auto-save, so every cup played inside one auto-save window would be scored
+# against the same stale base rank - a later cup could then overwrite (even
+# lower) rank earned by an earlier one, and big boss wins were silently wiped.
+# Remember the base + award table sent for the most recent matchmaking so the
+# cup result can advance the stored rank immediately.
+_PENDING_CUP_AWARDS = {}
+
+
+def remember_cup_awards(player_id, cup_id, base_rank, awards):
+    _PENDING_CUP_AWARDS[player_id] = (cup_id, base_rank, awards)
+
+
+def apply_cup_rank_award(player_id, finish_position, submitted_cup_ids):
+    """Advance the stored rank from the last matchmaking's table + this finish.
+
+    Returns the (old_rank, new_rank) pair when applied, otherwise None.
+    """
+    pending = _PENDING_CUP_AWARDS.get(player_id)
+    if pending is None or not finish_position:
+        return None
+    cup_id, base_rank, awards = pending
+    if submitted_cup_ids and cup_id not in submitted_cup_ids:
+        return None
+    del _PENDING_CUP_AWARDS[player_id]
+    index = min(max(finish_position - 1, 0), len(awards) - 1)
+    new_rank = base_rank + awards[index]
+    profile = PlayerDB.load_player(player_id)
+    profile["rank"] = new_rank
+    PlayerDB.save_player(player_id, profile)
+    return base_rank, new_rank
 
 
 LOGGER = logging.getLogger("hcr2.handlers")
@@ -340,7 +368,7 @@ class MessageDispatcher:
         profile = PlayerDB.load_player(self.player_id)
         status = out.GameStatus
         status.playerId = self.player_id
-        status.playerName = self.player_id
+        status.playerName = profile.get("player_name") or profile.get("name") or self.player_id
         status.totalCoinsCollected = profile.get("coins", 0)
         status.diamonds = profile.get("diamonds", 0)
         status.playerXp = profile.get("xp", 0)
@@ -416,6 +444,9 @@ class MessageDispatcher:
             # and persists it back through storeGameStatus. Without it the rank never
             # moves, so send the absolute rank for each finish position.
             wc_race.RaceFinishWCRanks.extend(cup_finish_ranks(player_rank))
+            remember_cup_awards(
+                self.player_id, in_msg.CupId, player_rank, RANK_AWARD_BY_POSITION
+            )
             LOGGER.info(
                 "[Cups] WCRank %s -> finish awards %s",
                 player_rank,
@@ -592,11 +623,55 @@ class MessageDispatcher:
         out.MessageNumber = in_msg.MessageNumber
 
         LOGGER.info(
-            "[Cups] Accepted cup result: cups=%s finish_position=%s replays=%s",
+            "[Cups] Accepted cup result: size=%s cups=%s finish_position=%s replays=%s",
+            in_msg.ByteSize(),
             [(cup.cupId, list(cup.replayIds)) for cup in in_msg.Cups],
             in_msg.FinishPosition if in_msg.HasField("FinishPosition") else None,
             len(in_msg.Replays),
         )
+
+        # createCup uploads one Replay per finished track. When the client kept
+        # the recording (zipped FrameData), register it so a later requestCups
+        # can race that run as a cup ghost.
+        stored_ids = []
+        for index, replay in enumerate(in_msg.Replays):
+            replay_id = ghost_mgr.store_cup_ghost(self.player_id, replay)
+            if replay_id:
+                stored_ids.append(replay_id)
+                continue
+            LOGGER.info(
+                "[Cups]   replay[%s] not stored as a cup ghost: level=%s vehicle=%s "
+                "byteFrameData=%s zippedFrameData=%s frames=%s frameData.frames=%s",
+                index,
+                replay.levelId,
+                replay.vehicle,
+                len(replay.byteFrameData),
+                len(replay.zippedFrameData),
+                len(replay.frames),
+                len(replay.frameData.frames),
+            )
+        if stored_ids:
+            LOGGER.info("[Cups] Stored %s cup ghost recordings: %s", len(stored_ids), stored_ids)
+
+        # Advance the stored rank right away instead of waiting for the client's
+        # periodic storeGameStatus auto-save, otherwise cups played in the same
+        # window are all scored from the same stale base and cancel each other.
+        finish_position = (
+            in_msg.FinishPosition if in_msg.HasField("FinishPosition") else None
+        )
+        applied = apply_cup_rank_award(
+            self.player_id,
+            finish_position,
+            [cup.cupId for cup in in_msg.Cups],
+        )
+        if applied is not None:
+            LOGGER.info(
+                "[Cups] Rank %.3f -> %.3f for %s (finish_position=%s)",
+                applied[0],
+                applied[1],
+                self.player_id,
+                finish_position,
+            )
         return out
 
     def _handle_store_replay(self, in_msg):
@@ -611,7 +686,7 @@ class MessageDispatcher:
             key = ghost_mgr.store_player_replay(self.player_id, replay)
             out.Key = key
             LOGGER.info(
-                "[Replays] Stored replay for player=%s level=%s vehicle=%s time=%.3f distance=%.2f frame_bytes=%s zipped_bytes=%s frames=%s frame_data=%s key=%s",
+                "[Replays] Stored replay for player=%s level=%s vehicle=%s time=%.3f distance=%.2f frame_bytes=%s zipped_bytes=%s frames=%s frame_data=%s msg_size=%s fields=%s key=%s",
                 self.player_id,
                 replay.levelId,
                 replay.vehicle,
@@ -621,10 +696,28 @@ class MessageDispatcher:
                 len(replay.zippedFrameData),
                 len(replay.frames),
                 len(replay.frameData.frames),
+                in_msg.ByteSize(),
+                [f[0].name for f in replay.ListFields()],
                 key,
             )
         else:
             out.Key = f"replay_{self.player_id}_{int(time.time())}"
+            # Diagnostic: catch store messages that batch replays in the repeated
+            # field (with or without frame payloads) instead of the singular one.
+            for index, replay in enumerate(in_msg.Replays):
+                LOGGER.info(
+                    "[Replays]   batched replay[%s] level=%s vehicle=%s player=%s "
+                    "byteFrameData=%s zippedFrameData=%s frames=%s frameData.frames=%s fields=%s",
+                    index,
+                    replay.levelId,
+                    replay.vehicle,
+                    replay.playerId,
+                    len(replay.byteFrameData),
+                    len(replay.zippedFrameData),
+                    len(replay.frames),
+                    len(replay.frameData.frames),
+                    [f[0].name for f in replay.ListFields()],
+                )
 
         return out
 
@@ -913,21 +1006,23 @@ class MessageDispatcher:
         return min(player_replays, key=self._replay_sort_key, default=None)
 
     def _all_level_replays(self, level_id):
-        """Collect every candidate replay for a level across all loaded pools.
+        """Collect every candidate replay for a level across the loaded pools.
 
-        The player's own uploads live in ``player_replays``; the bundled ``more/``
-        replay pack and the APK ``ghost_*.dat`` fixtures populate ``cup_replays``
-        and ``authentic_ghosts``. Leaderboards must consider all of them, or only
-        the local player ever shows up.
+        Only the player's own uploads (``player_replays``) are eligible. The
+        bundled ``more/`` pack (``cup_replays``) and the cup opponent ghosts
+        loaded from the ``cups/`` asset folder (``authentic_ghosts``) are both
+        deliberately left out so cup ghosts never leak into track leaderboards.
+
+        An empty ``level_id`` matches every level, which the adventure points
+        board uses because it is not tied to a single track.
         """
-        replays = list(ghost_mgr.player_replays.get(level_id, []))
-        replays.extend(ghost_mgr.cup_replays.get(level_id, []))
-        replays.extend(
+        if level_id:
+            return list(ghost_mgr.player_replays.get(level_id, []))
+        return [
             replay
-            for replay in ghost_mgr.authentic_ghosts.values()
-            if replay.levelId == level_id
-        )
-        return replays
+            for pool in ghost_mgr.player_replays.values()
+            for replay in pool
+        ]
 
     @staticmethod
     def _leaderboard_replay_id(replay):
@@ -971,6 +1066,36 @@ class MessageDispatcher:
         # filter, so anything that is not a known keyword is treated as a flag code.
         return [replay for replay in ranked if replay.flag.lower() == filter_name]
 
+    @staticmethod
+    def _leaderboard_points(profile):
+        """Adventure points a points-board row reports for a player.
+
+        The client compares its own ``PlayerInfo::getWcRank() * 1000.0`` against
+        the row value, so the stored WCRank (profile ``rank``) is scaled by the
+        same factor.
+        """
+        try:
+            return int(round(float(profile.get("rank", 0.0)) * POINTS_PER_WCRANK))
+        except (TypeError, ValueError):
+            return 0
+
+    def _points_leaderboard_replays(self, level_id, leaderboard_filter):
+        """Rank the candidate players by adventure points instead of by result.
+
+        The points board (LeaderboardType 6 / ``wcrankpoints``) is driven by the
+        by-points message types and expects its rows ordered by points, so the
+        shared row loop is fed a points-ordered replay list here. ``level_id``
+        may be empty for the adventure board, which spans every level.
+        """
+        ranked = self._leaderboard_replays_for_filter(level_id, leaderboard_filter)
+        return sorted(
+            ranked,
+            key=lambda replay: (
+                -self._leaderboard_points(PlayerDB.load_player(replay.playerId)),
+                replay.playerId,
+            ),
+        )
+
     def _handle_request_leaderboard(self, in_msg):
         """Serve the requested leaderboard tab for a level.
 
@@ -984,7 +1109,10 @@ class MessageDispatcher:
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
 
-        level_id = in_msg.LevelId or "rookie_cup_01_01"
+        # Keep the raw level so the adventure points board (which sends no level)
+        # can span every track; the response still needs a concrete level id.
+        requested_level_id = in_msg.LevelId
+        level_id = requested_level_id or "rookie_cup_01_01"
         leaderboard = out.Leaderboard
         leaderboard.levelId = level_id
         filter_name = in_msg.LeaderboardFilter if in_msg.HasField("LeaderboardFilter") else "global"
@@ -996,7 +1124,17 @@ class MessageDispatcher:
             leaderboard.referenceValue = in_msg.ReferenceTime
 
         self._requested_leaderboard_vehicle = in_msg.VehicleId if in_msg.HasField("VehicleId") else ""
-        ranked_replays = self._leaderboard_replays_for_filter(level_id, filter_name)
+        # The adventure/cup points board arrives through the by-points message
+        # types (or the wcrankpoints key). It reports row points and is ordered
+        # by points; every other tab stays ordered by time/distance.
+        points_board = (
+            out.MessageType == MSG_REQUEST_LEADERBOARD_BY_POINTS
+            or filter_name.lower() == POINTS_LEADERBOARD_FILTER
+        )
+        if points_board:
+            ranked_replays = self._points_leaderboard_replays(requested_level_id, filter_name)
+        else:
+            ranked_replays = self._leaderboard_replays_for_filter(level_id, filter_name)
         for replay in ranked_replays[page_offset : page_offset + 50]:
             profile = PlayerDB.load_player(replay.playerId)
             item = leaderboard.leaderboard.add()
@@ -1006,6 +1144,7 @@ class MessageDispatcher:
             item.vehicleId = replay.vehicle or "jeep"
             item.time = replay.time
             item.distance = replay.distance
+            item.points = self._leaderboard_points(profile)
             item.finishingStatus = replay.finishingStatus
             item.replayId = self._leaderboard_replay_id(replay)
             item.flag = replay.flag
@@ -1013,12 +1152,13 @@ class MessageDispatcher:
             item.retryCount = 0
 
         LOGGER.info(
-            "[Leaderboard] Served %s ranked rows for %s (filter=%s vehicle=%s offset=%s)",
+            "[Leaderboard] Served %s ranked rows for %s (filter=%s vehicle=%s offset=%s points_board=%s)",
             len(leaderboard.leaderboard),
             level_id,
             filter_name,
             self._requested_leaderboard_vehicle or "all",
             page_offset,
+            points_board,
         )
         return out
 
@@ -1034,7 +1174,13 @@ class MessageDispatcher:
         standings.levelId = in_msg.LevelId or "rookie_cup_01_01"
         out.LevelId = standings.levelId
 
-        global_results = self._level_leaderboard_replays(standings.levelId)
+        # The by-points standings belong to the adventure/cup points board, so
+        # rank against the points-ordered player set (spanning every level when
+        # the request carries no level) rather than the level's time ranking.
+        if out.MessageType == MSG_REQUEST_LEADERBOARD_STANDINGS_BY_POINTS:
+            global_results = self._points_leaderboard_replays(in_msg.LevelId, "global")
+        else:
+            global_results = self._level_leaderboard_replays(standings.levelId)
         local_results = [r for r in global_results if r.playerId == self.player_id]
         friend_ids = set(PlayerDB.get_friends(self.player_id))
         friend_ids.add(self.player_id)
@@ -1140,8 +1286,13 @@ class MessageDispatcher:
             in_msg.ContentVersion if in_msg.ContentVersion else 7,
             requester_player_id=self.player_id,
         )
-        # Same per-finish-position WCRank table as _handle_request_cups.
-        wc.RaceFinishWCRanks.extend(cup_finish_ranks(player_rank))
+        # Boss cups award a full rank point for the win and a loss otherwise.
+        wc.RaceFinishWCRanks.extend(
+            cup_finish_ranks(player_rank, BOSS_RANK_AWARD_BY_POSITION)
+        )
+        remember_cup_awards(
+            self.player_id, cup_id, player_rank, BOSS_RANK_AWARD_BY_POSITION
+        )
         out.SendCupReplays = bool(cups)
         for c in cups:
             cp = out.Cups.add()
