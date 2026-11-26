@@ -69,23 +69,107 @@ MSG_REMOVE_FRIEND                 = 52
 MSG_REQUEST_SEASON_RESET          = 53
 MSG_REQUEST_BOSS_CUP              = 54
 MSG_REQUEST_FLAG                  = 20
-# Leaderboard request message IDs observed from the game client. The "ByDistance"
-# and "ByPoints" variants all share the same Leaderboard response payload.
-MSG_REQUEST_LEADERBOARD              = 4
-MSG_REQUEST_LEADERBOARD_BY_DISTANCE  = 5
-MSG_REQUEST_LEADERBOARD_BY_POINTS    = 8
-MSG_REQUEST_LEADERBOARD_STANDINGS    = 23
+# Leaderboard request message IDs observed from the game client (recovered from
+# GameServer::requestLeaderboard* / requestLeaderboardStandings*). Every variant
+# shares the same Leaderboard / LeaderboardStandings response payload and only the
+# MessageType differs, so the client can route the reply to the right callback.
+MSG_REQUEST_LEADERBOARD                       = 4   # requestLeaderboardByTime
+MSG_REQUEST_LEADERBOARD_BY_DISTANCE           = 5
+MSG_REQUEST_LEADERBOARD_BY_POINTS             = 8
+MSG_REQUEST_LEADERBOARD_STANDINGS             = 23  # requestLeaderboardStandingsByTime
+MSG_REQUEST_LEADERBOARD_STANDINGS_BY_DISTANCE = 24
+MSG_REQUEST_LEADERBOARD_STANDINGS_BY_POINTS   = 25
+MSG_REQUEST_CHALLENGE_LEADERBOARD_BY_TIME     = 32
+MSG_REQUEST_CHALLENGE_LEADERBOARD_BY_DISTANCE = 33
+MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_TIME      = 42
+MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_DISTANCE  = 43
 
-# Cup points added to the player's WCRank by finish position (1st, 2nd, 3rd, 4th).
-# The client's RaceInfo::getWcRankWithFinishPosition reads an absolute rank per
-# position out of WCRace.RaceFinishWCRanks and calls PlayerInfo::setWcRank with it,
-# so the server sends currentRank + these awards.
-CUP_FINISH_POINTS = (0.5, 0.15, 0.0, -0.25)
+# The client reads an absolute WCRank per finish position out of
+# WCRace.RaceFinishWCRanks (RaceInfo::getWcRankWithFinishPosition) and applies it
+# verbatim via PlayerInfo::setWcRank, so the server is the sole authority for the
+# post-cup rank. Reproduce the game's own reference formula
+# (ReplayManager::createWcRaceFromCache) so awards stay consistent.
+DEFAULT_RANK_PER_POSITION = 0.02
+DEFAULT_RANK_BOOST_FACTOR = 0.05
+DEFAULT_RANK_BOOST_MAX_RANK = 10.0
+
+
+def cup_finish_ranks(
+    player_rank,
+    rank_per_position=DEFAULT_RANK_PER_POSITION,
+    rank_boost_factor=DEFAULT_RANK_BOOST_FACTOR,
+    rank_boost_max_rank=DEFAULT_RANK_BOOST_MAX_RANK,
+):
+    """Build the absolute WCRank table the client reads per finish position.
+
+    Mirrors ReplayManager::createWcRaceFromCache so the server awards exactly
+    what the game's own reference implementation would, including the low-rank
+    boost and the duplicated final entry the client relies on for aborted cups.
+    """
+    ranks = []
+    for i in range(1, 5):
+        rank = player_rank - i * rank_per_position
+        rank += (3 - i) * rank_per_position
+        if rank < rank_boost_max_rank:
+            rank += -(rank_boost_factor * rank) + rank_boost_factor * rank_boost_max_rank
+        finish_rank = rank + (rank - player_rank)
+        if i == 4 and player_rank <= finish_rank:
+            finish_rank = player_rank
+        ranks.append(finish_rank)
+    ranks.append(ranks[-1])
+    return ranks
+
 
 LOGGER = logging.getLogger("hcr2.handlers")
 DECRYPTED_DIR = os.path.expanduser(os.environ.get(
     "HCR2_DECRYPTED_DIR", os.path.join(os.path.expanduser("~"), "decrypted_output")
 ))
+
+# The client keys every country flag by its lowercase ISO-3166-1 alpha-2 code
+# (ui/cocosstudio/elements/flag_atlas.plist frame names, e.g. "us"), falling back
+# to "default" when the code is unknown (SpriteFrameCache lookup fails and the
+# flag is hidden). Resolve the player's country from their IP with the bundled
+# IP2Location LITE DB5 database.
+IP2LOCATION_DB_PATH = os.environ.get(
+    "HCR2_IP2LOCATION_DB",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "IP2LOCATION-LITE-DB5.BIN"),
+)
+_ip2location_db = None
+_ip2location_failed = False
+
+
+def _get_ip2location():
+    """Return a shared IP2Location reader, or None when the DB/package is missing."""
+    global _ip2location_db, _ip2location_failed
+    if _ip2location_db is not None or _ip2location_failed:
+        return _ip2location_db
+    try:
+        import IP2Location
+        _ip2location_db = IP2Location.IP2Location(IP2LOCATION_DB_PATH)
+        LOGGER.info("[Flag] Loaded IP2Location DB from %s", IP2LOCATION_DB_PATH)
+    except Exception:
+        LOGGER.exception("[Flag] IP2Location unavailable; falling back to default flag")
+        _ip2location_failed = True
+    return _ip2location_db
+
+
+def flag_for_ip(ip):
+    """Map a client IP to a lowercase alpha-2 flag name, or None if unresolvable."""
+    if not ip:
+        return None
+    db = _get_ip2location()
+    if db is None:
+        return None
+    try:
+        result = db.get_all(ip)
+    except Exception:
+        LOGGER.exception("[Flag] IP2Location lookup failed for %s", ip)
+        return None
+    code = (result.country_short or "").strip().lower()
+    # IP2Location uses "-" as the placeholder for unknown/unresolved countries.
+    if not code or code == "-":
+        return None
+    return code
 
 def load_decrypted_json(filename: str):
     path = os.path.join(DECRYPTED_DIR, filename)
@@ -98,8 +182,9 @@ def load_decrypted_json(filename: str):
     return None
 
 class MessageDispatcher:
-    def __init__(self, session_id: int):
+    def __init__(self, session_id: int, client_ip: str = None):
         self.session_id = session_id
+        self.client_ip = client_ip
         self.player_id = "default_player"
 
     def handle(self, in_msg) -> list:
@@ -165,9 +250,17 @@ class MessageDispatcher:
             MSG_REQUEST_LEADERBOARD,
             MSG_REQUEST_LEADERBOARD_BY_DISTANCE,
             MSG_REQUEST_LEADERBOARD_BY_POINTS,
+            MSG_REQUEST_CHALLENGE_LEADERBOARD_BY_TIME,
+            MSG_REQUEST_CHALLENGE_LEADERBOARD_BY_DISTANCE,
+            MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_TIME,
+            MSG_REQUEST_FRIENDLY_LEADERBOARD_BY_DISTANCE,
         ):
             responses.append(self._handle_request_leaderboard(in_msg))
-        elif msg_type == MSG_REQUEST_LEADERBOARD_STANDINGS:
+        elif msg_type in (
+            MSG_REQUEST_LEADERBOARD_STANDINGS,
+            MSG_REQUEST_LEADERBOARD_STANDINGS_BY_DISTANCE,
+            MSG_REQUEST_LEADERBOARD_STANDINGS_BY_POINTS,
+        ):
             responses.append(self._handle_request_leaderboard_standings(in_msg))
         elif msg_type == MSG_REQUEST_FLAG:
             responses.append(self._handle_request_flag(in_msg))
@@ -321,10 +414,8 @@ class MessageDispatcher:
             # The client derives the post-race WCRank from this per-finish-position
             # table (RaceInfo::getWcRankWithFinishPosition -> PlayerInfo::setWcRank)
             # and persists it back through storeGameStatus. Without it the rank never
-            # moves, so send the current rank plus each position's point award.
-            wc_race.RaceFinishWCRanks.extend(
-                player_rank + points for points in CUP_FINISH_POINTS
-            )
+            # moves, so send the absolute rank for each finish position.
+            wc_race.RaceFinishWCRanks.extend(cup_finish_ranks(player_rank))
             LOGGER.info(
                 "[Cups] WCRank %s -> finish awards %s",
                 player_rank,
@@ -821,10 +912,34 @@ class MessageDispatcher:
         ]
         return min(player_replays, key=self._replay_sort_key, default=None)
 
+    def _all_level_replays(self, level_id):
+        """Collect every candidate replay for a level across all loaded pools.
+
+        The player's own uploads live in ``player_replays``; the bundled ``more/``
+        replay pack and the APK ``ghost_*.dat`` fixtures populate ``cup_replays``
+        and ``authentic_ghosts``. Leaderboards must consider all of them, or only
+        the local player ever shows up.
+        """
+        replays = list(ghost_mgr.player_replays.get(level_id, []))
+        replays.extend(ghost_mgr.cup_replays.get(level_id, []))
+        replays.extend(
+            replay
+            for replay in ghost_mgr.authentic_ghosts.values()
+            if replay.levelId == level_id
+        )
+        return replays
+
+    @staticmethod
+    def _leaderboard_replay_id(replay):
+        """Return a replay ID the client can resolve back to real ghost data."""
+        if replay.HasField("_id") and replay._id:
+            return replay._id
+        return ghost_mgr._cup_replay_id(replay)
+
     def _level_leaderboard_replays(self, level_id):
         """Return each player's best available result, ranked for the level."""
         best_by_player = {}
-        for replay in ghost_mgr.player_replays.get(level_id, []):
+        for replay in self._all_level_replays(level_id):
             if (
                 not replay.available
                 or not replay.playerId
@@ -838,8 +953,8 @@ class MessageDispatcher:
 
     def _leaderboard_replays_for_filter(self, level_id, leaderboard_filter):
         ranked = self._level_leaderboard_replays(level_id)
-        filter_name = leaderboard_filter.lower()
-        if filter_name in ("local", "default", "personal"):
+        filter_name = (leaderboard_filter or "global").lower()
+        if filter_name in ("local", "personal"):
             return [replay for replay in ranked if replay.playerId == self.player_id]
         if filter_name in ("friends", "friend"):
             friend_ids = set(PlayerDB.get_friends(self.player_id))
@@ -849,14 +964,21 @@ class MessageDispatcher:
             vehicle_id = self._requested_leaderboard_vehicle
             if vehicle_id:
                 return [replay for replay in ranked if replay.vehicle == vehicle_id]
-        return ranked
+            return ranked
+        if filter_name in ("global", "all"):
+            return ranked
+        # The country/flag leaderboard tab sends PlayerInfo::getPlayerFlag() as the
+        # filter, so anything that is not a known keyword is treated as a flag code.
+        return [replay for replay in ranked if replay.flag.lower() == filter_name]
 
     def _handle_request_leaderboard(self, in_msg):
-        """Return server-local standings scoped to the requested leaderboard filter."""
+        """Serve the requested leaderboard tab for a level.
+
+        Every requestLeaderboard* / challenge / friendly variant shares the same
+        Leaderboard response payload, so one handler serves them all.
+        """
         out = FSMessageCls()
-        # requestLeaderboard, requestLeaderboardByDistance (5) and ByPoints (8) all share
-        # the same Leaderboard response payload; echo the request type so the client's
-        # per-message-number callback is invoked.
+        # Echo the request type so the client's per-message-number callback fires.
         out.MessageType = in_msg.MessageType or MSG_REQUEST_LEADERBOARD
         out.ResponseCode = 0
         out.Session = self.session_id
@@ -885,7 +1007,7 @@ class MessageDispatcher:
             item.time = replay.time
             item.distance = replay.distance
             item.finishingStatus = replay.finishingStatus
-            item.replayId = replay._id if replay.HasField("_id") else ""
+            item.replayId = self._leaderboard_replay_id(replay)
             item.flag = replay.flag
             item.sessionId = replay.sessionId
             item.retryCount = 0
@@ -903,7 +1025,7 @@ class MessageDispatcher:
     def _handle_request_leaderboard_standings(self, in_msg):
         """Report the player's rank in global, local, and friends result sets."""
         out = FSMessageCls()
-        out.MessageType = MSG_REQUEST_LEADERBOARD_STANDINGS
+        out.MessageType = in_msg.MessageType or MSG_REQUEST_LEADERBOARD_STANDINGS
         out.ResponseCode = 0
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
@@ -950,18 +1072,31 @@ class MessageDispatcher:
         return out
 
     def _handle_request_flag(self, in_msg):
-        """Answer the client's country-flag lookup (MessageType 20)."""
+        """Answer the client's country-flag lookup (MessageType 20).
+
+        A flag the player picked (persisted from GameStatus) wins; otherwise the
+        country is resolved from the client's IP with the bundled IP2Location DB.
+        """
         out = FSMessageCls()
         out.MessageType = MSG_REQUEST_FLAG
         out.ResponseCode = 0
         out.Session = self.session_id
         out.MessageNumber = in_msg.MessageNumber
 
-        # The client falls back to "default" when the flag field is absent, so mirror
-        # that default explicitly when the stored profile has no flag.
         profile = PlayerDB.load_player(self.player_id)
-        out.flag = profile.get("flag") or "default"
-        LOGGER.info("[Flag] Served flag %r for player %s", out.flag, self.player_id)
+        stored = (profile.get("flag") or "").strip()
+        if stored and stored != "default":
+            out.flag = stored
+            source = "stored"
+        else:
+            out.flag = flag_for_ip(self.client_ip) or "default"
+            source = "ip %s" % self.client_ip
+        LOGGER.info(
+            "[Flag] Served flag %r for player %s (source: %s)",
+            out.flag,
+            self.player_id,
+            source,
+        )
         return out
 
     def _handle_invite_friend(self, in_msg):
@@ -1006,9 +1141,7 @@ class MessageDispatcher:
             requester_player_id=self.player_id,
         )
         # Same per-finish-position WCRank table as _handle_request_cups.
-        wc.RaceFinishWCRanks.extend(
-            player_rank + points for points in CUP_FINISH_POINTS
-        )
+        wc.RaceFinishWCRanks.extend(cup_finish_ranks(player_rank))
         out.SendCupReplays = bool(cups)
         for c in cups:
             cp = out.Cups.add()

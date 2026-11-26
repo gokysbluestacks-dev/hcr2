@@ -51,7 +51,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.ReferenceTime = 25.5
         request.VehicleId = "jeep"
 
-        with patch("handlers.ghost_mgr.player_replays", {"rookie_cup_01_01": [replay]}):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": [replay]},
+            cup_replays={},
+            authentic_ghosts={},
+        ):
             response = self.dispatcher.handle(request)[0]
         self.assertEqual(response.MessageType, 4)
         self.assertEqual(response.MessageNumber, 41)
@@ -96,9 +101,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.MessageNumber = 43
         request.LevelId = "rookie_cup_01_01"
 
-        with patch("handlers.ghost_mgr.player_replays", {
-            "rookie_cup_01_01": [slower, faster],
-        }), patch.object(PlayerDB, "get_friends", return_value=[]):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": [slower, faster]},
+            cup_replays={},
+            authentic_ghosts={},
+        ), patch.object(PlayerDB, "get_friends", return_value=[]):
             response = self.dispatcher.handle(request)[0]
 
         standings = response.LeaderboardStandings
@@ -131,9 +139,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.LevelId = "rookie_cup_01_01"
         request.pageOffset = 0
 
-        with patch("handlers.ghost_mgr.player_replays", {"rookie_cup_01_01": replays}), patch.object(
-            PlayerDB, "get_friends", return_value=["FriendPlayer"]
-        ):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": replays},
+            cup_replays={},
+            authentic_ghosts={},
+        ), patch.object(PlayerDB, "get_friends", return_value=["FriendPlayer"]):
             request.LeaderboardFilter = "local"
             local = self.dispatcher.handle(request)[0].Leaderboard
             request.LeaderboardFilter = "friends"
@@ -180,9 +191,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.LevelId = "rookie_cup_01_01"
         request.LeaderboardFilter = "vehicles"
         request.VehicleId = "sportscar"
-        with patch("handlers.ghost_mgr.player_replays", {
-            "rookie_cup_01_01": [jeep, sportscar],
-        }):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": [jeep, sportscar]},
+            cup_replays={},
+            authentic_ghosts={},
+        ):
             response = self.dispatcher.handle(request)[0]
 
         self.assertEqual(
@@ -216,9 +230,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.LevelId = "rookie_cup_01_01"
         request.pageOffset = 0
 
-        with patch("handlers.ghost_mgr.player_replays", {
-            "rookie_cup_01_01": [slower, faster],
-        }):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": [slower, faster]},
+            cup_replays={},
+            authentic_ghosts={},
+        ):
             response = self.dispatcher.handle(request)[0]
 
         self.assertEqual(len(response.Leaderboard.leaderboard), 2)
@@ -241,7 +258,12 @@ class LeaderboardHandlerTests(unittest.TestCase):
         request.MessageNumber = 42
         request.LevelId = "rookie_cup_01_01"
 
-        with patch("handlers.ghost_mgr.player_replays", {"rookie_cup_01_01": [replay]}):
+        with patch.multiple(
+            "handlers.ghost_mgr",
+            player_replays={"rookie_cup_01_01": [replay]},
+            cup_replays={},
+            authentic_ghosts={},
+        ):
             response = self.dispatcher.handle(request)[0]
         self.assertEqual(response.MessageType, 23)
         self.assertEqual(response.MessageNumber, 42)

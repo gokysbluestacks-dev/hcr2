@@ -26,9 +26,10 @@ class HCR2ClientSession:
         self.client_id = client_id
         self.session_id = random.SystemRandom().getrandbits(63) or 1
         self.framer = HCR2Framer()
-        self.dispatcher = MessageDispatcher(self.session_id)
         self.peer = writer.get_extra_info("peername")
         self.sockname = writer.get_extra_info("sockname")
+        self.client_ip = self.peer[0] if self.peer else None
+        self.dispatcher = MessageDispatcher(self.session_id, client_ip=self.client_ip)
         self.local_port = self.sockname[1] if self.sockname else 0
         self.read_timeout = float(os.environ.get("HCR2_READ_TIMEOUT", "120"))
 

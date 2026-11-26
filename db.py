@@ -126,6 +126,11 @@ class PlayerDB:
         if game_status_msg.HasField("cloudSaveVersion"):
             profile["cloud_save_version"] = game_status_msg.cloudSaveVersion + 1
 
+        # Persist the flag the player picked so requestFlag can echo it back
+        # instead of re-resolving the country from their IP.
+        if game_status_msg.HasField("flag"):
+            profile["flag"] = game_status_msg.flag
+
         profile["vehicles"] = list(game_status_msg.unlockedVehicles)
         profile["worlds"] = list(game_status_msg.ownedWorlds)
         profile["unlocks"] = [

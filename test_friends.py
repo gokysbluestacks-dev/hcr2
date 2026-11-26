@@ -46,12 +46,12 @@ class FriendHandlerTests(unittest.TestCase):
 
     def test_request_player_infos_returns_only_requested_profiles(self):
         PlayerDB.save_player("OtherPlayer", {"player_id": "OtherPlayer", "rank": 2.0})
-        request = self.make_request(53)
+        request = self.make_request(46)  # GameServer::requestPlayerInfos
         request.PlayerIds.extend(["OtherPlayer", "FriendTestPlayer"])
 
         response = self.dispatcher.handle(request)[0]
 
-        self.assertEqual(response.MessageType, 53)
+        self.assertEqual(response.MessageType, 46)
         self.assertEqual(len(response.PlayerInfos), 1)
         self.assertEqual(response.PlayerInfos[0].playerId, "OtherPlayer")
 
